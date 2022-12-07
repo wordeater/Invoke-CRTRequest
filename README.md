@@ -48,16 +48,16 @@ Output is an array of strings which is converted into an array of hashes with so
 ```
  
 Post-processing does the following
-- Converts issuer_name to an array of hashes
-- Converts issuer_name.OU from an array to '|' separated data
-- Converts name_value to '|' separated data instead of '\n' separated data
-- Converts entry_timestamp to a DateTime
-- Converts not_before to a DateTime
-- Converts not_after to a DateTime
+- Converts `issuer_name` to an `array` of `hashes`
+- Converts `issuer_name.OU` from an `array` to a `|` separated `string`
+- Converts `name_value` to a `|` separated `string` instead of a `\n` separated `string`
+- Converts `entry_timestamp` to a `DateTime`
+- Converts `not_before` to a `DateTime`
+- Converts `not_after` to a `DateTime`
 
-Which can be sent to Export-Csv with a ForEach command.
+File output can be sent to `Export-Csv` with a `ForEach` command.
 
-Note that using -Verbose currently breaks the Export-Csv option.
+Note that using `-Verbose` currently breaks the `Export-Csv` option.
     
 
 ## PARAMETERS
