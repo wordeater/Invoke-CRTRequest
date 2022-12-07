@@ -102,7 +102,7 @@ After post-processing, the data looks like this.
   }
 ]
 ```
-where
+where each `element` of the `array` is a `PSCustomObject` like this:
 ```
    TypeName: System.Management.Automation.PSCustomObject
 
