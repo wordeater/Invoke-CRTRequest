@@ -1,2 +1,2 @@
-- Fix the output such that -Verbose doesn't break the ability to write to a CSV. It seems to be inconsistent.
+- Fix the output such that `-Verbose` doesn't break the ability to write to a CSV. It seems to be inconsistent.
 - Find a reliable way to write all output to the same log file being used by the code calling the function. Currently Tee-Object doesn't seem to catch all the function output. It writes to screen, but not to file.
