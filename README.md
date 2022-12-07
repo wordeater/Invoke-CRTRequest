@@ -132,11 +132,11 @@ PS > Invoke-CRTRequest "microsoft.com" -Deduplicate 0 -ExcludeExpired 1 | Format
     
 -------------------------- EXAMPLE 2 --------------------------
     
-PS > Invoke-CTRequest -Domain "google.com" -Delay 15 -Retry 5
+PS > Invoke-CRTRequest -Domain "google.com" -Delay 15 -Retry 5
     
 -------------------------- EXAMPLE 3 --------------------------
     
-PS > Invoke-CTRequest -Domain "linkedin.com" | ForEach-Object { $_ | Export-Csv .\Temp.csv -Force -Append -NoType }
+PS > Invoke-CRTRequest -Domain "linkedin.com" | ForEach-Object { $_ | Export-Csv .\Temp.csv -Force -Append -NoType }
 
 -------------------------- EXAMPLE 4 --------------------------
 
