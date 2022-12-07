@@ -54,7 +54,9 @@ Post-processing does the following
 - Converts entry_timestamp to a DateTime
 - Converts not_before to a DateTime
 - Converts not_after to a DateTime
+
 Which can be sent to Export-Csv with a ForEach command.
+
 Note that using -Verbose currently breaks the Export-Csv option.
     
 
