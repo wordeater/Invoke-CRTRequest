@@ -1,7 +1,7 @@
 ```
-PS > Invoke-CTRequest -Domain "linkedin.com" | ForEach-Object { $_ | Export-Csv .\Temp.csv -Force -Append -NoType }
+PS> Invoke-CTRequest -Domain "linkedin.com" | ForEach-Object { $_ | Export-Csv .\Temp.csv -Force -Append -NoType }
 
-PS > Import-Csv .\Temp.csv | Get-Member                                                                                                                                                                                             
+PS> Import-Csv .\Temp.csv | Get-Member                                                                                                                                                                                             
 
    TypeName: System.Management.Automation.PSCustomObject
 
