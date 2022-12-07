@@ -1,5 +1,7 @@
 ```
 PS> Invoke-CTRequest -Domain "linkedin.com" | ForEach-Object { $_ | Export-Csv .\Temp.csv -Force -Append -NoType }
+[2022-12-07 16:58:44]   Invoke-RestMethod -Method "Get" -Uri "https://crt.sh/?q=linkedin.com&output=json"
+[2022-12-07 16:58:52]   Match found for "linkedin.com"
 
 PS> Import-Csv .\Temp.csv | Get-Member                                                                                                                                                                                             
 
