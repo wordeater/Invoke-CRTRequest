@@ -72,10 +72,13 @@ function Invoke-CRTRequest {
 		Invoke-CRTRequest "microsoft.com" -Deduplicate 0 -ExcludeExpired 1 | Format-Table
 	
 	.EXAMPLE
-		Invoke-CTRequest -Domain "google.com" -Delay 15 -Retry 5
+		Invoke-CRTRequest -Domain "google.com" -Delay 15 -Retry 5
 	
 	.EXAMPLE
-		Invoke-CTRequest -Domain "linkedin.com" | ForEach-Object { $_ | Export-Csv .\Temp.csv -Force -Append -NoType }
+		Invoke-CRTRequest -Domain "linkedin.com" | ForEach-Object { $_ | Export-Csv .\Temp.csv -Force -Append -NoType }
+	
+	.EXAMPLE
+		Invoke-CRTRequest "purple.com" -Deduplicate 1 -ExcludeExpired 1 -Verbose
 	
 	.NOTES
 		Written by Word Eater (WordEaterNG@gmail.com)
