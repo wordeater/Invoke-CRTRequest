@@ -124,6 +124,8 @@ How Certificate Transparency Works - https://certificate.transparency.dev/howctw
         
 Used to convert a string into an array - https://stackoverflow.com/questions/15927291/how-to-split-a-string-by-comma-ignoring-comma-in-double-quotes
 
+This function creates another function called `Get-Timestamp` that is uses to create nice-looking timestamps on the output. It checks to see if the function already exists, so if you have another `Get-Timestamp` function, it will try to use that instead.
+
 ## EXAMPLES
 ```
 -------------------------- EXAMPLE 1 --------------------------
