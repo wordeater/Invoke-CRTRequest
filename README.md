@@ -134,7 +134,7 @@ serial_number              NoteProperty string serial_number=033225df1dffc2523e5
 
 File output can be sent to `Export-Csv` with a `ForEach` command.
 
-Note that using `-Verbose` currently breaks the `Export-Csv` option.
+Note that using `-Verbose` sometimes, *but not always*, breaks the `Export-Csv` option.
     
 
 ## PARAMETERS
@@ -191,6 +191,8 @@ Note that using `-Verbose` currently breaks the `Export-Csv` option.
 ## NOTES
     
 Written by Word Eater (WordEaterNG@gmail.com)
+
+Tested on Windows and Linux, both with PowerShell 7.
         
 Certificate Transparency Search Page - https://crt.sh/
 
