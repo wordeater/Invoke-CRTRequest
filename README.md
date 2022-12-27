@@ -147,21 +147,21 @@ Note that using `-Verbose` sometimes, *but not always*, breaks the `Export-Csv` 
     Default value                localhost.localdomain
     Accept pipeline input?       false
     Accept wildcard characters?  false
-    
--Deduplicate <Boolean>
+   
+-Deduplicate [<SwitchParameter>]
     Deduplicate (pre)certificate pairs? The default setting is 'No'
     
     Required?                    false
-    Position?                    2
+    Position?                    named
     Default value                False
     Accept pipeline input?       false
     Accept wildcard characters?  false
     
--ExcludeExpired <Boolean>
+-ExcludeExpired [<SwitchParameter>]
     Exclude expired certificates? The default setting is 'No'
     
     Required?                    false
-    Position?                    3
+    Position?                    named
     Default value                False
     Accept pipeline input?       false
     Accept wildcard characters?  false
@@ -170,7 +170,7 @@ Note that using `-Verbose` sometimes, *but not always*, breaks the `Export-Csv` 
     When a request fails, the function will sleep for this number of seconds before trying again. It will keep retrying until a success occurs. The default value is '5' seconds.
     
     Required?                    false
-    Position?                    4
+    Position?                    2
     Default value                5
     Accept pipeline input?       false
     Accept wildcard characters?  false
@@ -179,7 +179,7 @@ Note that using `-Verbose` sometimes, *but not always*, breaks the `Export-Csv` 
     When a request fails, the function will retry the request. This parameter sets how many times it will retry the same request before moving on. The default is '-1' which will keep trying until there is a success.
     
     Required?                    false
-    Position?                    5
+    Position?                    3
     Default value                -1
     Accept pipeline input?       false
     Accept wildcard characters?  false
