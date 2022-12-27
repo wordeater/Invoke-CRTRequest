@@ -69,7 +69,7 @@ function Invoke-CRTRequest {
 		System.Array
 	
 	.EXAMPLE
-		Invoke-CRTRequest "microsoft.com" -Deduplicate 0 -ExcludeExpired 1 | Format-Table
+		Invoke-CRTRequest "microsoft.com" -Deduplicate -ExcludeExpired | Format-Table
 	
 	.EXAMPLE
 		Invoke-CRTRequest -Domain "google.com" -Delay 15 -Retry 5
@@ -78,16 +78,24 @@ function Invoke-CRTRequest {
 		Invoke-CRTRequest -Domain "linkedin.com" | ForEach-Object { $_ | Export-Csv .\Temp.csv -Force -Append -NoType }
 	
 	.EXAMPLE
-		Invoke-CRTRequest "purple.com" -Deduplicate 1 -ExcludeExpired 1 -Verbose
+		Invoke-CRTRequest "purple.com" -Deduplicate -ExcludeExpired -Verbose
 	
 	.NOTES
 		Written by Word Eater (WordEaterNG@gmail.com)
+		
+		Tested on Windows Server and Linux
 		
 		Certificate Transparency Search Page - https://crt.sh/
 		How Certificate Transparency Works - https://certificate.transparency.dev/howctworks/
 		
 		Used to convert a string into an array
 			https://stackoverflow.com/questions/15927291/how-to-split-a-string-by-comma-ignoring-comma-in-double-quotes
+			
+		Version History
+		v1.5-20221227	Changed Deduplicate and ExcludeExpired to switch instead of boolean
+				Changed Write-Output in End { } into a return
+				Moved return from End { } to the Proceess { } loop so it should be able to return partial values if something goes wrong
+				Added Write-Warning to non-terminating error messages
 
 	.LINK
 		https://crt.sh/
@@ -102,25 +110,19 @@ function Invoke-CRTRequest {
 	[OutputType([System.Array])]
 	Param(
 		[Parameter(Mandatory=$true)][String]$Domain="localhost.localdomain",
-		[System.Boolean]$Deduplicate=$false,
-		[System.Boolean]$ExcludeExpired=$false,
+		[switch]$Deduplicate,
+		[switch]$ExcludeExpired,
 		[Int32][ValidateRange(0, [Int32]::MaxValue)]$Delay=5,
 		[Int32][ValidateRange(-1, [Int32]::MaxValue)]$Retry=-1
 	) # end of parameter
 	
 	Begin {
-		# checking for helper function
-		if ( Get-Command 'Get-TimeStamp' -errorAction SilentlyContinue ) {
-			$(Get-Timestamp) + "`t" + "Get-Timestamp exists" | Write-Verbose
-		} else {
-			function Get-TimeStamp {
-				$TimeStamp = "[{0:yyyy-MM-dd} {0:HH:mm:ss}]" -f (Get-Date)
-				return $TimeStamp
-			}
+		# creating helper function
+		function Get-TimeStamp {
+			$TimeStamp = "[{0:yyyy-MM-dd} {0:HH:mm:ss}]" -f (Get-Date)
+			return $TimeStamp
 		}
 		$StartDateTime = Get-Date
-		$OutputRow = [System.Collections.ArrayList]@()
-		$OutputTable = [System.Collections.ArrayList]@()
 	} # end of Begin
 	
 	Process {
@@ -159,14 +161,14 @@ function Invoke-CRTRequest {
 						$req = Invoke-RestMethod -Method Get -Uri $ReqUrl
 					} catch {
 						if ($_.ErrorDetails.Message) {
-							$(Get-Timestamp) + "`t" + $_.ErrorDetails.Message | Write-Host
+							$(Get-Timestamp) + "`t" + $_.ErrorDetails.Message | Write-Warning
 							$Failed = $true
-							$(Get-Timestamp) + "`t" + "Waiting " + $Delay + " seconds to try again." | Write-Host
+							$(Get-Timestamp) + "`t" + "Waiting " + $Delay + " seconds to try again." | Write-Warning
 							Start-Sleep $Delay
 						} else {
 							$(Get-Timestamp) + "`t" + $_ | Write-Host
 							$Failed = $true
-							$(Get-Timestamp) + "`t" + "Waiting " + $Delay + " seconds to try again." | Write-Host
+							$(Get-Timestamp) + "`t" + "Waiting " + $Delay + " seconds to try again." | Write-Warning
 							Start-Sleep $Delay
 						}	
 					}
@@ -179,9 +181,9 @@ function Invoke-CRTRequest {
 					$req = Invoke-RestMethod -Method Get -Uri $ReqUrl
 				} catch {
 					if ($_.ErrorDetails.Message) {
-						$(Get-Timestamp) + "`t" + $_.ErrorDetails.Message | Write-Host
+						$(Get-Timestamp) + "`t" + $_.ErrorDetails.Message | Write-Warning
 					} else {
-						$(Get-Timestamp) + "`t" + $_ | Write-Host
+						$(Get-Timestamp) + "`t" + $_ | Write-Warning
 					}
 				}
 				Break
@@ -197,14 +199,14 @@ function Invoke-CRTRequest {
 						$req = Invoke-RestMethod -Method Get -Uri $ReqUrl
 					} catch {
 						if ($_.ErrorDetails.Message) {
-							$(Get-Timestamp) + "`t" + $_.ErrorDetails.Message | Write-Host
+							$(Get-Timestamp) + "`t" + $_.ErrorDetails.Message | Write-Warning
 							$Failed = $true
-							$(Get-Timestamp) + "`t" + "Waiting " + $Delay + " seconds to try again ($current of $total)." | Write-Host
+							$(Get-Timestamp) + "`t" + "Waiting " + $Delay + " seconds to try again ($current of $total)." | Write-Warning
 							Start-Sleep $Delay
 						} else {
 							$(Get-Timestamp) + "`t" + $_ | Write-Host
 							$Failed = $true
-							$(Get-Timestamp) + "`t" + "Waiting " + $Delay + " seconds to try again ($current of $total)." | Write-Host
+							$(Get-Timestamp) + "`t" + "Waiting " + $Delay + " seconds to try again ($current of $total)." | Write-Warning
 							Start-Sleep $Delay
 						}	
 					}
@@ -237,7 +239,7 @@ function Invoke-CRTRequest {
 					"issuer.serialNumber" = $issuer.serialNumber
 					"issuer.emailAddress" = $issuer.emailAddress
 				}
-				$OutputTable = $OutputTable + $OutputRow
+				return $OutputRow
 			}
 		} else {
 			$(Get-Timestamp) + "`t" + "No match found for ""$Domain""" | Write-Host
@@ -246,7 +248,6 @@ function Invoke-CRTRequest {
 	} # end of Process
 	
 	End {
-		Write-Output -NoEnumerate $OutputTable
 		$EndDateTime = Get-Date
 		$Duration = New-TimeSpan -Start $StartDateTime -End $EndDateTime
 		$(Get-Timestamp) + "`t" + "Execution took $Duration" | Write-Verbose
