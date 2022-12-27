@@ -1,7 +1,7 @@
 # Invoke-CRTRequest
 
 ## NAME
-Invoke-CRTRequest
+`Invoke-CRTRequest`
     
 ## SYNOPSIS
 Queries the certificate transparency website https://crt.sh with the provided domain and returns the results.
