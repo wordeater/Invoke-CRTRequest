@@ -206,7 +206,7 @@ This function creates another function called `Get-Timestamp` that is uses to cr
 ```
 -------------------------- EXAMPLE 1 --------------------------
     
-PS > Invoke-CRTRequest "microsoft.com" -Deduplicate 0 -ExcludeExpired 1 | Format-Table
+PS > Invoke-CRTRequest "microsoft.com" -ExcludeExpired | Format-Table
     
 -------------------------- EXAMPLE 2 --------------------------
     
@@ -218,7 +218,7 @@ PS > Invoke-CRTRequest -Domain "linkedin.com" | ForEach-Object { $_ | Export-Csv
 
 -------------------------- EXAMPLE 4 --------------------------
 
-PS > Invoke-CRTRequest "purple.com" -Deduplicate 1 -ExcludeExpired 1 -Verbose
+PS > Invoke-CRTRequest "purple.com" -Deduplicate -ExcludeExpired -Verbose
 ```
     
 ## RELATED LINKS
