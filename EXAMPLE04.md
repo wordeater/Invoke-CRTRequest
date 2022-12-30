@@ -1,16 +1,111 @@
 ```
-PS> Invoke-CRTRequest "purple.com" -Deduplicate 1 -ExcludeExpired 1 -Verbose > out.txt                                                                                                                                             
-VERBOSE: [2022-12-07 12:56:28]  Domain to search: purple.com
-VERBOSE: [2022-12-07 12:56:28]  Deduplicate results? Yes
-VERBOSE: [2022-12-07 12:56:28]  Exclude expired? Yes
-VERBOSE: [2022-12-07 12:56:28]  Delay between retries: 5 seconds
-VERBOSE: [2022-12-07 12:56:28]  Total number of retries: -1
-VERBOSE: [2022-12-07 12:56:28]  Url to Invoke: https://crt.sh/?q=purple.com&output=json&deduplicate=Y&exclude=expired
-[2022-12-07 12:56:28]   Invoke-RestMethod -Method "Get" -Uri "https://crt.sh/?q=purple.com&output=json&deduplicate=Y&exclude=expired"
+PS> Invoke-CRTRequest "purple.com" -Deduplicate -ExcludeExpired -Verbose                                                                                                                                                             
+VERBOSE: [2022-12-30 11:32:49]  Domain to search: purple.com
+VERBOSE: [2022-12-30 11:32:49]  Deduplicate results? Yes
+VERBOSE: [2022-12-30 11:32:49]  Exclude expired? Yes
+VERBOSE: [2022-12-30 11:32:49]  Delay between retries: 5 seconds
+VERBOSE: [2022-12-30 11:32:49]  Total number of retries: -1
+VERBOSE: [2022-12-30 11:32:49]  Url to Invoke: https://crt.sh/?q=purple.com&output=json&deduplicate=Y&exclude=expired
+[2022-12-30 11:32:49]   Invoke-RestMethod -Method "Get" -Uri "https://crt.sh/?q=purple.com&output=json&deduplicate=Y&exclude=expired"
 VERBOSE: GET with 0-byte payload
 VERBOSE: received -byte response of content type application/json
 VERBOSE: Content encoding: utf-8
-[2022-12-07 12:56:29]   Match found for "purple.com"
+[2022-12-30 11:32:49]   Match found for "purple.com"
+
+search_domain              : purple.com
+common_name                : support.purple.com
+name_value                 : support.purple.com
+id                         : 8302033084
+entry_timestamp            : 12/28/2022 12:42:35AM
+not_before                 : 12/27/2022 11:42:35PM
+not_after                  : 3/27/2023 11:42:34PM
+serial_number              : 0305e99bac73f7ba2413734035a5a25f15df
+issuer_ca_id               : 183267
+issuer_name                : C=US, O=Let's Encrypt, CN=R3
+issuer.CommonName          : R3
+issuer.CountryName         : US
+issuer.StateorProvinceName : 
+issuer.Locality            : 
+issuer.Organization        : Let's Encrypt
+issuer.OrganizationalUnit  : 
+issuer.serialNumber        : 
+issuer.emailAddress        : 
+
+search_domain              : purple.com
+common_name                : mpos-stage.purple.com
+name_value                 : mpos-stage.purple.com|purple.com
+id                         : 8257101896
+entry_timestamp            : 12/22/2022 2:04:47AM
+not_before                 : 12/22/2022 1:04:47AM
+not_after                  : 3/22/2023 1:04:46AM
+serial_number              : 035a2916ed16107e5403b9bc1c9a399aefdc
+issuer_ca_id               : 183283
+issuer_name                : C=US, O=Let's Encrypt, CN=E1
+issuer.CommonName          : E1
+issuer.CountryName         : US
+issuer.StateorProvinceName : 
+issuer.Locality            : 
+issuer.Organization        : Let's Encrypt
+issuer.OrganizationalUnit  : 
+issuer.serialNumber        : 
+issuer.emailAddress        : 
+
+search_domain              : purple.com
+common_name                : mpos-stage.purple.com
+name_value                 : mpos-stage.purple.com|purple.com
+id                         : 8257720868
+entry_timestamp            : 12/22/2022 2:04:43AM
+not_before                 : 12/22/2022 1:04:43AM
+not_after                  : 3/22/2023 1:04:42AM
+serial_number              : 03ae508ce8f5a5d29af38d94192b56771a7d
+issuer_ca_id               : 183267
+issuer_name                : C=US, O=Let's Encrypt, CN=R3
+issuer.CommonName          : R3
+issuer.CountryName         : US
+issuer.StateorProvinceName : 
+issuer.Locality            : 
+issuer.Organization        : Let's Encrypt
+issuer.OrganizationalUnit  : 
+issuer.serialNumber        : 
+issuer.emailAddress        : 
+
+search_domain              : purple.com
+common_name                : cspo.purple.com
+name_value                 : cspo.purple.com
+id                         : 8185936425
+entry_timestamp            : 12/12/2022 10:42:18PM
+not_before                 : 12/12/2022 12:00:00AM
+not_after                  : 6/11/2023 11:59:59PM
+serial_number              : 0c1b5d32b82fc62b95777f93d1c68adf
+issuer_ca_id               : 246719
+issuer_name                : C=US, O=Amazon, CN=Amazon RSA 2048 M01
+issuer.CommonName          : Amazon RSA 2048 M01
+issuer.CountryName         : US
+issuer.StateorProvinceName : 
+issuer.Locality            : 
+issuer.Organization        : Amazon
+issuer.OrganizationalUnit  : 
+issuer.serialNumber        : 
+issuer.emailAddress        : 
+
+search_domain              : purple.com
+common_name                : buy.purple.com
+name_value                 : buy.purple.com
+id                         : 8164653283
+entry_timestamp            : 12/10/2022 2:16:40AM
+not_before                 : 12/10/2022 1:16:39AM
+not_after                  : 3/10/2023 1:16:38AM
+serial_number              : 04dec6c4cfca24625b96947fa57d0e7d1c61
+issuer_ca_id               : 183267
+issuer_name                : C=US, O=Let's Encrypt, CN=R3
+issuer.CommonName          : R3
+issuer.CountryName         : US
+issuer.StateorProvinceName : 
+issuer.Locality            : 
+issuer.Organization        : Let's Encrypt
+issuer.OrganizationalUnit  : 
+issuer.serialNumber        : 
+issuer.emailAddress        : 
 
 search_domain              : purple.com
 common_name                : sleepweek.purple.com
@@ -229,44 +324,6 @@ entry_timestamp            : 10/6/2022 3:56:41AM
 not_before                 : 10/6/2022 2:56:41AM
 not_after                  : 1/4/2023 2:56:40AM
 serial_number              : 042182fee2b4d72609d5e133c10523775cbd
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
-
-search_domain              : purple.com
-common_name                : sleepweek.purple.com
-name_value                 : sleepweek.purple.com
-id                         : 7605894841
-entry_timestamp            : 9/24/2022 1:41:39AM
-not_before                 : 9/24/2022 12:41:39AM
-not_after                  : 12/23/2022 12:41:38AM
-serial_number              : 034a584f2aa94636822486c78756fbe69a6e
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
-
-search_domain              : purple.com
-common_name                : shop.purple.com
-name_value                 : shop.purple.com
-id                         : 7566574977
-entry_timestamp            : 9/18/2022 6:47:08AM
-not_before                 : 9/18/2022 5:47:09AM
-not_after                  : 12/17/2022 5:47:08AM
-serial_number              : 04077c1c74ec90573f701c67b3d8cd0e5023
 issuer_ca_id               : 183267
 issuer_name                : C=US, O=Let's Encrypt, CN=R3
 issuer.CommonName          : R3
@@ -696,5 +753,5 @@ issuer.OrganizationalUnit  :
 issuer.serialNumber        : 
 issuer.emailAddress        : 
 
-VERBOSE: [2022-12-07 12:56:29]  Execution took 00:00:01.0717374
+VERBOSE: [2022-12-30 11:32:49]  Execution took 00:00:00.5918601
 ```
