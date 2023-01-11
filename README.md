@@ -200,7 +200,7 @@ How Certificate Transparency Works - https://certificate.transparency.dev/howctw
         
 Used to convert a string with embedded double-quotes that contain commas into an array - https://stackoverflow.com/questions/15927291/how-to-split-a-string-by-comma-ignoring-comma-in-double-quotes
 
-This function creates another very tiny function called `Get-Timestamp` that is uses to create nice-looking timestamps on the output.
+This function creates another very tiny function called `Get-Timestamp` that is uses to create nice-looking timestamps on the `Verbose` output.
 
 ## EXAMPLES
 ```
