@@ -943,5 +943,6 @@ issuer.OrganizationalUnit  : Server CA 1B
 issuer.serialNumber        : 
 issuer.emailAddress        : 
 
+VERBOSE: [2023-01-11 11:18:38]	Returned 49 results.
 VERBOSE: [2023-01-11 11:18:38]	Execution took 00:00:01.5395797
 ```
