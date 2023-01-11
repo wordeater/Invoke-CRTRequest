@@ -183,15 +183,6 @@ Note that using `-Verbose` sometimes, *but not always*, breaks the `Export-Csv` 
     Default value                -1
     Accept pipeline input?       false
     Accept wildcard characters?  false
-
--Verbose [<SwitchParameter>]
-    Provides detailed output including settings, status, and timestamps.
-    
-    Required?                    false
-    Position?                    named
-    Default value                False
-    Accept pipeline input?       false
-    Accept wildcard characters?  false
     
 <CommonParameters>
     This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
