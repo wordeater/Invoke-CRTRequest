@@ -7,7 +7,7 @@
 Queries the certificate transparency website https://crt.sh with the provided domain and returns the results.
     
 ## SYNTAX
-`Invoke-CRTRequest [-Domain] <String> [[-Deduplicate] <Boolean>] [[-ExcludeExpired] <Boolean>] [[-Delay] <Int32>] [[-Retry] <Int32>] [<CommonParameters>]`
+`Invoke-CRTRequest [-Domain] <String> [-Deduplicate] [-ExcludeExpired] [[-Delay] <Int32>] [[-Retry] <Int32>] [<CommonParameters>]`
     
     
 ## DESCRIPTION
@@ -181,6 +181,15 @@ Note that using `-Verbose` sometimes, *but not always*, breaks the `Export-Csv` 
     Required?                    false
     Position?                    3
     Default value                -1
+    Accept pipeline input?       false
+    Accept wildcard characters?  false
+
+-Verbose [<SwitchParameter>]
+    Provides detailed output including settings, status, and timestamps.
+    
+    Required?                    false
+    Position?                    named
+    Default value                False
     Accept pipeline input?       false
     Accept wildcard characters?  false
     
