@@ -92,7 +92,9 @@ function Invoke-CRTRequest {
 			https://stackoverflow.com/questions/15927291/how-to-split-a-string-by-comma-ignoring-comma-in-double-quotes
 			
 		Version History
-		v1.5-20221227	Changed Deduplicate and ExcludeExpired to switch instead of boolean
+		v1.6-20230111	Changed most Write-Host to Write-Verbose to be more like standard cmdlets
+				Changed Write-Host for the host not found to be a Write-Error
+		v1.5-20221227	Changed Deduplicate and ExcludeExpired to switch instead of boolean to be more like standard cmdlets
 				Changed Write-Output in End { } into a return
 				Moved return from End { } to the Proceess { } loop so it should be able to return partial values if something goes wrong
 				Added Write-Warning to non-terminating error messages
@@ -157,7 +159,7 @@ function Invoke-CRTRequest {
 				do {
 					$Failed = $false
 					try {
-						$(Get-Timestamp) + "`t" + "Invoke-RestMethod -Method ""Get"" -Uri ""$ReqUrl""" | Write-Host
+						$(Get-Timestamp) + "`t" + "Invoke-RestMethod -Method ""Get"" -Uri ""$ReqUrl""" | Write-Verbose
 						$req = Invoke-RestMethod -Method Get -Uri $ReqUrl
 					} catch {
 						if ($_.ErrorDetails.Message) {
@@ -166,7 +168,7 @@ function Invoke-CRTRequest {
 							$(Get-Timestamp) + "`t" + "Waiting " + $Delay + " seconds to try again." | Write-Warning
 							Start-Sleep $Delay
 						} else {
-							$(Get-Timestamp) + "`t" + $_ | Write-Host
+							$(Get-Timestamp) + "`t" + $_ | Write-Verbose
 							$Failed = $true
 							$(Get-Timestamp) + "`t" + "Waiting " + $Delay + " seconds to try again." | Write-Warning
 							Start-Sleep $Delay
@@ -177,7 +179,7 @@ function Invoke-CRTRequest {
 			}
 			'0' {
 				try {
-					$(Get-Timestamp) + "`t" + "Invoke-RestMethod -Method ""Get"" -Uri ""$ReqUrl""" | Write-Host
+					$(Get-Timestamp) + "`t" + "Invoke-RestMethod -Method ""Get"" -Uri ""$ReqUrl""" | Write-Verbose
 					$req = Invoke-RestMethod -Method Get -Uri $ReqUrl
 				} catch {
 					if ($_.ErrorDetails.Message) {
@@ -195,7 +197,7 @@ function Invoke-CRTRequest {
 					$current++
 					$Failed = $false
 					try {
-						$(Get-Timestamp) + "`t" + "Invoke-RestMethod -Method ""Get"" -Uri ""$ReqUrl""" | Write-Host
+						$(Get-Timestamp) + "`t" + "Invoke-RestMethod -Method ""Get"" -Uri ""$ReqUrl""" | Write-Verbose
 						$req = Invoke-RestMethod -Method Get -Uri $ReqUrl
 					} catch {
 						if ($_.ErrorDetails.Message) {
@@ -204,7 +206,7 @@ function Invoke-CRTRequest {
 							$(Get-Timestamp) + "`t" + "Waiting " + $Delay + " seconds to try again ($current of $total)." | Write-Warning
 							Start-Sleep $Delay
 						} else {
-							$(Get-Timestamp) + "`t" + $_ | Write-Host
+							$(Get-Timestamp) + "`t" + $_ | Write-Verbose
 							$Failed = $true
 							$(Get-Timestamp) + "`t" + "Waiting " + $Delay + " seconds to try again ($current of $total)." | Write-Warning
 							Start-Sleep $Delay
@@ -215,7 +217,7 @@ function Invoke-CRTRequest {
 			}
 		}
 		if ( [bool]$req.response ) {
-			$(Get-Timestamp) + "`t" + "Match found for ""$Domain""" | Write-Host
+			$(Get-Timestamp) + "`t" + "Match found for ""$Domain""" | Write-Verbose
 			$req | ForEach {
 				$entry = $_
 				$issuer = $([regex]::Split($entry.issuer_name, ',(?=(?:[^"]|"[^"]*")*$)' ) | ForEach { $_.Trim() } ) | ConvertFrom-StringData
@@ -242,7 +244,7 @@ function Invoke-CRTRequest {
 				return $OutputRow
 			}
 		} else {
-			$(Get-Timestamp) + "`t" + "No match found for ""$Domain""" | Write-Host
+			$(Get-Timestamp) + "`t" + "No match found for ""$Domain""" | Write-Error
 		}
 		
 	} # end of Process
