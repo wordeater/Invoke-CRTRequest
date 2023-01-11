@@ -243,6 +243,8 @@ function Invoke-CRTRequest {
 				}
 				return $OutputRow
 			}
+			$Count = $req.Count
+			$(Get-Timestamp) + "`t" + "Returned $Count results." | Write-Verbose
 		} else {
 			$(Get-Timestamp) + "`t" + "No match found for ""$Domain""" | Write-Error
 		}
