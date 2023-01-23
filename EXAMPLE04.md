@@ -1,16 +1,168 @@
 ```
-PS> Invoke-CRTRequest "purple.com" -Deduplicate -ExcludeExpired -Verbose
-VERBOSE: [2023-01-11 11:18:36]	Domain to search: purple.com
-VERBOSE: [2023-01-11 11:18:36]	Deduplicate results? Yes
-VERBOSE: [2023-01-11 11:18:36]	Exclude expired? Yes
-VERBOSE: [2023-01-11 11:18:36]	Delay between retries: 5 seconds
-VERBOSE: [2023-01-11 11:18:36]	Total number of retries: -1
-VERBOSE: [2023-01-11 11:18:36]	Url to Invoke: https://crt.sh/?q=purple.com&output=json&deduplicate=Y&exclude=expired
-VERBOSE: [2023-01-11 11:18:36]	Invoke-RestMethod -Method "Get" -Uri "https://crt.sh/?q=purple.com&output=json&deduplicate=Y&exclude=expired"
+PS> Invoke-CRTRequest "purple.com" -Deduplicate -ExcludeExpired -Verbose -Debug
+DEBUG: [2023-01-23 10:46:11]	Domain to search: purple.com
+DEBUG: [2023-01-23 10:46:11]	Deduplicate results? Yes
+DEBUG: [2023-01-23 10:46:11]	Exclude expired? Yes
+DEBUG: [2023-01-23 10:46:11]	Delay between retries: 5 seconds
+DEBUG: [2023-01-23 10:46:11]	Total number of retries: -1
+DEBUG: [2023-01-23 10:46:11]	Url to Invoke: https://crt.sh/?q=purple.com&output=json&deduplicate=Y&exclude=expired
+VERBOSE: [2023-01-23 10:46:11]	Invoke-RestMethod -Method "Get" -Uri "https://crt.sh/?q=purple.com&output=json&deduplicate=Y&exclude=expired"
 VERBOSE: GET with 0-byte payload
 VERBOSE: received -byte response of content type application/json
 VERBOSE: Content encoding: utf-8
-VERBOSE: [2023-01-11 11:18:38]	Match found for "purple.com"
+VERBOSE: [2023-01-23 10:46:22]	Match found for "purple.com"
+
+search_domain              : purple.com
+common_name                : discount-engine-stage.purple.com
+name_value                 : discount-engine-stage.purple.com|purple.com
+id                         : 8448370274
+entry_timestamp            : 1/19/2023 9:03:54PM
+not_before                 : 1/19/2023 8:03:54PM
+not_after                  : 4/19/2023 8:03:53PM
+serial_number              : 0334178f28087b1169b01ac59f090b2345c3
+issuer_ca_id               : 183283
+issuer_name                : C=US, O=Let's Encrypt, CN=E1
+issuer.CommonName          : E1
+issuer.CountryName         : US
+issuer.StateorProvinceName : 
+issuer.Locality            : 
+issuer.Organization        : Let's Encrypt
+issuer.OrganizationalUnit  : 
+issuer.serialNumber        : 
+issuer.emailAddress        : 
+
+search_domain              : purple.com
+common_name                : discount-engine-stage.purple.com
+name_value                 : discount-engine-stage.purple.com|purple.com
+id                         : 8448369914
+entry_timestamp            : 1/19/2023 9:03:47PM
+not_before                 : 1/19/2023 8:03:47PM
+not_after                  : 4/19/2023 8:03:46PM
+serial_number              : 03d08d36d8aa5cb4f62187f2cfe574888705
+issuer_ca_id               : 183267
+issuer_name                : C=US, O=Let's Encrypt, CN=R3
+issuer.CommonName          : R3
+issuer.CountryName         : US
+issuer.StateorProvinceName : 
+issuer.Locality            : 
+issuer.Organization        : Let's Encrypt
+issuer.OrganizationalUnit  : 
+issuer.serialNumber        : 
+issuer.emailAddress        : 
+
+search_domain              : purple.com
+common_name                : shop.purple.com
+name_value                 : shop.purple.com
+id                         : 8418653402
+entry_timestamp            : 1/16/2023 4:52:38AM
+not_before                 : 1/16/2023 3:52:38AM
+not_after                  : 4/16/2023 3:52:37AM
+serial_number              : 048d0296c38c3f466b217063377c51a95dc0
+issuer_ca_id               : 183267
+issuer_name                : C=US, O=Let's Encrypt, CN=R3
+issuer.CommonName          : R3
+issuer.CountryName         : US
+issuer.StateorProvinceName : 
+issuer.Locality            : 
+issuer.Organization        : Let's Encrypt
+issuer.OrganizationalUnit  : 
+issuer.serialNumber        : 
+issuer.emailAddress        : 
+
+search_domain              : purple.com
+common_name                : mpos-v2.purple.com
+name_value                 : mpos-v2.purple.com|purple.com
+id                         : 8393429629
+entry_timestamp            : 1/11/2023 6:36:49PM
+not_before                 : 1/11/2023 5:36:49PM
+not_after                  : 4/11/2023 5:36:48PM
+serial_number              : 0428139b02fb74be22058b496b4a8b173c02
+issuer_ca_id               : 183283
+issuer_name                : C=US, O=Let's Encrypt, CN=E1
+issuer.CommonName          : E1
+issuer.CountryName         : US
+issuer.StateorProvinceName : 
+issuer.Locality            : 
+issuer.Organization        : Let's Encrypt
+issuer.OrganizationalUnit  : 
+issuer.serialNumber        : 
+issuer.emailAddress        : 
+
+search_domain              : purple.com
+common_name                : mpos-v2.purple.com
+name_value                 : mpos-v2.purple.com|purple.com
+id                         : 8393429658
+entry_timestamp            : 1/11/2023 6:36:48PM
+not_before                 : 1/11/2023 5:36:47PM
+not_after                  : 4/11/2023 5:36:46PM
+serial_number              : 039b474dfc73bc78320c1708d91a7d25dbf3
+issuer_ca_id               : 183267
+issuer_name                : C=US, O=Let's Encrypt, CN=R3
+issuer.CommonName          : R3
+issuer.CountryName         : US
+issuer.StateorProvinceName : 
+issuer.Locality            : 
+issuer.Organization        : Let's Encrypt
+issuer.OrganizationalUnit  : 
+issuer.serialNumber        : 
+issuer.emailAddress        : 
+
+search_domain              : purple.com
+common_name                : mpos.purple.com
+name_value                 : mpos.purple.com|purple.com
+id                         : 8393420610
+entry_timestamp            : 1/11/2023 6:35:00PM
+not_before                 : 1/11/2023 5:35:00PM
+not_after                  : 4/11/2023 5:34:59PM
+serial_number              : 04d360b4236b7d30f4e0ba4b98cee494c787
+issuer_ca_id               : 183283
+issuer_name                : C=US, O=Let's Encrypt, CN=E1
+issuer.CommonName          : E1
+issuer.CountryName         : US
+issuer.StateorProvinceName : 
+issuer.Locality            : 
+issuer.Organization        : Let's Encrypt
+issuer.OrganizationalUnit  : 
+issuer.serialNumber        : 
+issuer.emailAddress        : 
+
+search_domain              : purple.com
+common_name                : mpos.purple.com
+name_value                 : mpos.purple.com|purple.com
+id                         : 8417433423
+entry_timestamp            : 1/11/2023 6:34:56PM
+not_before                 : 1/11/2023 5:34:56PM
+not_after                  : 4/11/2023 5:34:55PM
+serial_number              : 04b8bef4050e5b5fb7e332001a1de677245d
+issuer_ca_id               : 183267
+issuer_name                : C=US, O=Let's Encrypt, CN=R3
+issuer.CommonName          : R3
+issuer.CountryName         : US
+issuer.StateorProvinceName : 
+issuer.Locality            : 
+issuer.Organization        : Let's Encrypt
+issuer.OrganizationalUnit  : 
+issuer.serialNumber        : 
+issuer.emailAddress        : 
+
+search_domain              : purple.com
+common_name                : mpos.purple.com
+name_value                 : mpos.purple.com|purple.com
+id                         : 8387916599
+entry_timestamp            : 1/10/2023 6:03:40PM
+not_before                 : 1/10/2023 5:03:40PM
+not_after                  : 4/10/2023 5:03:39PM
+serial_number              : 042be641513cf2fa268b06ffbf453f512a3b
+issuer_ca_id               : 183283
+issuer_name                : C=US, O=Let's Encrypt, CN=E1
+issuer.CommonName          : E1
+issuer.CountryName         : US
+issuer.StateorProvinceName : 
+issuer.Locality            : 
+issuer.Organization        : Let's Encrypt
+issuer.OrganizationalUnit  : 
+issuer.serialNumber        : 
+issuer.emailAddress        : 
 
 search_domain              : purple.com
 common_name                : mpos.purple.com
@@ -72,8 +224,27 @@ issuer.emailAddress        :
 search_domain              : purple.com
 common_name                : mpos-prod.purple.com
 name_value                 : mpos-prod.purple.com|purple.com
+id                         : 8398995075
+entry_timestamp            : 1/9/2023 1:54:01AM
+not_before                 : 1/9/2023 12:54:01AM
+not_after                  : 4/9/2023 12:54:00AM
+serial_number              : 03c058bc927c4edf17624f3b422c6abf4421
+issuer_ca_id               : 183283
+issuer_name                : C=US, O=Let's Encrypt, CN=E1
+issuer.CommonName          : E1
+issuer.CountryName         : US
+issuer.StateorProvinceName : 
+issuer.Locality            : 
+issuer.Organization        : Let's Encrypt
+issuer.OrganizationalUnit  : 
+issuer.serialNumber        : 
+issuer.emailAddress        : 
+
+search_domain              : purple.com
+common_name                : mpos-prod.purple.com
+name_value                 : mpos-prod.purple.com|purple.com
 id                         : 8377863513
-entry_timestamp            : 1/9/2023 1:53:51AM
+entry_timestamp            : 1/9/2023 1:53:50AM
 not_before                 : 1/9/2023 12:53:50AM
 not_after                  : 4/9/2023 12:53:49AM
 serial_number              : 04be86cbee08855e0858bf1b013131bc7616
@@ -507,44 +678,6 @@ issuer.serialNumber        :
 issuer.emailAddress        : 
 
 search_domain              : purple.com
-common_name                : mpos-stage.purple.com
-name_value                 : mpos-stage.purple.com|purple.com
-id                         : 7816490539
-entry_timestamp            : 10/23/2022 11:47:20PM
-not_before                 : 10/23/2022 10:47:20PM
-not_after                  : 1/21/2023 10:47:19PM
-serial_number              : 03a9db11c4a97cb70e1fe08df9fc5f0c0a0b
-issuer_ca_id               : 183283
-issuer_name                : C=US, O=Let's Encrypt, CN=E1
-issuer.CommonName          : E1
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
-
-search_domain              : purple.com
-common_name                : mpos-stage.purple.com
-name_value                 : mpos-stage.purple.com|purple.com
-id                         : 7816490254
-entry_timestamp            : 10/23/2022 11:47:13PM
-not_before                 : 10/23/2022 10:47:13PM
-not_after                  : 1/21/2023 10:47:12PM
-serial_number              : 030656729842c3435db200dfe6f5081ab307
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
-
-search_domain              : purple.com
 common_name                : share.purple.com
 name_value                 : share.purple.com
 id                         : 7271021664
@@ -905,44 +1038,6 @@ issuer.OrganizationalUnit  :
 issuer.serialNumber        : 
 issuer.emailAddress        : 
 
-search_domain              : purple.com
-common_name                : integration.purple.com
-name_value                 : integration.purple.com
-id                         : 5787255778
-entry_timestamp            : 12/14/2021 12:05:14AM
-not_before                 : 12/14/2021 12:00:00AM
-not_after                  : 1/13/2023 11:59:59PM
-serial_number              : 03b6790b4abb21291a4a97dda9bfae2e
-issuer_ca_id               : 9324
-issuer_name                : C=US, O=Amazon, OU=Server CA 1B, CN=Amazon
-issuer.CommonName          : Amazon
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Amazon
-issuer.OrganizationalUnit  : Server CA 1B
-issuer.serialNumber        : 
-issuer.emailAddress        : 
-
-search_domain              : purple.com
-common_name                : integration.purple.com
-name_value                 : integration.purple.com
-id                         : 5787255689
-entry_timestamp            : 12/14/2021 12:04:46AM
-not_before                 : 12/14/2021 12:00:00AM
-not_after                  : 1/13/2023 11:59:59PM
-serial_number              : 0ba786df9a37bbf00d24557c9ba2fdc8
-issuer_ca_id               : 9324
-issuer_name                : C=US, O=Amazon, OU=Server CA 1B, CN=Amazon
-issuer.CommonName          : Amazon
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Amazon
-issuer.OrganizationalUnit  : Server CA 1B
-issuer.serialNumber        : 
-issuer.emailAddress        : 
-
-VERBOSE: [2023-01-11 11:18:38]	Returned 49 results.
-VERBOSE: [2023-01-11 11:18:38]	Execution took 00:00:01.5395797
+VERBOSE: [2023-01-23 10:46:22]	Returned 54 results.
+DEBUG: [2023-01-23 10:46:22]	Execution took 00:00:10.8799444
 ```
