@@ -1,5 +1,10 @@
 ```
-PS> Invoke-CRTRequest -Domain "google.com" -Delay 15 -Retry 5
+PS> Invoke-CRTRequest -Domain "google.com" -Delay 15 -Retry 5 -Verbose
+VERBOSE: [2023-01-23 10:45:38]	Invoke-RestMethod -Method "Get" -Uri "https://crt.sh/?q=google.com&output=json"
+VERBOSE: GET with 0-byte payload
+VERBOSE: received -byte response of content type application/json
+VERBOSE: Content encoding: utf-8
+VERBOSE: [2023-01-23 10:45:42]	Match found for "google.com"
 
 search_domain              : google.com
 common_name                : *.google.com
@@ -22387,4 +22392,6 @@ issuer.Organization        : Google Inc
 issuer.OrganizationalUnit  : 
 issuer.serialNumber        : 
 issuer.emailAddress        : 
+
+VERBOSE: [2023-01-23 10:45:43]	Returned 1152 results.
 ```
