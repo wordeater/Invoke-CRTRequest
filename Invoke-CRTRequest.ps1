@@ -72,13 +72,13 @@ function Invoke-CRTRequest {
 		Invoke-CRTRequest "microsoft.com" -Deduplicate -ExcludeExpired | Format-Table
 	
 	.EXAMPLE
-		Invoke-CRTRequest -Domain "google.com" -Delay 15 -Retry 5
+		Invoke-CRTRequest -Domain "google.com" -Delay 15 -Retry 5 -Verbose
 	
 	.EXAMPLE
 		Invoke-CRTRequest -Domain "linkedin.com" | ForEach-Object { $_ | Export-Csv .\Temp.csv -Force -Append -NoType }
 	
 	.EXAMPLE
-		Invoke-CRTRequest "purple.com" -Deduplicate -ExcludeExpired -Verbose
+		Invoke-CRTRequest "purple.com" -Deduplicate -ExcludeExpired -Verbose -Debug
 	
 	.NOTES
 		Written by Word Eater (WordEaterNG@gmail.com)
@@ -92,6 +92,7 @@ function Invoke-CRTRequest {
 			https://stackoverflow.com/questions/15927291/how-to-split-a-string-by-comma-ignoring-comma-in-double-quotes
 			
 		Version History
+		v1.7-20230123	Changed some Write-Verbose to Write-Debug to be more like standard cmdlets
 		v1.6-20230111	Changed most Write-Host to Write-Verbose to be more like standard cmdlets
 				Changed Write-Host for the host not found to be a Write-Error
 		v1.5-20221227	Changed Deduplicate and ExcludeExpired to switch instead of boolean to be more like standard cmdlets
@@ -131,28 +132,28 @@ function Invoke-CRTRequest {
 	
 		$ReqUrl = 'https://crt.sh/?q=' + $Domain + '&output=json'
 		
-		$(Get-Timestamp) + "`t" + "Domain to search: $Domain" | Write-Verbose
+		$(Get-Timestamp) + "`t" + "Domain to search: $Domain" | Write-Debug
 		
 		if ( $Deduplicate ) { 
 			$ReqUrl = $ReqUrl + '&deduplicate=Y'
-			$(Get-Timestamp) + "`t" + "Deduplicate results? Yes" | Write-Verbose
+			$(Get-Timestamp) + "`t" + "Deduplicate results? Yes" | Write-Debug
 		}
 		else {
-			$(Get-Timestamp) + "`t" + "Deduplicate results? No" | Write-Verbose
+			$(Get-Timestamp) + "`t" + "Deduplicate results? No" | Write-Debug
 		}
 		if ( $ExcludeExpired ) {
 			$ReqUrl = $ReqUrl + '&exclude=expired'
-			$(Get-Timestamp) + "`t" + "Exclude expired? Yes" | Write-Verbose
+			$(Get-Timestamp) + "`t" + "Exclude expired? Yes" | Write-Debug
 		}
 		else {
-			$(Get-Timestamp) + "`t" + "Exclude expired? No" | Write-Verbose
+			$(Get-Timestamp) + "`t" + "Exclude expired? No" | Write-Debug
 		}
 		
-		$(Get-Timestamp) + "`t" + "Delay between retries: $Delay seconds" | Write-Verbose
+		$(Get-Timestamp) + "`t" + "Delay between retries: $Delay seconds" | Write-Debug
 		
-		$(Get-Timestamp) + "`t" + "Total number of retries: $Retry" | Write-Verbose
+		$(Get-Timestamp) + "`t" + "Total number of retries: $Retry" | Write-Debug
 		
-		$(Get-Timestamp) + "`t" + "Url to Invoke: $ReqUrl" | Write-Verbose
+		$(Get-Timestamp) + "`t" + "Url to Invoke: $ReqUrl" | Write-Debug
 		
 		switch ( $Retry ) {
 			'-1' {
@@ -254,7 +255,7 @@ function Invoke-CRTRequest {
 	End {
 		$EndDateTime = Get-Date
 		$Duration = New-TimeSpan -Start $StartDateTime -End $EndDateTime
-		$(Get-Timestamp) + "`t" + "Execution took $Duration" | Write-Verbose
+		$(Get-Timestamp) + "`t" + "Execution took $Duration" | Write-Debug
 	} # end of End
 	
 } # end of function Invoke-CRTRequest
