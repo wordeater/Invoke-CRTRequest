@@ -1,2965 +1,2640 @@
 ```
-PS> Invoke-CRTRequest "microsoft.com" -ExcludeExpired | Format-Table
+PS> Invoke-CRTRequest "microsoft.com" -Deduplicate -ExcludeExpired | Format-Table
 
-search_domain common_name                                                  name_value
-------------- -----------                                                  ----------                                                                                                                                                 
-microsoft.com studio.jarvis.microsoft.com                                  jarvis.microsoft.com|studio.jarvis.microsoft.com
-microsoft.com sfdataservice.microsoft.com                                  *.sfds.microsoft.com|pti-int.store.microsoft.com|pti.store.microsoft.com|sfdataservice-legacy-staging.microsoft.com|sfdataservice-legacy.microsoft.com|sfd…
-microsoft.com now.norway.tip0.rpadminssl.flow.microsoft.com                *.us.admin.api.flow.microsoft.com|admin.api.flow.microsoft.com|now.norway.tip0.rpadminssl.flow.microsoft.com|us.admin.api.flow.microsoft.com|westus.us.adm…
-microsoft.com gw.ecdn.microsoft.com                                        gw.ecdn.microsoft.com|gw.eur.msit.ecdn.microsoft.com|gw.eur.prod.ecdn.microsoft.com|gw.neu.eur.msit.ecdn.microsoft.com|gw.neu.eur.prod.ecdn.microsoft.com|…
-microsoft.com dcat-idm.microsoft.com                                       dcat-idm.microsoft.com
-microsoft.com prod.servicefabric.customermaster.fd.cloud.microsoft.com     prod.servicefabric.customermaster.fd.cloud.microsoft.com
-microsoft.com query-mr-prod-eastca.cms.microsoft.com                       query-mr-prod-ca.cms.microsoft.com|query-mr-prod-eastca-secondary.cms.microsoft.com|query-mr-prod-eastca.cms.microsoft.com|query-primary-mr-prod-ca.cms.mi…
-microsoft.com api-msrc.corp.microsoft.com                                  api-msrc.corp.microsoft.com
-microsoft.com analytics.aimon.applicationinsights.azure.com                analytics.aimon.applicationinsights.microsoft.com|ms.portal.loganalytics.microsoft.com
-microsoft.com onessdev.microsoft.com                                       onessdev.microsoft.com
-microsoft.com victor.ustcms.microsoft.com                                  victor.ustcms.microsoft.com
-microsoft.com f4c6cf8e-fd6d-4c72-822d-c64a57022fac.microsoft.com           f4c6cf8e-fd6d-4c72-822d-c64a57022fac.microsoft.com
-microsoft.com apiv2.prod.narada.microsoft.com                              *.apiv2.prod.narada.microsoft.com|apiv2.prod.narada.microsoft.com
-microsoft.com surfacesigning.corp.microsoft.com                            surfacesigning.corp.microsoft.com
-microsoft.com *.holoportation-relay.prod.collab.mixedreality.microsoft.com *.holoportation-relay-pme.prod.collab.mixedreality.microsoft.com|*.holoportation-relay.prod.collab.mixedreality.microsoft.com|*.holoportation-relay2.prod.…
-microsoft.com *.tts-frontend.speech.microsoft.com                          *.tts-frontend.speech.microsoft.com|*.tts.speech.microsoft.com|*.voice.speech.microsoft.com
-microsoft.com order.rest.store.microsoft.com                               *.order.rest.store.microsoft.com|order-admin.store.microsoft.com|Order.rest.internal.bn4.ap.store.microsoft.com|Order.rest.internal.bn4.onprem.store.micro…
-microsoft.com slk.microsoft.com                                            slk.microsoft.com
-microsoft.com vlcreditsuat.microsoft.com                                   commercialreturnsuat.microsoft.com|vlcreditsuat.microsoft.com
-microsoft.com store-images-origin.ppe.microsoft.com                        store-images-origin.ppe.microsoft.com
-microsoft.com portal.loganalytics.microsoft.com                            analytics.applicationinsights.microsoft.com|portal.loganalytics.microsoft.com
-microsoft.com api.sdh.sdg.teams.microsoft.com                              api.sdh.sdg.teams.microsoft.com|noame2e.sdh.sdg.teams.microsoft.com|uscee2e.sdh.sdg.teams.microsoft.com|use2e2e.sdh.sdg.teams.microsoft.com
-microsoft.com cdnppe.definitionupdates.microsoft.com                       cdnppe.definitionupdates.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com contactcentrequality.microsoft.com                           contactcentrequality.microsoft.com
-microsoft.com azfipjemusql02.redmond.corp.microsoft.com                    azfipjemusql02.redmond.corp.microsoft.com
-microsoft.com contactcentrequality.microsoft.com                           contactcentrequality.microsoft.com
-microsoft.com aad-attestation-test1.dps.mp.microsoft.com                   aad-attestation-test1.dps.mp.microsoft.com
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|web.powerva.microsoft.com
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|web.powerva.microsoft.com
-microsoft.com adminanalytics.powerplatform.microsoft.com                   *.adminanalytics.powerplatform.microsoft.com|*.dfanalytics.powerplatform.microsoft.com|adminanalytics.powerplatform.microsoft.com|dfanalytics.powerplatfor…
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|web.powerva.microsoft.com
-microsoft.com csanalytics.powerplatform.microsoft.com                      *.csanalytics.powerplatform.microsoft.com|csanalytics.powerplatform.microsoft.com
-microsoft.com sustainability.microsoft.com                                 *.sustainability.microsoft.com|sustainability.microsoft.com
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|web.powerva.microsoft.com
-microsoft.com kepler.powerplatform.microsoft.com                           *.kepler.powerplatform.microsoft.com|kepler.powerplatform.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com heartbeat.securitycenter.windows.com                         gradingplatform.microsoft.com
-microsoft.com heartbeat.securitycenter.windows.com                         canary.gradingplatform.microsoft.com
-microsoft.com authoringorchestrator.iris.microsoft.com                     authoringorchestrator.iris.microsoft.com
-microsoft.com cd.public.disco.ml.teams.microsoft.com                       *.cd.ipdns.public.disco.ml.teams.microsoft.com|*.cd.nam.public.disco.ml.teams.microsoft.com|cd.nam.public.disco.ml.teams.microsoft.com|cd.public.disco.ml.…
-microsoft.com cd.public.disco.ml.teams.microsoft.com                       *.cd.ipdns.public.disco.ml.teams.microsoft.com|*.cd.nam.public.disco.ml.teams.microsoft.com|cd.nam.public.disco.ml.teams.microsoft.com|cd.public.disco.ml.…
-microsoft.com wwlengprogslns.microsoft.com                                 wwlengprogslns.microsoft.com
-microsoft.com authoring.iris.microsoft.com                                 authoring.iris.microsoft.com
-microsoft.com mbs-d2.download.microsoft.com                                mbs-d2.download.microsoft.com
-microsoft.com euaworkflow.microsoft.com                                    euaworkflow.microsoft.com|euaworkfloweventprocessordev.microsoft.com|euaworkflowservicedev.microsoft.com
-microsoft.com euatenant.microsoft.com                                      euatenant.microsoft.com|euatenantservicedev.microsoft.com
-microsoft.com euapolicy.microsoft.com                                      euapolicy.microsoft.com|euapolicysapeventprocessordev.microsoft.com|euapolicysapprocessordev.microsoft.com|euapolicyservicedev.microsoft.com
-microsoft.com euapolicy.microsoft.com                                      euapolicy.microsoft.com|euapolicyeventprocessordev.microsoft.com
-microsoft.com euamigrationdev.microsoft.com                                euamigrationdev.microsoft.com
-microsoft.com euadelegationdev.microsoft.com                               euadelegationdev.microsoft.com|euadelegationportaldev.microsoft.com|euadelegationservicedev.microsoft.com
-microsoft.com euaauthorization.microsoft.com                               euaauthorization.microsoft.com|euaauthorizationservicedev.microsoft.com
-microsoft.com euaaccessprovisioning.microsoft.com                          euaaccessportaldev.microsoft.com|euaaccessprovisioning.microsoft.com|euaaccessservicedev.microsoft.com|euasoxcomplianceprocessordev.microsoft.com
-microsoft.com tip2.api.businessappdiscovery.microsoft.com                  *.tip2.api.businessappdiscovery.microsoft.com|tip2.api.businessappdiscovery.microsoft.com
-microsoft.com test.sustainability.microsoft.com                            *.test.sustainability.microsoft.com|test.sustainability.microsoft.com
-microsoft.com notifier.objectstore.microsoft.com                           notifier.objectstore.microsoft.com
-microsoft.com query-rt-int-eastus.cms.microsoft.com                        query-preview-rt-int-eastus.cms.microsoft.com|query-rt-int-eastus.cms.microsoft.com
-microsoft.com financials.cp.microsoft.com                                  financials.cp.microsoft.com
-microsoft.com invoicegrouping.cp.microsoft.com                             invoicegrouping.cp.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com powerplatform-int.microsoft.com                              powerplatform-int.microsoft.com|ppe.geneva.keyvault.powerplatform-int.microsoft.com
-microsoft.com powervirtualagents-int.microsoft.com                         powervirtualagents-int.microsoft.com|ppe.geneva.keyvault.powervirtualagents-int.microsoft.com
-microsoft.com powerautomate-int.microsoft.com                              powerautomate-int.microsoft.com|ppe.geneva.keyvault.powerautomate-int.microsoft.com
-microsoft.com certmgmt-test-public.manage-dogfood.microsoft.com            certmgmt-test-public.manage-dogfood.microsoft.com
-microsoft.com *.fptdev.microsoft.com                                       *.fptdev.microsoft.com
-microsoft.com preview.personnel.microsoft.com                              preview.personnel.microsoft.com
-microsoft.com powerplatform.microsoft.com                                  powerplatform.microsoft.com|prod.geneva.keyvault.powerplatform.microsoft.com
-microsoft.com powervirtualagents.microsoft.com                             powervirtualagents.microsoft.com|prod.geneva.keyvault.powervirtualagents.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com api.businessappdiscovery.microsoft.com                       *.api.businessappdiscovery.microsoft.com|api.businessappdiscovery.microsoft.com
-microsoft.com sustainability.microsoft.com                                 *.sustainability.microsoft.com|sustainability.microsoft.com
-microsoft.com api.businessappdiscovery.microsoft.com                       *.api.businessappdiscovery.microsoft.com|api.businessappdiscovery.microsoft.com
-microsoft.com admin.powerapps.com                                          admin.businessplatform.microsoft.com|admin.flow.microsoft.com
-microsoft.com sustainability.microsoft.com                                 *.sustainability.microsoft.com|sustainability.microsoft.com
-microsoft.com financialrecordjournal.cp.microsoft.com                      financialrecordjournal.cp.microsoft.com
-microsoft.com api.preview.powerva.microsoft.com                            api.preview.powerva.microsoft.com
-microsoft.com powerautomate.microsoft.com                                  powerautomate.microsoft.com|prod.geneva.keyvault.powerautomate.microsoft.com
-microsoft.com tminienv76svc.afstest.azure.net                              kailani-getloc-test-01.one.microsoft.com|kailani-getloc-test-02.one.microsoft.com|kailani-getloc-test-03.one.microsoft.com|kailani-getloc-test-04.one.micr…
-microsoft.com ecoshosting.microsoft.com                                    ecoshosting-ppe.microsoft.com|ecoshosting.microsoft.com|mystaff-ppe.microsoft.com|mystaff.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com sreaadcertificate.cp.microsoft.com                           CTPOperations.cp.microsoft.com|sreaadcertificate.cp.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com recognitionschedulejournal.cp.microsoft.com                  *.recognitionschedulejournal.cp.microsoft.com|recognitionschedulejournal.cp.microsoft.com
-microsoft.com datagridservices.corp.microsoft.com                          datagridservices.corp.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com approval.int.l2o.microsoft.com                               approval.int.l2o.microsoft.com
-microsoft.com ccp.pulsarx-int.microsoft.com                                api.ccp.pulsarx-int.microsoft.com|ccp.pulsarx-int.microsoft.com
-microsoft.com secure4s.scene7.com                                          cdn-dynmedia-1.microsoft.com
-microsoft.com *.ppe.mgmt.fp.wd.microsoft.com                               *.ppe.mgmt.fp.wd.microsoft.com
-microsoft.com a-jpea.prod.templates.tac.teams.microsoft.com                a-jpea.prod.templates.tac.teams.microsoft.com|jpea.prod.templates.tac.teams.microsoft.com|prod.templates.tac.teams.microsoft.com
-microsoft.com settings-sandbox.data.microsoft.com                          *.settings-sandbox.data.microsoft.com|settings-sandbox.data.microsoft.com
-microsoft.com *.develop.speech.microsoft.com                               *.develop.speech.microsoft.com|develop.speech.microsoft.com
-microsoft.com *.jpn.daas.microsoft.com                                     *.daas.microsoft.com|*.jpn.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.jpn.daas.microsoft.com
-microsoft.com iamkubernetesprod.trafficmanager.net                         *.iamtelemetrycollector-tip.microsoft.com|*.iamtelemetrycollector.microsoft.com|*.myaccount.microsoft.com|*.myapplications.microsoft.com|*.myprofile.micro…
-microsoft.com iamkubernetesprod.trafficmanager.net                         *.iamtelemetrycollector-tip.microsoft.com|*.iamtelemetrycollector.microsoft.com|*.myaccount.microsoft.com|*.myapplications.microsoft.com|*.myprofile.micro…
-microsoft.com iamkubernetesprod.trafficmanager.net                         *.iamtelemetrycollector-tip.microsoft.com|*.iamtelemetrycollector.microsoft.com|*.myaccount.microsoft.com|*.myapplications.microsoft.com|*.myprofile.micro…
-microsoft.com iamkubernetesprod.trafficmanager.net                         *.iamtelemetrycollector-tip.microsoft.com|*.iamtelemetrycollector.microsoft.com|*.myaccount.microsoft.com|*.myapplications.microsoft.com|*.myprofile.micro…
-microsoft.com iamkubernetesprod.trafficmanager.net                         *.iamtelemetrycollector-tip.microsoft.com|*.iamtelemetrycollector.microsoft.com|*.myaccount.microsoft.com|*.myapplications.microsoft.com|*.myprofile.micro…
-microsoft.com iamkubernetesprod.trafficmanager.net                         *.iamtelemetrycollector-tip.microsoft.com|*.iamtelemetrycollector.microsoft.com|*.myaccount.microsoft.com|*.myapplications.microsoft.com|*.myprofile.micro…
-microsoft.com iamkubernetesprod.trafficmanager.net                         *.iamtelemetrycollector-tip.microsoft.com|*.iamtelemetrycollector.microsoft.com|*.myaccount.microsoft.com|*.myapplications.microsoft.com|*.myprofile.micro…
-microsoft.com iamkubernetesprod.trafficmanager.net                         *.iamtelemetrycollector-tip.microsoft.com|*.iamtelemetrycollector.microsoft.com|*.myaccount.microsoft.com|*.myapplications.microsoft.com|*.myprofile.micro…
-microsoft.com iamkubernetesprod.trafficmanager.net                         *.iamtelemetrycollector-tip.microsoft.com|*.iamtelemetrycollector.microsoft.com|*.myaccount.microsoft.com|*.myapplications.microsoft.com|*.myprofile.micro…
-microsoft.com iamkubernetesprod.trafficmanager.net                         *.iamtelemetrycollector-tip.microsoft.com|*.iamtelemetrycollector.microsoft.com|*.myaccount.microsoft.com|*.myapplications.microsoft.com|*.myprofile.micro…
-microsoft.com iamkubernetesprod.trafficmanager.net                         *.iamtelemetrycollector-tip.microsoft.com|*.iamtelemetrycollector.microsoft.com|*.myaccount.microsoft.com|*.myapplications.microsoft.com|*.myprofile.micro…
-microsoft.com iamkubernetesprod.trafficmanager.net                         *.iamtelemetrycollector-tip.microsoft.com|*.iamtelemetrycollector.microsoft.com|*.myaccount.microsoft.com|*.myapplications.microsoft.com|*.myprofile.micro…
-microsoft.com vi.microsoft.com                                             vi.microsoft.com
-microsoft.com rapportu2.microsoft.com                                      rapportu2.microsoft.com
-microsoft.com internal.evergreen.microsoft.com                             internal.evergreen.microsoft.com
-microsoft.com azureava-api.microsoft.com                                   azureava-api.microsoft.com
-microsoft.com ocingestion-int.mp.microsoft.com                             *.ocingestion-int.mp.microsoft.com|ocingestion-int.mp.microsoft.com
-microsoft.com ustrl-int.mp.microsoft.com                                   *.ustrl-int.mp.microsoft.com|ustrl-int.mp.microsoft.com
-microsoft.com *.tools.opensource.microsoft.com                             *.tools.opensource.microsoft.com|tools.opensource.microsoft.com
-microsoft.com ppe.data.watson.microsoft.com                                ppe.data.watson.microsoft.com
-microsoft.com *.ppe.mgmt.dl.wd.microsoft.com                               *.ppe.mgmt.dl.wd.microsoft.com
-microsoft.com accountuserservice.dce.mp.microsoft.com                      accountuserservice-df.dce.mp.microsoft.com|accountuserservice.dce.mp.microsoft.com
-microsoft.com heartbeat.securitycenter.windows.com                         stg.gradingplatform.microsoft.com
-microsoft.com iridiasppe.microsoft.com                                     iridiasppe.microsoft.com
-microsoft.com iridiasppe.microsoft.com                                     iridiasppe.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com ppe.shadowrole-writer.m365.microsoft.com                     *.ppe.shadowrole-writer.m365.microsoft.com|ppe.shadowrole-writer.m365.microsoft.com
-microsoft.com revenueallocator.cp.microsoft.com                            revenueallocator.cp.microsoft.com
-microsoft.com deferraljournal.cp.microsoft.com                             deferraljournal.cp.microsoft.com
-microsoft.com cre.raas.microsoft.com                                       cre.raas.microsoft.com
-microsoft.com partnercenterservice-staging.microsoft.com                   partnercenterservice-staging.microsoft.com|partnercenterservicechina-staging.microsoft.com
-microsoft.com appmanagement.activedirectory.microsoft.com                  appmanagement.activedirectory.microsoft.com
-microsoft.com dynamics-int.microsoft.com                                   dynamics-int.microsoft.com|ppe.geneva.keyvault.dynamics-int.microsoft.com
-microsoft.com powerbi-int.microsoft.com                                    powerbi-int.microsoft.com|ppe.geneva.keyvault.powerbi-int.microsoft.com
-microsoft.com ocfm-int.mp.microsoft.com                                    *.ocfm-int.mp.microsoft.com|ocfm-int.mp.microsoft.com
-microsoft.com ocfm-client-int.mp.microsoft.com                             *.ocfm-client-int.mp.microsoft.com|ocfm-client-int.mp.microsoft.com
-microsoft.com proxy-int.rl.microsoft.com                                   *.proxy-int.rl.microsoft.com|proxy-int.rl.microsoft.com
-microsoft.com rod-int.rl.microsoft.com                                     *.rod-int.rl.microsoft.com|rod-int.rl.microsoft.com
-microsoft.com warranty-client-int.mp.microsoft.com                         *.warranty-client-int.mp.microsoft.com|warranty-client-int.mp.microsoft.com
-microsoft.com powerquery-int.microsoft.com                                 powerquery-int.microsoft.com|ppe.geneva.keyvault.powerquery-int.microsoft.com
-microsoft.com dcsrdazersf1.corp.microsoft.com                              dcsrdazersf1.corp.microsoft.com
-microsoft.com *.windowsautopilot-df.microsoft.com                          *.windowsautopilot-df.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com msrc.microsoft.com                                           msrc.microsoft.com
-microsoft.com *.eds.m365.microsoft.com                                     *.eds.m365.microsoft.com
-microsoft.com *.eds.m365.microsoft.com                                     *.eds.m365.microsoft.com
-microsoft.com aneexp-reports-cosmos-access.exp.microsoft.com               aneexp-reports-cosmos-access.exp.microsoft.com
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com admin.powerapps.com                                          admin.businessplatform.microsoft.com|admin.flow.microsoft.com
-microsoft.com api.businessappdiscovery.microsoft.com                       *.api.businessappdiscovery.microsoft.com|api.businessappdiscovery.microsoft.com
-microsoft.com sustainability.microsoft.com                                 *.sustainability.microsoft.com|sustainability.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com csanalytics.powerplatform.microsoft.com                      *.csanalytics.powerplatform.microsoft.com|csanalytics.powerplatform.microsoft.com
-microsoft.com consumerapi-prodprv.narada.microsoft.com                     *.consumerapi-prodprv.narada.microsoft.com|consumerapi-prodprv.narada.microsoft.com
-microsoft.com daf.api-ppe.support.microsoft.com                            daf.api-ppe.support.microsoft.com
-microsoft.com *.api-ppe.support-aries.microsoft.com                        *.api-ppe.support-aries.microsoft.com|alda.api-ppe.support.microsoft.com|daf.api-ppe.support.microsoft.com|sara.api-ppe.support.microsoft.com
-microsoft.com *.api-ppe.support-aries.microsoft.com                        *.api-ppe.support-aries.microsoft.com|alda.api-ppe.support.microsoft.com|daf.api-ppe.support.microsoft.com|sara.api-ppe.support.microsoft.com
-microsoft.com alda.api-ppe.support.microsoft.com                           alda.api-ppe.support.microsoft.com
-microsoft.com alda.api-ppe.support.microsoft.com                           alda.api-ppe.support.microsoft.com
-microsoft.com daf.api-ppe.support.microsoft.com                            daf.api-ppe.support.microsoft.com
-microsoft.com *.api-ppe.support-aries.microsoft.com                        *.api-ppe.support-aries.microsoft.com|alda.api-ppe.support.microsoft.com|daf.api-ppe.support.microsoft.com|sara.api-ppe.support.microsoft.com
-microsoft.com alda.api-ppe.support.microsoft.com                           alda.api-ppe.support.microsoft.com
-microsoft.com kepler.powerplatform.microsoft.com                           *.kepler.powerplatform.microsoft.com|kepler.powerplatform.microsoft.com
-microsoft.com buildstarter-svc.corp.microsoft.com                          buildstarter-svc.corp.microsoft.com
-microsoft.com creditnote-int.payoutmanagement.pi.dps.microsoft.com         creditnote-int.payoutmanagement.pi.dps.microsoft.com
-microsoft.com sgrm.microsoft.com                                           *.sgrm.microsoft.com|sgrm.microsoft.com
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|web.powerva.microsoft.com
-microsoft.com sustainability.microsoft.com                                 *.sustainability.microsoft.com|sustainability.microsoft.com
-microsoft.com admin.powerapps.com                                          admin.businessplatform.microsoft.com|admin.flow.microsoft.com
-microsoft.com admin.powerapps.com                                          admin.businessplatform.microsoft.com|admin.flow.microsoft.com
-microsoft.com throttling-ssl.groups-throttling-prod.data.microsoft.com     throttling-ssl.groups-throttling-prod.data.microsoft.com
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|web.powerva.microsoft.com
-microsoft.com adminanalytics.powerplatform.microsoft.com                   *.adminanalytics.powerplatform.microsoft.com|*.dfanalytics.powerplatform.microsoft.com|adminanalytics.powerplatform.microsoft.com|dfanalytics.powerplatfor…
-microsoft.com throttling-ssl.groups-throttling-prod.data.microsoft.com     throttling-ssl.groups-throttling-prod.data.microsoft.com
-microsoft.com csanalytics.powerplatform.microsoft.com                      *.csanalytics.powerplatform.microsoft.com|csanalytics.powerplatform.microsoft.com
-microsoft.com throttling-ssl.groups-throttling-prod.data.microsoft.com     throttling-ssl.groups-throttling-prod.data.microsoft.com
-microsoft.com throttling-ssl.groups-throttling-prod.data.microsoft.com     throttling-ssl.groups-throttling-prod.data.microsoft.com
-microsoft.com throttling-ssl.groups-throttling-prod.data.microsoft.com     throttling-ssl.groups-throttling-prod.data.microsoft.com
-microsoft.com throttling-ssl.groups-throttling-prod.data.microsoft.com     throttling-ssl.groups-throttling-prod.data.microsoft.com
-microsoft.com throttling-ssl.groups-throttling-prod.data.microsoft.com     throttling-ssl.groups-throttling-prod.data.microsoft.com
-microsoft.com throttling-ssl.groups-throttling-prod.data.microsoft.com     throttling-ssl.groups-throttling-prod.data.microsoft.com
-microsoft.com throttling-ssl.groups-throttling-ppe.data.microsoft.com      throttling-ssl.groups-throttling-ppe.data.microsoft.com
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com kepler.powerplatform.microsoft.com                           *.kepler.powerplatform.microsoft.com|kepler.powerplatform.microsoft.com
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|web.powerva.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com csanalytics.powerplatform.microsoft.com                      *.csanalytics.powerplatform.microsoft.com|csanalytics.powerplatform.microsoft.com
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com kepler.powerplatform.microsoft.com                           *.kepler.powerplatform.microsoft.com|kepler.powerplatform.microsoft.com
-microsoft.com service.paymentstransaction.commerce.microsoft.com           service.paymentstransaction.commerce.microsoft.com
-microsoft.com ts-groupsadmin.targetingservice.services.microsoft.com       ts-groupsadmin.targetingservice.services.microsoft.com
-microsoft.com *.apps.microsoft.com                                         *.apps.microsoft.com
-microsoft.com staging.bigcatalog-ac.commerce.microsoft.com                 *.staging-dcatbackend.mp.microsoft.com|*.staging.bigcatalog-ac.commerce.microsoft.com|*.stagingretrieval-dcatbackend.mp.microsoft.com|staging.bigcatalog-a…
-microsoft.com primarycert.api-dev.support.microsoft.com                    primarycert.api-dev.support.microsoft.com
-microsoft.com *.data.develop.api.speech.microsoft.com                      *.data.develop.api.speech.microsoft.com|data.develop.api.speech.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com api.powerva.microsoft.com                                    api.powerva.microsoft.com
-microsoft.com learningpathuat.microsoft.com                                learningpathuat.microsoft.com
-microsoft.com msgtarecruitinghub.microsoft.com                             msgtarecruitinghub.microsoft.com
-microsoft.com msgtarecruitinghub.microsoft.com                             msgtarecruitinghub.microsoft.com
-microsoft.com test.csanalytics.powerplatform.microsoft.com                 *.test.csanalytics.powerplatform.microsoft.com|csanalytics-test.powerplatform.microsoft.com|test.csanalytics.powerplatform.microsoft.com
-microsoft.com tip.admin.powerplatform.microsoft.com                        tip.admin.powerplatform.microsoft.com
-microsoft.com rules-int.microsoft.com                                      rules-int.microsoft.com
-microsoft.com msaasqueryserviceapi.trafficmanager.net                      msaasqueryserviceapi.support.microsoft.com
-microsoft.com msaasqueryserviceapi.trafficmanager.net                      msaasqueryserviceapi.support.microsoft.com
-microsoft.com msaasqueryserviceapi.trafficmanager.net                      msaasqueryserviceapi.support.microsoft.com
-microsoft.com msaasqueryserviceapi.trafficmanager.net                      msaasqueryserviceapi.support.microsoft.com
-microsoft.com ops.dev.serviceshub.microsoft.com                            ops.dev.serviceshub.microsoft.com
-microsoft.com kepler.powerplatform.microsoft.com                           *.kepler.powerplatform.microsoft.com|kepler.powerplatform.microsoft.com
-microsoft.com dccareerhubstage.microsoft.com                               dccareerhubstage.microsoft.com
-microsoft.com 1eslivesecrets.microsoft.com                                 1eslivesecrets.microsoft.com
-microsoft.com egrcpoc.microsoft.com                                        egrcpoc.microsoft.com
-microsoft.com egrcuat.microsoft.com                                        egrcuat.microsoft.com
-microsoft.com egrcdev.microsoft.com                                        egrcdev.microsoft.com
-microsoft.com cmgatewaymtgeo.gateway.configmgr.manage-int.microsoft.com    cmgatewaymtgeo.gateway.configmgr.manage-int.microsoft.com
-microsoft.com mysignins.microsoft.com                                      api.mysignins.microsoft.com|mysignins.microsoft.com
-microsoft.com dynamics.microsoft.com                                       dynamics.microsoft.com|prod.geneva.keyvault.dynamics.microsoft.com
-microsoft.com powerbi.microsoft.com                                        powerbi.microsoft.com|prod.geneva.keyvault.powerbi.microsoft.com
-microsoft.com powerapps.microsoft.com                                      powerapps.microsoft.com|prod.geneva.keyvault.powerapps.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com firstparty.rnr-dev.ms                                        ratingsedge-dev.rnr.microsoft.com
-microsoft.com client-cvs.ratingsedge-ppe.rnr.microsoft.com                 client-cvs.ratingsedge-ppe.rnr.microsoft.com
-microsoft.com dev.spoolchatgateway.microsoft.com                           dev.spoolchatgateway.microsoft.com
-microsoft.com apac.substratesync.teams.microsoft.com                       apac.substratesync.teams.microsoft.com
-microsoft.com emea.substratesync.teams.microsoft.com                       emea.substratesync.teams.microsoft.com
-microsoft.com amer.substratesync.teams.microsoft.com                       amer.substratesync.teams.microsoft.com
-microsoft.com *.ali.myworkspace.microsoft.com                              *.ali.myworkspace.microsoft.com
-microsoft.com ieb2-amp-prod-westus.cms.microsoft.com                       ieb2-amp-prod-westus.cms.microsoft.com
-microsoft.com ieb-amp-prod-westus.cms.microsoft.com                        ieb-amp-prod-westus.cms.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com ieb2-amp-prod-northeu.cms.microsoft.com                      ieb2-amp-prod-northeu.cms.microsoft.com
-microsoft.com ieb-amp-prod-northeu.cms.microsoft.com                       ieb-amp-prod-northeu.cms.microsoft.com
-microsoft.com ieb2-amp-prod-eastus.cms.microsoft.com                       ieb2-amp-prod-eastus.cms.microsoft.com
-microsoft.com ieb-amp-prod-eastus.cms.microsoft.com                        ieb-amp-prod-eastus.cms.microsoft.com
-microsoft.com approvalserviceuat.microsoft.com                             approvalserviceuat.microsoft.com
-microsoft.com ieb2-amp-prod-eastap.cms.microsoft.com                       ieb2-amp-prod-eastap.cms.microsoft.com
-microsoft.com cmgatewaysigning.gateway.configmgr.manage-int.microsoft.com  cmgatewaysigning.gateway.configmgr.manage-int.microsoft.com
-microsoft.com ieb-amp-prod-eastap.cms.microsoft.com                        ieb-amp-prod-eastap.cms.microsoft.com
-microsoft.com commonux-canary.dps.microsoft.com                            commonux-canary.dps.microsoft.com
-microsoft.com ieb2-rt-prod-westcenus.cms.microsoft.com                     ieb2-rt-prod-westcenus.cms.microsoft.com
-microsoft.com ieb-rt-prod-westcenus.cms.microsoft.com                      ieb-rt-prod-westcenus.cms.microsoft.com
-microsoft.com salesplatformux-test.l2o.microsoft.com                       int.geneva.keyvault.salesplatformux-test.l2o.microsoft.com|salesplatformux-test.l2o.microsoft.com
-microsoft.com jp.auditservice.teams.microsoft.com                          auditservice.teams.microsoft.com|jp.auditservice.teams.microsoft.com
-microsoft.com eu.auditservice.teams.microsoft.com                          auditservice.teams.microsoft.com|eu.auditservice.teams.microsoft.com
-microsoft.com us.auditservice.teams.microsoft.com                          auditservice.teams.microsoft.com|us.auditservice.teams.microsoft.com
-microsoft.com ieb2-rt-prod-northeu.cms.microsoft.com                       ieb2-rt-prod-northeu.cms.microsoft.com
-microsoft.com ieb-rt-prod-northeu.cms.microsoft.com                        ieb-rt-prod-northeu.cms.microsoft.com
-microsoft.com ieb2-rt-prod-eastus.cms.microsoft.com                        ieb2-rt-prod-eastus.cms.microsoft.com
-microsoft.com ieb-rt-prod-eastus.cms.microsoft.com                         ieb-rt-prod-eastus.cms.microsoft.com
-microsoft.com ieb-rt-prod-eastap.cms.microsoft.com                         ieb-rt-prod-eastap.cms.microsoft.com
-microsoft.com *.nam.test.daas.microsoft.com                                *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com query-preview-internal-ci-westus.cms.microsoft.com           query-preview-internal-ci-westus.cms.microsoft.com
-microsoft.com *.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com ieb2-rt-prod-eastap.cms.microsoft.com                        ieb2-rt-prod-eastap.cms.microsoft.com
-microsoft.com api.preview.powerva.microsoft.com                            api.preview.powerva.microsoft.com
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|web.powerva.microsoft.com
-microsoft.com cred.microsoft.com                                           cred.microsoft.com
-microsoft.com asimov-xflow-int.corp.microsoft.com                          asimov-xflow-int.corp.microsoft.com|xflow-int.corp.microsoft.com
-microsoft.com coral-prod.prod.startclean.microsoft.com                     coral-prod.prod.startclean.microsoft.com
-microsoft.com build-prxy37-15.ntdev.corp.microsoft.com                     build-prxy37-15.ntdev.corp.microsoft.com|WinProxyBLD011.sys-ntgroup.ntdev.microsoft.com|WinProxyBLD012.sys-ntgroup.ntdev.microsoft.com|WinProxyBLD013.sys-…
-microsoft.com build-prxy37-14.ntdev.corp.microsoft.com                     build-prxy37-14.ntdev.corp.microsoft.com|WinProxyBLD001.sys-ntgroup.ntdev.microsoft.com|WinProxyBLD002.sys-ntgroup.ntdev.microsoft.com|WinProxyBLD003.sys-…
-microsoft.com *.tts-frontend.speech.microsoft.com                          *.tts-frontend.speech.microsoft.com|*.tts.speech.microsoft.com|*.voice.speech.microsoft.com
-microsoft.com *.jabangaslab.myworkspace.microsoft.com                      *.jabangaslab.myworkspace.microsoft.com
-microsoft.com whiteboard.microsoft.com                                     eu.whiteboard.microsoft.com|us.whiteboard.microsoft.com|whiteboard.microsoft.com
-microsoft.com whiteboard.microsoft.com                                     eu.whiteboard.microsoft.com|us.whiteboard.microsoft.com|whiteboard.microsoft.com
-microsoft.com test.supplier-api.microsoft.com                              test.supplier-api.microsoft.com
-microsoft.com *.bra.daas.microsoft.com                                     *.bra.daas.microsoft.com|*.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.bra.daas.microsoft.com|*.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.au.daas.microsoft.com|*.daas.microsoft.com
-microsoft.com *.au.daas.microsoft.com                                      *.au.daas.microsoft.com|*.daas.microsoft.com
-microsoft.com main.prod.marketplaceapi.azure.com                           marketplaceapi.microsoft.com
-microsoft.com contactcentrequality.microsoft.com                           contactcentrequality.microsoft.com
-microsoft.com hfpb365lab.myworkspace.microsoft.com                         *.hfpb365lab.myworkspace.microsoft.com|hfpb365lab.myworkspace.microsoft.com
-microsoft.com main.prod.marketplaceapi.azure.com                           marketplaceapi.microsoft.com
-microsoft.com main.prod.marketplaceapi.azure.com                           marketplaceapi.microsoft.com
-microsoft.com main.prod.marketplaceapi.azure.com                           marketplaceapi.microsoft.com
-microsoft.com binarysigning.pq-df.microsoft.com                            binarysigning.pq-df.microsoft.com
-microsoft.com staging.bigcatalog-ac.commerce.microsoft.com                 *.staging-dcatbackend.mp.microsoft.com|*.staging.bigcatalog-ac.commerce.microsoft.com|*.stagingretrieval-dcatbackend.mp.microsoft.com|staging.bigcatalog-a…
-microsoft.com clientauth.geneva.keyvault.ec.vl.ord.ots.microsoft.com       clientauth.geneva.keyvault.ec.vl.ord.ots.microsoft.com
-microsoft.com sustainability.microsoft.com                                 *.sustainability.microsoft.com|sustainability.microsoft.com
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com api.powerva.microsoft.com                                    api.powerva.microsoft.com
-microsoft.com onecert-test.microsoft.com                                   onecert-test.microsoft.com
-microsoft.com stager.df.muv6.microsoft.com                                 *.na.stager.df.muv6.microsoft.com|na.stager.df.muv6.microsoft.com|stager.df.muv6.microsoft.com
-microsoft.com c.dogfood.ctrl.ml.teams.microsoft.com                        *.c.ipdns.dogfood.ctrl.ml.teams.microsoft.com|*.c.west.dogfood.ctrl.ml.teams.microsoft.com|c.dogfood.ctrl.ml.teams.microsoft.com|c.west.dogfood.ctrl.ml.te…
-microsoft.com fr.azurefds.microsoft.com                                    fr.azurefds.microsoft.com
-microsoft.com msrc-ppe.microsoft.com                                       msrc-ppe.microsoft.com
-microsoft.com c.dogfood.ctrl.ml.teams.microsoft.com                        *.c.east.dogfood.ctrl.ml.teams.microsoft.com|*.c.ipdns.dogfood.ctrl.ml.teams.microsoft.com|c.dogfood.ctrl.ml.teams.microsoft.com|c.east.dogfood.ctrl.ml.te…
-microsoft.com portal-legacy-dev.gtoinvoicing.microsoft.com                 portal-legacy-dev.gtoinvoicing.microsoft.com
-microsoft.com portal-legacy-dev.gtoinvoicing.microsoft.com                 portal-legacy-dev.gtoinvoicing.microsoft.com
-microsoft.com wd-ppe-sseop-syncsvc.se.wd.microsoft.com                     wd-ppe-sseop-syncsvc.se.wd.microsoft.com
-microsoft.com portal-dev.gtoinvoicing.microsoft.com                        portal-dev.gtoinvoicing.microsoft.com
-microsoft.com portal-dev.gtoinvoicing.microsoft.com                        portal-dev.gtoinvoicing.microsoft.com
-microsoft.com api-dev.gtoinvoicing.microsoft.com                           api-dev.gtoinvoicing.microsoft.com
-microsoft.com api-dev.gtoinvoicing.microsoft.com                           api-dev.gtoinvoicing.microsoft.com
-microsoft.com *.junosbidi.microsoft.com                                    *.junosbidi.microsoft.com
-microsoft.com mediabuilderacc-sourcelookup.trafficmanager.net              mediabuilderacc-sourcelookup.microsoft.com
-microsoft.com mediabuilderacc-dropmap.trafficmanager.net                   mediabuilderacc-dropmap.microsoft.com
-microsoft.com mediabuilderacc-tools.trafficmanager.net                     mediabuilderacc-tools.microsoft.com
-microsoft.com mediabuilderacc-media.trafficmanager.net                     mediabuilderacc-media.microsoft.com
-microsoft.com mediabuilderacc.trafficmanager.net                           mediabuilderacc.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com hypernet-onboarding.corp.microsoft.com                       hypernet-onboarding.corp.microsoft.com
-microsoft.com *.mgmt.dl.wd.microsoft.com                                   *.mgmt.dl.wd.microsoft.com
-microsoft.com ppe.token.docs.microsoft.com                                 ppe.token.docs.microsoft.com
-microsoft.com e360wsus.gtm.corp.microsoft.com                              aze360sea1.redmond.corp.microsoft.com|aze360sea2.redmond.corp.microsoft.com|aze360sea3.redmond.corp.microsoft.com|aze360sea4.redmond.corp.microsoft.com|az…
-microsoft.com rnrsqlvmbcp.redmond.corp.microsoft.com                       rnrsqlvmbcp.redmond.corp.microsoft.com
-microsoft.com *.ppe.sr.wd.microsoft.com                                    *.ppe.sr.wd.microsoft.com
-microsoft.com *.ppe.mgmt.sr.wd.microsoft.com                               *.ppe.mgmt.sr.wd.microsoft.com
-microsoft.com healthcare.gcc.teams.microsoft.com                           healthcare.gcc.teams.microsoft.com
-microsoft.com versta.microsoft.com                                         versta.microsoft.com
-microsoft.com versta.microsoft.com                                         versta.microsoft.com
-microsoft.com versta.microsoft.com                                         versta.microsoft.com
-microsoft.com afssharemetasigning-test.one.microsoft.com                   afssharemetasigning-test.one.microsoft.com
-microsoft.com mam-us.func.cp.wd.microsoft.com                              mam-us.func.cp.wd.microsoft.com
-microsoft.com dev.clouddc2.syslogclient.telemetry.microsoft.com            dev.clouddc2.syslogclient.telemetry.microsoft.com
-microsoft.com dev.clouddc2.syslogclient.telemetry.microsoft.com            dev.clouddc2.syslogclient.telemetry.microsoft.com
-microsoft.com rpfe.classic.cp.microsoft.com                                rpfe.classic.cp.microsoft.com
-microsoft.com dev.clouddc2.syslogclient.telemetry.microsoft.com            dev.clouddc2.syslogclient.telemetry.microsoft.com
-microsoft.com dev.clouddc2.syslogclient.telemetry.microsoft.com            dev.clouddc2.syslogclient.telemetry.microsoft.com
-microsoft.com dev.clouddc2.syslogclient.telemetry.microsoft.com            dev.clouddc2.syslogclient.telemetry.microsoft.com
-microsoft.com dev.clouddc2.syslogclient.telemetry.microsoft.com            dev.clouddc2.syslogclient.telemetry.microsoft.com
-microsoft.com dev.clouddc2.syslogclient.telemetry.microsoft.com            dev.clouddc2.syslogclient.telemetry.microsoft.com
-microsoft.com *.vkonev.dev.space.microsoft.com                             *.vkonev.dev.space.microsoft.com
-microsoft.com dev.clouddc2.syslogclient.telemetry.microsoft.com            dev.clouddc2.syslogclient.telemetry.microsoft.com
-microsoft.com api.cpm.account.microsoft.com                                api.cpm.account.microsoft.com
-microsoft.com api.cpm.account.microsoft.com                                api.cpm.account.microsoft.com
-microsoft.com mam-us.func.cp.wd.microsoft.com                              mam-us.func.cp.wd.microsoft.com
-microsoft.com versta.microsoft.com                                         versta.microsoft.com
-microsoft.com api.msrc-ppe.microsoft.com                                   api.msrc-ppe.microsoft.com
-microsoft.com mysignins.microsoft.com                                      api.mysignins.microsoft.com|mysignins.microsoft.com
-microsoft.com ccp.pulsarx.microsoft.com                                    ccp.pulsarx.microsoft.com
-microsoft.com adminanalytics.powerplatform.microsoft.com                   *.adminanalytics.powerplatform.microsoft.com|*.dfanalytics.powerplatform.microsoft.com|adminanalytics.powerplatform.microsoft.com|dfanalytics.powerplatfor…
-microsoft.com web.preview.powerva.microsoft.com                            *.web.preview.powerva.microsoft.com|web.preview.powerva.microsoft.com
-microsoft.com api.preview.powerva.microsoft.com                            api.preview.powerva.microsoft.com
-microsoft.com vi.microsoft.com                                             vi.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.prod.startclean.microsoft.com                              *.prod.startclean.microsoft.com
-microsoft.com *.nam.vaas.daas.microsoft.com                                *.nam.vaas.daas.microsoft.com|*.vaas.daas.microsoft.com
-microsoft.com *.vaas.daas.microsoft.com                                    *.nam.vaas.daas.microsoft.com|*.vaas.daas.microsoft.com
-microsoft.com *.nam.vaas.daas.microsoft.com                                *.nam.vaas.daas.microsoft.com|*.vaas.daas.microsoft.com
-microsoft.com *.vaas.daas.microsoft.com                                    *.nam.vaas.daas.microsoft.com|*.vaas.daas.microsoft.com
-microsoft.com pps.paymod.cp.microsoft.com                                  pps.paymod.cp.microsoft.com
-microsoft.com portal.office.com                                            admin-ignite.microsoft.com|admin-sdf.microsoft.com|admin.microsoft.com|portal.microsoft.com
-microsoft.com admin.powerapps.com                                          admin.businessplatform.microsoft.com|admin.flow.microsoft.com
-microsoft.com api.cpm.account.microsoft.com                                api.cpm.account.microsoft.com
-microsoft.com microsoftedge.microsoft.com                                  microsoftedge.microsoft.com
-microsoft.com pceilo.gtm.cae.microsoft.com                                 pceilo.gtm.cae.microsoft.com
-microsoft.com identitytriagelopper.redmond.corp.microsoft.com              identitytriagelopper.redmond.corp.microsoft.com
-microsoft.com iks-ppe.ideas.microsoft.com                                  iks-ppe.ideas.microsoft.com
-microsoft.com iks-test.ideas.microsoft.com                                 iks-test.ideas.microsoft.com
-microsoft.com *.mec.infra.teams.microsoft.com                              *.mec.infra.teams.microsoft.com
-microsoft.com devicetest.teams.microsoft.com                               devicetest.teams.microsoft.com
-microsoft.com devicetest-ppe.teams.microsoft.com                           devicetest-ppe.teams.microsoft.com
-microsoft.com devicetest-canary.teams.microsoft.com                        devicetest-canary.teams.microsoft.com
-microsoft.com reconintelligence.microsoft.com                              reconintelligence.microsoft.com
-microsoft.com a-uswe-canary.prod.templates.tac.teams.microsoft.com         a-uswe-canary-cosmic.prod.templates.tac.teams.microsoft.com|a-uswe-canary.prod.templates.tac.teams.microsoft.com|canary.prod.templates.tac.teams.microsoft…
-microsoft.com *.tts-frontend.speech.microsoft.com                          *.tts-frontend.speech.microsoft.com|*.tts.speech.microsoft.com|*.voice.speech.microsoft.com
-microsoft.com api.reconintelligenceprod.microsoft.com                      api.reconintelligenceprod.microsoft.com
-microsoft.com *.tts-frontend.speech.microsoft.com                          *.tts-frontend.speech.microsoft.com|*.tts.speech.microsoft.com|*.voice.speech.microsoft.com
-microsoft.com *.tts-frontend.speech.microsoft.com                          *.tts-frontend.speech.microsoft.com|*.tts.speech.microsoft.com|*.voice.speech.microsoft.com
-microsoft.com *.tts-frontend.speech.microsoft.com                          *.tts-frontend.speech.microsoft.com|*.tts.speech.microsoft.com|*.voice.speech.microsoft.com
-microsoft.com *.tts-frontend.speech.microsoft.com                          *.tts-frontend.speech.microsoft.com|*.tts.speech.microsoft.com|*.voice.speech.microsoft.com
-microsoft.com *.tts-frontend.speech.microsoft.com                          *.tts-frontend.speech.microsoft.com|*.tts.speech.microsoft.com|*.voice.speech.microsoft.com
-microsoft.com ic3he-prod.teams.microsoft.com                               ic3he-df.teams.microsoft.com|ic3he-dfcus.teams.microsoft.com|ic3he-dfeus.teams.microsoft.com|ic3he-ge-prod.teams.microsoft.com|ic3he-prod.teams.microsoft.…
-microsoft.com *.tts-frontend.speech.microsoft.com                          *.tts-frontend.speech.microsoft.com|*.tts.speech.microsoft.com|*.voice.speech.microsoft.com
-microsoft.com partnercenter-aircapi.microsoft.com                          partnercenter-aircapi.microsoft.com
-microsoft.com partnercenter-aircapi.microsoft.com                          partnercenter-aircapi.microsoft.com
-microsoft.com adinsight.ads.microsoft.com                                  adinsight.ads.microsoft.com|adinsight.beta.ads.microsoft.com|adinsight.beta.bingads.microsoft.com|adinsight.bingads.microsoft.com
-microsoft.com api.cpm.account.microsoft.com                                api.cpm.account.microsoft.com
-microsoft.com service.RecOrder-INT.commerce.microsoft.com                  service.RecOrder-INT.commerce.microsoft.com
-microsoft.com *.tts-frontend.speech.microsoft.com                          *.tts-frontend.speech.microsoft.com|*.tts.speech.microsoft.com|*.voice.speech.microsoft.com
-microsoft.com *.tts-frontend.speech.microsoft.com                          *.tts-frontend.speech.microsoft.com|*.tts.speech.microsoft.com|*.voice.speech.microsoft.com
-microsoft.com *.tts-frontend.speech.microsoft.com                          *.tts-frontend.speech.microsoft.com|*.tts.speech.microsoft.com|*.voice.speech.microsoft.com
-microsoft.com *.tts-frontend.speech.microsoft.com                          *.tts-frontend.speech.microsoft.com|*.tts.speech.microsoft.com|*.voice.speech.microsoft.com
-microsoft.com internal.evergreen.microsoft.com                             internal.evergreen.microsoft.com
-microsoft.com msgtarecruitinghubint.microsoft.com                          msgtarecruitinghubint.microsoft.com
-microsoft.com *.dg.myworkspace.microsoft.com                               *.dg.myworkspace.microsoft.com
-microsoft.com wd.ppe.encrypt.se.wd.microsoft.com                           wd.ppe.encrypt.se.wd.microsoft.com
-microsoft.com hrapiuat.microsoft.com                                       hrapiuat.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com enterprisereportingjournal.cp.microsoft.com                  enterprisereportingjournal.cp.microsoft.com
-microsoft.com adinsight.ads.microsoft.com                                  adinsight.ads.microsoft.com|adinsight.beta.ads.microsoft.com|adinsight.beta.bingads.microsoft.com|adinsight.bingads.microsoft.com
-microsoft.com fp.wd.microsoft.com                                          *.fp.wd.microsoft.com|fp.wd.microsoft.com|psapp.microsoft.com|psappeu.microsoft.com
-microsoft.com fp.wd.microsoft.com                                          *.fp.wd.microsoft.com|fp.wd.microsoft.com|psapp.microsoft.com|psappeu.microsoft.com
-microsoft.com *.gafaniz.myworkspace.microsoft.com                          *.gafaniz.myworkspace.microsoft.com
-microsoft.com fp.wd.microsoft.com                                          *.fp.wd.microsoft.com|fp.wd.microsoft.com|psapp.microsoft.com|psappeu.microsoft.com
-microsoft.com supportchannels.services.microsoft.com                       supportchannels.services.microsoft.com
-microsoft.com WdatpApi-PRD.trafficmanager.net                              api-df.security.microsoft.com|api-df.securitycenter.microsoft.com|api-eu.security.microsoft.com|api-eu.securitycenter.microsoft.com|api-eu3.security.micro…
-microsoft.com api.notification.microsoft.com                               api.notification.microsoft.com
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com adminanalytics.powerplatform.microsoft.com                   *.adminanalytics.powerplatform.microsoft.com|*.dfanalytics.powerplatform.microsoft.com|adminanalytics.powerplatform.microsoft.com|dfanalytics.powerplatfor…
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com emsl.partners.extranet.microsoft.com                         emsl.partners.extranet.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.uk.daas.microsoft.com
-microsoft.com *.uk.daas.microsoft.com                                      *.daas.microsoft.com|*.uk.daas.microsoft.com
-microsoft.com vi.microsoft.com                                             vi.microsoft.com
-microsoft.com healthprobe.gateway.cp.microsoft.com                         healthprobe.gateway.cp.microsoft.com
-microsoft.com api.cp.microsoft.com                                         *.api.cp.microsoft.com|api.cp.microsoft.com|commerceaccount.bn4.cp.microsoft.com|commerceaccount.co1.cp.microsoft.com|commerceaccount.cp.microsoft.com|com…
-microsoft.com contractsvlcm.partners.extranet.microsoft.com                contractsvlcm.partners.extranet.microsoft.com
-microsoft.com fp.wd.microsoft.com                                          *.fp.wd.microsoft.com|fp.wd.microsoft.com|psapp.microsoft.com|psappeu.microsoft.com
-microsoft.com fp.wd.microsoft.com                                          *.fp.wd.microsoft.com|fp.wd.microsoft.com|psapp.microsoft.com|psappeu.microsoft.com
-microsoft.com *.notify.windows.com                                         *.cdpcs.access.microsoft.com|*.cdpcs.microsoft.com|*.romeccs.microsoft.com|cdpcs.access.microsoft.com|cdpcs.microsoft.com|romeccs.microsoft.com
-microsoft.com *.notify.windows.com                                         *.cdpcs.access.microsoft.com|*.cdpcs.microsoft.com|*.romeccs.microsoft.com|cdpcs.access.microsoft.com|cdpcs.microsoft.com|romeccs.microsoft.com
-microsoft.com *.notify.windows.com                                         *.cdpcs.access.microsoft.com|*.cdpcs.microsoft.com|*.romeccs.microsoft.com|cdpcs.access.microsoft.com|cdpcs.microsoft.com|romeccs.microsoft.com
-microsoft.com fp.wd.microsoft.com                                          *.fp.wd.microsoft.com|fp.wd.microsoft.com|psapp.microsoft.com|psappeu.microsoft.com
-microsoft.com fp.wd.microsoft.com                                          *.fp.wd.microsoft.com|fp.wd.microsoft.com|psapp.microsoft.com|psappeu.microsoft.com
-microsoft.com fp.wd.microsoft.com                                          *.fp.wd.microsoft.com|fp.wd.microsoft.com|psapp.microsoft.com|psappeu.microsoft.com
-microsoft.com *.controls.account.microsoft.com                             *.controls.account.microsoft.com|controls.account.microsoft.com
-microsoft.com contracts.eagreements.microsoft.com                          contracts.eagreements.microsoft.com
-microsoft.com amupdatedl.microsoft.com                                     amupdatedl.microsoft.com|amupdatedl1.microsoft.com|amupdatedl2.microsoft.com|amupdatedl3.microsoft.com|amupdatedl4.microsoft.com|amupdatedl5.microsoft.com…
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.ind.daas.microsoft.com
-microsoft.com *.ind.daas.microsoft.com                                     *.daas.microsoft.com|*.ind.daas.microsoft.com
-microsoft.com westus2.sr.speech.microsoft.com                              westus2.sr.speech.microsoft.com
-microsoft.com westus2.cris.speech.microsoft.com                            westus2.cris.speech.microsoft.com
-microsoft.com westus2.ggs.speech.microsoft.com                             westus2.ggs.speech.microsoft.com
-microsoft.com westus2.dpp.speech.microsoft.com                             westus2.dpp.speech.microsoft.com
-microsoft.com westus2.dgs.speech.microsoft.com                             westus2.dgs.speech.microsoft.com
-microsoft.com westus2.sr.speech.microsoft.com                              westus2.sr.speech.microsoft.com
-microsoft.com westus2.cris.speech.microsoft.com                            westus2.cris.speech.microsoft.com
-microsoft.com westus2.ggs.speech.microsoft.com                             westus2.ggs.speech.microsoft.com
-microsoft.com westus2.dpp.speech.microsoft.com                             westus2.dpp.speech.microsoft.com
-microsoft.com westus2.dgs.speech.microsoft.com                             westus2.dgs.speech.microsoft.com
-microsoft.com ccp.pulsarx.microsoft.com                                    ccp.pulsarx.microsoft.com
-microsoft.com api.amt.microsoft.com                                        api.amt.microsoft.com
-microsoft.com *.analytics.speech.microsoft.com                             *.analytics.speech.microsoft.com|analytics.speech.microsoft.com
-microsoft.com consent-prod.serviceshub.microsoft.com                       consent-prod.serviceshub.microsoft.com
-microsoft.com *.analytics.develop.api.speech.microsoft.com                 *.analytics.develop.api.speech.microsoft.com|analytics.develop.api.speech.microsoft.com
-microsoft.com api.msrc.microsoft.com                                       api.msrc.microsoft.com
-microsoft.com glscommerce-prod.microsoft.com                               *.glscommerce-prod.microsoft.com|*.glscommerce.microsoft.com|glscommerce-prod.microsoft.com|glscommerce.microsoft.com|purchase.glscommerce.microsoft.com
-microsoft.com ccp.pulsarx-int.microsoft.com                                ccp.pulsarx-int.microsoft.com
-microsoft.com westus.commands.runtime.speech.microsoft.com                 australiaeast.commands.runtime.speech.microsoft.com|canadacentral.commands.runtime.speech.microsoft.com|centralindia.commands.runtime.speech.microsoft.com…
-microsoft.com australiaeast.commands.speech.microsoft.com                  australiaeast.commands.speech.microsoft.com|canadacentral.commands.speech.microsoft.com|centralindia.commands.speech.microsoft.com|centralus.commands.spee…
-microsoft.com senseiservices-ppe-aks.microsoft.com                         senseiservices-ppe-aks.microsoft.com
-microsoft.com bencertificate.redmond.corp.microsoft.com                    bencertificate.redmond.corp.microsoft.com
-microsoft.com storedvaluecore.cp.microsoft.com                             storedvaluecore.cp.microsoft.com
-microsoft.com api.preview.powerva.microsoft.com                            api.preview.powerva.microsoft.com
-microsoft.com senseiservices-ppe-aks.microsoft.com                         senseiservices-ppe-aks.microsoft.com
-microsoft.com ic3mdmdashboardeditor.esprg.microsoft.com                    ic3mdmdashboardeditor.esprg.microsoft.com|prod.geneva.keyvault.ic3mdmdashboardeditor.esprg.microsoft.com
-microsoft.com mslcatalogimagesuat.microsoft.com                            mslcatalogimagesuat.microsoft.com
-microsoft.com packages.microsoft.com                                       gcs.geneva.keyvault.packages.microsoft.com|packages.microsoft.com
-microsoft.com tux-devrepo.corp.microsoft.com                               tux-devrepo.corp.microsoft.com
-microsoft.com financialspricing.fp.commerce.microsoft.com                  financialspricing.fp.commerce.microsoft.com
-microsoft.com abc-fabric-er-production.corp.microsoft.com                  abc-fabric-er-production.corp.microsoft.com
-microsoft.com abc-fabric-staging.corp.microsoft.com                        abc-fabric-staging.corp.microsoft.com
-microsoft.com csharp.net                                                   answerdesk.microsoft.com
-microsoft.com *.exp.microsoft.com                                          *.exp.microsoft.com|exp.microsoft.com
-microsoft.com *.exp.microsoft.com                                          *.exp.microsoft.com|exp.microsoft.com
-microsoft.com adnotifications.windowsazure.com                             *.strongauthenticationservice.auth.microsoft.com|strongauthenticationservice.auth.microsoft.com
-microsoft.com *.controls.account.microsoft.com                             *.controls.account.microsoft.com|controls.account.microsoft.com
-microsoft.com adinsight.ads-int.microsoft.com                              adinsight.ads-int.microsoft.com|adinsight.beta.ads-int.microsoft.com|adinsight.beta.si.bingads.microsoft.com|adinsight.si.bingads.microsoft.com
-microsoft.com centraluseuap.api.cognitive.microsoft.com                    centraluseuap.api.cognitive.microsoft.com|centraluseuap.dev.cognitive.microsoft.com
-microsoft.com encryption.appmanagement.activedirectory.microsoft.com       encryption.appmanagement.activedirectory.microsoft.com
-microsoft.com encryption.appmanagement.activedirectory-ppe.microsoft.com   encryption.appmanagement.activedirectory-ppe.microsoft.com
-microsoft.com spocontentazureclient.dprodmgd301.spocerts.microsoft.com     spocontentazureclient.dprodmgd301.spocerts.microsoft.com
-microsoft.com *.cognitiveservices.azure.com                                *.api.cognitive.microsoft.com|*.dev.cognitive.microsoft.com
-microsoft.com sustainability.microsoft.com                                 *.sustainability.microsoft.com|sustainability.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com adinsight.ads-int.microsoft.com                              adinsight.ads-int.microsoft.com|adinsight.beta.ads-int.microsoft.com|adinsight.beta.si.bingads.microsoft.com|adinsight.si.bingads.microsoft.com
-microsoft.com officecdn.microsoft.com                                      *.office.delivery.microsoft.com|*.officecdn.microsoft.com|i.officecdn.microsoft.com|officecdn.microsoft.com
-microsoft.com iceuat.redmond.corp.microsoft.com                            iceuat.redmond.corp.microsoft.com
-microsoft.com androidmamtestservice.microsoft.com                          androidmamtestservice.microsoft.com
-microsoft.com sts.red.ae.microsoft.com                                     *.red.ae.microsoft.com|CUSsts.red.ae.microsoft.com|redsts.red.ae.microsoft.com|sts.red.ae.microsoft.com|UW2sts.red.ae.microsoft.com
-microsoft.com yubiauw202.red.ue.microsoft.com                              yubiauw202.red.ue.microsoft.com
-microsoft.com yubiauw201.red.ue.microsoft.com                              yubiauw201.red.ue.microsoft.com
-microsoft.com command.prod.cms.msn.com                                     command-amp-prod-westus-secondary.cms.microsoft.com|command-amp-prod-westus.cms.microsoft.com
-microsoft.com dev.docs.microsoft.com                                       dev.docs.microsoft.com
-microsoft.com *.dev.startclean.microsoft.com                               *.dev.startclean.microsoft.com
-microsoft.com e360ehdist.corp.microsoft.com                                e360ehdist.corp.microsoft.com
-microsoft.com command.prod.cms.msn.com                                     command-amp-prod-eastus-secondary.cms.microsoft.com|command-amp-prod-eastus.cms.microsoft.com
-microsoft.com spocontentazureclient.dprodmgd105.spocerts.microsoft.com     spocontentazureclient.dprodmgd105.spocerts.microsoft.com
-microsoft.com cosell.microsoft.com                                         cosell.microsoft.com
-microsoft.com msxpartnercenterbridge.preview.microsoft.com                 msxpartnercenterbridge.preview.microsoft.com
-microsoft.com cosell.microsoft.com                                         cosell.microsoft.com
-microsoft.com coral-dev.dev.startclean.microsoft.com                       coral-dev.dev.startclean.microsoft.com
-microsoft.com command-amp-prod-northeu.cms.microsoft.com                   command-amp-prod-northeu-secondary.cms.microsoft.com|command-amp-prod-northeu.cms.microsoft.com
-microsoft.com msxpartnercenterbridge.microsoft.com                         msxpartnercenterbridge.microsoft.com
-microsoft.com spocontentazureclient.prod.spocerts.microsoft.com            spocontentazureclient.prod.spocerts.microsoft.com
-microsoft.com spocontentazureclient.dprodmgd106.spocerts.microsoft.com     spocontentazureclient.dprodmgd106.spocerts.microsoft.com
-microsoft.com spocontentazureclient.prodbubble.spocerts.microsoft.com      spocontentazureclient.prodbubble.spocerts.microsoft.com
-microsoft.com spocontentazureclient.prodbubble.spocerts.microsoft.com      spocontentazureclient.prodbubble.spocerts.microsoft.com
-microsoft.com spocontentazureclient.dprodmgd104.spocerts.microsoft.com     spocontentazureclient.dprodmgd104.spocerts.microsoft.com
-microsoft.com spocontentazureclient.edog.spocerts.microsoft.com            spocontentazureclient.edog.spocerts.microsoft.com
-microsoft.com command-amp-prod-eastap.cms.microsoft.com                    command-amp-prod-eastap-secondary.cms.microsoft.com|command-amp-prod-eastap.cms.microsoft.com
-microsoft.com command-amp-prod-eastap.cms.microsoft.com                    command-amp-prod-eastap-secondary.cms.microsoft.com|command-amp-prod-eastap.cms.microsoft.com
-microsoft.com cre.raas.microsoft.com                                       cre.raas.microsoft.com
-microsoft.com ppe-azureavamgmt-api.microsoft.com                           ppe-azureavamgmt-api.microsoft.com
-microsoft.com ppe-azureava-bot.microsoft.com                               ppe-azureava-bot.microsoft.com
-microsoft.com ppe-azureava-api.microsoft.com                               ppe-azureava-api.microsoft.com
-microsoft.com ppe-azureava-api.microsoft.com                               ppe-azureava-api.microsoft.com
-microsoft.com query-amp-ppe-eastus.cms.microsoft.com                       query-amp-ppe-eastus-secondary.cms.microsoft.com|query-amp-ppe-eastus.cms.microsoft.com
-microsoft.com query-preview-amp-ppe-eastus.cms.microsoft.com               query-preview-amp-ppe-eastus-secondary.cms.microsoft.com|query-preview-amp-ppe-eastus.cms.microsoft.com
-microsoft.com *.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com *.nam.test.daas.microsoft.com                                *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com ipma.microsoft.com                                           ipma.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com heartbeat.securitycenter.windows.com                         gradingplatform.microsoft.com
-microsoft.com suggest.mi.microsoft.com                                     suggest.mi.microsoft.com
-microsoft.com suggest.mi-staging.microsoft.com                             suggest.mi-staging.microsoft.com
-microsoft.com gsmtest1.microsoft.com                                       gsmtest1.microsoft.com
-microsoft.com surveyplatform.microsoft.com                                 surveyplatform.microsoft.com
-microsoft.com admin.powerapps.com                                          admin.businessplatform.microsoft.com|admin.flow.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com *.plmsit.microsoft.com                                       *.plmsit.microsoft.com
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com api.businessappdiscovery.microsoft.com                       *.api.businessappdiscovery.microsoft.com|api.businessappdiscovery.microsoft.com
-microsoft.com admin.powerapps.com                                          admin.businessplatform.microsoft.com|admin.flow.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com shim.prod.cms.amp.microsoft.com                              shim.prod.cms.amp.microsoft.com
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com admin.powerapps.com                                          admin.businessplatform.microsoft.com|admin.flow.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com shdprodstatuswriter.microsoft.com                            shdprodstatuswriter.microsoft.com
-microsoft.com shdprodstatusreader.microsoft.com                            shdprodstatusreader.microsoft.com
-microsoft.com shdprodstatuswriter.microsoft.com                            shdprodstatuswriter.microsoft.com
-microsoft.com tux-devrepo.corp.microsoft.com                               tux-devrepo.corp.microsoft.com
-microsoft.com amupdatedl.microsoft.com                                     amupdatedl.microsoft.com|amupdatedl1.microsoft.com|amupdatedl2.microsoft.com|amupdatedl3.microsoft.com|amupdatedl4.microsoft.com|amupdatedl5.microsoft.com…
-microsoft.com quotecenter.microsoft.com                                    quotecenter.microsoft.com
-microsoft.com quotecenterbackend.l2o.microsoft.com                         quotecenterbackend.l2o.microsoft.com
-microsoft.com quotecenterservice.l2o.microsoft.com                         quotecenterservice.l2o.microsoft.com
-microsoft.com MSFPGATools.geneva.keyvault.corp.microsoft.com               MSFPGATools.geneva.keyvault.corp.microsoft.com
-microsoft.com ldss.l2o.microsoft.com                                       ldss.l2o.microsoft.com
-microsoft.com shdprodstatuswriter.microsoft.com                            shdprodstatuswriter.microsoft.com
-microsoft.com shdprodstatusreader.microsoft.com                            shdprodstatusreader.microsoft.com
-microsoft.com shdprodstatuswriter.microsoft.com                            shdprodstatuswriter.microsoft.com
-microsoft.com shdprodstatusreader.microsoft.com                            shdprodstatusreader.microsoft.com
-microsoft.com shdprodstatuswriter.microsoft.com                            shdprodstatuswriter.microsoft.com
-microsoft.com shdprodstatusreader.microsoft.com                            shdprodstatusreader.microsoft.com
-microsoft.com shdprodstatusreader.microsoft.com                            shdprodstatusreader.microsoft.com
-microsoft.com shdprodstatusreader.microsoft.com                            shdprodstatusreader.microsoft.com
-microsoft.com shdprodstatuswriter.microsoft.com                            shdprodstatuswriter.microsoft.com
-microsoft.com shdprodstatusreader.microsoft.com                            shdprodstatusreader.microsoft.com
-microsoft.com shdprodstatuswriter.microsoft.com                            shdprodstatuswriter.microsoft.com
-microsoft.com shdprodstatusreader.microsoft.com                            shdprodstatusreader.microsoft.com
-microsoft.com shdprodstatusreader.microsoft.com                            shdprodstatusreader.microsoft.com
-microsoft.com shdprodstatuswriter.microsoft.com                            shdprodstatuswriter.microsoft.com
-microsoft.com shdprodstatusreader.microsoft.com                            shdprodstatusreader.microsoft.com
-microsoft.com shdprodstatuswriter.microsoft.com                            shdprodstatuswriter.microsoft.com
-microsoft.com shdprodstatusreader.microsoft.com                            shdprodstatusreader.microsoft.com
-microsoft.com shdprodstatuswriter.microsoft.com                            shdprodstatuswriter.microsoft.com
-microsoft.com shdprodstatusreader.microsoft.com                            shdprodstatusreader.microsoft.com
-microsoft.com shdprodstatuswriter.microsoft.com                            shdprodstatuswriter.microsoft.com
-microsoft.com api.mspim.net                                                myaccess.microsoft.com
-microsoft.com login.windows.net                                            iotauth.microsoft.com|login.microsoft.com|mtlsauth.microsoft.com
-microsoft.com pas.windows.net                                              authorization.microsoft.com
-microsoft.com appmanagement.activedirectory.microsoft.com                  appmanagement.activedirectory-ppe.microsoft.com|appmanagement.activedirectory.microsoft.com
-microsoft.com mygroups.microsoft.com                                       *.myapplications-ppe.microsoft.com|*.myapplications-tip.microsoft.com|*.myapplications.microsoft.com|*.mygroups-ppe.microsoft.com|*.mygroups-tip.microsoft…
-microsoft.com credentials.azure.com                                        canary.strongauthenticationservice.auth.microsoft.com|credentials-ppe.auth.microsoft.com|credentials.auth.microsoft.com|mfavalidation-ppe.auth.microsoft.c…
-microsoft.com identity.microsoft.com                                       applications.microsoft.com|apps.dev.microsoft.com|identity.microsoft.com
-microsoft.com partner.ppe.repmap.microsoft.com                             *.ppe.repmap.microsoft.com|*.prod.repmap.microsoft.com|client.ppe.repmap.microsoft.com|client.prod.repmap.microsoft.com|partner.ppe.repmap.microsoft.com|p…
-microsoft.com myaccount.microsoft.com                                      api.myaccount-ppe.microsoft.com|api.myaccount-tip.microsoft.com|api.myaccount.microsoft.com|api.myworkaccount-ppe.microsoft.com|api.myworkaccount.microsof…
-microsoft.com myaccess.canary.microsoft.com                                myaccess.canary.microsoft.com|myaccess.microsoft.com
-microsoft.com telemetrycollector.microsoft.com                             iamtelemetrycollector-ppe.microsoft.com|iamtelemetrycollector.microsoft.com|telemetrycollector-ppe.microsoft.com|telemetrycollector.microsoft.com
-microsoft.com invitations.microsoft.com                                    invitations.microsoft.com
-microsoft.com shdprodstatuswriter.microsoft.com                            shdprodstatuswriter.microsoft.com
-microsoft.com shdprodstatusreader.microsoft.com                            shdprodstatusreader.microsoft.com
-microsoft.com shdprodstatuswriter.microsoft.com                            shdprodstatuswriter.microsoft.com
-microsoft.com shdprodstatuswriter.microsoft.com                            shdprodstatuswriter.microsoft.com
-microsoft.com shdprodstatusreader.microsoft.com                            shdprodstatusreader.microsoft.com
-microsoft.com shdppestatusreader.microsoft.com                             shdppestatusreader.microsoft.com
-microsoft.com shdppestatuswriter.microsoft.com                             shdppestatuswriter.microsoft.com
-microsoft.com 8346816a-b42a-4351-984a-7c822dd88be8.microsoft.com           8346816a-b42a-4351-984a-7c822dd88be8.microsoft.com
-microsoft.com dpcuat.microsoft.com                                         dpcuat.microsoft.com
-microsoft.com azafsvexcelweb.redmond.corp.microsoft.com                    azafsvexcelweb.redmond.corp.microsoft.com
-microsoft.com funfeedbackservices.corp.microsoft.com                       funfeedbackservices.corp.microsoft.com
-microsoft.com adnotifications.windowsazure.com                             *.strongauthenticationservice.auth.microsoft.com|strongauthenticationservice.auth.microsoft.com
-microsoft.com istiocsitestservice.ustcms.microsoft.com                     istiocsitestservice.ustcms.microsoft.com
-microsoft.com monitoring.geneva.keyvault.dco.api.iris.microsoft.com        monitoring.geneva.keyvault.dco.api.iris.microsoft.com
-microsoft.com local.cloudbrowser.microsoft.com                             local.cloudbrowser.microsoft.com
-microsoft.com local.cloudbrowser.microsoft.com                             local.cloudbrowser.microsoft.com
-microsoft.com api.recognition.microsoft.com                                api.recognition.microsoft.com
-microsoft.com cloudbrowser.microsoft.com                                   cloudbrowser.microsoft.com
-microsoft.com azurestackhcisolutions.azure.microsoft.com                   azurestackhcisolutions.azure.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com schemas.microsoft.com                                        schemas.microsoft.com
-microsoft.com glscommerce-ppe.microsoft.com                                *.glscommerce-ppe.microsoft.com|glscommerce-ppe.microsoft.com
-microsoft.com azrd3sup01.redmond.corp.microsoft.com                        azrd3sup01.redmond.corp.microsoft.com
-microsoft.com qa.api.recognition.microsoft.com                             qa.api.recognition.microsoft.com
-microsoft.com edge.cloudbrowser.microsoft.com                              edge.cloudbrowser.microsoft.com
-microsoft.com qa.admin.recognition.microsoft.com                           qa.admin.recognition.microsoft.com
-microsoft.com myorderppe.microsoft.com                                     myorderppe.microsoft.com
-microsoft.com signing.l2o.microsoft.com                                    signing.l2o.microsoft.com
-microsoft.com osf-agave.redmond.corp.microsoft.com                         osf-agave.redmond.corp.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com androidmamtestservice.microsoft.com                          androidmamtestservice.microsoft.com
-microsoft.com api.reconintelligenceppe.microsoft.com                       api.reconintelligenceppe.microsoft.com
-microsoft.com lists.microsoft.com                                          lists.microsoft.com
-microsoft.com *.controls.account.microsoft.com                             *.controls.account.microsoft.com|controls.account.microsoft.com
-microsoft.com api-dev.gtoinvoicing.microsoft.com                           api-dev.gtoinvoicing.microsoft.com
-microsoft.com oneaskapi.l2o.microsoft.com                                  oneaskapi.l2o.microsoft.com
-microsoft.com suggest.mi-test.microsoft.com                                suggest.mi-test.microsoft.com
-microsoft.com api.preview.powerva.microsoft.com                            api.preview.powerva.microsoft.com
-microsoft.com azsaptstcomhl.redmond.corp.microsoft.com                     azsaptstcomhl.redmond.corp.microsoft.com|azsaptstcomhl1.redmond.corp.microsoft.com|azsaptstcomhl2.redmond.corp.microsoft.com|azsaptstcomhl3.redmond.corp.m…
-microsoft.com esvmsipoc.redmond.corp.microsoft.com                         esvmsipoc.redmond.corp.microsoft.com
-microsoft.com opensource-dev.microsoft.com                                 opensource-dev.microsoft.com
-microsoft.com blogs.msdn.microsoft.com                                     blogs.msdn.microsoft.com
-microsoft.com social.msdn.microsoft.com                                    profileapi.services.microsoft.com|qa.services.social.microsoft.com|qa.social.msdn.microsoft.com|qa.social.technet.microsoft.com|search.msdn.microsoft.com|…
-microsoft.com social.msdn.microsoft.com                                    profileapi.services.microsoft.com|qa.services.social.microsoft.com|qa.social.msdn.microsoft.com|qa.social.technet.microsoft.com|search.msdn.microsoft.com|…
-microsoft.com social.msdn.microsoft.com                                    profileapi.services.microsoft.com|qa.services.social.microsoft.com|qa.social.msdn.microsoft.com|qa.social.technet.microsoft.com|search.msdn.microsoft.com|…
-microsoft.com command-mr-prod-uk.cms.microsoft.com                         command-mr-prod-southuk-secondary.cms.microsoft.com|command-mr-prod-southuk.cms.microsoft.com|command-mr-prod-uk.cms.microsoft.com
-microsoft.com command-mr-prod-ap.cms.microsoft.com                         command-mr-prod-ap.cms.microsoft.com|command-mr-prod-eastap-secondary.cms.microsoft.com|command-mr-prod-eastap.cms.microsoft.com
-microsoft.com onesettingsppe.microsoft.com                                 onesettingsppe.microsoft.com
-microsoft.com communitytraining.microsoft.com                              communitytraining.microsoft.com
-microsoft.com cd.public.disco.ml.teams.microsoft.com                       *.cd.ipdns.public.disco.ml.teams.microsoft.com|*.cd.world.public.disco.ml.teams.microsoft.com|cd.public.disco.ml.teams.microsoft.com|cd.world.public.disco…
-microsoft.com cd.public.disco.ml.teams.microsoft.com                       *.cd.ipdns.public.disco.ml.teams.microsoft.com|*.cd.world.public.disco.ml.teams.microsoft.com|cd.public.disco.ml.teams.microsoft.com|cd.world.public.disco…
-microsoft.com cd.public.disco.ml.teams.microsoft.com                       *.cd.eur.public.disco.ml.teams.microsoft.com|*.cd.ipdns.public.disco.ml.teams.microsoft.com|cd.eur.public.disco.ml.teams.microsoft.com|cd.public.disco.ml.…
-microsoft.com *.tts-frontend.speech.microsoft.com                          *.tts-frontend.speech.microsoft.com|*.tts.speech.microsoft.com|*.voice.speech.microsoft.com
-microsoft.com cd.public.disco.ml.teams.microsoft.com                       *.cd.canary.public.disco.ml.teams.microsoft.com|*.cd.ipdns.public.disco.ml.teams.microsoft.com|cd.canary.public.disco.ml.teams.microsoft.com|cd.public.dis…
-microsoft.com msgtarecruitinghubint.microsoft.com                          msgtarecruitinghubint.microsoft.com
-microsoft.com qa.forumsapi.contentservices.msdn.microsoft.com              qa.forumsapi.contentservices.msdn.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com mysignins.microsoft.com                                      api.mysignins.microsoft.com|mysignins.microsoft.com
-microsoft.com appmanagement.activedirectory-ppe.microsoft.com              appmanagement.activedirectory-ppe.microsoft.com
-microsoft.com 46e20c66-5151-43a9-91d8-30464dfa088f.microsoft.com           46e20c66-5151-43a9-91d8-30464dfa088f.microsoft.com
-microsoft.com api.test.websec.microsoft.com                                api.test.websec.microsoft.com
-microsoft.com vivalearning.microsoft.com                                   vivalearning.microsoft.com
-microsoft.com api.websec.microsoft.com                                     api.websec.microsoft.com
-microsoft.com api.ppe.websec.microsoft.com                                 api.ppe.websec.microsoft.com
-microsoft.com I25OC2DSQLWHS01.partners.extranet.microsoft.com              I25OC2DSQLWHS01.partners.extranet.microsoft.com
-microsoft.com exceptionservice.quote.microsoft.com                         exceptionservice.quote.microsoft.com
-microsoft.com attributeservice.quote.microsoft.com                         attributeservice.quote.microsoft.com
-microsoft.com transactionservice.quote.microsoft.com                       transactionservice.quote.microsoft.com
-microsoft.com fetchservice.quote.microsoft.com                             fetchservice.quote.microsoft.com
-microsoft.com impl.api.addons.microsoftedge.microsoft.com                  impl.api.addons.microsoftedge.microsoft.com
-microsoft.com account.microsoft-ppe.com                                    redeem.ppe.microsoft.com
-microsoft.com products.quote.microsoft.com                                 products.quote.microsoft.com
-microsoft.com flow-icm-connector.flow.microsoft.com                        flow-icm-connector.flow.microsoft.com
-microsoft.com fas-ppe.teams.microsoft.com                                  fas-ppe.teams.microsoft.com
-microsoft.com targetinggroupsapiapp.corp.microsoft.com                     targetinggroupsapiapp.corp.microsoft.com
-microsoft.com documents.quote.microsoft.com                                documents.quote.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com ieb2-mr-ppe-westus2.cms.microsoft.com                        ieb2-mr-ppe-westus2.cms.microsoft.com
-microsoft.com ieb-mr-ppe-westus2.cms.microsoft.com                         ieb-mr-ppe-westus2.cms.microsoft.com
-microsoft.com ieb2-mr-ppe-eastus.cms.microsoft.com                         ieb2-mr-ppe-eastus.cms.microsoft.com
-microsoft.com ieb-mr-ppe-eastus.cms.microsoft.com                          ieb-mr-ppe-eastus.cms.microsoft.com
-microsoft.com ieb2-amp-ppe-eastus.cms.microsoft.com                        ieb2-amp-ppe-eastus.cms.microsoft.com
-microsoft.com ieb-amp-ppe-eastus.cms.microsoft.com                         ieb-amp-ppe-eastus.cms.microsoft.com
-microsoft.com ieb2-rt-int-eastus.cms.microsoft.com                         ieb2-rt-int-eastus.cms.microsoft.com
-microsoft.com ieb-rt-int-eastus.cms.microsoft.com                          ieb-rt-int-eastus.cms.microsoft.com
-microsoft.com mysignins.microsoft.com                                      api.mysignins.microsoft.com|mysignins.microsoft.com
-microsoft.com appsvc.aircapi.commercemgmt.m365.microsoft.com               *.appsvc.aircapi.commercemgmt.m365.microsoft.com|appsvc.aircapi.commercemgmt.m365.microsoft.com
-microsoft.com ieb-internal-int-westus.cms.microsoft.com                    ieb-internal-int-westus.cms.microsoft.com
-microsoft.com petewu-dev.northamerica.corp.microsoft.com                   petewu-dev.northamerica.corp.microsoft.com
-microsoft.com ieb-internal-int-eastus.cms.microsoft.com                    ieb-internal-int-eastus.cms.microsoft.com
-microsoft.com edge-cashbackcert.microsoft.com                              edge-cashbackcert.microsoft.com|edge-cashbackcert1.microsoft.com
-microsoft.com *.controls.account.microsoft.com                             *.controls.account.microsoft.com|controls.account.microsoft.com
-microsoft.com supportactions-dev.services.microsoft.com                    supportactions-dev.services.microsoft.com
-microsoft.com oneitvsoapiprod.microsoft.com                                oneitvsoapiprod.microsoft.com
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|eastus2euap.api.prod.adu.microsoft.com
-microsoft.com redir.update.microsoft.com                                   fe1.update.microsoft.com|fe1.ws.microsoft.com|redir.update.microsoft.com|update.microsoft.com|windowsupdate.microsoft.com|www.update.microsoft.com
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.prod.adu.microsoft.com|eastus2euap.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com
-microsoft.com *.mec.infra.teams.microsoft.com                              *.mec.infra.teams.microsoft.com|api.test.mec.infra.teams.microsoft.com|b-api-test.mec.infra.teams.microsoft.com
-microsoft.com msraapi.com                                                  msraapiprod.corp.microsoft.com
-microsoft.com msraapi.com                                                  msraapiprod.corp.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com ccp.pulsarx-int.microsoft.com                                ccp.pulsarx-int.microsoft.com
-microsoft.com msa.mdapngp.microsoft.com                                    msa.mdapngp.microsoft.com
-microsoft.com graph.approvalserviceppe.microsoft.com                       graph.approvalserviceppe.microsoft.com
-microsoft.com reconintelligenceppe.microsoft.com                           reconintelligenceppe.microsoft.com
-microsoft.com api.test.powerva.microsoft.com                               *.api.test.powerva.microsoft.com|api.test.powerva.microsoft.com
-microsoft.com azure-apt-cat.cloudapp.net                                   package-repo-service.corp.microsoft.com
-microsoft.com groups-sandbox.data.microsoft.com                            *.groups-sandbox.data.microsoft.com|groups-sandbox.data.microsoft.com
-microsoft.com optimizer-sandbox.asimov.microsoft.com                       optimizer-sandbox.asimov.microsoft.com
-microsoft.com finance365.microsoft.com                                     finance365.microsoft.com
-microsoft.com er.onecc-ppe.data.microsoft.com                              er.onecc-ppe.data.microsoft.com
-microsoft.com onecc-ppe.data.microsoft.com                                 *.onecc-ppe.data.microsoft.com|onecc-ppe.data.microsoft.com
-microsoft.com wus.tip2us.tip2.rpadminssl.flow.microsoft.com                *.us.admin.api.flow.microsoft.com|admin.api.flow.microsoft.com|us.admin.api.flow.microsoft.com|wus.tip2us.tip2.rpadminssl.flow.microsoft.com
-microsoft.com er.onecc-sandbox.data.microsoft.com                          er.onecc-sandbox.data.microsoft.com
-microsoft.com onecc-sandbox.data.microsoft.com                             *.onecc-sandbox.data.microsoft.com|onecc-sandbox.data.microsoft.com
-microsoft.com wus.tip2us.tip2.rpssl.flow.microsoft.com                     *.us.tip2.api.flow.microsoft.com|tip2.api.flow.microsoft.com|us.tip2.api.flow.microsoft.com|wus.tip2us.tip2.rpssl.flow.microsoft.com
-microsoft.com oaas-int.ezio.commerce.microsoft.com                         *.oaas-int.ezio.commerce.microsoft.com|oaas-int.ezio.commerce.microsoft.com
-microsoft.com Balancemanagement.cp.microsoft.com                           Balancemanagement.cp.microsoft.com
-microsoft.com groups-admin-sandbox.data.microsoft.com                      groups-admin-sandbox.data.microsoft.com
-microsoft.com msraapi.com                                                  msraapiuat.corp.microsoft.com
-microsoft.com *.elixir.microsoft.com                                       *.elixir.microsoft.com|elixir.microsoft.com
-microsoft.com api.reconintelligenceppe.microsoft.com                       api.reconintelligenceppe.microsoft.com
-microsoft.com 8346816a-b42a-4351-984a-7c822dd88be8.microsoft.com           8346816a-b42a-4351-984a-7c822dd88be8.microsoft.com
-microsoft.com reconintelligenceppe.microsoft.com                           reconintelligenceppe.microsoft.com
-microsoft.com reconintelligenceppe.microsoft.com                           reconintelligenceppe.microsoft.com
-microsoft.com reconintelligenceppe.microsoft.com                           reconintelligenceppe.microsoft.com
-microsoft.com onecc-ppe.data.microsoft.com                                 *.onecc-ppe.data.microsoft.com|onecc-ppe.data.microsoft.com
-microsoft.com pipelinestudio.ideas.microsoft.com                           pipelinestudio.ideas.microsoft.com
-microsoft.com holoportationrelay.dev.collab.mixedreality.microsoft.com     *.holoportationrelay.dev.collab.mixedreality.microsoft.com|holoportationrelay.dev.collab.mixedreality.microsoft.com
-microsoft.com occommon.microsoft.com                                       *.occommon.microsoft.com|occommon.microsoft.com
-microsoft.com cbsl.mp.microsoft.com                                        *.cbsl.mp.microsoft.com|cbsl.mp.microsoft.com
-microsoft.com cuap01.afs.azure.net                                         kailani-cuap.one.microsoft.com|kailani-getloc-prod-01.one.microsoft.com|tm-kailani-cuap.one.microsoft.com|tm-kailani-euap.one.microsoft.com
-microsoft.com tip2.flow.microsoft.com                                      *.us.tip2.flow.microsoft.com|tip2.flow.microsoft.com|us.tip2.flow.microsoft.com
-microsoft.com ppeaemauth.microsoft.com                                     ppeaemauth.microsoft.com
-microsoft.com consumerapi-ppe.narada.microsoft.com                         *.consumerapi-ppe.narada.microsoft.com|consumerapi-ppe.narada.microsoft.com
-microsoft.com obligation.int.l2o.microsoft.com                             obligation.int.l2o.microsoft.com
-microsoft.com mvtd.events.microsoft.com                                    mvtd.events.microsoft.com
-microsoft.com obligation.int.l2o.microsoft.com                             obligation.int.l2o.microsoft.com
-microsoft.com *.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com *.nam.test.daas.microsoft.com                                *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com apiv1.prodprv.narada.microsoft.com                           *.apiv1.prodprv.narada.microsoft.com|apiv1.prodprv.narada.microsoft.com
-microsoft.com adminanalytics.powerplatform.microsoft.com                   *.adminanalytics.powerplatform.microsoft.com|*.dfanalytics.powerplatform.microsoft.com|adminanalytics.powerplatform.microsoft.com|dfanalytics.powerplatfor…
-microsoft.com onecert-test.microsoft.com                                   onecert-test.microsoft.com
-microsoft.com apiv2.prodprv.narada.microsoft.com                           *.apiv2.prodprv.narada.microsoft.com|apiv2.prodprv.narada.microsoft.com
-microsoft.com lse1-msft-dr2.microsoft.com                                  lse1-msft-dr2.microsoft.com
-microsoft.com msdrad.msg.infra.gcc.teams.microsoft.com                     *.msdrad.msg.infra.gcc.teams.microsoft.com|msdrad.msg.infra.gcc.teams.microsoft.com
-microsoft.com api.ams.gcc.teams.microsoft.com                              *.api.ams.gcc.teams.microsoft.com|api.ams.gcc.teams.microsoft.com
-microsoft.com internal.evergreen.microsoft.com                             internal.evergreen.microsoft.com
-microsoft.com origin.sdx.microsoft.com                                     origin.sdx.microsoft.com
-microsoft.com mysignins.microsoft.com                                      api.mysignins.microsoft.com|mysignins.microsoft.com
-microsoft.com mbs-d4.partners.extranet.microsoft.com                       mbs-d4.partners.extranet.microsoft.com
-microsoft.com i07md4dsqlnet01.partners.extranet.microsoft.com              i07md4dsqlnet01.partners.extranet.microsoft.com
-microsoft.com calmadmin.corp.microsoft.com                                 calmadmin-db.corp.microsoft.com|calmadmin.corp.microsoft.com|calmadmin.gtm.corp.microsoft.com
-microsoft.com calmadmin.corp.microsoft.com                                 calmadmin-cp.corp.microsoft.com|calmadmin.corp.microsoft.com|calmadmin.gtm.corp.microsoft.com
-microsoft.com aimdp.microsoft.com                                          aimdp.microsoft.com
-microsoft.com aimdp.microsoft.com                                          aimdp.microsoft.com
-microsoft.com gallery.technet.microsoft.com                                *.gallery.technet.microsoft.com|gallery.technet.microsoft.com
-microsoft.com WDXAsiaExperienceJapan.microsoft.com                         WDXAsiaExperienceJapan.microsoft.com|windows.WDXAsiaExperienceJapan.geneva.keyvault.wdx.microsoft.com
-microsoft.com tminienv9svc.afstest.azure.net                               kailani-getloc-test-01.one.microsoft.com|kailani-getloc-test-02.one.microsoft.com|kailani-getloc-test-03.one.microsoft.com|kailani-getloc-test-04.one.micr…
-microsoft.com ppe.frontend.esrp.microsoft.com                              ppe.frontend.esrp.microsoft.com
-microsoft.com fp.wd.microsoft.com                                          *.fp.wd.microsoft.com|fp.wd.microsoft.com|psapp.microsoft.com|psappeu.microsoft.com
-microsoft.com signing.bvt.lextax.microsoft.com                             signing.bvt.lextax.microsoft.com
-microsoft.com *.bvt.lextax.microsoft.com                                   *.bvt.lextax.microsoft.com
-microsoft.com *.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com *.nam.test.daas.microsoft.com                                *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com *.rgrovu.myworkspace.microsoft.com                           *.rgrovu.myworkspace.microsoft.com
-microsoft.com fp.wd.microsoft.com                                          *.fp.wd.microsoft.com|fp.wd.microsoft.com|psapp.microsoft.com|psappeu.microsoft.com
-microsoft.com paintelodatauatv2.one.microsoft.com                          paintelodatauatv2.one.microsoft.com
-microsoft.com paintelodatauat.one.microsoft.com                            paintelodatauat.one.microsoft.com
-microsoft.com storedvalue.cp.microsoft.com                                 storedvalue.cp.microsoft.com
-microsoft.com webhook.infra.gcc.teams.microsoft.com                        webhook.infra.gcc.teams.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com internal.evergreen.microsoft.com                             internal.evergreen.microsoft.com
-microsoft.com target.microsoft.com                                         target.microsoft.com
-microsoft.com emails-int.azure.microsoft.com                               emails-int.azure.microsoft.com
-microsoft.com emails.azure.microsoft.com                                   emails.azure.microsoft.com
-microsoft.com vsa-dev.services.microsoft.com                               vsa-dev.services.microsoft.com|vsa-westus2-dev.services.microsoft.com
-microsoft.com targetinggroupsapiapp.corp.microsoft.com                     targetinggroupsapiapp.corp.microsoft.com
-microsoft.com onepdmauth.rsm.microsoft.com                                 onepdmauth.rsm.microsoft.com
-microsoft.com *.migrig.myworkspace.microsoft.com                           *.migrig.myworkspace.microsoft.com
-microsoft.com msaas.support.microsoft.com                                  msaas.support.microsoft.com
-microsoft.com communitytraining.microsoft.com                              communitytraining.microsoft.com
-microsoft.com azafsvexcelsql.redmond.corp.microsoft.com                    azafsvexcelsql.redmond.corp.microsoft.com
-microsoft.com irdet.microsoft.com                                          irdet.microsoft.com
-microsoft.com *.uae.daas.microsoft.com                                     *.daas.microsoft.com|*.uae.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.uae.daas.microsoft.com
-microsoft.com social.msdn.microsoft.com                                    profileapi.services.microsoft.com|qa.profileapi.services.microsoft.com|search.msdn.microsoft.com|services.social.microsoft.com|social.microsoft.com|social…
-microsoft.com qa.social.msdn.microsoft.com                                 qa.profileapi.services.microsoft.com|qa.search.msdn.microsoft.com|qa.services.social.microsoft.com|qa.social.expression.microsoft.com|qa.social.microsoft.…
-microsoft.com dhapi.corp.microsoft.com                                     dhapi.corp.microsoft.com
-microsoft.com tokens-int.mp.dps.microsoft.com                              tokens-int.mp.dps.microsoft.com
-microsoft.com internalccmtpd.glbdns.microsoft.com                          internalccmtpd.glbdns.microsoft.com
-microsoft.com appmanagement.activedirectory-ppe.microsoft.com              appmanagement.activedirectory-ppe.microsoft.com
-microsoft.com calcuiuat.microsoft.com                                      calcuiuat.microsoft.com
-microsoft.com *.elixirppe.microsoft.com                                    *.elixirppe.microsoft.com|elixirppe.microsoft.com
-microsoft.com *.vnext.ti.microsoft.com                                     *.api.vnext.ti.microsoft.com|*.vnext.ti.microsoft.com|api.vnext.ti.microsoft.com|vnext.ti.microsoft.com
-microsoft.com sapsi215.redmond.corp.microsoft.com                          sapsi215.redmond.corp.microsoft.com
-microsoft.com admin.powerapps.com                                          admin.businessplatform.microsoft.com|admin.flow.microsoft.com
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com csanalytics.powerplatform.microsoft.com                      *.csanalytics.powerplatform.microsoft.com|csanalytics.powerplatform.microsoft.com
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|web.powerva.microsoft.com
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com api.businessappdiscovery.microsoft.com                       *.api.businessappdiscovery.microsoft.com|api.businessappdiscovery.microsoft.com
-microsoft.com test.sustainability.microsoft.com                            *.test.sustainability.microsoft.com|test.sustainability.microsoft.com
-microsoft.com barsppesql.redmond.corp.microsoft.com                        barsppesql.redmond.corp.microsoft.com
-microsoft.com ddsql3.redmond.corp.microsoft.com                            ddsql3.redmond.corp.microsoft.com
-microsoft.com prodaemauth.microsoft.com                                    prodaemauth.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com servicesuat.microsoft.com                                    aceskillsuat.microsoft.com|prse.myskillsUAT.microsoft.com|servicesuat.microsoft.com
-microsoft.com paymentcentralvnext.microsoft.com                            paymentcentralvnext.microsoft.com
-microsoft.com servicesuat.microsoft.com                                    aceskillsuat.microsoft.com|prse.myskillsUAT.microsoft.com|servicesuat.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com settings.data.microsoft.com                                  *.settings.data.microsoft.com|settings.data.microsoft.com
-microsoft.com settings.data.microsoft.com                                  *.settings.data.microsoft.com|settings.data.microsoft.com
-microsoft.com *.settings-validation.data.microsoft.com                     *.settings-validation.data.microsoft.com|settings-validation.data.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com settings-ppe.data.microsoft.com                              *.settings-ppe.data.microsoft.com|settings-ppe.data.microsoft.com
-microsoft.com esxp-sit.microsoft.com                                       esxp-sit.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com paymentcentral.microsoft.com                                 paymentcentral.microsoft.com
-microsoft.com financialinstructions.upp.emt.dps.microsoft.com              financialinstructions.upp.emt.dps.microsoft.com
-microsoft.com api.powerva.microsoft.com                                    api.powerva.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com *.settings-validation-sandbox.data.microsoft.com             *.settings-validation-sandbox.data.microsoft.com|settings-validation-sandbox.data.microsoft.com
-microsoft.com *.settings-validation-ppe.data.microsoft.com                 *.settings-validation-ppe.data.microsoft.com|settings-validation-ppe.data.microsoft.com
-microsoft.com pls-debug.ideas.microsoft.com                                pls-debug.ideas.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com iridiasppe.gov.microsoft.com                                 iridiasppe.gov.microsoft.com
-microsoft.com *.mec.infra.teams.microsoft.com                              *.mec.infra.teams.microsoft.com|api.int.mec.infra.teams.microsoft.com|api.test.mec.infra.teams.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com api.powerva.microsoft.com                                    api.powerva.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com packages.microsoft.com                                       packages.microsoft.com
-microsoft.com *.mooncakedevops.speech.microsoft.com                        *.api.mooncakedevops.speech.microsoft.com|*.mooncakedevops.speech.microsoft.com|api.mooncakedevops.speech.microsoft.com|mooncakedevops.speech.microsoft.com
-microsoft.com dev-azureavamgmt-api.microsoft.com                           dev-azureavamgmt-api.microsoft.com
-microsoft.com dev-azureava-bot.microsoft.com                               dev-azureava-bot.microsoft.com
-microsoft.com frontdoor.bigcatalog.commerce.microsoft.com                  *.bigcatalog.commerce.microsoft.com|*.bigcatalog.microsoft.com|*.displaycatalog.md.mp.microsoft.com|*.displaycatalog.mp.microsoft.com|*.frontdoor-consumer…
-microsoft.com dev-azureava-api.microsoft.com                               dev-azureava-api.microsoft.com
-microsoft.com frontdoor.bigcatalog.commerce.microsoft.com                  *.bigcatalog.commerce.microsoft.com|*.bigcatalog.microsoft.com|*.displaycatalog.md.mp.microsoft.com|*.displaycatalog.mp.microsoft.com|*.frontdoor-consumer…
-microsoft.com frontdoor.bigcatalog.commerce.microsoft.com                  *.bigcatalog.commerce.microsoft.com|*.bigcatalog.microsoft.com|*.displaycatalog.md.mp.microsoft.com|*.displaycatalog.mp.microsoft.com|*.frontdoor-consumer…
-microsoft.com frontdoor.bigcatalog.commerce.microsoft.com                  *.bigcatalog.commerce.microsoft.com|*.bigcatalog.microsoft.com|*.displaycatalog.md.mp.microsoft.com|*.displaycatalog.mp.microsoft.com|*.frontdoor-consumer…
-microsoft.com gsr.microsoft.com                                            gsr.microsoft.com
-microsoft.com gsr.microsoft.com                                            gsr.microsoft.com
-microsoft.com dsctest.microsoft.com                                        *.dsctest.microsoft.com|dsctest.microsoft.com
-microsoft.com int.sf.customermaster.cloud.microsoft.com                    int.sf.customermaster.cloud.microsoft.com
-microsoft.com ccp.pulsarx.microsoft.com                                    ccp.pulsarx.microsoft.com
-microsoft.com *.fairfaxdevops.speech.microsoft.com                         *.api.fairfaxdevops.speech.microsoft.com|*.fairfaxdevops.speech.microsoft.com|api.fairfaxdevops.speech.microsoft.com|fairfaxdevops.speech.microsoft.com
-microsoft.com rewards.microsoft.com                                        rewards.microsoft.com
-microsoft.com iamkubernetesprod.trafficmanager.net                         *.iamtelemetrycollector-tip.microsoft.com|*.iamtelemetrycollector.microsoft.com|*.myaccount.microsoft.com|*.myapplications.microsoft.com|*.myprofile.micro…
-microsoft.com casexpservicesperf.microsoft.com                             casexpservicesperf.microsoft.com
-microsoft.com token.cp.microsoft.com                                       info.token.cp.microsoft.com|token.cp.microsoft.com
-microsoft.com token.cp.microsoft.com                                       inventory.token.cp.microsoft.com|token.cp.microsoft.com
-microsoft.com token.cp.microsoft.com                                       minting.token.cp.microsoft.com|token.cp.microsoft.com
-microsoft.com token.cp.microsoft.com                                       delivery.token.cp.microsoft.com|token.cp.microsoft.com
-microsoft.com token.cp.microsoft.com                                       request.token.cp.microsoft.com|token.cp.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|eastus2euap.dcsfe.prod.…
-microsoft.com I07U1DROWLIS.partners.extranet.microsoft.com                 I07U1DROWLIS.partners.extranet.microsoft.com
-microsoft.com MOETU1DLIS.partners.extranet.microsoft.com                   MOETU1DLIS.partners.extranet.microsoft.com
-microsoft.com I25U1DEOCLIS.partners.extranet.microsoft.com                 I25U1DEOCLIS.partners.extranet.microsoft.com
-microsoft.com casuisrvcsperf.microsoft.com                                 casuisrvcsperf.microsoft.com
-microsoft.com dcsfe.int.adu.microsoft.com                                  *.dcsfe.int.adu.microsoft.com|dcsfe.int.adu.microsoft.com|westus2.dcsfe.int.adu.microsoft.com
-microsoft.com rp.int.adu.microsoft.com                                     *.rp.int.adu.microsoft.com|rp.int.adu.microsoft.com|westus2.rp.int.adu.microsoft.com
-microsoft.com mta-sts.microsoft.com                                        mta-sts.microsoft.com
-microsoft.com api.int.adu.microsoft.com                                    *.api.int.adu.microsoft.com|api.int.adu.microsoft.com|westus2.api.int.adu.microsoft.com
-microsoft.com rp.test.adu.microsoft.com                                    *.rp.test.adu.microsoft.com|rp.test.adu.microsoft.com|westus2.rp.test.adu.microsoft.com
-microsoft.com dcsfe.test.adu.microsoft.com                                 *.dcsfe.test.adu.microsoft.com|dcsfe.test.adu.microsoft.com|westus2.dcsfe.test.adu.microsoft.com
-microsoft.com api.test.adu.microsoft.com                                   *.api.test.adu.microsoft.com|api.test.adu.microsoft.com|westus2.api.test.adu.microsoft.com
-microsoft.com robo.partners.extranet.microsoft.com                         *.robo.partners.extranet.microsoft.com|robo.partners.extranet.microsoft.com
-microsoft.com settings.infra.gcc.teams.microsoft.com                       settings.infra.gcc.teams.microsoft.com
-microsoft.com api.esi.microsoft.com                                        api.esi.microsoft.com
-microsoft.com api.esi.microsoft.com                                        api.esi.microsoft.com
-microsoft.com umservice.microsoft.com                                      umservice.microsoft.com
-microsoft.com whiteboard.microsoft.com                                     eu.whiteboard.microsoft.com|us.whiteboard.microsoft.com|whiteboard.microsoft.com
-microsoft.com whiteboard.microsoft.com                                     eu.whiteboard.microsoft.com|us.whiteboard.microsoft.com|whiteboard.microsoft.com
-microsoft.com journal.mcapiprojects-aircapi.commerce.microsoft.com         journal.mcapiprojects-aircapi.commerce.microsoft.com|ncus.journal.mcapiprojects-aircapi.commerce.microsoft.com
-microsoft.com projects.mcapiprojects-aircapi.commerce.microsoft.com        ncus.projects.mcapiprojects-aircapi.commerce.microsoft.com|projects.mcapiprojects-aircapi.commerce.microsoft.com
-microsoft.com myapplications-ppe.microsoft.com                             *.myapplications-ppe.microsoft.com|myapplications-ppe.microsoft.com
-microsoft.com cdn-vsa-trs-prod.services.microsoft.com                      cdn-vsa-trs-prod.services.microsoft.com
-microsoft.com a-api-westus2-test.mec.infra.teams.microsoft.com             *.mec.infra.teams.microsoft.com|a-api-westus2-test.mec.infra.teams.microsoft.com|api.test.mec.infra.teams.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com monetization-api.mp.dse.microsoft.com                        monetization-api.mp.dse.microsoft.com
-microsoft.com cre.raas.microsoft.com                                       cre.raas.microsoft.com
-microsoft.com *.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com *.nam.test.daas.microsoft.com                                *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com ieb2-internal-ci-westus.cms.microsoft.com                    ieb2-internal-ci-westus.cms.microsoft.com
-microsoft.com *.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com *.nam.test.daas.microsoft.com                                *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com partneraccountexperience.microsoft.com                       partneraccountexperience.microsoft.com
-microsoft.com portal-staging.changemanager.fcm.azure.microsoft.com         portal-staging.changemanager.fcm.azure.microsoft.com
-microsoft.com *.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com *.nam.test.daas.microsoft.com                                *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com scansvc.x.atp.wd.microsoft.com                               *.scansvc.x.atp.wd.microsoft.com|scansvc.x.atp.wd.microsoft.com
-microsoft.com scansvc.x.atp.wd.microsoft.com                               *.scansvc.x.atp.wd.microsoft.com|scansvc.x.atp.wd.microsoft.com
-microsoft.com scansvc.x.atp.wd.microsoft.com                               *.scansvc.x.atp.wd.microsoft.com|scansvc.x.atp.wd.microsoft.com
-microsoft.com scansvc.x.atp.wd.microsoft.com                               *.scansvc.x.atp.wd.microsoft.com|scansvc.x.atp.wd.microsoft.com
-microsoft.com scansvc.x.atp.wd.microsoft.com                               *.scansvc.x.atp.wd.microsoft.com|scansvc.x.atp.wd.microsoft.com
-microsoft.com x.cp.wd.microsoft.com                                        *.x.atp.wd.microsoft.com|*.x.cp.wd.microsoft.com|x.atp.wd.microsoft.com|x.cp.wd.microsoft.com
-microsoft.com x.cp.wd.microsoft.com                                        *.x.atp.wd.microsoft.com|*.x.cp.wd.microsoft.com|x.atp.wd.microsoft.com|x.cp.wd.microsoft.com
-microsoft.com x.cp.wd.microsoft.com                                        *.x.atp.wd.microsoft.com|*.x.cp.wd.microsoft.com|x.atp.wd.microsoft.com|x.cp.wd.microsoft.com
-microsoft.com x.cp.wd.microsoft.com                                        *.x.atp.wd.microsoft.com|*.x.cp.wd.microsoft.com|x.atp.wd.microsoft.com|x.cp.wd.microsoft.com
-microsoft.com x.cp.wd.microsoft.com                                        *.x.atp.wd.microsoft.com|*.x.cp.wd.microsoft.com|x.atp.wd.microsoft.com|x.cp.wd.microsoft.com
-microsoft.com azurecdn-licensing.microsoft.com                             azurecdn-licensing.microsoft.com
-microsoft.com PfxProfileSigning.manage.microsoft.com                       PfxProfileSigning.manage.microsoft.com
-microsoft.com KeyRecoveryAgent.manage.microsoft.com                        KeyRecoveryAgent.manage.microsoft.com
-microsoft.com msa.mdapngp.microsoft.com                                    msa.mdapngp.microsoft.com
-microsoft.com a-usnc.prod.templates.tac.teams.microsoft.com                a-usnc.prod.templates.tac.teams.microsoft.com|prod.templates.tac.teams.microsoft.com|usnc.prod.templates.tac.teams.microsoft.com
-microsoft.com tip1.api.flow.microsoft.com                                  *.emea.tip1.api.flow.microsoft.com|*.tip1.api.flow.microsoft.com|*.us.tip1.api.flow.microsoft.com|tip1.api.flow.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com csanalytics.powerplatform.microsoft.com                      *.csanalytics.powerplatform.microsoft.com|csanalytics.powerplatform.microsoft.com
-microsoft.com api.businessappdiscovery.microsoft.com                       *.api.businessappdiscovery.microsoft.com|api.businessappdiscovery.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com csanalytics.powerplatform.microsoft.com                      *.csanalytics.powerplatform.microsoft.com|csanalytics.powerplatform.microsoft.com
-microsoft.com creditnote-int.payoutmanagement.pi.dps.microsoft.com         creditnote-int.payoutmanagement.pi.dps.microsoft.com
-microsoft.com migrationsvc.teams-nonprod.microsoft.com                     migrationsvc.teams-nonprod.microsoft.com
-microsoft.com onestore-int.microsoft.com                                   onestore-int.microsoft.com
-microsoft.com client-cvs.ratingsedge-ppe.rnr.microsoft.com                 client-cvs.ratingsedge-ppe.rnr.microsoft.com
-microsoft.com gateway.westeurope.maps.azure.com                            atlas.microsoft.com
-microsoft.com cdn.manage-beta.microsoft.com                                betaswda01-mscdn.download.manage-beta.microsoft.com|betaswda01.download.manage-beta.microsoft.com|betaswdb01-mscdn.download.manage-beta.microsoft.com|beta…
-microsoft.com xrefppe.docs.microsoft.com                                   *.xrefppe.docs.microsoft.com|xrefppe.docs.microsoft.com
-microsoft.com kepler.powerplatform.microsoft.com                           *.kepler.powerplatform.microsoft.com|kepler.powerplatform.microsoft.com
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|web.powerva.microsoft.com
-microsoft.com api.businessappdiscovery.microsoft.com                       *.api.businessappdiscovery.microsoft.com|api.businessappdiscovery.microsoft.com
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|web.powerva.microsoft.com
-microsoft.com csanalytics.powerplatform.microsoft.com                      *.csanalytics.powerplatform.microsoft.com|csanalytics.powerplatform.microsoft.com
-microsoft.com *.nam.test.daas.microsoft.com                                *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com *.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com *.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com *.nam.test.daas.microsoft.com                                *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com licensing-tip.powerplatform.microsoft.com                    *.licensing-tip.powerplatform.microsoft.com|licensing-tip.powerplatform.microsoft.com
-microsoft.com sustainability.microsoft.com                                 *.sustainability.microsoft.com|sustainability.microsoft.com
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com sustainability.microsoft.com                                 *.sustainability.microsoft.com|sustainability.microsoft.com
-microsoft.com adminanalytics.powerplatform.microsoft.com                   *.adminanalytics.powerplatform.microsoft.com|*.dfanalytics.powerplatform.microsoft.com|adminanalytics.powerplatform.microsoft.com|dfanalytics.powerplatfor…
-microsoft.com *.nam.test.daas.microsoft.com                                *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com *.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com storeoffers.mp.dps.microsoft.com                             Storeoffers-centralus.mp.dps.microsoft.com|Storeoffers-eastus.mp.dps.microsoft.com|Storeoffers-eastus2.mp.dps.microsoft.com|storeoffers.mp.dps.microsoft.c…
-microsoft.com mpdpsmonetizationservicefabric-prod.mp.dps.microsoft.com     mpdpsmonetizationservicefabric-prod.mp.dps.microsoft.com
-microsoft.com notificationgatewaycontent.mp.dps.microsoft.com              notificationgatewaycontent.mp.dps.microsoft.com
-microsoft.com storeoffersmgmt.mp.dps.microsoft.com                         Storeoffersmgmt-centralus.mp.dps.microsoft.com|Storeoffersmgmt-eastus.mp.dps.microsoft.com|Storeoffersmgmt-eastus2.mp.dps.microsoft.com|storeoffersmgmt.mp…
-microsoft.com monetizationauthservice.mp.dps.microsoft.com                 monetizationauthservice.mp.dps.microsoft.com
-microsoft.com groupmanagementservice.mp.dps.microsoft.com                  groupmanagementservice.mp.dps.microsoft.com
-microsoft.com tokens.mp.dps.microsoft.com                                  tokens.mp.dps.microsoft.com
-microsoft.com swsales.mp.dps.microsoft.com                                 swsales.mp.dps.microsoft.com
-microsoft.com storeoffersui.mp.dps.microsoft.com                           Storeoffersui-centralus.mp.dps.microsoft.com|Storeoffersui-eastus.mp.dps.microsoft.com|Storeoffersui-eastus2.mp.dps.microsoft.com|storeoffersui.mp.dps.mic…
-microsoft.com exp.mp.dse.microsoft.com                                     exp.mp.dse.microsoft.com
-microsoft.com crossplatform.mgmt.mp.dps.microsoft.com                      crossplatform.mgmt.mp.dps.microsoft.com
-microsoft.com userattributes.mp.dps.microsoft.com                          userattributes.mp.dps.microsoft.com
-microsoft.com campaigntracking.mp.dps.microsoft.com                        campaigntracking.mp.dps.microsoft.com
-microsoft.com crossplatform.api.mp.dps.microsoft.com                       crossplatform.api.mp.dps.microsoft.com
-microsoft.com guidesideasaccess8.microsoft.com                             guidesideasaccess8.microsoft.com
-microsoft.com cosell.microsoft.com                                         cosell.microsoft.com
-microsoft.com cosell.dev.microsoft.com                                     cosell.dev.microsoft.com
-microsoft.com calcuiuat.microsoft.com                                      calcuiuat.microsoft.com
-microsoft.com v1.edge-vpn-service-api.microsoft.com                        v1.edge-vpn-service-api.microsoft.com
-microsoft.com i07ou1boaappv.partners.extranet.microsoft.com                i07ou1boaappv.partners.extranet.microsoft.com
-microsoft.com i07ou1bsqlui1.partners.extranet.microsoft.com                i07ou1bsqlui1.partners.extranet.microsoft.com
-microsoft.com devaemauth.microsoft.com                                     devaemauth.microsoft.com
-microsoft.com sf.mst3.ds.dev.us.daas.microsoft.com                         sf.mst3.ds.dev.us.daas.microsoft.com
-microsoft.com sf.user.mst3.ds.dev.us.daas.microsoft.com                    sf.user.mst3.ds.dev.us.daas.microsoft.com
-microsoft.com sf.admin.mst3.ds.dev.us.daas.microsoft.com                   sf.admin.mst3.ds.dev.us.daas.microsoft.com
-microsoft.com cpvexperience.pc.microsoft.com                               cpvexperience.pc.microsoft.com
-microsoft.com ppe.fp.wd.microsoft.com                                      *.ppe.fp.wd.microsoft.com|ppe.fp.wd.microsoft.com
-microsoft.com serviceinsights.microsoft.com                                capacityinsights.microsoft.com|serviceinsights.microsoft.com|serviceintelligence.microsoft.com
-microsoft.com puller.serviceinsights.microsoft.com                         puller.serviceinsights.microsoft.com
-microsoft.com azafsvexcelweb.redmond.corp.microsoft.com                    azafsvexcelweb.redmond.corp.microsoft.com
-microsoft.com *.elixirdev.microsoft.com                                    *.elixirdev.microsoft.com|elixirdev.microsoft.com
-microsoft.com msgtarecruitinghubint.microsoft.com                          msgtarecruitinghubint.microsoft.com
-microsoft.com HVAII-Geneva.UST.wdgae.microsoft.com                         HVAII-Geneva.UST.wdgae.microsoft.com
-microsoft.com *.elixirdev.microsoft.com                                    *.elixirdev.microsoft.com|elixirdev.microsoft.com
-microsoft.com compassv2int.trafficmanager.net                              compassv2int-1-revo.corp.microsoft.com|compassv2int-1.corp.microsoft.com|compassv2int-2-revo.corp.microsoft.com|compassv2int-2.corp.microsoft.com|compassv…
-microsoft.com msproduct.download.microsoft.com                             msproduct.download.microsoft.com
-microsoft.com prod.decryptionservice.cdl.cp.microsoft.com                  kstd9.cp.microsoft.com|prod.decryptionservice.cdl.cp.microsoft.com
-microsoft.com canary.api.lockbox.microsoft.com                             canary.api.lockbox.microsoft.com
-microsoft.com scansvc.x.atp.wd.microsoft.com                               *.scansvc.x.atp.wd.microsoft.com|scansvc.x.atp.wd.microsoft.com
-microsoft.com x.cp.wd.microsoft.com                                        *.x.atp.wd.microsoft.com|*.x.cp.wd.microsoft.com|x.atp.wd.microsoft.com|x.cp.wd.microsoft.com
-microsoft.com test.api.lockbox.microsoft.com                               test.api.lockbox.microsoft.com
-microsoft.com wus2.int.support.inapp.services.microsoft.com                wus2.int.support.inapp.services.microsoft.com
-microsoft.com data-ai-dev.microsoft.com                                    data-ai-dev.microsoft.com
-microsoft.com msgtarecruitinghubint.microsoft.com                          msgtarecruitinghubint.microsoft.com
-microsoft.com forge-editor.microsoft.com                                   forge-editor.microsoft.com
-microsoft.com command-rt-prod-eastap.cms.microsoft.com                     command-rt-prod-eastap-secondary.cms.microsoft.com|command-rt-prod-eastap.cms.microsoft.com
-microsoft.com command.prod.cms.rt.microsoft.com                            command-rt-prod-westcenus-secondary.cms.microsoft.com|command-rt-prod-westcenus.cms.microsoft.com|command.prod.cms.rt.microsoft.com
-microsoft.com command.prod.cms.rt.microsoft.com                            command-rt-prod-eastus-secondary.cms.microsoft.com|command-rt-prod-eastus.cms.microsoft.com|command.prod.cms.rt.microsoft.com
-microsoft.com api-uat.azureforeducation.microsoft.com                      api-uat.azureforeducation.microsoft.com
-microsoft.com vvapp.teams.microsoft.com                                    vvapp.teams.microsoft.com
-microsoft.com vvapp-int.teams.microsoft.com                                vvapp-int.teams.microsoft.com
-microsoft.com scansvc.x.atp.wd.microsoft.com                               *.scansvc.x.atp.wd.microsoft.com|scansvc.x.atp.wd.microsoft.com
-microsoft.com vvapp-dev.teams.microsoft.com                                vvapp-dev.teams.microsoft.com
-microsoft.com x.cp.wd.microsoft.com                                        *.x.atp.wd.microsoft.com|*.x.cp.wd.microsoft.com|x.atp.wd.microsoft.com|x.cp.wd.microsoft.com
-microsoft.com *.api.mtq.microsoft.com                                      *.api.mtq.microsoft.com|bvt.api.mtq.microsoft.com|int.api.mtq.microsoft.com|uat.api.mtq.microsoft.com
-microsoft.com *.mtq.microsoft.com                                          *.mtq.microsoft.com|bvt.mtq.microsoft.com|int.mtq.microsoft.com|uat.mtq.microsoft.com
-microsoft.com command-rt-prod-northeu.cms.microsoft.com                    command-rt-prod-northeu-secondary.cms.microsoft.com|command-rt-prod-northeu.cms.microsoft.com
-microsoft.com mroblmaccessint.mro.rdx.office.microsoft.com                 mroblmaccessint.mro.rdx.office.microsoft.com
-microsoft.com dev.clouddc2.syslogclient.telemetry.microsoft.com            dev.clouddc2.syslogclient.telemetry.microsoft.com
-microsoft.com capping.cp.microsoft.com                                     capping.cp.microsoft.com
-microsoft.com dynauat.api.preprod.esi.microsoft.com                        dynauat.api.preprod.esi.microsoft.com
-microsoft.com dev.clouddc2.syslogclient.telemetry.microsoft.com            dev.clouddc2.syslogclient.telemetry.microsoft.com
-microsoft.com chipei.redmond.corp.microsoft.com                            chipei.redmond.corp.microsoft.com
-microsoft.com packages.microsoft.com                                       packages.microsoft.com
-microsoft.com ivtautomc.copsprod.teams.microsoft.com                       ivtautomc.copsprod.teams.microsoft.com
-microsoft.com skype-sms-auth.communityleader.microsoft.com                 skype-sms-auth.communityleader.microsoft.com
-microsoft.com *.communityleader.microsoft.com                              *.communityleader.microsoft.com
-microsoft.com mtq.microsoft.com                                            mtq.microsoft.com
-microsoft.com api.mtq.microsoft.com                                        api.mtq.microsoft.com
-microsoft.com *.tts-frontend.speech.microsoft.com                          *.tts-frontend.speech.microsoft.com|*.tts.speech.microsoft.com|*.voice.speech.microsoft.com
-microsoft.com communityleader.microsoft.com                                communityleader.microsoft.com
-microsoft.com paslp.partners.extranet.microsoft.com                        paslp.partners.extranet.microsoft.com
-microsoft.com CO1-WINSEQFE.segroup.winse.corp.microsoft.com                CO1-WINSEQFE.segroup.winse.corp.microsoft.com
-microsoft.com *.nam.test.daas.microsoft.com                                *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com *.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com mysignins.microsoft.com                                      api.mysignins.microsoft.com|mysignins.microsoft.com
-microsoft.com cesazure.redmond.corp.microsoft.com                          cesazure.redmond.corp.microsoft.com
-microsoft.com dditsqldata.redmond.corp.microsoft.com                       dditsql.redmond.corp.microsoft.com|dditsql2.redmond.corp.microsoft.com|dditsql3.redmond.corp.microsoft.com|dditsql4.redmond.corp.microsoft.com|dditsqldata…
-microsoft.com storage.ams.gcc.teams.microsoft.com                          *.storage.ams.gcc.teams.microsoft.com|storage.ams.gcc.teams.microsoft.com
-microsoft.com wus.tip2us.tip2.rpssl.flow.microsoft.com                     *.us.tip2.api.flow.microsoft.com|tip2.api.flow.microsoft.com|us.tip2.api.flow.microsoft.com|wus.tip2us.tip2.rpssl.flow.microsoft.com
-microsoft.com *.chdownin.dev.space.microsoft.com                           *.chdownin.dev.space.microsoft.com
-microsoft.com admin.powerapps.com                                          admin.businessplatform.microsoft.com|admin.flow.microsoft.com
-microsoft.com api.tst.forex.microsoft.com                                  api.dev.forex.microsoft.com|api.int.forex.microsoft.com|api.tst.forex.microsoft.com
-microsoft.com sfr2poc.juno.microsoft.com                                   sfr2poc.juno.microsoft.com
-microsoft.com sfr2poc.juno.microsoft.com                                   sfr2poc.juno.microsoft.com
-microsoft.com dditsqlfc.redmond.corp.microsoft.com                         dditsql.redmond.corp.microsoft.com|dditsql2.redmond.corp.microsoft.com|dditsql3.redmond.corp.microsoft.com|dditsql4.redmond.corp.microsoft.com|dditsqlfc.r…
-microsoft.com *.sr.speech.microsoft.com                                    *.sr-frontend.speech.microsoft.com|*.sr.speech.microsoft.com
-microsoft.com *.dpp.speech.microsoft.com                                   *.dpp.speech.microsoft.com
-microsoft.com *.dgs.speech.microsoft.com                                   *.dgs.speech.microsoft.com
-microsoft.com prod.azurefds.microsoft.com                                  prod.azurefds.microsoft.com
-microsoft.com smp-int.microsoft.com                                        smp-int.microsoft.com
-microsoft.com evcographics.myworkspace.microsoft.com                       *.evcographics.myworkspace.microsoft.com|evcographics.myworkspace.microsoft.com
-microsoft.com ocv-slots-test.microsoft.com                                 ocv-slots-test.microsoft.com
-microsoft.com prod.azurefds.microsoft.com                                  prod.azurefds.microsoft.com
-microsoft.com gateway.eastus.maps.azure.com                                atlas.microsoft.com
-microsoft.com *.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com *.nam.test.daas.microsoft.com                                *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com sfr2uat.juno.microsoft.com                                   sfr2uat.juno.microsoft.com
-microsoft.com sfr2uat.juno.microsoft.com                                   sfr2uat.juno.microsoft.com
-microsoft.com gateway.northeurope.maps.azure.com                           atlas.microsoft.com
-microsoft.com trialsautoapippe.microsoft.com                               trialsautoapippe.microsoft.com
-microsoft.com internal.evergreen.microsoft.com                             internal.evergreen.microsoft.com
-microsoft.com flex-prod.sfcs.rnext-supplychain.microsoft.com               flex-prod.sfcs.rnext-supplychain.microsoft.com
-microsoft.com clt16dut2.redmond.corp.microsoft.com                         clt16dut2.redmond.corp.microsoft.com
-microsoft.com i02ba3cwebexp02.redmond.corp.microsoft.com                   i02ba3cwebexp02.redmond.corp.microsoft.com
-microsoft.com lshefner.myworkspace.microsoft.com                           *.lshefner.myworkspace.microsoft.com|lshefner.myworkspace.microsoft.com
-microsoft.com api.businessappdiscovery.microsoft.com                       *.api.businessappdiscovery.microsoft.com|api.businessappdiscovery.microsoft.com
-microsoft.com msgtarecruitinghubint.microsoft.com                          msgtarecruitinghubint.microsoft.com
-microsoft.com api.sdh.sdg.teams.microsoft.com                              api.sdh.sdg.teams.microsoft.com|noame2e.sdh.sdg.teams.microsoft.com|uscee2e.sdh.sdg.teams.microsoft.com|use2e2e.sdh.sdg.teams.microsoft.com
-microsoft.com api.sdh.sdg.teams.microsoft.com                              api.sdh.sdg.teams.microsoft.com|noame2e.sdh.sdg.teams.microsoft.com|uscee2e.sdh.sdg.teams.microsoft.com|use2e2e.sdh.sdg.teams.microsoft.com
-microsoft.com ppe.fp.wd.microsoft.com                                      *.ppe.fp.wd.microsoft.com|ppe.fp.wd.microsoft.com
-microsoft.com livefe2.redmond.corp.microsoft.com                           livefe2.redmond.corp.microsoft.com
-microsoft.com australiaeast.commands.speech.microsoft.com                  australiaeast.commands.speech.microsoft.com|canadacentral.commands.speech.microsoft.com|centralindia.commands.speech.microsoft.com|eastasia.commands.speec…
-microsoft.com westus.commands.runtime.speech.microsoft.com                 australiaeast.commands.runtime.speech.microsoft.com|canadacentral.commands.runtime.speech.microsoft.com|centralindia.commands.runtime.speech.microsoft.com…
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com surestepuat.microsoft.com                                    surestepuat.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com dcsint.cp.microsoft.com                                      dcsint.cp.microsoft.com
-microsoft.com surestepuat.microsoft.com                                    surestepuat.microsoft.com
-microsoft.com surestep.microsoft.com                                       surestep.microsoft.com
-microsoft.com surestepdev.microsoft.com                                    surestepdev.microsoft.com
-microsoft.com cmserviceencrypt.gateway.configmgr.manage-mig.microsoft.com  cmserviceencrypt.gateway.configmgr.manage-mig.microsoft.com
-microsoft.com *.nam.test.daas.microsoft.com                                *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com cmgatewaysigning.gateway.configmgr.manage-mig.microsoft.com  cmgatewaysigning.gateway.configmgr.manage-mig.microsoft.com
-microsoft.com cmgatewaysigning.gateway.configmgr.manage-mig.microsoft.com  cmgatewaysigning.gateway.configmgr.manage-mig.microsoft.com
-microsoft.com gateway.configmgr.manage-mig.microsoft.com                   gateway.configmgr.manage-mig.microsoft.com|us.gateway.configmgr.manage-mig.microsoft.com
-microsoft.com paymentfulfillmentfd.cp.microsoft.com                        *.paymentfulfillmentfd.cp.microsoft.com|paymentfulfillmentfd.cp.microsoft.com
-microsoft.com *.develop.api.speech.microsoft.com                           *.develop.api.speech.microsoft.com|develop.api.speech.microsoft.com
-microsoft.com int.cmngp.cloud.microsoft.com                                int.cmngp.cloud.microsoft.com
-microsoft.com servicefabric.prod.customermaster.cloud.microsoft.com        servicefabric.prod.customermaster.cloud.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com kepler.powerplatform.microsoft.com                           *.kepler.powerplatform.microsoft.com|kepler.powerplatform.microsoft.com
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com mre.p.dfp.microsoft.com                                      mre.p.dfp.microsoft.com
-microsoft.com *.dataapi-int.dcat.dsp.mp.microsoft.com                      *.backend.dataapi-int.dcat.dsp.mp.microsoft.com|*.dataapi-int.dcat.dsp.mp.microsoft.com|slspub.redmond.corp.microsoft.com
-microsoft.com instrumentstore.cp.microsoft.com                             instrumentstore.cp.microsoft.com
-microsoft.com paymentsinstrumentrelay.cp.microsoft.com                     paymentsinstrumentrelay.cp.microsoft.com
-microsoft.com paymentfileexchangerelayservice.cp.microsoft.com             paymentfileexchangerelayservice.cp.microsoft.com
-microsoft.com p5.cp.microsoft.com                                          p5.cp.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com cmd-int.dcat.dsp.mp.microsoft.com                            *.backend.cmd-int.dcat.dsp.mp.microsoft.com|*.cmd-int.dcat.dsp.mp.microsoft.com|cmd-int.dcat.dsp.mp.microsoft.com
-microsoft.com cmd-dev.dcat.dsp.mp.microsoft.com                            *.backend.cmd-dev.dcat.dsp.mp.microsoft.com|*.cmd-dev.dcat.dsp.mp.microsoft.com|cmd-dev.dcat.dsp.mp.microsoft.com
-microsoft.com docs.microsoft.com                                           docs.microsoft.com
-microsoft.com glb.auar-dev.trafficshaping.dsp.mp.microsoft.com             glb.auar-dev.trafficshaping.dsp.mp.microsoft.com
-microsoft.com westus2.api.cognitive.microsoft.com                          westus2.api.cognitive.microsoft.com|westus2.dev.cognitive.microsoft.com
-microsoft.com onecert-test.microsoft.com                                   onecert-test.microsoft.com
-microsoft.com service.onestore.microsoft.com                               service.onestore.microsoft.com
-microsoft.com azuremarketplace.microsoft.com                               azuremarketplace.microsoft.com
-microsoft.com *.pub-int.dcat.dsp.mp.microsoft.com                          *.backend.pub-int.dcat.dsp.mp.microsoft.com|*.pub-int.dcat.dsp.mp.microsoft.com
-microsoft.com mysignins.microsoft.com                                      api.mysignins.microsoft.com|mysignins.microsoft.com
-microsoft.com stage.public-api.todo.microsoft.com                          stage.public-api.todo.microsoft.com
-microsoft.com myaccess.ppe.microsoft.com                                   myaccess.ppe.microsoft.com
-microsoft.com dev.public-api.todo.microsoft.com                            dev.public-api.todo.microsoft.com
-microsoft.com centralus.api.cognitive.microsoft.com                        centralus.api.cognitive.microsoft.com|centralus.dev.cognitive.microsoft.com
-microsoft.com ccp.pulsarx-int.microsoft.com                                ccp.pulsarx-int.microsoft.com
-microsoft.com stage.public-create.todo.microsoft.com                       stage.public-create.todo.microsoft.com
-microsoft.com dev.public-create.todo.microsoft.com                         dev.public-create.todo.microsoft.com
-microsoft.com eastus.api.cognitive.microsoft.com                           eastus.api.cognitive.microsoft.com|eastus.dev.cognitive.microsoft.com
-microsoft.com scansvc.x.atp.wd.microsoft.com                               *.scansvc.x.atp.wd.microsoft.com|scansvc.x.atp.wd.microsoft.com
-microsoft.com x.cp.wd.microsoft.com                                        *.x.atp.wd.microsoft.com|*.x.cp.wd.microsoft.com|x.atp.wd.microsoft.com|x.cp.wd.microsoft.com
-microsoft.com ams-portal.redmond.corp.microsoft.com                        ams-portal.redmond.corp.microsoft.com
-microsoft.com *.dataapi-dev.dcat.dsp.mp.microsoft.com                      *.backend.dataapi-dev.dcat.dsp.mp.microsoft.com|*.dataapi-dev.dcat.dsp.mp.microsoft.com
-microsoft.com iam.supplychain.microsoft.com                                iam.supplychain.microsoft.com
-microsoft.com projects.mcapiprojects-aircapi.commerce.microsoft.com        ncus.projects.mcapiprojects-aircapi.commerce.microsoft.com|projects.mcapiprojects-aircapi.commerce.microsoft.com
-microsoft.com *.fusebot.m365.microsoft.com                                 *.fusebot.m365.microsoft.com
-microsoft.com *.fusebot.m365.microsoft.com                                 *.fusebot.m365.microsoft.com
-microsoft.com *.internal.api.speech.microsoft.com                          *.internal.api.speech.microsoft.com|internal.api.speech.microsoft.com
-microsoft.com atlas.microsoft.com                                          atlas.microsoft.com|eu.atlas.microsoft.com|us.atlas.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com shswda01.download.manage-selfhost.microsoft.com              shswda01-mscdn.download.manage-selfhost.microsoft.com|shswda01.download.manage-selfhost.microsoft.com
-microsoft.com *.salus.microsoft.com                                        *.salus.microsoft.com
-microsoft.com onedfswd.download.manage-dogfood.microsoft.com               onedfswd-mscdn.download.manage-dogfood.microsoft.com|onedfswd.download.manage-dogfood.microsoft.com
-microsoft.com *.nor.daas.microsoft.com                                     *.daas.microsoft.com|*.nor.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nor.daas.microsoft.com
-microsoft.com channelincentivesbeta.microsoft.com                          channelincentivesbeta.microsoft.com
-microsoft.com westeurope.api.cognitive.microsoft.com                       westeurope.api.cognitive.microsoft.com|westeurope.dev.cognitive.microsoft.com
-microsoft.com partner.ppe.repmap.microsoft.com                             *.ppe.repmap.microsoft.com|*.prod.repmap.microsoft.com|client.ppe.repmap.microsoft.com|client.prod.repmap.microsoft.com|partner.ppe.repmap.microsoft.com|p…
-microsoft.com mygroups.microsoft.com                                       *.myapplications-ppe.microsoft.com|*.myapplications-tip.microsoft.com|*.myapplications.microsoft.com|*.mygroups-ppe.microsoft.com|*.mygroups-tip.microsoft…
-microsoft.com identity.microsoft.com                                       applications.microsoft.com|apps.dev.microsoft.com|identity.microsoft.com
-microsoft.com myaccount.microsoft.com                                      api.myaccount-ppe.microsoft.com|api.myaccount-tip.microsoft.com|api.myaccount.microsoft.com|api.myworkaccount-ppe.microsoft.com|api.myworkaccount.microsof…
-microsoft.com partnercenter-aircapi.microsoft.com                          partnercenter-aircapi.microsoft.com
-microsoft.com login.windows.net                                            iotauth.microsoft.com|login.microsoft.com|mtlsauth.microsoft.com
-microsoft.com appmanagement.activedirectory.microsoft.com                  appmanagement.activedirectory-ppe.microsoft.com|appmanagement.activedirectory.microsoft.com
-microsoft.com invitations.microsoft.com                                    invitations.microsoft.com
-microsoft.com partner.ppe.repmap.microsoft.com                             *.ppe.repmap.microsoft.com|*.prod.repmap.microsoft.com|client.ppe.repmap.microsoft.com|client.prod.repmap.microsoft.com|partner.ppe.repmap.microsoft.com|p…
-microsoft.com myaccount.microsoft.com                                      api.myaccount-ppe.microsoft.com|api.myaccount-tip.microsoft.com|api.myaccount.microsoft.com|api.myworkaccount-ppe.microsoft.com|api.myworkaccount.microsof…
-microsoft.com identity.microsoft.com                                       applications.microsoft.com|apps.dev.microsoft.com|identity.microsoft.com
-microsoft.com mobileappcommunicator.auth.microsoft.com                     mobileappcommunicator.auth-ppe.microsoft.com|mobileappcommunicator.auth.microsoft.com
-microsoft.com mygroups.microsoft.com                                       *.myapplications-ppe.microsoft.com|*.myapplications-tip.microsoft.com|*.myapplications.microsoft.com|*.mygroups-ppe.microsoft.com|*.mygroups-tip.microsoft…
-microsoft.com myaccess.canary.microsoft.com                                myaccess.canary.microsoft.com|myaccess.microsoft.com
-microsoft.com iamtelemetrycollector.microsoft.com                          iamtelemetrycollector-ppe.microsoft.com|iamtelemetrycollector.microsoft.com
-microsoft.com partnercenter-aircapi.microsoft.com                          partnercenter-aircapi.microsoft.com
-microsoft.com partnercenter-aircapi.microsoft.com                          partnercenter-aircapi.microsoft.com
-microsoft.com *.notify.windows.com                                         *.cdpcs.access.microsoft.com|*.cdpcs.microsoft.com|*.romeccs.microsoft.com|cdpcs.access.microsoft.com|cdpcs.microsoft.com|romeccs.microsoft.com
-microsoft.com pubweb.df.muv6.microsoft.com                                 broad.pubweb.df.muv6.microsoft.com|internal.pubweb.df.muv6.microsoft.com|live.pubweb.df.muv6.microsoft.com|pubweb.df.muv6.microsoft.com
-microsoft.com sara.api-dev.support.microsoft.com                           sara.api-dev.support.microsoft.com
-microsoft.com *.customkeyword.develop.api.speech.microsoft.com             *.customkeyword.develop.api.speech.microsoft.com|customkeyword.develop.api.speech.microsoft.com
-microsoft.com *.keywordspotting.develop.api.speech.microsoft.com           *.keywordspotting.develop.api.speech.microsoft.com|keywordspotting.develop.api.speech.microsoft.com
-microsoft.com api.ccp.pulsarx.microsoft.com                                api.ccp.pulsarx.microsoft.com
-microsoft.com *.core.wdgae.microsoft.com                                   *.core.wdgae.microsoft.com
-microsoft.com *.core.wdgae.microsoft.com                                   *.core.wdgae.microsoft.com
-microsoft.com wus.tip1us.tip1.rpadminssl.flow.microsoft.com                *.us.admin.api.flow.microsoft.com|admin.api.flow.microsoft.com|us.admin.api.flow.microsoft.com|westus.us.tip1.admin.api.flow.microsoft.com|wus.tip1us.tip1…
-microsoft.com eus.tip1us.tip1.rpadminssl.flow.microsoft.com                *.us.admin.api.flow.microsoft.com|admin.api.flow.microsoft.com|eus.tip1us.tip1.rpadminssl.flow.microsoft.com|us.admin.api.flow.microsoft.com|westus.us.tip…
-microsoft.com wus.tip1us.tip1.rpssl.flow.microsoft.com                     *.emea.tip1.api.flow.microsoft.com|*.tip1.api.flow.microsoft.com|*.us.tip1.api.flow.microsoft.com|tip1.api.flow.microsoft.com|unitedstates.tip1.api.flow.m…
-microsoft.com eus.tip1us.tip1.rpssl.flow.microsoft.com                     *.emea.tip1.api.flow.microsoft.com|*.tip1.api.flow.microsoft.com|*.us.tip1.api.flow.microsoft.com|eus.tip1us.tip1.rpssl.flow.microsoft.com|tip1.api.flow.m…
-microsoft.com wvd-rdp.test.watson.azure.com                                azurewatsontest.microsoft.com
-microsoft.com wvd-sas.test.watson.azure.com                                azurewatsontest.microsoft.com
-microsoft.com onecert.core.microsoft.com                                   onecert.core.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nor.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.ger.daas.microsoft.com
-microsoft.com *.nor.daas.microsoft.com                                     *.daas.microsoft.com|*.nor.daas.microsoft.com
-microsoft.com *.ger.daas.microsoft.com                                     *.daas.microsoft.com|*.ger.daas.microsoft.com
-microsoft.com holidays.microsoft.com                                       holidays.microsoft.com
-microsoft.com paintelodatauat.one.microsoft.com                            paintelodatauat.one.microsoft.com|paintelodatauatv2.one.microsoft.com
-microsoft.com msa.mdapngp-int.microsoft.com                                msa.mdapngp-int.microsoft.com
-microsoft.com msa.mdapngp.microsoft.com                                    msa.mdapngp.microsoft.com
-microsoft.com westcentralus.api.cognitive.microsoft.com                    westcentralus.api.cognitive.microsoft.com|westcentralus.dev.cognitive.microsoft.com
-microsoft.com relationships.partner.microsoft.com                          relationships.partner.microsoft.com
-microsoft.com *.ppe.customercareintelligence.net                           embed.preprod.powerva.microsoft.com
-microsoft.com *.falconprod-sf.trafficmanager.net                           falconhypernet.glbdns2.microsoft.com|falconhyperneteastasia.glbdns2.microsoft.com|falconhyperneteastus2.glbdns2.microsoft.com|falconhypernetncus.glbdns2.m…
-microsoft.com *.elixirdev.microsoft.com                                    *.elixirdev.microsoft.com|elixirdev.microsoft.com
-microsoft.com *.falconprod-sf.trafficmanager.net                           falconhypernet.glbdns2.microsoft.com|falconhyperneteastasia.glbdns2.microsoft.com|falconhyperneteastus2.glbdns2.microsoft.com|falconhypernetncus.glbdns2.m…
-microsoft.com admin.powerapps.com                                          admin.businessplatform.microsoft.com|admin.flow.microsoft.com
-microsoft.com polaris-test.microsoft.com                                   polaris-test.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com polaris.microsoft.com                                        polaris.microsoft.com
-microsoft.com azafsvexcelsql.redmond.corp.microsoft.com                    azafsvexcelsql.redmond.corp.microsoft.com
-microsoft.com studentambassadors.microsoft.com                             studentambassadors.microsoft.com
-microsoft.com solutions.microsoft.com                                      solutions.microsoft.com
-microsoft.com msgtarecruitinghubdev.microsoft.com                          msgtarecruitinghubdev.microsoft.com
-microsoft.com gateway.westus2.maps.azure.com                               atlas.microsoft.com
-microsoft.com solutions.microsoft.com                                      solutions.microsoft.com
-microsoft.com eastus2euap.api.cognitive.microsoft.com                      eastus2euap.api.cognitive.microsoft.com|eastus2euap.dev.cognitive.microsoft.com
-microsoft.com adminanalytics.powerplatform.microsoft.com                   *.adminanalytics.powerplatform.microsoft.com|*.dfanalytics.powerplatform.microsoft.com|adminanalytics.powerplatform.microsoft.com|dfanalytics.powerplatfor…
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|web.powerva.microsoft.com
-microsoft.com survey.microsoft.com                                         bingsurvey.microsoft.com|microsoftsurvey.microsoft.com|surfacesurvey.microsoft.com|survey.microsoft.com|surveyconfigurator.microsoft.com|xboxsurvey.micros…
-microsoft.com awssvcu1.partners.extranet.microsoft.com                     awssvcu1.partners.extranet.microsoft.com
-microsoft.com financialrecordjournal.cp.microsoft.com                      financialrecordjournal.cp.microsoft.com
-microsoft.com awsuiu1.partners.extranet.microsoft.com                      awsuiu1.partners.extranet.microsoft.com
-microsoft.com *.nam.test.daas.microsoft.com                                *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com *.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com cla.opensource.microsoft.com                                 cla.microsoft.com|cla.opensource.microsoft.com
-microsoft.com authoring.support.microsoft.com                              authoring.support.microsoft.com
-microsoft.com supportactions-eastus-dev.services.microsoft.com             supportactions-eastus-dev.services.microsoft.com
-microsoft.com ppe.aad.clientauth.tlc.sharedservices.edu.microsoft.com      ppe.aad.clientauth.tlc.sharedservices.edu.microsoft.com|ppe.tls.sharedservices.edu.microsoft.com
-microsoft.com documents.quote-uat.microsoft.com                            documents.quote-uat.microsoft.com
-microsoft.com documents.quote-dev.microsoft.com                            documents.quote-dev.microsoft.com
-microsoft.com nonprod.ta.mtp.md.microsoft.com                              nonprod.ta.mtp.md.microsoft.com
-microsoft.com api-staging.powerplatform.microsoft.com                      api-staging.powerplatform.microsoft.com
-microsoft.com api.powerplatform.microsoft.com                              api.powerplatform.microsoft.com
-microsoft.com tip1-staging.api.powerplatform.microsoft.com                 tip1-staging.api.powerplatform.microsoft.com
-microsoft.com tip1.api.powerplatform.microsoft.com                         tip1.api.powerplatform.microsoft.com
-microsoft.com attributeservice.quote-uat.microsoft.com                     attributeservice.quote-uat.microsoft.com
-microsoft.com exceptionservice.quote-uat.microsoft.com                     exceptionservice.quote-uat.microsoft.com
-microsoft.com sdx.microsoft.com                                            sdx.microsoft.com
-microsoft.com *.dynareg.microsoft.com                                      *.dynareg.microsoft.com
-microsoft.com attributeservice.quote-dev.microsoft.com                     attributeservice.quote-dev.microsoft.com
-microsoft.com exceptionservice.quote-dev.microsoft.com                     exceptionservice.quote-dev.microsoft.com
-microsoft.com *.eur.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.eur.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.eur.dev.daas.microsoft.com
-microsoft.com fcsatbgrpc.extest.microsoft.com                              fcsatbgrpc.extest.microsoft.com
-microsoft.com tdsatbgrpc.extest.microsoft.com                              tdsatbgrpc.extest.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.kor.daas.microsoft.com
-microsoft.com *.kor.daas.microsoft.com                                     *.daas.microsoft.com|*.kor.daas.microsoft.com
-microsoft.com api.powerva.microsoft.com                                    api.powerva.microsoft.com
-microsoft.com *.elixir.microsoft.com                                       *.elixir.microsoft.com|elixir.microsoft.com
-microsoft.com licensing-uat1.microsoft.com                                 businessaccount-uat.microsoft.com|licensing-uat1.microsoft.com
-microsoft.com solutions.microsoft.com                                      solutions.microsoft.com
-microsoft.com *.elixirppe.microsoft.com                                    *.elixirppe.microsoft.com
-microsoft.com ssettool.redmond.corp.microsoft.com                          ssettool.redmond.corp.microsoft.com
-microsoft.com myaccount.microsoft.com                                      api.myaccount-ppe.microsoft.com|api.myaccount-tip.microsoft.com|api.myaccount.microsoft.com|api.myworkaccount-ppe.microsoft.com|api.myworkaccount.microsof…
-microsoft.com myaccess.canary.microsoft.com                                myaccess.canary.microsoft.com|myaccess.microsoft.com
-microsoft.com iamtelemetrycollector.microsoft.com                          iamtelemetrycollector-ppe.microsoft.com|iamtelemetrycollector.microsoft.com
-microsoft.com mygroups.microsoft.com                                       *.myapplications-ppe.microsoft.com|*.myapplications-tip.microsoft.com|*.myapplications.microsoft.com|*.mygroups-ppe.microsoft.com|*.mygroups-tip.microsoft…
-microsoft.com mobileappcommunicator.auth.microsoft.com                     mobileappcommunicator.auth-ppe.microsoft.com|mobileappcommunicator.auth.microsoft.com
-microsoft.com partner.ppe.repmap.microsoft.com                             *.ppe.repmap.microsoft.com|*.prod.repmap.microsoft.com|client.ppe.repmap.microsoft.com|client.prod.repmap.microsoft.com|partner.ppe.repmap.microsoft.com|p…
-microsoft.com login.windows.net                                            iotauth.microsoft.com|login.microsoft.com|mtlsauth.microsoft.com
-microsoft.com identity.microsoft.com                                       applications.microsoft.com|apps.dev.microsoft.com|identity.microsoft.com
-microsoft.com appmanagement.activedirectory.microsoft.com                  appmanagement.activedirectory-ppe.microsoft.com|appmanagement.activedirectory.microsoft.com
-microsoft.com invitations.microsoft.com                                    invitations.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com wvd-rdp.test.watson.azure.com                                azurewatsontest.microsoft.com
-microsoft.com wvd-sas.test.watson.azure.com                                azurewatsontest.microsoft.com
-microsoft.com azsecpack.c.dfp.microsoft.com                                azsecpack.c.dfp.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com templatesvlcmu1.partners.extranet.microsoft.com              templatesvlcmu1.partners.extranet.microsoft.com
-microsoft.com contractsvlcmu1.partners.extranet.microsoft.com              contractsvlcmu1.partners.extranet.microsoft.com
-microsoft.com bvt-sign.scan.preprod.esrp.microsoft.com                     bvt-sign.scan.preprod.esrp.microsoft.com
-microsoft.com family.dev.cs.md.microsoft.com                               family.dev.cs.md.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com query-amp-ppe-eastus.cms.microsoft.com                       query-amp-ppe-eastus.cms.microsoft.com
-microsoft.com centraluseuap.api.cognitive.microsoft.com                    centraluseuap.api.cognitive.microsoft.com|centraluseuap.dev.cognitive.microsoft.com
-microsoft.com iuradr.partnersbeta.microsoft.com                            adr.partnersbeta.microsoft.com|iur.partnersbeta.microsoft.com|iuradr.partnersbeta.microsoft.com|stage.cloudpartner.mspartner.microsoft.com
-microsoft.com scansvc.x.atp.wd.microsoft.com                               *.scansvc.x.atp.wd.microsoft.com|scansvc.x.atp.wd.microsoft.com
-microsoft.com *.ti.microsoft.com                                           *.api.ti.microsoft.com|*.ti.microsoft.com|api.ti.microsoft.com|ti.microsoft.com
-microsoft.com westus2-TiP.api.cognitive.microsoft.com                      westus2-TiP.api.cognitive.microsoft.com|westus2-TiP.dev.cognitive.microsoft.com
-microsoft.com x.cp.wd.microsoft.com                                        *.x.atp.wd.microsoft.com|*.x.cp.wd.microsoft.com|x.atp.wd.microsoft.com|x.cp.wd.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com bsx-intmd.microsoft.com                                      *.bsx-intmd.microsoft.com|*.businessstore-intmd.microsoft.com|*.educationstore-intmd.microsoft.com|bsx-intmd.microsoft.com|businessstore-intmd.microsoft.c…
-microsoft.com portal.meshazurestack.selfhost.corp.microsoft.com            portal.meshazurestack.selfhost.corp.microsoft.com
-microsoft.com management.meshazurestack.selfhost.corp.microsoft.com        management.meshazurestack.selfhost.corp.microsoft.com
-microsoft.com adminmanagement.meshazurestack.selfhost.corp.microsoft.com   adminmanagement.meshazurestack.selfhost.corp.microsoft.com
-microsoft.com adminportal.meshazurestack.selfhost.corp.microsoft.com       adminportal.meshazurestack.selfhost.corp.microsoft.com
-microsoft.com *.vault.meshazurestack.selfhost.corp.microsoft.com           *.vault.meshazurestack.selfhost.corp.microsoft.com
-microsoft.com *.hosting.meshazurestack.selfhost.corp.microsoft.com         *.hosting.meshazurestack.selfhost.corp.microsoft.com
-microsoft.com *.adminvault.meshazurestack.selfhost.corp.microsoft.com      *.adminvault.meshazurestack.selfhost.corp.microsoft.com
-microsoft.com *.adminhosting.meshazurestack.selfhost.corp.microsoft.com    *.adminhosting.meshazurestack.selfhost.corp.microsoft.com
-microsoft.com *.table.meshazurestack.selfhost.corp.microsoft.com           *.table.meshazurestack.selfhost.corp.microsoft.com
-microsoft.com *.queue.meshazurestack.selfhost.corp.microsoft.com           *.queue.meshazurestack.selfhost.corp.microsoft.com
-microsoft.com *.blob.meshazurestack.selfhost.corp.microsoft.com            *.blob.meshazurestack.selfhost.corp.microsoft.com
-microsoft.com defender.microsoft.com                                       *.gb.wd.microsoft.com|defender.microsoft.com|mysecurity.microsoft.com
-microsoft.com relay.ks.cp.microsoft.com                                    relay.ks.cp.microsoft.com
-microsoft.com *.falconprod-sf.trafficmanager.net                           falconhypernet.glbdns2.microsoft.com|falconhyperneteastasia.glbdns2.microsoft.com|falconhyperneteastus2.glbdns2.microsoft.com|falconhypernetncus.glbdns2.m…
-microsoft.com LogManagerService.scus.manage-mig.microsoft.com              LogManagerService.scus.manage-mig.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.ger.daas.microsoft.com
-microsoft.com *.ger.daas.microsoft.com                                     *.daas.microsoft.com|*.ger.daas.microsoft.com
-microsoft.com bsx-int.microsoft.com                                        *.bsx-int.microsoft.com|*.businessstore-int.microsoft.com|*.educationstore-int.microsoft.com|bsx-int.microsoft.com|businessstore-int.microsoft.com|educati…
-microsoft.com LogManagerService.wus3.manage-mig.microsoft.com              LogManagerService.wus3.manage-mig.microsoft.com
-microsoft.com prod-cca.data.dfp.microsoft.com                              prod-cca.data.dfp.microsoft.com
-microsoft.com public.todo.microsoft.com                                    public.todo.microsoft.com
-microsoft.com LogManagerService.scus.manage-mig.microsoft.com              LogManagerService.scus.manage-mig.microsoft.com
-microsoft.com dsc.microsoft.com                                            *.dsc.microsoft.com|dsc.microsoft.com
-microsoft.com dscadminhub.dsc.microsoft.com                                *.dscadminhub.dsc.microsoft.com|dscadminhub.dsc.microsoft.com
-microsoft.com LogManagerService.wus3.manage-mig.microsoft.com              LogManagerService.wus3.manage-mig.microsoft.com
-microsoft.com LogManagerService.wus3.manage-mig.microsoft.com              LogManagerService.wus3.manage-mig.microsoft.com
-microsoft.com licensingdocs.microsoft.com                                  licensingdocs.microsoft.com
-microsoft.com api.preview.powerva.microsoft.com                            api.preview.powerva.microsoft.com
-microsoft.com media.thanos.mediacreation.trafficmanager.net                mediacreation-media.microsoft.com
-microsoft.com sourcelookup.thanos.mediacreation.trafficmanager.net         mediacreation-sourcelookup.microsoft.com
-microsoft.com web.thanos.mediacreation.trafficmanager.net                  mediacreation.microsoft.com
-microsoft.com dropmap.thanos.mediacreation.trafficmanager.net              mediacreation-dropmap.microsoft.com
-microsoft.com tools.thanos.mediacreation.trafficmanager.net                mediacreation-tools.microsoft.com
-microsoft.com stage.public.todo.microsoft.com                              stage.public.todo.microsoft.com
-microsoft.com dev.public.todo.microsoft.com                                dev.public.todo.microsoft.com
-microsoft.com query-preview-amp-ppe-eastus.cms.microsoft.com               query-preview-amp-ppe-eastus.cms.microsoft.com
-microsoft.com api.powerva.microsoft.com                                    api.powerva.microsoft.com
-microsoft.com eus2a4opcnps02.a4opacketcore.microsoft.com                   eus2a4opcnps02.a4opacketcore.microsoft.com
-microsoft.com eus2a4opcnps01.a4opacketcore.microsoft.com                   eus2a4opcnps01.a4opacketcore.microsoft.com
-microsoft.com licensingdocs.microsoft.com                                  licensingdocs.microsoft.com
-microsoft.com onecert.core.microsoft.com                                   onecert.core.microsoft.com|xonecert.core.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.ger.daas.microsoft.com
-microsoft.com *.ger.daas.microsoft.com                                     *.daas.microsoft.com|*.ger.daas.microsoft.com
-microsoft.com *.nor.daas.microsoft.com                                     *.daas.microsoft.com|*.nor.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nor.daas.microsoft.com
-microsoft.com api.partnercompetency.microsoft.com                          api.partnercompetency.microsoft.com
-microsoft.com chargeaggregationservice.cp.microsoft.com                    chargeaggregationservice.co1.cp.microsoft.com|chargeaggregationservice.cp.microsoft.com|chargeaggregationservice.dm2.cp.microsoft.com
-microsoft.com chargeaggregationjournal.cp.microsoft.com                    chargeaggregationjournal.co1.cp.microsoft.com|chargeaggregationjournal.cp.microsoft.com|chargeaggregationjournal.dm2.cp.microsoft.com
-microsoft.com *.elixirdev.microsoft.com                                    *.elixirdev.microsoft.com|elixirdev.microsoft.com
-microsoft.com oneitvsoapiprod.microsoft.com                                oneitvsoapiprod.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com api.int.marko.microsoft.com                                  api.int.marko.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com partnercenter-aircapi.microsoft.com                          partnercenter-aircapi.microsoft.com
-microsoft.com kevlar.m365adminservices.microsoft.com                       kevlar.m365adminservices.microsoft.com
-microsoft.com datsext.one.microsoft.com                                    datsext.one.microsoft.com
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|northcentralus.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|northcentralus.api.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|northcentralus.dcsfe.pr…
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|eastus2.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|eastus2.api.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|eastus2.dcsfe.prod.adu.…
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|centralus.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|centralus.api.prod.adu.microsoft.com
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|eastus.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|eastus.api.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|centralus.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.ad…
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|eastus.dcsfe.prod.adu.m…
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com|westus3.rp.prod.adu.microsoft.com
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|westus3.api.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|westus3.dcsfe.prod.adu.…
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|northeurope.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|northeurope.api.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|northeurope.dcsfe.prod.…
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com|westeurope.rp.prod.adu.microsoft.com
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|westeurope.api.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|westeurope.dcsfe.prod.a…
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com|uksouth.rp.prod.adu.microsoft.com
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|uksouth.api.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|uksouth.dcsfe.prod.adu.…
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|eastus.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com|westus.rp.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|eastus.dcsfe.prod.adu.m…
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|westus.api.prod.adu.microsoft.com
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|eastus.api.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|westus.dcsfe.prod.adu.m…
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|australiaeast.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|australiaeast.api.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|australiaeast.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|d…
-microsoft.com contentservice.dce.mp.microsoft.com                          contentservice.dce.mp.microsoft.com
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com|swedensouth.rp.prod.adu.microsoft.com
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|swedensouth.api.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|swedensouth.dcsfe.prod.…
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com|swedencentral.rp.prod.adu.microsoft.com
-microsoft.com ieb-internal-ci-westus.cms.microsoft.com                     ieb-internal-ci-westus.cms.microsoft.com
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|swedencentral.api.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|swedencentral.dcsfe.pro…
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com|ukwest.rp.prod.adu.microsoft.com
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|ukwest.api.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|ukwest.dcsfe.prod.adu.m…
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com|southcentralus.rp.prod.adu.microsoft.com
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|southcentralus.api.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|southcentralus.dcsfe.pr…
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|australiasoutheast.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|australiasoutheast.api.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|australiasoutheast.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.…
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|northcentralus.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|northcentralus.dcsfe.pr…
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|northcentralus.api.prod.adu.microsoft.com
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|eastus2.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|eastus2.dcsfe.prod.adu.…
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|eastus2.api.prod.adu.microsoft.com
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|centralus.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|centralus.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.ad…
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|centralus.api.prod.adu.microsoft.com
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|eastus.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|eastus.dcsfe.prod.adu.m…
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|eastus.api.prod.adu.microsoft.com
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com|westus3.rp.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|westus3.dcsfe.prod.adu.…
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|westus3.api.prod.adu.microsoft.com
-microsoft.com costmanagement.microsoft.com                                 costmanagement.microsoft.com
-microsoft.com api.revenuerecognition.microsoft.com                         api.revenuerecognition.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com product-catalog.apim-int.azure.microsoft.com                 product-catalog.apim-int.azure.microsoft.com
-microsoft.com 3dprintservice.microsoft.com                                 3dprintservice.microsoft.com
-microsoft.com *.azsacr.spokane.azurestack.corp.microsoft.com               *.azsacr.spokane.azurestack.corp.microsoft.com
-microsoft.com reservations-ff-out.microsoft.com                            reservations-ff-out.microsoft.com
-microsoft.com datagridservices-dev.microsoft.com                           *.datagridservices-dev.microsoft.com|datagridservices-dev.microsoft.com
-microsoft.com testweb.playready.microsoft.com                              testweb.playready.microsoft.com
-microsoft.com test.playready.microsoft.com                                 test.playready.microsoft.com
-microsoft.com query-preview-amp-ppe-eastus.cms.microsoft.com               query-preview-amp-ppe-eastus.cms.microsoft.com
-microsoft.com query-preview-amp-ppe-eastus.cms.microsoft.com               query-preview-amp-ppe-eastus.cms.microsoft.com
-microsoft.com api.partnerproficiency.microsoft.com                         api.partnerproficiency.microsoft.com
-microsoft.com packaging.dev.serviceshub.microsoft.com                      packaging.dev.serviceshub.microsoft.com
-microsoft.com mcapicpl.geneva.keyvault.client.cls-int.microsoft.com        mcapicpl.geneva.keyvault.client.cls-int.microsoft.com
-microsoft.com sbc.tsamy.myworkspace.microsoft.com                          sbc.tsamy.myworkspace.microsoft.com
-microsoft.com iot.dps.mp.microsoft.com                                     iot.dps.mp.microsoft.com
-microsoft.com kepler.powerplatform.microsoft.com                           *.kepler.powerplatform.microsoft.com|kepler.powerplatform.microsoft.com
-microsoft.com echelon.microsoft.com                                        echelon.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com internal.evergreen.microsoft.com                             internal.evergreen.microsoft.com
-microsoft.com d.dogfood.main.ml.teams.microsoft.com                        *.d.ipdns.dogfood.main.ml.teams.microsoft.com|*.d.west.dogfood.main.ml.teams.microsoft.com|d.dogfood.main.ml.teams.microsoft.com|d.west.dogfood.main.ml.te…
-microsoft.com o.dogfood.main.ml.teams.microsoft.com                        *.o.ipdns.dogfood.main.ml.teams.microsoft.com|*.o.west.dogfood.main.ml.teams.microsoft.com|o.dogfood.main.ml.teams.microsoft.com|o.west.dogfood.main.ml.te…
-microsoft.com c.dogfood.main.ml.teams.microsoft.com                        *.c.ipdns.dogfood.main.ml.teams.microsoft.com|*.c.west.dogfood.main.ml.teams.microsoft.com|c.dogfood.main.ml.teams.microsoft.com|c.west.dogfood.main.ml.te…
-microsoft.com adnotifications.windowsazure.com                             *.strongauthenticationservice.auth.microsoft.com|strongauthenticationservice.auth.microsoft.com
-microsoft.com licensing-tie.powerplatform.microsoft.com                    *.licensing-tie.powerplatform.microsoft.com|licensing-tie.powerplatform.microsoft.com
-microsoft.com d.dogfood.main.ml.teams.microsoft.com                        *.d.east.dogfood.main.ml.teams.microsoft.com|*.d.ipdns.dogfood.main.ml.teams.microsoft.com|d.dogfood.main.ml.teams.microsoft.com|d.east.dogfood.main.ml.te…
-microsoft.com c.dogfood.main.ml.teams.microsoft.com                        *.c.east.dogfood.main.ml.teams.microsoft.com|*.c.ipdns.dogfood.main.ml.teams.microsoft.com|c.dogfood.main.ml.teams.microsoft.com|c.east.dogfood.main.ml.te…
-microsoft.com o.dogfood.main.ml.teams.microsoft.com                        *.o.east.dogfood.main.ml.teams.microsoft.com|*.o.ipdns.dogfood.main.ml.teams.microsoft.com|o.dogfood.main.ml.teams.microsoft.com|o.east.dogfood.main.ml.te…
-microsoft.com api.notification.microsoft.com                               api.notification.microsoft.com
-microsoft.com api.offlinepi.microsoft.com                                  api.offlinepi.microsoft.com
-microsoft.com mpnmembership.microsoft.com                                  mpnmembership.microsoft.com
-microsoft.com api.invoice.microsoft.com                                    api.invoice.microsoft.com
-microsoft.com emails-ppe.azure.microsoft.com                               emails-ppe.azure.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com wpauat.one.microsoft.com                                     wpauat.one.microsoft.com
-microsoft.com smpaccountexceptionservice-int.dps.microsoft.com             smpaccountexceptionservice-int.dps.microsoft.com
-microsoft.com cre.raas.microsoft.com                                       cre.raas.microsoft.com
-microsoft.com enditemqa.corp.microsoft.com                                 enditemqa.corp.microsoft.com
-microsoft.com smpaccountexceptionservice.dps.microsoft.com                 smpaccountexceptionservice.dps.microsoft.com
-microsoft.com fr.azurefds.microsoft.com                                    fr.azurefds.microsoft.com
-microsoft.com prod.azurefds.microsoft.com                                  prod.azurefds.microsoft.com
-microsoft.com oneaskapi.dev.l2o.microsoft.com                              oneaskapi.dev.l2o.microsoft.com
-microsoft.com mailhook.teams.microsoft.com                                 mailhook.teams.microsoft.com
-microsoft.com mailhook.teams.microsoft.com                                 mailhook.teams.microsoft.com
-microsoft.com gsmtest1.microsoft.com                                       gsmtest1.microsoft.com
-microsoft.com c84098b6-065c-430d-b038-3175851e5152.microsoft.com           c84098b6-065c-430d-b038-3175851e5152.microsoft.com
-microsoft.com mstntfsfilteringservice.teams.microsoft.com                  mstntfsfilteringservice-amer.teams.microsoft.com|mstntfsfilteringservice-apac.teams.microsoft.com|mstntfsfilteringservice-emea.teams.microsoft.com|mstntfs…
-microsoft.com mstntfsfilteringservice.teams.microsoft.com                  mstntfsfilteringservice-amer.teams.microsoft.com|mstntfsfilteringservice-apac.teams.microsoft.com|mstntfsfilteringservice-emea.teams.microsoft.com|mstntfs…
-microsoft.com mstntfsfilteringservice.teams.microsoft.com                  mstntfsfilteringservice-amer.teams.microsoft.com|mstntfsfilteringservice-apac.teams.microsoft.com|mstntfsfilteringservice-emea.teams.microsoft.com|mstntfs…
-microsoft.com mstntfsfilteringservice.teams.microsoft.com                  mstntfsfilteringservice-amer.teams.microsoft.com|mstntfsfilteringservice-apac.teams.microsoft.com|mstntfsfilteringservice-emea.teams.microsoft.com|mstntfs…
-microsoft.com mstntfsfilteringservice.teams.microsoft.com                  mstntfsfilteringservice-amer.teams.microsoft.com|mstntfsfilteringservice-apac.teams.microsoft.com|mstntfsfilteringservice-emea.teams.microsoft.com|mstntfs…
-microsoft.com mstntfsfilteringservice.teams.microsoft.com                  mstntfsfilteringservice-amer.teams.microsoft.com|mstntfsfilteringservice-apac.teams.microsoft.com|mstntfsfilteringservice-emea.teams.microsoft.com|mstntfs…
-microsoft.com api.preview.powerva.microsoft.com                            api.preview.powerva.microsoft.com
-microsoft.com deviceprofileruat.microsoft.com                              deviceprofileruat.microsoft.com
-microsoft.com tippnrtdlpservice-int.teams.microsoft.com                    tippnrtdlpservice-int.teams.microsoft.com
-microsoft.com tippnrtdlpservice-test.teams.microsoft.com                   tippnrtdlpservice-test.teams.microsoft.com
-microsoft.com partner.rest.cp.microsoft.com                                partner.cp.microsoft.com|partner.rest.cp.microsoft.com
-microsoft.com sts.rest.cp.microsoft.com                                    sts.cp.microsoft.com|sts.rest.cp.microsoft.com
-microsoft.com order.rest.store.microsoft.com                               *.order.rest.store.microsoft.com|order-admin.store.microsoft.com|order.rest.store.microsoft.com
-microsoft.com fulfillment.rest.cp.microsoft.com                            *.fulfillment.cp.microsoft.com|fulfillment.cp.microsoft.com|fulfillment.rest.cp.microsoft.com
-microsoft.com entitlement.rest.cp.microsoft.com                            *.entitlement.cp.microsoft.com|entitlement.cp.microsoft.com|entitlement.rest.cp.microsoft.com
-microsoft.com l2o-rel-wf-kv-int.l2o.microsoft.com                          l2o-rel-wf-kv-int.geneva.keyvault.l2o.microsoft.com|l2o-rel-wf-kv-int.l2o.microsoft.com
-microsoft.com fusion.microsoft.com                                         fusion.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com appmanagement.activedirectory.microsoft.com                  appmanagement.activedirectory-ppe.microsoft.com|appmanagement.activedirectory.microsoft.com
-microsoft.com iamtelemetrycollector.microsoft.com                          iamtelemetrycollector-ppe.microsoft.com|iamtelemetrycollector.microsoft.com
-microsoft.com login.windows.net                                            iotauth.microsoft.com|login.microsoft.com|mtlsauth.microsoft.com
-microsoft.com myaccess.canary.microsoft.com                                myaccess.canary.microsoft.com|myaccess.microsoft.com
-microsoft.com myaccount.microsoft.com                                      api.myaccount-ppe.microsoft.com|api.myaccount-tip.microsoft.com|api.myaccount.microsoft.com|api.myworkaccount-ppe.microsoft.com|api.myworkaccount.microsof…
-microsoft.com mygroups.microsoft.com                                       *.myapplications-ppe.microsoft.com|*.myapplications-tip.microsoft.com|*.myapplications.microsoft.com|*.mygroups-ppe.microsoft.com|*.mygroups-tip.microsoft…
-microsoft.com identity.microsoft.com                                       applications.microsoft.com|apps.dev.microsoft.com|identity.microsoft.com
-microsoft.com mobileappcommunicator.auth.microsoft.com                     mobileappcommunicator.auth-ppe.microsoft.com|mobileappcommunicator.auth.microsoft.com
-microsoft.com invitations.microsoft.com                                    invitations.microsoft.com
-microsoft.com partner.ppe.repmap.microsoft.com                             *.ppe.repmap.microsoft.com|*.prod.repmap.microsoft.com|client.ppe.repmap.microsoft.com|client.prod.repmap.microsoft.com|partner.ppe.repmap.microsoft.com|p…
-microsoft.com appmanagement.activedirectory.microsoft.com                  appmanagement.activedirectory-ppe.microsoft.com|appmanagement.activedirectory.microsoft.com
-microsoft.com msats.commerce.microsoft.com                                 *.msats.commerce.microsoft.com|msats.commerce.microsoft.com
-microsoft.com supportactions-centralus.services.microsoft.com              supportactions-centralus.services.microsoft.com
-microsoft.com ratingperiodjournal.cp.microsoft.com                         ratingperiodjournal.cp.microsoft.com
-microsoft.com ratingperiods.cp.microsoft.com                               ratingperiods.cp.microsoft.com
-microsoft.com airsapitest.microsoft.com                                    airsapitest.microsoft.com
-microsoft.com *.portal.lens.microsoft.com                                  *.portal.lens.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.eur.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.eur.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com ring0.sitesecure.microsoft.com                               ring0.sitesecure.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com ring0.api.sitesecure.microsoft.com                           ring0.api.sitesecure.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.uk.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.uk.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.uk.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.eur.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.uk.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.uk.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.eur.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.eur.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.eur.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.eur.daas.microsoft.com
-microsoft.com fusion-ppe.microsoft.com                                     fusion-ppe.microsoft.com
-microsoft.com *.portal.lensppe.microsoft.com                               *.portal.lensppe.microsoft.com
-microsoft.com prod-weu.api.dfp.microsoft.com                               prod-weu.api.dfp.microsoft.com
-microsoft.com msats-ppe.commerce.microsoft.com                             *.msats-ppe.commerce.microsoft.com|msats-ppe.commerce.microsoft.com
-microsoft.com ocv-kevlar-test.microsoft.com                                ocv-kevlar-test.microsoft.com
-microsoft.com ratingassets.cp.microsoft.com                                ratingassets.cp.microsoft.com
-microsoft.com ocv-kevlar-test.microsoft.com                                ocv-kevlar-test.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com swagger.microsoft.com                                        swagger.microsoft.com
-microsoft.com engagementweb.dse.mp.microsoft.com                           engagementweb.dse.mp.microsoft.com
-microsoft.com engagementservice.dse.mp.microsoft.com                       engagementservice.dse.mp.microsoft.com
-microsoft.com notificationservice.dse.mp.microsoft.com                     notificationservice.dse.mp.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com fusion-test.microsoft.com                                    fusion-test.microsoft.com
-microsoft.com prod-neu.api.dfp.microsoft.com                               prod-neu.api.dfp.microsoft.com
-microsoft.com calc.microsoft.com                                           calc.microsoft.com
-microsoft.com blog.msrc.microsoft.com                                      *.blog.msrc.microsoft.com|blog.msrc.microsoft.com|msrc-blog.microsoft.com
-microsoft.com mast.microsoft.com                                           mast.microsoft.com|mast.portal.microsoft.com
-microsoft.com mastapi.microsoft.com                                        mastapi.microsoft.com|prod.api.mast.portal.microsoft.com
-microsoft.com prodprv.mint.commercemgmt.m365.microsoft.com                 *.prodprv.mint.commercemgmt.m365.microsoft.com|prodprv.mint.commercemgmt.m365.microsoft.com
-microsoft.com apiv2.prodprv.narada.microsoft.com                           *.apiv2.prodprv.narada.microsoft.com|apiv2.prodprv.narada.microsoft.com
-microsoft.com buildershub.microsoft.com                                    buildershub.microsoft.com|onegovernanceui.microsoft.com
-microsoft.com prod-cca.api.dfp.microsoft.com                               prod-cca.api.dfp.microsoft.com
-microsoft.com command-amp-ppe-eastus.cms.microsoft.com                     command-amp-ppe-eastus-secondary.cms.microsoft.com|command-amp-ppe-eastus.cms.microsoft.com
-microsoft.com bspmgmtsvc.mp.microsoft.com                                  *.bspmgmtsvc.mp.microsoft.com|bspmgmtsvc.mp.microsoft.com
-microsoft.com *.kirkland.azurestack.corp.microsoft.com                     *.adminhosting.kirkland.azurestack.corp.microsoft.com|*.adminvault.kirkland.azurestack.corp.microsoft.com|*.blob.kirkland.azurestack.corp.microsoft.com|*.…
-microsoft.com prod-cus.api.dfp.microsoft.com                               prod-cus.api.dfp.microsoft.com
-microsoft.com dev.clouddc2.syslogclient.telemetry.microsoft.com            dev.clouddc2.syslogclient.telemetry.microsoft.com
-microsoft.com *.abdulwadoodh.myworkspace.microsoft.com                     *.abdulwadoodh.myworkspace.microsoft.com
-microsoft.com adnotifications.windowsazure.com                             *.strongauthenticationservice.auth.microsoft.com|strongauthenticationservice.auth.microsoft.com
-microsoft.com financialinstructions-int.upp.emt.dps.microsoft.com          financialinstructions-int.upp.emt.dps.microsoft.com
-microsoft.com datagridservices-ppe.corp.microsoft.com                      datagridservices-ppe.corp.microsoft.com
-microsoft.com canary-azureavamgmt-api.microsoft.com                        canary-azureavamgmt-api.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com canary-azureava-bot.microsoft.com                            canary-azureava-bot.microsoft.com
-microsoft.com canary-azureava-api.microsoft.com                            canary-azureava-api.microsoft.com
-microsoft.com azureavamgmt-api.microsoft.com                               azureavamgmt-api.microsoft.com
-microsoft.com azureava-bot.microsoft.com                                   azureava-bot.microsoft.com
-microsoft.com projectsantacruz.microsoft.com                               projectsantacruz.microsoft.com
-microsoft.com freqcapsvc-int.microsoft.com                                 freqcapsvc-int.microsoft.com
-microsoft.com freqcapsvc.microsoft.com                                     freqcapsvc.microsoft.com
-microsoft.com testcoresupport.redmond.corp.microsoft.com                   testcoresupport.redmond.corp.microsoft.com
-microsoft.com global.billing.ppe.communication.microsoft.com               global.billing.ppe.communication.microsoft.com
-microsoft.com mdpp.microsoft.com                                           mdpp.microsoft.com
-microsoft.com prod-eus2.api.dfp.microsoft.com                              prod-eus2.api.dfp.microsoft.com
-microsoft.com catalogws.prod.muv6.microsoft.com                            *.centralus.live.catalogws.prod.muv6.microsoft.com|*.westus.live.catalogws.prod.muv6.microsoft.com|catalogws.prod.muv6.microsoft.com|centralus.live.catalo…
-microsoft.com catalog.update.microsoft.com                                 catalog.update.microsoft.com|www.catalog.update.microsoft.com
-microsoft.com dpcuat.microsoft.com                                         dpcuat.microsoft.com
-microsoft.com dpc.microsoft.com                                            dpc.microsoft.com
-microsoft.com frontdoor-consumer.bigcatalog.commerce.microsoft.com         *.bigcatalog.commerce.microsoft.com|*.bigcatalog.microsoft.com|*.displaycatalog.md.mp.microsoft.com|*.displaycatalog.mp.microsoft.com|*.frontdoor-consumer…
-microsoft.com commerce.dsc.microsoft.com                                   commerce.dsc.microsoft.com
-microsoft.com target.microsoft.com                                         target.microsoft.com
-microsoft.com authorization.cp.microsoft.com                               authorization.cp.microsoft.com
-microsoft.com ppe.mint.commercemgmt.m365.microsoft.com                     *.ppe.mint.commercemgmt.m365.microsoft.com|ppe.mint.commercemgmt.m365.microsoft.com
-microsoft.com global.billing.int.communication.microsoft.com               global.billing.int.communication.microsoft.com
-microsoft.com authorizationjournal.cp.microsoft.com                        authorizationjournal.cp.microsoft.com
-microsoft.com frontdoor.bigcatalog.commerce.microsoft.com                  *.bigcatalog.commerce.microsoft.com|*.bigcatalog.microsoft.com|*.displaycatalog.md.mp.microsoft.com|*.displaycatalog.mp.microsoft.com|*.frontdoor-consumer…
-microsoft.com paymentexperience.cp.microsoft.com                           paymentexperience.cp.microsoft.com
-microsoft.com azafsvexcelweb.redmond.corp.microsoft.com                    azafsvexcelweb.redmond.corp.microsoft.com
-microsoft.com canary-azureavamgmt-api.microsoft.com                        canary-azureavamgmt-api.microsoft.com
-microsoft.com canary-azureava-bot.microsoft.com                            canary-azureava-bot.microsoft.com
-microsoft.com canary-azureava-api.microsoft.com                            canary-azureava-api.microsoft.com
-microsoft.com azureavamgmt-api.microsoft.com                               azureavamgmt-api.microsoft.com
-microsoft.com azureava-bot.microsoft.com                                   azureava-bot.microsoft.com
-microsoft.com internal.evergreen.microsoft.com                             internal.evergreen.microsoft.com
-microsoft.com canary-azureavamgmt-api.microsoft.com                        canary-azureavamgmt-api.microsoft.com
-microsoft.com canary-azureava-bot.microsoft.com                            canary-azureava-bot.microsoft.com
-microsoft.com canary-azureava-api.microsoft.com                            canary-azureava-api.microsoft.com
-microsoft.com azureavamgmt-api.microsoft.com                               azureavamgmt-api.microsoft.com
-microsoft.com azureava-bot.microsoft.com                                   azureava-bot.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com autoclassification-test.onetrade.microsoft.com               autoclassification-test.onetrade.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.jpn.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.jpn.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.jpn.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.jpn.daas.microsoft.com
-microsoft.com westus2.convai.speech.microsoft.com                          australiaeast.convai.speech.microsoft.com|brazilsouth.convai.speech.microsoft.com|canadacentral.convai.speech.microsoft.com|centralindia.convai.speech.mic…
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.ger.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.ger.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.swz.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.swz.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com canary-azureavamgmt-api.microsoft.com                        canary-azureavamgmt-api.microsoft.com
-microsoft.com canary-azureava-bot.microsoft.com                            canary-azureava-bot.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com canary-azureava-api.microsoft.com                            canary-azureava-api.microsoft.com
-microsoft.com azureavamgmt-api.microsoft.com                               azureavamgmt-api.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com azureava-bot.microsoft.com                                   azureava-bot.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com protection.office.com                                        compliance.microsoft.com|df.compliance.microsoft.com|df.security.microsoft.com|security.microsoft.com|sip.compliance.microsoft.com|sip.security.microsoft.…
-microsoft.com transactionservice.quote-uat.microsoft.com                   transactionservice.quote-uat.microsoft.com
-microsoft.com migrationsvc.teams.microsoft.com                             migrationsvc-emea.teams.microsoft.com|migrationsvc.teams-canary.microsoft.com|migrationsvc.teams.microsoft.com
-microsoft.com transactionservice.quote-dev.microsoft.com                   transactionservice.quote-dev.microsoft.com
-microsoft.com fetchservice.quote-uat.microsoft.com                         fetchservice.quote-uat.microsoft.com
-microsoft.com mstntfsfilteringservice-dogfood.teams.microsoft.com          mstntfsfilteringservice-dogfood.teams.microsoft.com
-microsoft.com sbcteams.sdg.teams.microsoft.com                             sbcteams.sdg.teams.microsoft.com|useae2e.sbcteams.sdg.teams.microsoft.com|uswee2e.sbcteams.sdg.teams.microsoft.com
-microsoft.com sbcobmgmt.sdg.teams.microsoft.com                            sbcobmgmt.sdg.teams.microsoft.com|useae2e.sbcobmgmt.sdg.teams.microsoft.com|uswee2e.sbcobmgmt.sdg.teams.microsoft.com
-microsoft.com sbcobipp.sdg.teams.microsoft.com                             sbcobipp.sdg.teams.microsoft.com|useae2e.sbcobipp.sdg.teams.microsoft.com|uswee2e.sbcobipp.sdg.teams.microsoft.com
-microsoft.com sbcmainmgmt.sdg.teams.microsoft.com                          sbcmainmgmt.sdg.teams.microsoft.com|useae2e.sbcmainmgmt.sdg.teams.microsoft.com|uswee2e.sbcmainmgmt.sdg.teams.microsoft.com
-microsoft.com sbcmainipp.sdg.teams.microsoft.com                           sbcmainipp.sdg.teams.microsoft.com|useae2e.sbcmainipp.sdg.teams.microsoft.com|uswee2e.sbcmainipp.sdg.teams.microsoft.com
-microsoft.com client.sdg.teams.microsoft.com                               client.sdg.teams.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com products.quote-uat.microsoft.com                             products.quote-uat.microsoft.com
-microsoft.com signingapi-prodc.licensing.microsoft.com                     signingapi-prodc.licensing.microsoft.com
-microsoft.com client.sdg.teams.microsoft.com                               client.sdg.teams.microsoft.com
-microsoft.com mysignins.microsoft.com                                      api.mysignins.microsoft.com|mysignins.microsoft.com
-microsoft.com mysignins.microsoft.com                                      api.mysignins.microsoft.com|mysignins.microsoft.com
-microsoft.com pending.sls-int.update.microsoft.com                         *.backend.pending.sls-int.update.microsoft.com|*.pending.sls-int.update.microsoft.com|pending.sls-int.update.microsoft.com
-microsoft.com datagrid.microsoft.com                                       datagrid.microsoft.com|portal.datagridservices-prod-primary.microsoft.com|portal.datagridservices-prod-secondary.microsoft.com|portal.datagridservices.mic…
-microsoft.com test.powerva.microsoft.com                                   *.test.powerva.microsoft.com|test.powerva.microsoft.com
-microsoft.com affrmvpnclient.a4opacketcore.microsoft.com                   affrmvpnclient.a4opacketcore.microsoft.com
-microsoft.com test.hms.sfbautomation.microsoft.com                         test.hms.sfbautomation.microsoft.com
-microsoft.com onetrade.microsoft.com                                       onetrade.microsoft.com
-microsoft.com transactionservice.quote-dev.microsoft.com                   transactionservice.quote-dev.microsoft.com
-microsoft.com fetchservice.quote-dev.microsoft.com                         fetchservice.quote-dev.microsoft.com
-microsoft.com mlxauth.partnerbenefits.microsoft.com                        mlxauth.partnerbenefits.microsoft.com
-microsoft.com msc.microsoft.com                                            *.msc.microsoft.com|msc.microsoft.com|mscplan.microsoft.com
-microsoft.com api-msrc-ppe.corp.microsoft.com                              api-msrc-ppe.corp.microsoft.com
-microsoft.com forumsapi.contentservices.msdn.microsoft.com                 forumsapi.contentservices.msdn.microsoft.com
-microsoft.com mysignins.microsoft.com                                      api.mysignins.microsoft.com|mysignins.microsoft.com
-microsoft.com mbspdsqldntlsnr.partners.extranet.microsoft.com              mbspdsqldntlsnr.partners.extranet.microsoft.com
-microsoft.com i06mpdcsqldss01.redmond.corp.microsoft.com                   i06mpdcsqldss01.redmond.corp.microsoft.com
-microsoft.com i01mpdcsqldss01.redmond.corp.microsoft.com                   i01mpdcsqldss01.redmond.corp.microsoft.com
-microsoft.com api.powerva.microsoft.com                                    api.powerva.microsoft.com
-microsoft.com myaccess.microsoft.com                                       myaccess.microsoft.com
-microsoft.com *.sample.myworkspace.microsoft.com                           *.sample.myworkspace.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.fra.daas.microsoft.com
-microsoft.com *.fra.daas.microsoft.com                                     *.daas.microsoft.com|*.fra.daas.microsoft.com
-microsoft.com pending.sls-dev.update.microsoft.com                         *.backend.pending.sls-dev.update.microsoft.com|*.pending.sls-dev.update.microsoft.com|pending.sls-dev.update.microsoft.com
-microsoft.com *.slscr-dev.dcat.dsp.mp.microsoft.com                        *.backend.slscr-dev.dcat.dsp.mp.microsoft.com|*.slscr-dev.dcat.dsp.mp.microsoft.com
-microsoft.com *.sls-dev.dcat.dsp.mp.microsoft.com                          *.backend.sls-dev.dcat.dsp.mp.microsoft.com|*.sls-dev.dcat.dsp.mp.microsoft.com
-microsoft.com *.cwscr-dev.dcat.dsp.mp.microsoft.com                        *.backend.cwscr-dev.dcat.dsp.mp.microsoft.com|*.cwscr-dev.dcat.dsp.mp.microsoft.com
-microsoft.com *.cws-dev.dcat.dsp.mp.microsoft.com                          *.backend.cws-dev.dcat.dsp.mp.microsoft.com|*.cws-dev.dcat.dsp.mp.microsoft.com
-microsoft.com customeragreement.microsoft.com                              customeragreement.microsoft.com
-microsoft.com kis.one.microsoft.com                                        kis.one.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.fra.daas.microsoft.com
-microsoft.com *.fra.daas.microsoft.com                                     *.daas.microsoft.com|*.fra.daas.microsoft.com
-microsoft.com hcapftrack.redmond.corp.microsoft.com                        hcapftrack.redmond.corp.microsoft.com
-microsoft.com westus2.purchase.dgp-int.microsoft.com                       westus2.purchase.dgp-int.microsoft.com
-microsoft.com licensingdocs.microsoft.com                                  licensingdocs.microsoft.com
-microsoft.com hdc.xflowcredential.microsoft.com                            hdc.xflowcredential.microsoft.com
-microsoft.com bspmgmtsvc.mp.microsoft.com                                  *.bspmgmtsvc.mp.microsoft.com|bspmgmtsvc.mp.microsoft.com
-microsoft.com adnotifications.windowsazure.com                             *.strongauthenticationservice.auth.microsoft.com|strongauthenticationservice.auth.microsoft.com
-microsoft.com jp.tippnrtdlpservice.teams.microsoft.com                     jp.tippnrtdlpservice.teams.microsoft.com
-microsoft.com eu.tippnrtdlpservice.teams.microsoft.com                     eu.tippnrtdlpservice.teams.microsoft.com
-microsoft.com jp.tippreceiversvc.teams.microsoft.com                       jp.tippreceiversvc.teams.microsoft.com
-microsoft.com eu.tippreceiversvc.teams.microsoft.com                       eu.tippreceiversvc.teams.microsoft.com
-microsoft.com workshops.pi.microsoft.com                                   workshops.pi.microsoft.com
-microsoft.com ppm.px.microsoft.com                                         ppm.px.microsoft.com
-microsoft.com creditnote.payoutmanagement.pi.dps.microsoft.com             creditnote.payoutmanagement.pi.dps.microsoft.com
-microsoft.com us.tippreceiversvc.teams.microsoft.com                       us.tippreceiversvc.teams.microsoft.com
-microsoft.com us.tippnrtdlpservice.teams.microsoft.com                     us.tippnrtdlpservice.teams.microsoft.com
-microsoft.com packagedeliveryservice.teams.microsoft.com                   packagedeliveryservice.teams.microsoft.com
-microsoft.com packagedeliveryservice.teams.microsoft.com                   packagedeliveryservice.teams.microsoft.com
-microsoft.com substrate.ppe.cs.md.microsoft.com                            substrate.ppe.cs.md.microsoft.com
-microsoft.com warehouse.manage-mig.microsoft.com                           warehouse.manage-mig.microsoft.com
-microsoft.com myaccess.microsoft.com                                       myaccess.microsoft.com
-microsoft.com *.vi.myworkspace.microsoft.com                               *.vi.myworkspace.microsoft.com
-microsoft.com myaccess.microsoft.com                                       myaccess.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com jp.ippolicyservice.teams.microsoft.com                       ippolicyservice.teams.microsoft.com|jp.ippolicyservice.teams.microsoft.com
-microsoft.com *.falconprod-sf.trafficmanager.net                           falconhypernet.glbdns2.microsoft.com|falconhyperneteastasia.glbdns2.microsoft.com|falconhyperneteastus2.glbdns2.microsoft.com|falconhypernetncus.glbdns2.m…
-microsoft.com taxreceiptservice.cp.microsoft.com                           taxreceiptservice.cp.microsoft.com
-microsoft.com TaxReceiptClientAuth-prod.cp.microsoft.com                   TaxReceiptClientAuth-prod.cp.microsoft.com
-microsoft.com msip.clientidentity.microsoft.com                            msip.clientidentity.microsoft.com
-microsoft.com taxbackendadminservice.cp.microsoft.com                      taxbackendadminservice.cp.microsoft.com
-microsoft.com msip.clientidentity.microsoft.com                            msip.clientidentity.microsoft.com
-microsoft.com monitoring.geneva.keyvault.dco.api.iris.microsoft.com        monitoring.geneva.keyvault.dco.api.iris.microsoft.com
-microsoft.com affrmvpn.a4opacketcore.microsoft.com                         affrmvpn.a4opacketcore.microsoft.com
-microsoft.com hwanalytics-prod-pme.australiaeast.cloudapp.azure.com        hardwareanalytics-prod.universalstore.microsoft.com
-microsoft.com *.sis.msg.infra.teams.microsoft.com                          *.sis.msg.infra.teams.microsoft.com
-microsoft.com tip1.powerautomate.microsoft.com                             tip1.powerautomate.microsoft.com
-microsoft.com storage-rt-prod-eastus.cms.microsoft.com                     primary.storage.prod.cms.rt.microsoft.com|storage-rt-prod-eastus-secondary.cms.microsoft.com|storage-rt-prod-eastus.cms.microsoft.com|storage.prod.cms.rt.…
-microsoft.com *.callrecorder.infra.gcc.teams.microsoft.com                 *.callrecorder.infra.gcc.teams.microsoft.com|callrecorder.infra.gcc.teams.microsoft.com
-microsoft.com storage-rt-prod-westcenus.cms.microsoft.com                  primary.storage.prod.cms.rt.microsoft.com|storage-rt-prod-westcenus-secondary.cms.microsoft.com|storage-rt-prod-westcenus.cms.microsoft.com|storage.prod.c…
-microsoft.com storage-rt-prod-northeu.cms.microsoft.com                    primary.storage.prod.cms.rt.microsoft.com|storage-rt-prod-northeu-secondary.cms.microsoft.com|storage-rt-prod-northeu.cms.microsoft.com|storage.prod.cms.r…
-microsoft.com uae-spot-ppe-ff.usage.microsoft.com                          uae-spot-ppe-ff.usage.microsoft.com
-microsoft.com *.falconprod-sf.trafficmanager.net                           falconhypernet.glbdns2.microsoft.com|falconhyperneteastasia.glbdns2.microsoft.com|falconhyperneteastus2.glbdns2.microsoft.com|falconhypernetncus.glbdns2.m…
-microsoft.com storage-rt-prod-eastap.cms.microsoft.com                     primary.storage.prod.cms.rt.microsoft.com|storage-rt-prod-eastap-secondary.cms.microsoft.com|storage-rt-prod-eastap.cms.microsoft.com|storage.prod.cms.rt.…
-microsoft.com uae-spot-ppe.usage.microsoft.com                             uae-spot-ppe.usage.microsoft.com
-microsoft.com global.billing.dev.communication.microsoft.com               global.billing.dev.communication.microsoft.com
-microsoft.com storage-rt-prod-eastap.cms.microsoft.com                     storage-rt-prod-eastap-secondary.cms.microsoft.com|storage-rt-prod-eastap.cms.microsoft.com|storage.prod.cms.rt.microsoft.com
-microsoft.com mvp.microsoft.com                                            *.mvp.microsoft.com|mvp.microsoft.com
-microsoft.com iamtelemetrycollector.microsoft.com                          iamtelemetrycollector-ppe.microsoft.com|iamtelemetrycollector.microsoft.com
-microsoft.com mobileappcommunicator.auth.microsoft.com                     mobileappcommunicator.auth-ppe.microsoft.com|mobileappcommunicator.auth.microsoft.com
-microsoft.com myaccount.microsoft.com                                      api.myaccount-ppe.microsoft.com|api.myaccount-tip.microsoft.com|api.myaccount.microsoft.com|api.myworkaccount-ppe.microsoft.com|api.myworkaccount.microsof…
-microsoft.com myaccess.canary.microsoft.com                                myaccess.canary.microsoft.com|myaccess.microsoft.com
-microsoft.com partner.ppe.repmap.microsoft.com                             *.ppe.repmap.microsoft.com|*.prod.repmap.microsoft.com|client.ppe.repmap.microsoft.com|client.prod.repmap.microsoft.com|partner.ppe.repmap.microsoft.com|p…
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com login.windows.net                                            iotauth.microsoft.com|login.microsoft.com|mtlsauth.microsoft.com
-microsoft.com mygroups.microsoft.com                                       *.myapplications-ppe.microsoft.com|*.myapplications-tip.microsoft.com|*.myapplications.microsoft.com|*.mygroups-ppe.microsoft.com|*.mygroups-tip.microsoft…
-microsoft.com identity.microsoft.com                                       applications.microsoft.com|apps.dev.microsoft.com|identity.microsoft.com
-microsoft.com appmanagement.activedirectory.microsoft.com                  appmanagement.activedirectory-ppe.microsoft.com|appmanagement.activedirectory.microsoft.com
-microsoft.com invitations.microsoft.com                                    invitations.microsoft.com
-microsoft.com I25OC2DWEBSRS01.PARTNERS.EXTRANET.MICROSOFT.COM              I25OC2DWEBSRS01.PARTNERS.EXTRANET.MICROSOFT.COM
-microsoft.com dcureports.redmond.corp.microsoft.com                        dcureports.redmond.corp.microsoft.com
-microsoft.com *.falconprod-sf.trafficmanager.net                           falconhypernet.glbdns2.microsoft.com|falconhyperneteastasia.glbdns2.microsoft.com|falconhyperneteastus2.glbdns2.microsoft.com|falconhypernetncus.glbdns2.m…
-microsoft.com ueqsupersetweb.microsoft.com                                 ueqsupersetweb.microsoft.com
-microsoft.com *.falconprod-sf.trafficmanager.net                           falconhypernet.glbdns2.microsoft.com|falconhyperneteastasia.glbdns2.microsoft.com|falconhyperneteastus2.glbdns2.microsoft.com|falconhypernetncus.glbdns2.m…
-microsoft.com ppe-azureavamgmt-api.microsoft.com                           ppe-azureavamgmt-api.microsoft.com
-microsoft.com ppe-azureava-bot.microsoft.com                               ppe-azureava-bot.microsoft.com
-microsoft.com ppe.paymentexperience.cp.microsoft.com                       ppe.paymentexperience.cp.microsoft.com
-microsoft.com paymentexperience.cp.microsoft.com                           paymentexperience.cp.microsoft.com
-microsoft.com agent.rooms.microsoft.com                                    agent.rooms.microsoft.com
-microsoft.com heartbeat.securitycenter.windows.com                         canary.gradingplatform.microsoft.com
-microsoft.com *.onlinectsdev.speech.microsoft.com                          *.onlinectsdev.speech.microsoft.com
-microsoft.com partnerlite.microsoft.com                                    partnerlite.microsoft.com
-microsoft.com partnerlite.microsoft.com                                    partnerlite.microsoft.com
-microsoft.com helpcentral.microsoft.com                                    helpcentral.microsoft.com
-microsoft.com helpcentral.microsoft.com                                    helpcentral.microsoft.com
-microsoft.com gateway.westcentralus.maps.azure.com                         atlas.microsoft.com
-microsoft.com sustainability.microsoft.com                                 *.sustainability.microsoft.com|sustainability.microsoft.com
-microsoft.com eus2udsvcprod.eastus2.cloudapp.azure.com                     appmanagement.microsoft.com
-microsoft.com sts.sehva.wdgae.microsoft.com                                *.sehva.wdgae.microsoft.com|sts.sehva.wdgae.microsoft.com
-microsoft.com dropclick.microsoft.com                                      dropclick.microsoft.com
-microsoft.com cgw-service-prod.support.microsoft.com                       cgw-service-prod.support.microsoft.com
-microsoft.com wrapadminuat.partners.extranet.microsoft.com                 wrapadminuat.partners.extranet.microsoft.com
-microsoft.com appmanagement-stage.microsoft.com                            appmanagement-stage.microsoft.com
-microsoft.com secure4s.scene7.com                                          cdn-dynmedia-1.microsoft.com
-microsoft.com wus2udsvcprod.westus2.cloudapp.azure.com                     appmanagement.microsoft.com
-microsoft.com appmanagement.microsoft.com                                  appmanagement.microsoft.com
-microsoft.com appmanagement.microsoft.com                                  appmanagement.microsoft.com
-microsoft.com microsoft.com                                                aep.microsoft.com|aer.microsoft.com|aether.microsoft.com|afflink.microsoft.com|aistories.microsoft.com|alerts.microsoft.com|analyticspartner.microsoft.com…
-microsoft.com iuradr.partners.microsoft.com                                adr.partners.microsoft.com|cloudpartner.mspartner.microsoft.com|iur.partners.microsoft.com|iuradr.partners.microsoft.com
-microsoft.com partnersrps.wss.microsoft.com                                partnersrps.wss.microsoft.com
-microsoft.com DfMdt.dev.support.microsoft.com                              DfMdt.dev.support.microsoft.com
-microsoft.com azafsvexcelsql.redmond.corp.microsoft.com                    azafsvexcelsql.redmond.corp.microsoft.com
-microsoft.com mysignins.microsoft.com                                      api.mysignins.microsoft.com|mysignins.microsoft.com
-microsoft.com query-internal-ci-westus.cms.microsoft.com                   query-internal-ci-westus.cms.microsoft.com|query-preview-internal-ci-westus.cms.microsoft.com
-microsoft.com auth.hcs.microsoft.com                                       auth.hcs.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com partneranalyticsapim.microsoft.com                           partneranalyticsapim.microsoft.com
-microsoft.com eppapi.eppapis.microsoft.com                                 eppapi.eppapis.microsoft.com
-microsoft.com mta-sts.microsoft.com                                        mta-sts.microsoft.com
-microsoft.com sustainability.microsoft.com                                 *.sustainability.microsoft.com|sustainability.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com adminanalytics.powerplatform.microsoft.com                   *.adminanalytics.powerplatform.microsoft.com|*.dfanalytics.powerplatform.microsoft.com|adminanalytics.powerplatform.microsoft.com|dfanalytics.powerplatfor…
-microsoft.com kepler.powerplatform.microsoft.com                           *.kepler.powerplatform.microsoft.com|kepler.powerplatform.microsoft.com
-microsoft.com kepler.powerplatform.microsoft.com                           *.kepler.powerplatform.microsoft.com|kepler.powerplatform.microsoft.com
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com api.businessappdiscovery.microsoft.com                       *.api.businessappdiscovery.microsoft.com|api.businessappdiscovery.microsoft.com
-microsoft.com monetarycommit.aircapi.cp.microsoft.com                      monetarycommit.aircapi.cp.microsoft.com
-microsoft.com command-mr-prod-us.cms.microsoft.com                         command-mr-prod-us.cms.microsoft.com|command-mr-prod-westus-secondary.cms.microsoft.com|command-mr-prod-westus.cms.microsoft.com
-microsoft.com command-mr-prod-eu.cms.microsoft.com                         command-mr-prod-eu.cms.microsoft.com|command-mr-prod-westeu-secondary.cms.microsoft.com|command-mr-prod-westeu.cms.microsoft.com
-microsoft.com command-mr-prod-ap.cms.microsoft.com                         command-mr-prod-ap.cms.microsoft.com|command-mr-prod-southeastap-secondary.cms.microsoft.com|command-mr-prod-southeastap.cms.microsoft.com
-microsoft.com command-mr-prod-eu.cms.microsoft.com                         command-mr-prod-eu.cms.microsoft.com|command-mr-prod-northeu-secondary.cms.microsoft.com|command-mr-prod-northeu.cms.microsoft.com
-microsoft.com command-mr-prod-us.cms.microsoft.com                         command-mr-prod-eastus-secondary.cms.microsoft.com|command-mr-prod-eastus.cms.microsoft.com|command-mr-prod-us.cms.microsoft.com
-microsoft.com command-mr-prod-uk.cms.microsoft.com                         command-mr-prod-uk.cms.microsoft.com|command-mr-prod-westuk-secondary.cms.microsoft.com|command-mr-prod-westuk.cms.microsoft.com
-microsoft.com command-mr-prod-jp.cms.microsoft.com                         command-mr-prod-jp.cms.microsoft.com|command-mr-prod-westjp-secondary.cms.microsoft.com|command-mr-prod-westjp.cms.microsoft.com
-microsoft.com command-mr-prod-au.cms.microsoft.com                         command-mr-prod-au.cms.microsoft.com|command-mr-prod-southeastau-secondary.cms.microsoft.com|command-mr-prod-southeastau.cms.microsoft.com
-microsoft.com command-mr-prod-jp.cms.microsoft.com                         command-mr-prod-eastjp-secondary.cms.microsoft.com|command-mr-prod-eastjp.cms.microsoft.com|command-mr-prod-jp.cms.microsoft.com
-microsoft.com command-mr-prod-ca.cms.microsoft.com                         command-mr-prod-ca.cms.microsoft.com|command-mr-prod-eastca-secondary.cms.microsoft.com|command-mr-prod-eastca.cms.microsoft.com
-microsoft.com command-mr-prod-au.cms.microsoft.com                         command-mr-prod-au.cms.microsoft.com|command-mr-prod-eastau-secondary.cms.microsoft.com|command-mr-prod-eastau.cms.microsoft.com
-microsoft.com command-mr-prod-ca.cms.microsoft.com                         command-mr-prod-ca.cms.microsoft.com|command-mr-prod-centralca-secondary.cms.microsoft.com|command-mr-prod-centralca.cms.microsoft.com
-microsoft.com msrc-keyserver.corp.microsoft.com                            msrc-keyserver.corp.microsoft.com
-microsoft.com command.prod.cms.rt.microsoft.com                            command-rt-prod-westcenus-secondary.cms.microsoft.com|command-rt-prod-westcenus.cms.microsoft.com|command.prod.cms.rt.microsoft.com
-microsoft.com command-rt-prod-northeu.cms.microsoft.com                    command-rt-prod-northeu-secondary.cms.microsoft.com|command-rt-prod-northeu.cms.microsoft.com
-microsoft.com command.prod.cms.rt.microsoft.com                            command-rt-prod-eastus-secondary.cms.microsoft.com|command-rt-prod-eastus.cms.microsoft.com|command.prod.cms.rt.microsoft.com
-microsoft.com command-rt-prod-eastap.cms.microsoft.com                     command-rt-prod-eastap-secondary.cms.microsoft.com|command-rt-prod-eastap.cms.microsoft.com
-microsoft.com creditnote.payoutmanagement.pi.dps.microsoft.com             creditnote.payoutmanagement.pi.dps.microsoft.com
-microsoft.com powerplatform.microsoft.com                                  powerplatform-staging.microsoft.com|powerplatform.microsoft.com
-microsoft.com command.prod.cms.msn.com                                     command-amp-prod-westus-secondary.cms.microsoft.com|command-amp-prod-westus.cms.microsoft.com
-microsoft.com supportactions-eastus2.services.microsoft.com                supportactions-eastus2.services.microsoft.com
-microsoft.com powerautomateweb.microsoft.com                               powerautomateweb-staging.microsoft.com|powerautomateweb.microsoft.com
-microsoft.com command.prod.cms.msn.com                                     command-amp-prod-eastus-secondary.cms.microsoft.com|command-amp-prod-eastus.cms.microsoft.com
-microsoft.com supportactions-eastus.services.microsoft.com                 supportactions-eastus.services.microsoft.com
-microsoft.com command-amp-prod-northeu.cms.microsoft.com                   command-amp-prod-northeu-secondary.cms.microsoft.com|command-amp-prod-northeu.cms.microsoft.com
-microsoft.com command-amp-prod-eastap.cms.microsoft.com                    command-amp-prod-eastap-secondary.cms.microsoft.com|command-amp-prod-eastap.cms.microsoft.com
-microsoft.com apiv2.ppe.narada.microsoft.com                               *.apiv2.ppe.narada.microsoft.com|apiv2.ppe.narada.microsoft.com
-microsoft.com wishlist-int.mp.microsoft.com                                wishlist-int.mp.microsoft.com
-microsoft.com local.serviceshub.microsoft.com                              *.local.serviceshub.microsoft.com|local.serviceshub.microsoft.com
-microsoft.com packagedeliveryservice.int.teams.microsoft.com               packagedeliveryservice.int.teams.microsoft.com
-microsoft.com dev.serviceshub.microsoft.com                                *.dev.serviceshub.microsoft.com|dev.serviceshub.microsoft.com
-microsoft.com partnermanagedsubscription-ppe.microsoft.com                 partnermanagedsubscription-ppe.microsoft.com
-microsoft.com dev.serviceshub.microsoft.com                                *.dev.serviceshub.microsoft.com|dev.serviceshub.microsoft.com
-microsoft.com seedtest.msdxcdn.microsoft.com                               seedtest.msdxcdn.microsoft.com
-microsoft.com seedtest.msdx.microsoft.com                                  seedtest.msdx.microsoft.com
-microsoft.com iamkubernetesppe.trafficmanager.net                          *.iamtelemetrycollector-ppe.microsoft.com|*.myaccount-ppe.microsoft.com|*.myapplications-ppe.microsoft.com|*.myprofile-ppe.microsoft.com|*.mysignins-ppe.m…
-microsoft.com licensing-tip.powerplatform.microsoft.com                    *.licensing-tip.powerplatform.microsoft.com|licensing-tip.powerplatform.microsoft.com
-microsoft.com preprod.sustainability.microsoft.com                         *.preprod.sustainability.microsoft.com|preprod.sustainability.microsoft.com
-microsoft.com enrollment-int.pi.dps.microsoft.com                          enrollment-int.pi.dps.microsoft.com
-microsoft.com knowme-int.services.microsoft.com                            knowme-int.services.microsoft.com
-microsoft.com iamkubernetesppe.trafficmanager.net                          *.iamtelemetrycollector-ppe.microsoft.com|*.myaccount-ppe.microsoft.com|*.myapplications-ppe.microsoft.com|*.myprofile-ppe.microsoft.com|*.mysignins-ppe.m…
-microsoft.com iamkubernetesppe.trafficmanager.net                          *.iamtelemetrycollector-ppe.microsoft.com|*.myaccount-ppe.microsoft.com|*.myapplications-ppe.microsoft.com|*.myprofile-ppe.microsoft.com|*.mysignins-ppe.m…
-microsoft.com iamkubernetesppe.trafficmanager.net                          *.iamtelemetrycollector-ppe.microsoft.com|*.myaccount-ppe.microsoft.com|*.myapplications-ppe.microsoft.com|*.myprofile-ppe.microsoft.com|*.mysignins-ppe.m…
-microsoft.com *.nam.test.daas.microsoft.com                                *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com *.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com tip2.powerautomate.microsoft.com                             tip2.powerautomate.microsoft.com
-microsoft.com prod.ta.mtp.md.microsoft.com                                 prod.ta.mtp.md.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com api.reconintelligenceprod.microsoft.com                      api.reconintelligenceprod.microsoft.com
-microsoft.com csanalytics.powerplatform.microsoft.com                      *.csanalytics.powerplatform.microsoft.com|csanalytics.powerplatform.microsoft.com
-microsoft.com api.businessappdiscovery.microsoft.com                       *.api.businessappdiscovery.microsoft.com|api.businessappdiscovery.microsoft.com
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|web.powerva.microsoft.com
-microsoft.com tip2.api.powerplatform.microsoft.com                         tip2.api.powerplatform.microsoft.com
-microsoft.com adminanalytics.powerplatform.microsoft.com                   *.adminanalytics.powerplatform.microsoft.com|*.dfanalytics.powerplatform.microsoft.com|adminanalytics.powerplatform.microsoft.com|dfanalytics.powerplatfor…
-microsoft.com api.reconintelligenceprod.microsoft.com                      api.reconintelligenceprod.microsoft.com
-microsoft.com reconintelligence.microsoft.com                              reconintelligence.microsoft.com
-microsoft.com wmdrm.indiv.playready.microsoft.com                          ndbridge.indiv.playready.microsoft.com|secureclock.playready.microsoft.com|secureclock2.playready.microsoft.com|silverlight.indiv.playready.microsoft.com|…
-microsoft.com preview.eagreements.microsoft.com                            preview.eagreements.microsoft.com
-microsoft.com azurewatsontest.microsoft.com                                azurewatsontest.microsoft.com
-microsoft.com clientauth.geneva.keyvault.icem.microsoft.com                clientauth.geneva.keyvault.icem.microsoft.com
-microsoft.com test.supplier.microsoft.com                                  test.supplier.microsoft.com
-microsoft.com cltuat1.partners.extranet.microsoft.com                      cltuat1.partners.extranet.microsoft.com
-microsoft.com clientauthint.geneva.keyvault.icem.microsoft.com             clientauthint.geneva.keyvault.icem.microsoft.com
-microsoft.com tip2-staging.api.powerplatform.microsoft.com                 tip2-staging.api.powerplatform.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com emails.azure.microsoft.com                                   emails.azure.microsoft.com
-microsoft.com emails-int.azure.microsoft.com                               emails-int.azure.microsoft.com
-microsoft.com mstntfsfilteringservice-int.teams.microsoft.com              mstntfsfilteringservice-int.teams.microsoft.com
-microsoft.com mysignins.microsoft.com                                      api.mysignins.microsoft.com|mysignins.microsoft.com
-microsoft.com a-ukso.prod.templates.tac.teams.microsoft.com                a-ukso.prod.templates.tac.teams.microsoft.com|prod.templates.tac.teams.microsoft.com|ukso.prod.templates.tac.teams.microsoft.com
-microsoft.com a-usce.prod.templates.tac.teams.microsoft.com                a-usce.prod.templates.tac.teams.microsoft.com|prod.templates.tac.teams.microsoft.com|usce.prod.templates.tac.teams.microsoft.com
-microsoft.com a-ukwe.prod.templates.tac.teams.microsoft.com                a-ukwe.prod.templates.tac.teams.microsoft.com|prod.templates.tac.teams.microsoft.com|ukwe.prod.templates.tac.teams.microsoft.com
-microsoft.com a-usea.prod.templates.tac.teams.microsoft.com                a-usea.prod.templates.tac.teams.microsoft.com|prod.templates.tac.teams.microsoft.com|usea.prod.templates.tac.teams.microsoft.com
-microsoft.com a-asse.prod.templates.tac.teams.microsoft.com                a-asse.prod.templates.tac.teams.microsoft.com|asse.prod.templates.tac.teams.microsoft.com|prod.templates.tac.teams.microsoft.com
-microsoft.com powerbi-tip.microsoft.com                                    powerbi-tip.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com powerautomate.microsoft.com                                  powerautomate-staging.microsoft.com|powerautomate.microsoft.com
-microsoft.com oness.microsoft.com                                          oness.microsoft.com
-microsoft.com cosellvalidation.psx.mp.microsoft.com                        cosellvalidation.psx.mp.microsoft.com
-microsoft.com *.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com *.nam.test.daas.microsoft.com                                *.nam.test.daas.microsoft.com|*.test.daas.microsoft.com
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com|westeurope.rp.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|westeurope.dcsfe.prod.a…
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|westeurope.api.prod.adu.microsoft.com
-microsoft.com prodprv.appsvc.commercemgmt.m365.microsoft.com               *.prodprv.appsvc.commercemgmt.m365.microsoft.com|prodprv.appsvc.commercemgmt.m365.microsoft.com
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|eastasia.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|eastasia.dcsfe.prod.adu…
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|eastasia.api.prod.adu.microsoft.com
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com|westcentralus.rp.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|dl.adu.microsoft.com|westcentralus.dcsfe.pro…
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|westcentralus.api.prod.adu.microsoft.com
-microsoft.com rp.prod.adu.microsoft.com                                    *.rp.adu.microsoft.com|*.rp.prod.adu.microsoft.com|centraluseuap.rp.prod.adu.microsoft.com|rp.adu.microsoft.com|rp.prod.adu.microsoft.com
-microsoft.com dcsfe.prod.adu.microsoft.com                                 *.dcsfe.adu.microsoft.com|*.dcsfe.prod.adu.microsoft.com|centraluseuap.dcsfe.prod.adu.microsoft.com|dcsfe.adu.microsoft.com|dcsfe.prod.adu.microsoft.com|d…
-microsoft.com api.prod.adu.microsoft.com                                   *.api.adu.microsoft.com|*.api.prod.adu.microsoft.com|api.adu.microsoft.com|api.prod.adu.microsoft.com|centraluseuap.api.prod.adu.microsoft.com
-microsoft.com rp.perf.adu.microsoft.com                                    *.rp.perf.adu.microsoft.com|rp.perf.adu.microsoft.com|westcentralus.rp.perf.adu.microsoft.com
-microsoft.com dcsfe.perf.adu.microsoft.com                                 *.dcsfe.perf.adu.microsoft.com|dcsfe.perf.adu.microsoft.com|westcentralus.dcsfe.perf.adu.microsoft.com
-microsoft.com api.perf.adu.microsoft.com                                   *.api.perf.adu.microsoft.com|api.perf.adu.microsoft.com|westcentralus.api.perf.adu.microsoft.com
-microsoft.com rp.ppe.adu.microsoft.com                                     *.rp.ppe.adu.microsoft.com|rp.ppe.adu.microsoft.com|westcentralus.rp.ppe.adu.microsoft.com
-microsoft.com dcsfe.ppe.adu.microsoft.com                                  *.dcsfe.ppe.adu.microsoft.com|dcsfe.ppe.adu.microsoft.com|westcentralus.dcsfe.ppe.adu.microsoft.com
-microsoft.com api.ppe.adu.microsoft.com                                    *.api.ppe.adu.microsoft.com|api.ppe.adu.microsoft.com|westcentralus.api.ppe.adu.microsoft.com
-microsoft.com rp.int.adu.microsoft.com                                     *.rp.int.adu.microsoft.com|rp.int.adu.microsoft.com|westcentralus.rp.int.adu.microsoft.com
-microsoft.com dcsfe.int.adu.microsoft.com                                  *.dcsfe.int.adu.microsoft.com|dcsfe.int.adu.microsoft.com|westcentralus.dcsfe.int.adu.microsoft.com
-microsoft.com api.int.adu.microsoft.com                                    *.api.int.adu.microsoft.com|api.int.adu.microsoft.com|westcentralus.api.int.adu.microsoft.com
-microsoft.com rp.test.adu.microsoft.com                                    *.rp.test.adu.microsoft.com|rp.test.adu.microsoft.com|westcentralus.rp.test.adu.microsoft.com
-microsoft.com dcsfe.test.adu.microsoft.com                                 *.dcsfe.test.adu.microsoft.com|dcsfe.test.adu.microsoft.com|westcentralus.dcsfe.test.adu.microsoft.com
-microsoft.com api.test.adu.microsoft.com                                   *.api.test.adu.microsoft.com|api.test.adu.microsoft.com|westcentralus.api.test.adu.microsoft.com
-microsoft.com rp.dev.adu.microsoft.com                                     *.rp.dev.adu.microsoft.com|rp.dev.adu.microsoft.com|westcentralus.rp.dev.adu.microsoft.com
-microsoft.com dcsfe.dev.adu.microsoft.com                                  *.dcsfe.dev.adu.microsoft.com|dcsfe.dev.adu.microsoft.com|westcentralus.dcsfe.dev.adu.microsoft.com
-microsoft.com api.dev.adu.microsoft.com                                    *.api.dev.adu.microsoft.com|api.dev.adu.microsoft.com|westcentralus.api.dev.adu.microsoft.com
-microsoft.com rp.dev.adu.microsoft.com                                     *.rp.dev.adu.microsoft.com|rp.dev.adu.microsoft.com|westus.rp.dev.adu.microsoft.com
-microsoft.com dcsfe.dev.adu.microsoft.com                                  *.dcsfe.dev.adu.microsoft.com|dcsfe.dev.adu.microsoft.com|westus.dcsfe.dev.adu.microsoft.com
-microsoft.com api.dev.adu.microsoft.com                                    *.api.dev.adu.microsoft.com|api.dev.adu.microsoft.com|westus.api.dev.adu.microsoft.com
-microsoft.com azure-ratecard-dev.mp.microsoft.com                          azure-ratecard-dev.mp.microsoft.com
-microsoft.com api.preview.powerva.microsoft.com                            api.preview.powerva.microsoft.com
-microsoft.com api.dev.powerva.microsoft.com                                *.api.dev.powerva.microsoft.com|api.dev.powerva.microsoft.com
-microsoft.com incentivesinsightsdata.microsoft.com                         incentivesinsightsdata.microsoft.com
-microsoft.com m365-keyfulfillment.mp.microsoft.com                         *.keyfulfillment.mp.microsoft.com|keyfulfillment.mp.microsoft.com|m365-keyfulfillment.mp.microsoft.com
-microsoft.com api.powerva.microsoft.com                                    api.powerva.microsoft.com
-microsoft.com cre.raas.microsoft.com                                       cre.raas.microsoft.com
-microsoft.com live.applicationinsights.azure.com                           rt.applicationinsights.microsoft.com
-microsoft.com cmp.commerce.microsoft.com                                   cmp.commerce.microsoft.com
-microsoft.com iridiastest.gov.microsoft.com                                iridiastest.gov.microsoft.com
-microsoft.com a-auea.prod.templates.tac.teams.microsoft.com                a-auea.prod.templates.tac.teams.microsoft.com|auea.prod.templates.tac.teams.microsoft.com|prod.templates.tac.teams.microsoft.com
-microsoft.com a-jpwe.prod.templates.tac.teams.microsoft.com                a-jpwe.prod.templates.tac.teams.microsoft.com|jpwe.prod.templates.tac.teams.microsoft.com|prod.templates.tac.teams.microsoft.com
-microsoft.com a-euwe.prod.templates.tac.teams.microsoft.com                a-euwe.prod.templates.tac.teams.microsoft.com|euwe.prod.templates.tac.teams.microsoft.com|prod.templates.tac.teams.microsoft.com
-microsoft.com status.visualstudio.microsoft.com                            status.visualstudio.microsoft.com
-microsoft.com a-usea2.prod.templates.tac.teams.microsoft.com               a-usea2.prod.templates.tac.teams.microsoft.com|prod.templates.tac.teams.microsoft.com|usea2.prod.templates.tac.teams.microsoft.com
-microsoft.com a-euno.prod.templates.tac.teams.microsoft.com                a-euno.prod.templates.tac.teams.microsoft.com|euno.prod.templates.tac.teams.microsoft.com|prod.templates.tac.teams.microsoft.com
-microsoft.com throttling-ssl.groups-throttling-prod.data.microsoft.com     *.throttling-ssl.groups-throttling-prod.data.microsoft.com|throttling-ssl.groups-throttling-prod.data.microsoft.com
-microsoft.com groups.data.microsoft.com                                    *.groups.data.microsoft.com|groups.data.microsoft.com
-microsoft.com a-uswe.prod.templates.tac.teams.microsoft.com                a-uswe.prod.templates.tac.teams.microsoft.com|prod.templates.tac.teams.microsoft.com|uswe.prod.templates.tac.teams.microsoft.com
-microsoft.com seedtest-eastus2.msdxo.microsoft.com                         seedtest-eastus2.msdxo.microsoft.com
-microsoft.com a-uswe2-load.nonprod.templates.tac.teams.microsoft.com       a-uswe2-load.nonprod.templates.tac.teams.microsoft.com|load.nonprod.templates.tac.teams.microsoft.com|uswe2-load.nonprod.templates.tac.teams.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com mgmt.hcs.microsoft.com                                       mgmt.hcs.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com internal.evergreen.microsoft.com                             internal.evergreen.microsoft.com
-microsoft.com powervirtualagents-tip.microsoft.com                         powervirtualagents-tip.microsoft.com
-microsoft.com seedtest-westus2.msdxo.microsoft.com                         seedtest-westus2.msdxo.microsoft.com
-microsoft.com moconfig.microsoft.com                                       moconfig.microsoft.com
-microsoft.com cehclient.teams.microsoft.com                                cehclient.teams.microsoft.com
-microsoft.com bedrockmessageprocessorpreprod.corp.microsoft.com            bedrockmessageprocessorpreprod.corp.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com edge.payments.microsoft.com                                  edge.payments.microsoft.com
-microsoft.com sustainability.microsoft.com                                 *.sustainability.microsoft.com|sustainability.microsoft.com
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com api.businessappdiscovery.microsoft.com                       *.api.businessappdiscovery.microsoft.com|api.businessappdiscovery.microsoft.com
-microsoft.com kepler.powerplatform.microsoft.com                           *.kepler.powerplatform.microsoft.com|kepler.powerplatform.microsoft.com
-microsoft.com adminanalytics.powerplatform.microsoft.com                   *.adminanalytics.powerplatform.microsoft.com|*.dfanalytics.powerplatform.microsoft.com|adminanalytics.powerplatform.microsoft.com|dfanalytics.powerplatfor…
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com adminanalytics.powerplatform.microsoft.com                   *.adminanalytics.powerplatform.microsoft.com|*.dfanalytics.powerplatform.microsoft.com|adminanalytics.powerplatform.microsoft.com|dfanalytics.powerplatfor…
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|web.powerva.microsoft.com
-microsoft.com admin.powerapps.com                                          admin.businessplatform.microsoft.com|admin.flow.microsoft.com
-microsoft.com csanalytics.powerplatform.microsoft.com                      *.csanalytics.powerplatform.microsoft.com|csanalytics.powerplatform.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com mgmt.hcs.microsoft.com                                       mgmt.hcs.microsoft.com
-microsoft.com auth.hcs.microsoft.com                                       auth.hcs.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com api.businessappdiscovery.microsoft.com                       *.api.businessappdiscovery.microsoft.com|api.businessappdiscovery.microsoft.com
-microsoft.com sustainability.microsoft.com                                 *.sustainability.microsoft.com|sustainability.microsoft.com
-microsoft.com csanalytics.powerplatform.microsoft.com                      *.csanalytics.powerplatform.microsoft.com|csanalytics.powerplatform.microsoft.com
-microsoft.com sustainability.microsoft.com                                 *.sustainability.microsoft.com|sustainability.microsoft.com
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com clpws.ppe.ext.ssl.partners.extranet.microsoft.com            clplswsi.ppe.partners.extranet.microsoft.com|clplswsu1i.partners.extranet.microsoft.com|clplswsu2i.partners.extranet.microsoft.com|clpws.ppe.ext.ssl.partn…
-microsoft.com staging.bigcatalog-ac.commerce.microsoft.com                 *.staging-dcatbackend.mp.microsoft.com|*.staging.bigcatalog-ac.commerce.microsoft.com|*.stagingretrieval-dcatbackend.mp.microsoft.com|staging.bigcatalog-a…
-microsoft.com kepler-tip.powerplatform.microsoft.com                       *.kepler-tip.powerplatform.microsoft.com|kepler-tip.powerplatform.microsoft.com
-microsoft.com csanalytics.powerplatform.microsoft.com                      *.csanalytics.powerplatform.microsoft.com|csanalytics.powerplatform.microsoft.com
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|web.powerva.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com adminanalytics.powerplatform.microsoft.com                   *.adminanalytics.powerplatform.microsoft.com|*.dfanalytics.powerplatform.microsoft.com|adminanalytics.powerplatform.microsoft.com|dfanalytics.powerplatfor…
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com kepler.powerplatform.microsoft.com                           *.kepler.powerplatform.microsoft.com|kepler.powerplatform.microsoft.com
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com api.businessappdiscovery.microsoft.com                       *.api.businessappdiscovery.microsoft.com|api.businessappdiscovery.microsoft.com
-microsoft.com csanalytics.powerplatform.microsoft.com                      *.csanalytics.powerplatform.microsoft.com|csanalytics.powerplatform.microsoft.com
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com kepler.powerplatform.microsoft.com                           *.kepler.powerplatform.microsoft.com|kepler.powerplatform.microsoft.com
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|web.powerva.microsoft.com
-microsoft.com sebastiangordns.myworkspace.microsoft.com                    *.sebastiangordns.myworkspace.microsoft.com|sebastiangordns.myworkspace.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com kepler.powerplatform.microsoft.com                           *.kepler.powerplatform.microsoft.com|kepler.powerplatform.microsoft.com
-microsoft.com admin.powerapps.com                                          admin.businessplatform.microsoft.com|admin.flow.microsoft.com
-microsoft.com prod.eod.mte.wd.microsoft.com                                prod.eod.mte.wd.microsoft.com
-microsoft.com *.ppeint.cts.speech.microsoft.com                            *.australiacentral.ppeint.cts.speech.microsoft.com|*.australiacentral2.ppeint.cts.speech.microsoft.com|*.australiaeast.ppeint.cts.speech.microsoft.com|*.b…
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com mobileappcommunicator.auth.microsoft.com                     mobileappcommunicator.auth-ppe.microsoft.com|mobileappcommunicator.auth.microsoft.com
-microsoft.com partner.ppe.repmap.microsoft.com                             *.ppe.repmap.microsoft.com|*.prod.repmap.microsoft.com|client.ppe.repmap.microsoft.com|client.prod.repmap.microsoft.com|partner.ppe.repmap.microsoft.com|p…
-microsoft.com appmanagement.activedirectory.microsoft.com                  appmanagement.activedirectory-ppe.microsoft.com|appmanagement.activedirectory.microsoft.com
-microsoft.com identity.microsoft.com                                       applications.microsoft.com|apps.dev.microsoft.com|identity.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com login.windows.net                                            iotauth.microsoft.com|login.microsoft.com|mtlsauth.microsoft.com
-microsoft.com myaccount.microsoft.com                                      api.myaccount-ppe.microsoft.com|api.myaccount-tip.microsoft.com|api.myaccount.microsoft.com|api.myworkaccount-ppe.microsoft.com|api.myworkaccount.microsof…
-microsoft.com myaccess.canary.microsoft.com                                myaccess.canary.microsoft.com|myaccess.microsoft.com
-microsoft.com mygroups.microsoft.com                                       *.myapplications-ppe.microsoft.com|*.myapplications-tip.microsoft.com|*.myapplications.microsoft.com|*.mygroups-ppe.microsoft.com|*.mygroups-tip.microsoft…
-microsoft.com invitations.microsoft.com                                    invitations.microsoft.com
-microsoft.com iamtelemetrycollector.microsoft.com                          iamtelemetrycollector-ppe.microsoft.com|iamtelemetrycollector.microsoft.com
-microsoft.com datsuatex.partners.extranet.microsoft.com                    datsuatex.partners.extranet.microsoft.com
-microsoft.com download.oemsoc.microsoft.com                                download.oemsoc.microsoft.com
-microsoft.com vlscapi.microsoft.com                                        vlscapi.corp.microsoft.com|vlscapi.microsoft.com|vlscapi.one.microsoft.com|vlscapidr.one.microsoft.com|VLSCAPIWC.partners.extranet.microsoft.com|VLSCAPIWU…
-microsoft.com clientauth.geneva.keyvault.ec.vl.quot.bcweb.microsoft.com    clientauth.geneva.keyvault.ec.vl.quot.bcweb.microsoft.com
-microsoft.com emcws.partners.extranet.microsoft.com                        emcws.partners.extranet.microsoft.com
-microsoft.com bas.partners.extranet.microsoft.com                          bas.partners.extranet.microsoft.com|basdrgc.partners.extranet.microsoft.com|basgc.partners.extranet.microsoft.com
-microsoft.com clpws.prd.ssl.partners.extranet.microsoft.com                clpagmtws-co1ext.partners.extranet.microsoft.com|clpagmtws-co1int.partners.extranet.microsoft.com|clpagmtws-tk5ext.partners.extranet.microsoft.com|clpagmt…
-microsoft.com licensingonlineservicesactivation.microsoft.com              licensingonlineservicesactivation.microsoft.com
-microsoft.com supportactions-northeurope.services.microsoft.com            supportactions-northeurope.services.microsoft.com
-microsoft.com gcp.mu-preprod.streammu.microsoft.com                        gcp.mu-preprod.streammu.microsoft.com
-microsoft.com aad.mu-ae-preprod.streammu.microsoft.com                     aad.mu-ae-preprod.streammu.microsoft.com
-microsoft.com gcp.mu-prod.streammu.microsoft.com                           gcp.mu-prod.streammu.microsoft.com
-microsoft.com aad.mu-ae-prod.streammu.microsoft.com                        aad.mu-ae-prod.streammu.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com
-microsoft.com revenueallocatorconsumable.cp.microsoft.com                  revenueallocatorconsumable.cp.microsoft.com
-microsoft.com revenueallocatorspendable.cp.microsoft.com                   revenueallocatorspendable.cp.microsoft.com
-microsoft.com revenueallocatorusage.cp.microsoft.com                       revenueallocatorusage.cp.microsoft.com
-microsoft.com revenueallocatorcbrr.cp.microsoft.com                        revenueallocatorcbrr.cp.microsoft.com
-microsoft.com dlmbomprod.redmond.corp.microsoft.com                        dlmbomprod.redmond.corp.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com
-microsoft.com azafsvexcelweb.redmond.corp.microsoft.com                    azafsvexcelweb.redmond.corp.microsoft.com
-microsoft.com api.preview.powerva.microsoft.com                            api.preview.powerva.microsoft.com
-microsoft.com *.speech.microsoft.com                                       *.api.speech.microsoft.com|*.speech.microsoft.com|api.speech.microsoft.com|speech.microsoft.com
-microsoft.com glb.ingestion-prod.trafficshaping.dsp.mp.microsoft.com       glb.ingestion-prod.trafficshaping.dsp.mp.microsoft.com
-microsoft.com glb.adminportalapi-prod.trafficshaping.dsp.mp.microsoft.com  glb.adminportalapi-prod.trafficshaping.dsp.mp.microsoft.com
-microsoft.com auar.trafficshaping.dsp.mp.microsoft.com                     auar.trafficshaping.dsp.mp.microsoft.com
-microsoft.com pitstop.microsoft.com                                        pitstop.microsoft.com
-microsoft.com msxportal.microsoft.com                                      msxportal.microsoft.com
-microsoft.com msxadmin.microsoft.com                                       msxadmin.microsoft.com
-microsoft.com *.serversync-dev.dcat.dsp.mp.microsoft.com                   *.backend.serversync-dev.dcat.dsp.mp.microsoft.com|*.serversync-dev.dcat.dsp.mp.microsoft.com
-microsoft.com LogManagerService.scus.manage-mig.microsoft.com              LogManagerService.scus.manage-mig.microsoft.com
-microsoft.com LogManagerService.wus3.manage-mig.microsoft.com              LogManagerService.wus3.manage-mig.microsoft.com
-microsoft.com alt.consentservice.microsoft.com                             alt.consentservice.microsoft.com
-microsoft.com consentservice.microsoft.com                                 consentservice.microsoft.com
-microsoft.com ddsapp.dev.cs.md.microsoft.com                               ddsapp.dev.cs.md.microsoft.com
-microsoft.com smartscreen-ppe.microsoft.com                                *.smartscreen-ppe.microsoft.com|smartscreen-ppe.microsoft.com
-microsoft.com *.ppe.mgmt.ss.wd.microsoft.com                               *.ppe.mgmt.ss.wd.microsoft.com
-microsoft.com afd-RDGateway-R1.wvdselfhost.microsoft.com                   afd-RDGateway-R1.wvdselfhost.microsoft.com
-microsoft.com previewuat.eagreements.microsoft.com                         previewuat.eagreements.microsoft.com
-microsoft.com msrc-ppe.microsoft.com                                       msrc-ppe.microsoft.com
-microsoft.com l2oorchestration-int.l2o.microsoft.com                       l2oorchestration-int.geneva.keyvault.l2o.microsoft.com|l2oorchestration-int.l2o.microsoft.com
-microsoft.com centinel.microsoft.com                                       centinel.microsoft.com|communityinsider.microsoft.com
-microsoft.com smba.infra.gcc.teams.microsoft.com                           smba.infra.gcc.teams.microsoft.com
-microsoft.com *.usnat.ti.microsoft.com                                     *.api.usnat.ti.microsoft.com|*.usnat.ti.microsoft.com|api.usnat.ti.microsoft.com|usnat.ti.microsoft.com
-microsoft.com wssdcproxy.corp.microsoft.com                                wssdcproxy.corp.microsoft.com
-microsoft.com ModerndrsDigitalSignature-INT.cp.microsoft.com               ModerndrsDigitalSignature-INT.cp.microsoft.com
-microsoft.com oneaskdevsf.microsoft.com                                    oneaskdevsf.microsoft.com
-microsoft.com azprodssiis01.redmond.corp.microsoft.com                     azprodssiis01.redmond.corp.microsoft.com
-microsoft.com azppessiis02.redmond.corp.microsoft.com                      azppessiis02.redmond.corp.microsoft.com
-microsoft.com CUSRED025M1092.network.microsoft.com                         CUSRED025M1002.network.microsoft.com|CUSRED025M1092.network.microsoft.com
-microsoft.com sap.dev.sapsearch.microsoft.com                              sap.dev.sapsearch.microsoft.com
-microsoft.com CUSRED025M1091.network.microsoft.com                         CUSRED025M1001.network.microsoft.com|CUSRED025M1091.network.microsoft.com
-microsoft.com cusirvlc2m1084.network.microsoft.com                         cusirvlc2m1004.network.microsoft.com|cusirvlc2m1084.network.microsoft.com
-microsoft.com cusirvlc2m1083.network.microsoft.com                         cusirvlc2m1003.network.microsoft.com|cusirvlc2m1083.network.microsoft.com
-microsoft.com CUSIRVLC2M1082.network.microsoft.com                         CUSIRVLC2M1002.network.microsoft.com|CUSIRVLC2M1082.network.microsoft.com
-microsoft.com CUSIRVLC2M1081.network.microsoft.com                         CUSIRVLC2M1001.network.microsoft.com|CUSIRVLC2M1081.network.microsoft.com
-microsoft.com cusfrgfarm1082.network.microsoft.com                         cusfrgfarm1002.network.microsoft.com|cusfrgfarm1082.network.microsoft.com
-microsoft.com cusfrgfarm1081.network.microsoft.com                         cusfrgfarm1001.network.microsoft.com|cusfrgfarm1081.network.microsoft.com
-microsoft.com CUSCHL1APM1083.network.microsoft.com                         CUSCHL1APM1003.network.microsoft.com|CUSCHL1APM1083.network.microsoft.com
-microsoft.com CUSCHL1APM1082.network.microsoft.com                         CUSCHL1APM1002.network.microsoft.com|CUSCHL1APM1082.network.microsoft.com
-microsoft.com CUSCHL1APM1081.network.microsoft.com                         CUSCHL1APM1001.network.microsoft.com|CUSCHL1APM1081.network.microsoft.com
-microsoft.com a-uswe-canary.prod.templates.tac.teams.microsoft.com         a-uswe-canary.prod.templates.tac.teams.microsoft.com|canary.prod.templates.tac.teams.microsoft.com|prod.templates.tac.teams.microsoft.com|uswe-canary.prod…
-microsoft.com cinhydhy3m1083.network.microsoft.com                         cinhydhy3m1003.network.microsoft.com|cinhydhy3m1083.network.microsoft.com
-microsoft.com cinhydhy3m1082.network.microsoft.com                         cinhydhy3m1002.network.microsoft.com|cinhydhy3m1082.network.microsoft.com
-microsoft.com cinhydhy3m1081.network.microsoft.com                         cinhydhy3m1001.network.microsoft.com|cinhydhy3m1081.network.microsoft.com
-microsoft.com cingurepim1082.network.microsoft.com                         cingurepim1002.network.microsoft.com|cingurepim1082.network.microsoft.com
-microsoft.com CINGUREPIM1081.network.microsoft.com                         CINGUREPIM1001.network.microsoft.com|CINGUREPIM1081.network.microsoft.com
-microsoft.com cincheprem1082.network.microsoft.com                         cincheprem1002.network.microsoft.com|cincheprem1082.network.microsoft.com
-microsoft.com cincheprem1081.network.microsoft.com                         cincheprem1001.network.microsoft.com|cincheprem1081.network.microsoft.com
-microsoft.com cinban7vam1082.network.microsoft.com                         cinban7vam1002.network.microsoft.com|cinban7vam1082.network.microsoft.com
-microsoft.com cinban7vam1081.network.microsoft.com                         cinban7vam1001.network.microsoft.com|cinban7vam1081.network.microsoft.com
-microsoft.com cinbancl9m1082.network.microsoft.com                         cinbancl9m1002.network.microsoft.com|cinbancl9m1082.network.microsoft.com
-microsoft.com cinbancosm1081.network.microsoft.com                         cinbancosm1001.network.microsoft.com|cinbancosm1081.network.microsoft.com
-microsoft.com cinbancl9m1081.network.microsoft.com                         cinbancl9m1001.network.microsoft.com|cinbancl9m1081.network.microsoft.com
-microsoft.com partnerquoteuat.microsoft.com                                partnerquoteuat.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com manage.devcenter.microsoft.com                               manage.devcenter.microsoft.com
-microsoft.com csanalytics.powerplatform.microsoft.com                      *.csanalytics.powerplatform.microsoft.com|csanalytics.powerplatform.microsoft.com
-microsoft.com recruitfd.microsoft.com                                      recruitfd.microsoft.com
-microsoft.com amer-webhook.teams.microsoft.com                             amer-webhook.teams.microsoft.com|webhook-amer-onebox.teams.microsoft.com|webhook-amer-poola.teams.microsoft.com|webhook-amer-poolb.teams.microsoft.com|web…
-microsoft.com *.fullvalue.omex.office.net                                  frpinsights.partners.omex.microsoft.com
-microsoft.com *.fullvalue.omex.office.net                                  frpinsights.partners.omex.microsoft.com
-microsoft.com *.fullvalue.omex.office.net                                  frpinsights.partners.omex.microsoft.com
-microsoft.com *.fullvalue.omex.office.net                                  frpinsights.partners.omex.microsoft.com
-microsoft.com *.fullvalue.omex.office.net                                  frpinsights.partners.omex.microsoft.com
-microsoft.com *.fullvalue.omex.office.net                                  frpinsights.partners.omex.microsoft.com
-microsoft.com *.fullvalue.omex.office.net                                  frpinsights.partners.omex.microsoft.com
-microsoft.com *.fullvalue.omex.office.net                                  frpinsights.partners.omex.microsoft.com
-microsoft.com *.fullvalue.omex.office.net                                  frpinsights.partners.omex.microsoft.com
-microsoft.com *.fullvalue.omex.office.net                                  frpinsights.partners.omex.microsoft.com
-microsoft.com *.fullvalue.omex.office.net                                  frpinsights.partners.omex.microsoft.com
-microsoft.com *.fullvalue.omex.office.net                                  frpinsights.partners.omex.microsoft.com
-microsoft.com *.fullvalue.omex.office.net                                  frpinsights.partners.omex.microsoft.com
-microsoft.com *.fullvalue.omex.office.net                                  frpinsights.partners.omex.microsoft.com
-microsoft.com *.fullvalue.omex.office.net                                  frpinsights.partners.omex.microsoft.com
-microsoft.com LinkedIn.spectre.microsoft.com                               LinkedIn.spectre.microsoft.com
-microsoft.com azaxexpproddb03.redmond.corp.microsoft.com                   azaxexpproddb03.redmond.corp.microsoft.com
-microsoft.com clpws.ppe.ssl.partners.extranet.microsoft.com                clpagmtwsppe.partners.extranet.microsoft.com|clpagmtwsu1.partners.extranet.microsoft.com|clpagmtwsu2.partners.extranet.microsoft.com|clplswsppe.partners.e…
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com victor.myworkspace.microsoft.com                             *.victor.myworkspace.microsoft.com|victor.myworkspace.microsoft.com
-microsoft.com i07uoasqlpds.partners.extranet.microsoft.com                 i07uoasqlpds.partners.extranet.microsoft.com
-microsoft.com *.fullvalue.omex.officeppe.net                               frpinsights-ppe.partners.omex.microsoft.com
-microsoft.com *.fullvalue.omex.officeppe.net                               frpinsights-ppe.partners.omex.microsoft.com
-microsoft.com *.fullvalue.omex.officeppe.net                               frpinsights-ppe.partners.omex.microsoft.com
-microsoft.com appsource.microsoft.com                                      appsource.microsoft.com
-microsoft.com appsource.microsoft.com                                      appsource.microsoft.com
-microsoft.com appsource.microsoft.com                                      appsource.microsoft.com
-microsoft.com appsource.microsoft.com                                      appsource.microsoft.com
-microsoft.com api.powerva.microsoft.com                                    api.powerva.microsoft.com
-microsoft.com sustainability.microsoft.com                                 *.sustainability.microsoft.com|sustainability.microsoft.com
-microsoft.com emcws16u1.partners.extranet.microsoft.com                    emcws16u1.partners.extranet.microsoft.com
-microsoft.com kepler.powerplatform.microsoft.com                           *.kepler.powerplatform.microsoft.com|kepler.powerplatform.microsoft.com
-microsoft.com afd-RDGateway-R1.wvdexci2.microsoft.com                      afd-RDGateway-R1.wvdexci2.microsoft.com
-microsoft.com SenseAuth2-PRD.securitycenter.windows.com                    SenseAuth2-CA.security.microsoft.com|SenseAuth2-PRD.security.microsoft.com
-microsoft.com basu1.partners.extranet.microsoft.com                        basu1.partners.extranet.microsoft.com
-microsoft.com ldss.test.l2o.microsoft.com                                  ldss.test.l2o.microsoft.com
-microsoft.com *.notify.windows.com                                         *.cdpcs.access.microsoft.com|*.cdpcs.microsoft.com|*.romeccs.microsoft.com|cdpcs.access.microsoft.com|cdpcs.microsoft.com|romeccs.microsoft.com
-microsoft.com appmanagement.microsoft.com                                  appmanagement.microsoft.com
-microsoft.com appmanagement.microsoft.com                                  appmanagement.microsoft.com
-microsoft.com credentials.azure.com                                        *.credentials.auth.microsoft.com|credentials.auth.microsoft.com
-microsoft.com tools.captainamerica.mediacreation.trafficmanager.net        mediacreation-tools.microsoft.com
-microsoft.com sourcelookup.captainamerica.mediacreation.trafficmanager.net mediacreation-sourcelookup.microsoft.com
-microsoft.com media.captainamerica.mediacreation.trafficmanager.net        mediacreation-media.microsoft.com
-microsoft.com dropmap.captainamerica.mediacreation.trafficmanager.net      mediacreation-dropmap.microsoft.com
-microsoft.com ais.captainamerica.mediacreation.trafficmanager.net          mediacreation-ais.microsoft.com
-microsoft.com web.captainamerica.mediacreation.trafficmanager.net          mediacreation.microsoft.com
-microsoft.com wuppe.api.cognitive.microsoft.com                            wuppe.api.cognitive.microsoft.com
-microsoft.com servicebus.northwest.azs-longhaul-07.selfhost.corp.microsof… *.servicebus.northwest.azs-longhaul-07.selfhost.corp.microsoft.com|servicebus.northwest.azs-longhaul-07.selfhost.corp.microsoft.com
-microsoft.com rp.asr.northwest.azs-longhaul-07.selfhost.corp.microsoft.com rp.asr.northwest.azs-longhaul-07.selfhost.corp.microsoft.com
-microsoft.com api.powerva.microsoft.com                                    api.powerva.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com projects.mcapiprojects.commerce.microsoft.com                assets.cp.microsoft.com|projects.cp.microsoft.com|projects.mcapiprojects.commerce.microsoft.com
-microsoft.com journal.mcapiprojects.commerce.microsoft.com                 journal.mcapiprojects.commerce.microsoft.com|projectjournal.cp.microsoft.com
-microsoft.com adnotifications.windowsazure.com                             *.strongauthenticationservice.auth.microsoft.com|strongauthenticationservice.auth.microsoft.com
-microsoft.com dataservice.portal.esrp.microsoft.com                        dataservice.portal.esrp.microsoft.com
-microsoft.com *.sample.myworkspace.microsoft.com                           *.sample.myworkspace.microsoft.com
-microsoft.com azurewatsontest.microsoft.com                                azurewatsontest.microsoft.com
-microsoft.com sapsearch-ci.microsoft.com                                   sapsearch-ci.microsoft.com|sapsearch-stg.microsoft.com
-microsoft.com tip1.rpadmin.processsimple.trafficmanager.net                *.us.tip1.admin.api.flow.microsoft.com|tip1.admin.api.flow.microsoft.com|us.tip1.admin.api.flow.microsoft.com
-microsoft.com inprogress.realtimetelemetry.teams.microsoft.com             inprogress.realtimetelemetry.teams.microsoft.com
-microsoft.com afdalert.spocerts.microsoft.com                              afdalert.spocerts.microsoft.com
-microsoft.com brekeyvaultprod.microsoft.com                                brekeyvaultprod.microsoft.com
-microsoft.com brekeyvaultprod.microsoft.com                                brekeyvaultprod.microsoft.com
-microsoft.com *.pronservice.speech.microsoft.com                           *.pronservice.speech.microsoft.com
-microsoft.com *.testhost.speech.microsoft.com                              *.testhost.speech.microsoft.com
-microsoft.com afdalert.spocerts.microsoft.com                              afdalert.spocerts.microsoft.com
-microsoft.com *.tts-frontend.speech.microsoft.com                          *.tts-frontend.speech.microsoft.com|*.tts.speech.microsoft.com|*.voice.speech.microsoft.com
-microsoft.com agsredisclient.graph.microsoft.com                           agsredisclient.graph.microsoft.com
-microsoft.com www.corestudio.microsoft.com                                 www.corestudio.microsoft.com
-microsoft.com corestudio.microsoft.com                                     corestudio.microsoft.com
-microsoft.com msrc.corp.microsoft.com                                      msrc.corp.microsoft.com
-microsoft.com certsendhelloaad.xaplite.microsoft.com                       certsendhelloaad.xaplite.microsoft.com
-microsoft.com api.preview.powerva.microsoft.com                            api.preview.powerva.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com credentials.azure.com                                        *.credentials.auth.microsoft.com|credentials.auth.microsoft.com
-microsoft.com mscuat.microsoft.com                                         *.msc.microsoft.com|mscplanst.microsoft.com|mscplanuat.microsoft.com|mscst.microsoft.com|mscuat.microsoft.com
-microsoft.com knowme.services.microsoft.com                                *.knowme.services.microsoft.com|knowme.services.microsoft.com
-microsoft.com *.windowsautopilot-mig.microsoft.com                         *.windowsautopilot-mig.microsoft.com
-microsoft.com ecoshosting.microsoft.com                                    ecoshosting-ppe.microsoft.com|ecoshosting.microsoft.com|mystaff-ppe.microsoft.com|mystaff.microsoft.com
-microsoft.com azeu2pavmfwnsaof02.a4opacketcore.microsoft.com               azeu2pavmfwnsaof02.a4opacketcore.microsoft.com
-microsoft.com phonereglocal.corp.microsoft.com                             phonereglocal.corp.microsoft.com
-microsoft.com azeu2pavmfwnsaof01.a4opacketcore.microsoft.com               azeu2pavmfwnsaof01.a4opacketcore.microsoft.com
-microsoft.com *.controls.account.microsoft.com                             *.controls.account.microsoft.com|controls.account.microsoft.com
-microsoft.com tip2.rpadmin.processsimple.trafficmanager.net                *.us.tip2.admin.api.flow.microsoft.com|tip2.admin.api.flow.microsoft.com|us.tip2.admin.api.flow.microsoft.com
-microsoft.com spo-icm-alertswebapi.spocerts.microsoft.com                  spo-icm-alertswebapi.spocerts.microsoft.com
-microsoft.com adnotifications.windowsazure.com                             *.strongauthenticationservice.auth.microsoft.com|strongauthenticationservice.auth.microsoft.com
-microsoft.com eus.tip1us.tip1.rpssl.flow.microsoft.com                     *.emea.tip1.api.flow.microsoft.com|*.tip1.api.flow.microsoft.com|*.us.tip1.api.flow.microsoft.com|eus.tip1us.tip1.rpssl.flow.microsoft.com|tip1.api.flow.m…
-microsoft.com mseliteuat.microsoft.com                                     mseliteuat.microsoft.com
-microsoft.com aaawebxt.microsoft.com                                       aaawebxt.microsoft.com
-microsoft.com dev.smartbuilding.microsoft.com                              dev.smartbuilding.microsoft.com
-microsoft.com smartbuilding.microsoft.com                                  smartbuilding.microsoft.com
-microsoft.com hvsn.studios.microsoft.com                                   *.hvsn.studios.microsoft.com|hvsn.studios.microsoft.com
-microsoft.com *.ind.daas.microsoft.com                                     *.daas.microsoft.com|*.ind.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.ind.daas.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com eus2a4opcnps01.a4opacketcore.microsoft.com                   eus2a4opcnps01.a4opacketcore.microsoft.com
-microsoft.com securedevices.microsoft.com                                  securedevices.microsoft.com
-microsoft.com *.fullvalue.omex.office-int.net                              frpinsights-int.partners.omex.microsoft.com
-microsoft.com *.fullvalue.omex.office-int.net                              frpinsights-dev.partners.omex.microsoft.com
-microsoft.com azuresecpackggp.microsoft.com                                azuresecpackggp.microsoft.com
-microsoft.com afd-RDGateway-R0.wvdexci2.microsoft.com                      afd-RDGateway-R0.wvdexci2.microsoft.com
-microsoft.com *.exp.microsoft.com                                          *.exp.microsoft.com|exp.microsoft.com
-microsoft.com vivace.exp.microsoft.com                                     vivace.exp.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com ecoshosting.microsoft.com                                    ecoshosting-ppe.microsoft.com|ecoshosting.microsoft.com|mystaff-ppe.microsoft.com|mystaff.microsoft.com
-microsoft.com rr1masextrdg.corp.microsoft.com                              rr1masextrdg.corp.microsoft.com
-microsoft.com rr1masextrdg.corp.microsoft.com                              rr1masextrdg.corp.microsoft.com
-microsoft.com *.status-tip.dcat.dsp.mp.microsoft.com                       *.backend.status-tip.dcat.dsp.mp.microsoft.com|*.status-tip.dcat.dsp.mp.microsoft.com
-microsoft.com *.status-prod.dcat.dsp.mp.microsoft.com                      *.backend.status-prod.dcat.dsp.mp.microsoft.com|*.status-prod.dcat.dsp.mp.microsoft.com
-microsoft.com phx.sfs-tip.dcat.dsp.mp.microsoft.com                        *.backend.sfs-tip.dcat.dsp.mp.microsoft.com|*.sfs-tip.dcat.dsp.mp.microsoft.com|phx.sfs-tip.dcat.dsp.mp.microsoft.com
-microsoft.com phx.sfs-prod.dcat.dsp.mp.microsoft.com                       *.backend.sfs-prod.dcat.dsp.mp.microsoft.com|*.sfs-prod.dcat.dsp.mp.microsoft.com|phx.sfs-prod.dcat.dsp.mp.microsoft.com
-microsoft.com *.pub-tip.dcat.dsp.mp.microsoft.com                          *.backend.pub-tip.dcat.dsp.mp.microsoft.com|*.pub-tip.dcat.dsp.mp.microsoft.com
-microsoft.com *.pub-prod.dcat.dsp.mp.microsoft.com                         *.backend.pub-prod.dcat.dsp.mp.microsoft.com|*.pub-prod.dcat.dsp.mp.microsoft.com
-microsoft.com *.dataapi-tip.dcat.dsp.mp.microsoft.com                      *.backend.dataapi-tip.dcat.dsp.mp.microsoft.com|*.dataapi-tip.dcat.dsp.mp.microsoft.com
-microsoft.com *.dataapi-prod.dcat.dsp.mp.microsoft.com                     *.backend.dataapi-prod.dcat.dsp.mp.microsoft.com|*.dataapi-prod.dcat.dsp.mp.microsoft.com|slspub.redmond.corp.microsoft.com
-microsoft.com cmd-tip.dcat.dsp.mp.microsoft.com                            *.backend.cmd-tip.dcat.dsp.mp.microsoft.com|*.cmd-tip.dcat.dsp.mp.microsoft.com|cmd-tip.dcat.dsp.mp.microsoft.com
-microsoft.com cms.cdp.microsoft.com                                        *.backend.cms.cdp.microsoft.com|*.cms.cdp.microsoft.com|cms.cdp.microsoft.com|phx.cms.cdp.microsoft.com
-microsoft.com *.catalogservice-tip.dcat.dsp.mp.microsoft.com               *.backend.catalogservice-tip.dcat.dsp.mp.microsoft.com|*.catalogservice-tip.dcat.dsp.mp.microsoft.com
-microsoft.com catalogservice-prod.dcat.dsp.mp.microsoft.com                *.backend.catalogservice-prod.dcat.dsp.mp.microsoft.com|*.catalogservice-prod.dcat.dsp.mp.microsoft.com|catalogservice-prod.dcat.dsp.mp.microsoft.com
-microsoft.com *.catalog-tip.dcat.dsp.mp.microsoft.com                      *.backend.catalog-tip.dcat.dsp.mp.microsoft.com|*.catalog-tip.dcat.dsp.mp.microsoft.com
-microsoft.com catalog.update.microsoft.com                                 *.backend.catalog.update.microsoft.com|*.catalog.update.microsoft.com|catalog.update.microsoft.com
-microsoft.com msquat1wsext.partners.extranet.microsoft.com                 msquat1wsext.partners.extranet.microsoft.com
-microsoft.com msquat1wsext.partners.extranet.microsoft.com                 msquat1wsext.partners.extranet.microsoft.com
-microsoft.com msquat1wsext.partners.extranet.microsoft.com                 msquat1wsext.partners.extranet.microsoft.com
-microsoft.com msquat1ui.partners.extranet.microsoft.com                    msquat1ui.partners.extranet.microsoft.com
-microsoft.com securedevices.microsoft.com                                  securedevices.microsoft.com
-microsoft.com AZXFINWP02FAQ.redmond.corp.microsoft.com                     AZXFINWP02FAQ.redmond.corp.microsoft.com
-microsoft.com securedevices.microsoft.com                                  securedevices.microsoft.com
-microsoft.com *.spots-ppe.microsoft.com                                    *.spots-ppe.microsoft.com
-microsoft.com msgsppm.corp.microsoft.com                                   msgsppm.corp.microsoft.com
-microsoft.com pending.sls.update.microsoft.com                             *.backend.pending.sls-tip.update.microsoft.com|*.backend.pending.sls.update.microsoft.com|*.pending.sls-tip.update.microsoft.com|*.pending.sls.update.micr…
-microsoft.com afd-RDGateway-R0.wvdselfhost.microsoft.com                   afd-RDGateway-R0.wvdselfhost.microsoft.com
-microsoft.com supportactions-cst2.services.microsoft.com                   supportactions-cst2.services.microsoft.com
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|web.powerva.microsoft.com
-microsoft.com datagrid.microsoft.com                                       datagrid.microsoft.com|portal.datagridservices-prod-primary.microsoft.com|portal.datagridservices-prod-secondary.microsoft.com|portal.datagridservices.mic…
-microsoft.com azafsvexcelsql.redmond.corp.microsoft.com                    azafsvexcelsql.redmond.corp.microsoft.com
-microsoft.com command-rt-int-eastus.cms.microsoft.com                      command-rt-int-eastus-secondary.cms.microsoft.com|command-rt-int-eastus.cms.microsoft.com
-microsoft.com api.addons.microsoftedge.microsoft.com                       api.addons.microsoftedge.microsoft.com
-microsoft.com staging.bigcatalog-ac.commerce.microsoft.com                 *.staging-dcatbackend.mp.microsoft.com|*.staging.bigcatalog-ac.commerce.microsoft.com|*.stagingretrieval-dcatbackend.mp.microsoft.com|staging.bigcatalog-a…
-microsoft.com tools.thor.mediacreation.trafficmanager.net                  mediacreation-tools.microsoft.com
-microsoft.com ais.thor.mediacreation.trafficmanager.net                    mediacreation-ais.microsoft.com
-microsoft.com media.thor.mediacreation.trafficmanager.net                  mediacreation-media.microsoft.com
-microsoft.com web.thor.mediacreation.trafficmanager.net                    mediacreation.microsoft.com
-microsoft.com dropmap.thor.mediacreation.trafficmanager.net                mediacreation-dropmap.microsoft.com
-microsoft.com sourcelookup.thor.mediacreation.trafficmanager.net           mediacreation-sourcelookup.microsoft.com
-microsoft.com ecoshosting.microsoft.com                                    ecoshosting-ppe.microsoft.com|ecoshosting.microsoft.com|mystaff-ppe.microsoft.com|mystaff.microsoft.com
-microsoft.com mantis.microsoft.com                                         mantis.microsoft.com
-microsoft.com sbcteams.sdg.teams.microsoft.com                             sbcteams.sdg.teams.microsoft.com|useae2e.sbcteams.sdg.teams.microsoft.com|uswee2e.sbcteams.sdg.teams.microsoft.com
-microsoft.com sbcobmgmt.sdg.teams.microsoft.com                            sbcobmgmt.sdg.teams.microsoft.com|useae2e.sbcobmgmt.sdg.teams.microsoft.com|uswee2e.sbcobmgmt.sdg.teams.microsoft.com
-microsoft.com sbcobipp.sdg.teams.microsoft.com                             sbcobipp.sdg.teams.microsoft.com|useae2e.sbcobipp.sdg.teams.microsoft.com|uswee2e.sbcobipp.sdg.teams.microsoft.com
-microsoft.com mantisprod.microsoft.com                                     mantisprod.microsoft.com
-microsoft.com sbcmainmgmt.sdg.teams.microsoft.com                          sbcmainmgmt.sdg.teams.microsoft.com|useae2e.sbcmainmgmt.sdg.teams.microsoft.com|uswee2e.sbcmainmgmt.sdg.teams.microsoft.com
-microsoft.com mantisprodbcdr.microsoft.com                                 mantisprodbcdr.microsoft.com
-microsoft.com sbcmainipp.sdg.teams.microsoft.com                           sbcmainipp.sdg.teams.microsoft.com|useae2e.sbcmainipp.sdg.teams.microsoft.com|uswee2e.sbcmainipp.sdg.teams.microsoft.com
-microsoft.com forecast.microsoft.com                                       forecast.microsoft.com
-microsoft.com dm.sdg.teams.microsoft.com                                   dm.sdg.teams.microsoft.com|useae2e.dm.sdg.teams.microsoft.com|uswee2e.dm.sdg.teams.microsoft.com
-microsoft.com dmedge.sdg.teams.microsoft.com                               dmedge.sdg.teams.microsoft.com|useae2e.dmedge.sdg.teams.microsoft.com|uswee2e.dmedge.sdg.teams.microsoft.com
-microsoft.com rp.asr.northwest.azs-longhaul-07.selfhost.corp.microsoft.com rp.asr.northwest.azs-longhaul-07.selfhost.corp.microsoft.com
-microsoft.com servicebus.northwest.azs-longhaul-07.selfhost.corp.microsof… *.servicebus.northwest.azs-longhaul-07.selfhost.corp.microsoft.com|servicebus.northwest.azs-longhaul-07.selfhost.corp.microsoft.com
-microsoft.com eventhub.northwest.azs-longhaul-07.selfhost.corp.microsoft.… *.eventhub.northwest.azs-longhaul-07.selfhost.corp.microsoft.com|eventhub.northwest.azs-longhaul-07.selfhost.corp.microsoft.com
-microsoft.com inprogress.realtimetelemetry.teams.microsoft.com             inprogress.realtimetelemetry.teams.microsoft.com
-microsoft.com wus.tip1us.tip1.rpssl.flow.microsoft.com                     *.emea.tip1.api.flow.microsoft.com|*.tip1.api.flow.microsoft.com|*.us.tip1.api.flow.microsoft.com|tip1.api.flow.microsoft.com|unitedstates.tip1.api.flow.m…
-microsoft.com eus.tip1us.tip1.rpssl.flow.microsoft.com                     *.emea.tip1.api.flow.microsoft.com|*.tip1.api.flow.microsoft.com|*.us.tip1.api.flow.microsoft.com|eus.tip1us.tip1.rpssl.flow.microsoft.com|tip1.api.flow.m…
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com uiconfigurations.l2o.microsoft.com                           uiconfigurations.l2o.microsoft.com
-microsoft.com uiconfigurations.int.l2o.microsoft.com                       uiconfigurations.int.l2o.microsoft.com
-microsoft.com appmanagement-weu-assertion.microsoft.com                    appmanagement-weu-assertion.microsoft.com
-microsoft.com appmanagement-sea-assertion.microsoft.com                    appmanagement-sea-assertion.microsoft.com
-microsoft.com sdx.msdx.microsoft.com                                       sdx.msdx.microsoft.com
-microsoft.com azaatmdev01.redmond.corp.microsoft.com                       azaatmdev01.redmond.corp.microsoft.com
-microsoft.com api.preview.powerva.microsoft.com                            api.preview.powerva.microsoft.com
-microsoft.com quotecenterservice.int.l2o.microsoft.com                     quotecenterservice.int.l2o.microsoft.com
-microsoft.com agreementcenter.microsoft.com                                agreementcenter.microsoft.com
-microsoft.com agreementcenter-int.microsoft.com                            agreementcenter-int.microsoft.com
-microsoft.com empowerment-ppe.microsoft.com                                empowerment-ppe.microsoft.com
-microsoft.com web.preprod.powerva.microsoft.com                            *.web.preprod.powerva.microsoft.com|web.preprod.powerva.microsoft.com
-microsoft.com ecoshosting.microsoft.com                                    ecoshosting-ppe.microsoft.com|ecoshosting.microsoft.com|mystaff-ppe.microsoft.com|mystaff.microsoft.com
-microsoft.com glb.adminportalapi-int.trafficshaping.dsp.mp.microsoft.com   glb.adminportalapi-int.trafficshaping.dsp.mp.microsoft.com
-microsoft.com royaltyadminportal.microsoft.com                             royaltyadminportal.microsoft.com
-microsoft.com royaltyapi.microsoft.com                                     royaltyapi.microsoft.com
-microsoft.com royalty.microsoft.com                                        royalty.microsoft.com
-microsoft.com prv.consentservice.microsoft.com                             prv.consentservice.microsoft.com
-microsoft.com NA02.manage-mig.microsoft.com                                a.manage-mig.microsoft.com|admin.manage-mig.microsoft.com|EnterpriseEnrollment-s.manage-mig.microsoft.com|i.manage-mig.microsoft.com|manage-mig.microsoft.…
-microsoft.com csharp.net                                                   answerdesk.microsoft.com
-microsoft.com e.microsoft.com                                              academy.microsoft.com|admin.manage.microsoft.com|aischool.microsoft.com|amsterdam.myenvisiontour.microsoft.com|amsterdam.myignitetour.techcommunity.micros…
-microsoft.com journal.mcapifulfillment-consumer-int.commerce.microsoft.com *.consumerdispositionjournal-int.mcapi.microsoft.com|*.journal.mcapifulfillment-consumer-int.commerce.microsoft.com|consumerdispositionjournal-int.mcapi.m…
-microsoft.com journal.mcapifulfillment-consumer.commerce.microsoft.com     *.consumerdispositionjournal.mcapi.microsoft.com|*.journal.mcapifulfillment-consumer.commerce.microsoft.com|consumerdispositionjournal.mcapi.microsoft.com…
-microsoft.com disposition.mcapifulfillment-consumer-int.commerce.microsof… *.consumerdisposition-int.mcapi.microsoft.com|*.disposition.mcapifulfillment-consumer-int.commerce.microsoft.com|consumerdisposition-int.mcapi.microsoft.c…
-microsoft.com splunk.corp.microsoft.com                                    AZCUSSPKSRHP01.corp.microsoft.com|AZCUSSPKSRHP01.redmond.corp.microsoft.com|AZNESPKINXP01.corp.microsoft.com|AZNESPKINXP01.redmond.corp.microsoft.com|AZNE…
-microsoft.com FEF.msub07.manage.microsoft.com                              Enrollment.manage.microsoft.com|EnterpriseEnrollment-s.manage.microsoft.com|EnterpriseEnrollment-test.manage.microsoft.com|EnterpriseEnrollment.manage.mic…
-microsoft.com command-amp-ppe-eastus.cms.microsoft.com                     command-amp-ppe-eastus-secondary.cms.microsoft.com|command-amp-ppe-eastus.cms.microsoft.com
-microsoft.com buildershub.microsoft.com                                    buildershub.microsoft.com
-microsoft.com api.lockbox.microsoft.com                                    api.lockbox.microsoft.com
-microsoft.com moderndrstip.cp.microsoft.com                                moderndrstip.cp.microsoft.com
-microsoft.com moderndrs.cp.microsoft.com                                   moderndrs-ch1p.cp.microsoft.com|moderndrs-mw1p.cp.microsoft.com|moderndrs-sn3p.cp.microsoft.com|moderndrs.cp.microsoft.com
-microsoft.com command-rt-int-eastus.cms.microsoft.com                      command-rt-int-eastus-secondary.cms.microsoft.com|command-rt-int-eastus.cms.microsoft.com
-microsoft.com myaccess.canary.microsoft.com                                myaccess.canary.microsoft.com
-microsoft.com command-mr-ppe-us.cms.microsoft.com                          command-mr-ppe-us.cms.microsoft.com|command-mr-ppe-westus2-secondary.cms.microsoft.com|command-mr-ppe-westus2.cms.microsoft.com
-microsoft.com command-mr-ppe-us.cms.microsoft.com                          command-mr-ppe-eastus-secondary.cms.microsoft.com|command-mr-ppe-eastus.cms.microsoft.com|command-mr-ppe-us.cms.microsoft.com
-microsoft.com commercemeshsample.geneva.keyvault.microsoft.com             commercemeshsample.geneva.keyvault.microsoft.com
-microsoft.com msatoken.dcg-df.microsoft.com                                msatoken.dcg-df.microsoft.com
-microsoft.com rhui-1.microsoft.com                                         rhui-1.microsoft.com
-microsoft.com console-m365d.microsoft.com                                  *.console-m365d.microsoft.com|console-m365d.microsoft.com
-microsoft.com console-m365d.microsoft.com                                  *.console-m365d.microsoft.com|console-m365d.microsoft.com
-microsoft.com gsmtest1.microsoft.com                                       gsmtest1.microsoft.com
-microsoft.com OneSettings-Prod.win-sustainability.microsoft.com            OneSettings-Prod.win-sustainability.microsoft.com
-microsoft.com adnotifications.windowsazure.com                             *.strongauthenticationservice.auth.microsoft.com|strongauthenticationservice.auth.microsoft.com
-microsoft.com msatoken.dcg-beta.microsoft.com                              msatoken.dcg-beta.microsoft.com
-microsoft.com nonprofits.tsi.microsoft.com                                 nonprofits.tsi.microsoft.com
-microsoft.com azportshutdown.redmond.corp.microsoft.com                    azportshutdown.redmond.corp.microsoft.com
-microsoft.com powerquery.microsoft.com                                     powerquery-staging.microsoft.com|powerquery.microsoft.com|www.powerquery.microsoft.com
-microsoft.com powervirtualagents.microsoft.com                             powervirtualagents-staging.microsoft.com|powervirtualagents.microsoft.com
-microsoft.com *.ecs.skype.com                                              *.ecs.microsoft.com|ecs.microsoft.com
-microsoft.com appmanagement-stage-wus2.microsoft.com                       appmanagement-stage-wus2.microsoft.com
-microsoft.com jobagent.prodbubble.spocerts.microsoft.com                   jobagent.prodbubble.spocerts.microsoft.com
-microsoft.com deployment.servicetrust.microsoft.com                        deployment.servicetrust.microsoft.com
-microsoft.com appserviceprincipal.servicetrust.microsoft.com               appserviceprincipal.servicetrust.microsoft.com
-microsoft.com pr1dccevepms2.northamerica.corp.microsoft.com                pr1dccevepms2.northamerica.corp.microsoft.com
-microsoft.com jobagent.prod.spocerts.microsoft.com                         jobagent.prod.spocerts.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com internal.evergreen.microsoft.com                             internal.evergreen.microsoft.com
-microsoft.com ecoshosting.microsoft.com                                    ecoshosting-ppe.microsoft.com|ecoshosting.microsoft.com|mystaff-ppe.microsoft.com|mystaff.microsoft.com
-microsoft.com heartbeat.securitycenter.windows.com                         stg.gradingplatform.microsoft.com
-microsoft.com msvacationadmin.microsoft.com                                msvacationadmin.microsoft.com
-microsoft.com msvacation.microsoft.com                                     msvacation.microsoft.com
-microsoft.com msvacationadminppe.microsoft.com                             msvacationadminppe.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com mla-int.microsoft.com                                        mla-int.microsoft.com
-microsoft.com dev.dms.sfbautomation.microsoft.com                          dev.dms.sfbautomation.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com msxadmin-dev.microsoft.com                                   msxadmin-dev.microsoft.com
-microsoft.com vlcreditsuat.microsoft.com                                   grtuat.microsoft.com|vlcreditsuat.microsoft.com
-microsoft.com scranton.myworkspace.microsoft.com                           *.scranton.myworkspace.microsoft.com|scranton.myworkspace.microsoft.com
-microsoft.com michthor.myworkspace.microsoft.com                           *.michthor.myworkspace.microsoft.com|michthor.myworkspace.microsoft.com
-microsoft.com i07oasqlprvl.partners.extranet.microsoft.com                 i07oasqlprvl.partners.extranet.microsoft.com
-microsoft.com appmanagement-stage-wus2.microsoft.com                       appmanagement-stage-wus2.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com mysignins.microsoft.com                                      api.mysignins.microsoft.com|mysignins.microsoft.com
-microsoft.com test.notification.coreidentity.microsoft.com                 test.notification.coreidentity.microsoft.com
-microsoft.com storage-mr-prod-eastau.cms.microsoft.com                     storage-mr-prod-eastau-secondary.cms.microsoft.com|storage-mr-prod-eastau.cms.microsoft.com|storage.prod.cms.mr.microsoft.com
-microsoft.com storage-mr-prod-southeastau.cms.microsoft.com                storage-mr-prod-southeastau-secondary.cms.microsoft.com|storage-mr-prod-southeastau.cms.microsoft.com|storage.prod.cms.mr.microsoft.com
-microsoft.com storage-mr-prod-westuk.cms.microsoft.com                     storage-mr-prod-westuk-secondary.cms.microsoft.com|storage-mr-prod-westuk.cms.microsoft.com|storage.prod.cms.mr.microsoft.com
-microsoft.com storage-mr-prod-southuk.cms.microsoft.com                    storage-mr-prod-southuk-secondary.cms.microsoft.com|storage-mr-prod-southuk.cms.microsoft.com|storage.prod.cms.mr.microsoft.com
-microsoft.com storage-mr-prod-westjp.cms.microsoft.com                     storage-mr-prod-westjp-secondary.cms.microsoft.com|storage-mr-prod-westjp.cms.microsoft.com|storage.prod.cms.mr.microsoft.com
-microsoft.com storage-mr-prod-eastjp.cms.microsoft.com                     storage-mr-prod-eastjp-secondary.cms.microsoft.com|storage-mr-prod-eastjp.cms.microsoft.com|storage.prod.cms.mr.microsoft.com
-microsoft.com storage-mr-prod-eastca.cms.microsoft.com                     storage-mr-prod-eastca-secondary.cms.microsoft.com|storage-mr-prod-eastca.cms.microsoft.com|storage.prod.cms.mr.microsoft.com
-microsoft.com storage-mr-prod-centralca.cms.microsoft.com                  storage-mr-prod-centralca-secondary.cms.microsoft.com|storage-mr-prod-centralca.cms.microsoft.com|storage.prod.cms.mr.microsoft.com
-microsoft.com emcu1sqllis.partners.extranet.microsoft.com                  emcu1sqllis.partners.extranet.microsoft.com
-microsoft.com ucm.ads.microsoft.com                                        ucm.ads.microsoft.com
-microsoft.com sitesecure.microsoft.com                                     sitesecure.microsoft.com
-microsoft.com mediadiscovery-origin.microsoft.com                          mediadiscovery-origin.microsoft.com
-microsoft.com api.sitesecure.microsoft.com                                 api.sitesecure.microsoft.com
-microsoft.com tip2.api.powerplatform.microsoft.com                         tip2.api.powerplatform.microsoft.com
-microsoft.com xflowservice-datagridppe.corp.microsoft.com                  xflowservice-datagridppe.corp.microsoft.com
-microsoft.com cre.raas.microsoft.com                                       cre.raas.microsoft.com
-microsoft.com officecdn.microsoft.com                                      i.officecdn.microsoft.com|officecdn.microsoft.com
-microsoft.com dev.driproxy.cms.microsoft.com                               dev.driproxy.cms.microsoft.com
-microsoft.com paymentsconsole.cp.microsoft.com                             paymentsconsole.cp.microsoft.com
-microsoft.com paymentstransactionservice.cp.microsoft.com                  paymentstransactionservice.cp.microsoft.com
-microsoft.com paynotifications.cp.microsoft.com                            paynotifications.cp.microsoft.com
-microsoft.com payerauthservice.cp.microsoft.com                            payerauthservice.cp.microsoft.com
-microsoft.com paymentsjournalservice.cp.microsoft.com                      paymentsjournalservice.cp.microsoft.com
-microsoft.com sessionservice.cp.microsoft.com                              sessionservice.cp.microsoft.com
-microsoft.com paymentsbridgeservice.cp.microsoft.com                       paymentsbridgeservice.cp.microsoft.com
-microsoft.com paintelodatav2.one.microsoft.com                             paintelodatav2.one.microsoft.com
-microsoft.com paintelodata.one.microsoft.com                               paintelodata.one.microsoft.com
-microsoft.com cosmos.datagrid.microsoft.com                                cosmos.datagrid.microsoft.com
-microsoft.com cosmos.datagrid.microsoft.com                                cosmos.datagrid.microsoft.com
-microsoft.com cosmos.datagrid.microsoft.com                                cosmos.datagrid.microsoft.com
-microsoft.com kcs.one.microsoft.com                                        kcs.one.microsoft.com
-microsoft.com microsoft.com                                                aep.microsoft.com|aer.microsoft.com|aether.microsoft.com|afflink.microsoft.com|aistories.microsoft.com|alerts.microsoft.com|analyticspartner.microsoft.com…
-microsoft.com iris.ai.microsoft.com                                        iris.ai.microsoft.com
-microsoft.com nrt.iris.api.microsoft.com                                   nrt.iris.api.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.can.daas.microsoft.com|*.daas.microsoft.com
-microsoft.com *.can.daas.microsoft.com                                     *.can.daas.microsoft.com|*.daas.microsoft.com
-microsoft.com prod.stiauth.sds.microsoft.com                               prod.stiauth.sds.microsoft.com
-microsoft.com ppe.stiauth.sds.microsoft.com                                ppe.stiauth.sds.microsoft.com
-microsoft.com substrate.int.sds.microsoft.com                              substrate.int.sds.microsoft.com
-microsoft.com substrateintelligenceppe.microsoft.com                       substrateintelligenceppe.microsoft.com
-microsoft.com moderntaxreportadminservice.cp.microsoft.com                 moderntaxreportadminservice.cp.microsoft.com
-microsoft.com edgesearch-INT.edgesearch.microsoft.com                      *.edgesearch-int.edgesearch.microsoft.com|edgesearch-INT.edgesearch.microsoft.com|search.edge-int.ce.microsoft.com
-microsoft.com bigcatalog.microsoft.com                                     *.bigcatalog.microsoft.com|*.displaycatalog.mp.microsoft.com|*.frontdoor-displaycatalog.bigcatalog.microsoft.com|bigcatalog.microsoft.com|displaycatalog.m…
-microsoft.com command-internal-int-westus.cms.microsoft.com                command-internal-int-westus-secondary.cms.microsoft.com|command-internal-int-westus.cms.microsoft.com
-microsoft.com edgedata.prod.public.partner.insights.microsoft.com          edgedata.prod.public.partner.insights.microsoft.com
-microsoft.com staging.bigcatalog.commerce.microsoft.com                    *.bigcatalog.commerce.microsoft.com|*.bigcatalog.microsoft.com|*.staging-dcatbackend.mp.microsoft.com|*.staging.bigcatalog.commerce.microsoft.com|*.stagin…
-microsoft.com sustainability.microsoft.com                                 *.preview.sustainability.microsoft.com|*.sustainability.microsoft.com|preview.sustainability.microsoft.com|sustainability.microsoft.com
-microsoft.com web.powerva.microsoft.com                                    *.web.powerva.microsoft.com|*.web.preview.powerva.microsoft.com|web.powerva.microsoft.com|web.preview.powerva.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com kepler.powerplatform.microsoft.com                           *.kepler.powerplatform.microsoft.com|kepler.powerplatform.microsoft.com
-microsoft.com dfanalytics.powerplatform.microsoft.com                      *.dfanalytics.powerplatform.microsoft.com|dfanalytics.powerplatform.microsoft.com
-microsoft.com csanalytics.powerplatform.microsoft.com                      *.csanalytics.powerplatform.microsoft.com|csanalytics.powerplatform.microsoft.com
-microsoft.com adminanalytics.powerplatform.microsoft.com                   *.adminanalytics.powerplatform.microsoft.com|adminanalytics.powerplatform.microsoft.com
-microsoft.com command-internal-ci-westus.cms.microsoft.com                 command-internal-ci-westus-secondary.cms.microsoft.com|command-internal-ci-westus.cms.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com admin.powerapps.com                                          admin.businessplatform.microsoft.com|admin.flow.microsoft.com
-microsoft.com adminanalytics.powerplatform.microsoft.com                   *.adminanalytics.powerplatform.microsoft.com|*.dfanalytics.powerplatform.microsoft.com|adminanalytics.powerplatform.microsoft.com|dfanalytics.powerplatfor…
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com msgsearch.infra.gcc.teams.microsoft.com                      msgsearch.infra.gcc.teams.microsoft.com
-microsoft.com dev.spr-frontend.speech.microsoft.com                        dev.spr-frontend.speech.microsoft.com
-microsoft.com *.ggs.speech.microsoft.com                                   *.ggs-frontend.speech.microsoft.com|*.ggs.speech.microsoft.com
-microsoft.com *.dpp.speech.microsoft.com                                   *.dpp.speech.microsoft.com
-microsoft.com *.dgs-ggs.speech.microsoft.com                               *.dgs-ggs.speech.microsoft.com
-microsoft.com dev.sr-frontend-adaptive.speech.microsoft.com                dev.sr-frontend-adaptive.speech.microsoft.com
-microsoft.com *.sr-frontend.speech.microsoft.com                           *.sr-cortana-frontend.speech.microsoft.com|*.sr-d17f7d9a-frontend.speech.microsoft.com|*.sr-frontend.speech.microsoft.com|*.sr.speech.microsoft.com
-microsoft.com *.pronservice.speech.microsoft.com                           *.pronservice.speech.microsoft.com
-microsoft.com powerva.microsoft.com                                        powerva.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com asimov-xflow.corp.microsoft.com                              asimov-xflow.corp.microsoft.com
-microsoft.com api-stg.azureforeducation.microsoft.com                      api-stg.azureforeducation.microsoft.com
-microsoft.com *.tops-int.mp.microsoft.com                                  *.az.tops-int.mp.microsoft.com|*.az.tops.purchase-int.mp.microsoft.com|*.pme.tops-int.mp.microsoft.com|*.pme.tops.purchase-int.mp.microsoft.com|*.tops-int…
-microsoft.com journal.mcapiprojects.commerce.microsoft.com                 journal.mcapiprojects.commerce.microsoft.com|projectjournal.cp.microsoft.com
-microsoft.com projects.mcapiprojects.commerce.microsoft.com                assets.cp.microsoft.com|projects.cp.microsoft.com|projects.mcapiprojects.commerce.microsoft.com
-microsoft.com api-test.personnel.microsoft.com                             api-test.personnel.microsoft.com
-microsoft.com assets.mcapiassets.commerce.microsoft.com                    assets.cp.microsoft.com|assets.mcapiassets.commerce.microsoft.com
-microsoft.com preprod.sustainability.microsoft.com                         *.preprod.sustainability.microsoft.com|preprod.sustainability.microsoft.com
-microsoft.com preprod.csanalytics.powerplatform.microsoft.com              *.preprod.csanalytics.powerplatform.microsoft.com|csanalytics-preprod.powerplatform.microsoft.com|preprod.csanalytics.powerplatform.microsoft.com
-microsoft.com api.msrc-ppe.microsoft.com                                   api.msrc-ppe.microsoft.com
-microsoft.com eu.ippolicyservice.teams.microsoft.com                       eu.ippolicyservice.teams.microsoft.com|ippolicyservice.teams.microsoft.com
-microsoft.com us.ippolicyservice.teams.microsoft.com                       ippolicyservice.teams.microsoft.com|us.ippolicyservice.teams.microsoft.com
-microsoft.com int.fedgov.partnerbilling.microsoft.com                      int.fedgov.partnerbilling.microsoft.com
-microsoft.com bsp.mp.microsoft.com                                         *.bsp.mp.microsoft.com|*.businessstore.microsoft.com|*.educationstore.microsoft.com|bsp.mp.microsoft.com|businessstore.microsoft.com|educationstore.micros…
-microsoft.com noruactionstest.microsoft.com                                noruactionstest.microsoft.com
-microsoft.com ccobog192m1402.network.microsoft.com                         ccobog192m1402.network.microsoft.com|ccobog192m1452.network.microsoft.com
-microsoft.com noruactionstest.microsoft.com                                noruactionstest.microsoft.com
-microsoft.com *.tts-frontend.speech.microsoft.com                          *.tts-frontend.speech.microsoft.com|*.tts.speech.microsoft.com|*.voice.speech.microsoft.com
-microsoft.com *.testhost.speech.microsoft.com                              *.testhost.speech.microsoft.com
-microsoft.com *.sr-d17f7d9a-frontend.speech.microsoft.com                  *.sr-d17f7d9a-frontend.speech.microsoft.com
-microsoft.com *.dgs.speech.microsoft.com                                   *.dgs.speech.microsoft.com
-microsoft.com *.prod.mscert.microsoft.com                                  *.prod.mscert.microsoft.com|api.certification.microsoft.com|certification.microsoft.com|cmt.microsoft.com|examregistration.microsoft.com|learningdownloada…
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com msrc.microsoft.com                                           msrc.microsoft.com
-microsoft.com portal.msrc.microsoft.com                                    portal.msrc.microsoft.com
-microsoft.com aris.msrc.microsoft.com                                      aris.msrc.microsoft.com
-microsoft.com api.msrc.microsoft.com                                       api.msrc.microsoft.com
-microsoft.com xrefppe.docs.microsoft.com                                   *.xrefppe.docs.microsoft.com|xrefppe.docs.microsoft.com
-microsoft.com file-service.api.msrc.microsoft.com                          file-service.api.msrc.microsoft.com
-microsoft.com personservice.o365usgovidm.corp.microsoft.com                personservice.o365usgovidm.corp.microsoft.com
-microsoft.com o365usgovidm.corp.microsoft.com                              *.o365usgovidm.corp.microsoft.com|o365usgovidm.corp.microsoft.com|prod.o365usgovidm.corp.microsoft.com
-microsoft.com automation.o365usgovidm.corp.microsoft.com                   automation.o365usgovidm.corp.microsoft.com
-microsoft.com encryption.o365usgovidm.corp.microsoft.com                   encryption.o365usgovidm.corp.microsoft.com
-microsoft.com api.o365usgovidm.corp.microsoft.com                          api.o365usgovidm.corp.microsoft.com
-microsoft.com adagent.o365usgovidm.corp.microsoft.com                      adagent.o365usgovidm.corp.microsoft.com
-microsoft.com reportdatasvcu1.partners.extranet.microsoft.com              reportdatasvcu1.partners.extranet.microsoft.com
-microsoft.com emsuat1.partners.extranet.microsoft.com                      emsuat1.partners.extranet.microsoft.com
-microsoft.com storage-amp-prod-eastap.cms.microsoft.com                    primary.storage.prod.cms.amp.microsoft.com|storage-amp-prod-eastap-secondary.cms.microsoft.com|storage-amp-prod-eastap.cms.microsoft.com|storage.prod.cms.…
-microsoft.com targetinggroupsapiappppe.corp.microsoft.com                  targetinggroupsapiappppe.corp.microsoft.com
-microsoft.com targetinggroupsapiappppe.corp.microsoft.com                  targetinggroupsapiappppe.corp.microsoft.com
-microsoft.com storage-amp-prod-northeu.cms.microsoft.com                   primary.storage.prod.cms.amp.microsoft.com|storage-amp-prod-northeu-secondary.cms.microsoft.com|storage-amp-prod-northeu.cms.microsoft.com|storage.prod.cm…
-microsoft.com storage-amp-prod-westus.cms.microsoft.com                    primary.storage.prod.cms.amp.microsoft.com|storage-amp-prod-westus-secondary.cms.microsoft.com|storage-amp-prod-westus.cms.microsoft.com|storage.prod.cms.…
-microsoft.com storage-amp-prod-eastus.cms.microsoft.com                    primary.storage.prod.cms.amp.microsoft.com|storage-amp-prod-eastus-secondary.cms.microsoft.com|storage-amp-prod-eastus.cms.microsoft.com|storage.prod.cms.…
-microsoft.com storage-rt-prod-eastap.cms.microsoft.com                     primary.storage.prod.cms.rt.microsoft.com|storage-rt-prod-eastap-secondary.cms.microsoft.com|storage-rt-prod-eastap.cms.microsoft.com|storage.prod.cms.rt.…
-microsoft.com storage-rt-prod-northeu.cms.microsoft.com                    primary.storage.prod.cms.rt.microsoft.com|storage-rt-prod-northeu-secondary.cms.microsoft.com|storage-rt-prod-northeu.cms.microsoft.com|storage.prod.cms.r…
-microsoft.com storage-rt-prod-westcenus.cms.microsoft.com                  primary.storage.prod.cms.rt.microsoft.com|storage-rt-prod-westcenus-secondary.cms.microsoft.com|storage-rt-prod-westcenus.cms.microsoft.com|storage.prod.c…
-microsoft.com storage-rt-prod-eastus.cms.microsoft.com                     primary.storage.prod.cms.rt.microsoft.com|storage-rt-prod-eastus-secondary.cms.microsoft.com|storage-rt-prod-eastus.cms.microsoft.com|storage.prod.cms.rt.…
-microsoft.com storage-rt-int-eastus.cms.microsoft.com                      storage-rt-int-eastus-secondary.cms.microsoft.com|storage-rt-int-eastus.cms.microsoft.com
-microsoft.com storage-amp-ppe-eastus.cms.microsoft.com                     storage-amp-ppe-eastus-secondary.cms.microsoft.com|storage-amp-ppe-eastus.cms.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com anterolmockapi.specclouds.mockapifortesting.microsoft.com    anterolmockapi.specclouds.mockapifortesting.microsoft.com
-microsoft.com storage-mr-prod-southeastap.cms.microsoft.com                storage-mr-prod-southeastap-secondary.cms.microsoft.com|storage-mr-prod-southeastap.cms.microsoft.com|storage.prod.cms.mr.microsoft.com
-microsoft.com msvacationppe.microsoft.com                                  msvacationppe.microsoft.com
-microsoft.com msvacationppe.microsoft.com                                  msvacationppe.microsoft.com
-microsoft.com storage-mr-prod-eastap.cms.microsoft.com                     storage-mr-prod-eastap-secondary.cms.microsoft.com|storage-mr-prod-eastap.cms.microsoft.com|storage.prod.cms.mr.microsoft.com
-microsoft.com storage-mr-prod-westeu.cms.microsoft.com                     storage-mr-prod-westeu-secondary.cms.microsoft.com|storage-mr-prod-westeu.cms.microsoft.com|storage.prod.cms.mr.microsoft.com
-microsoft.com storage-mr-prod-northeu.cms.microsoft.com                    storage-mr-prod-northeu-secondary.cms.microsoft.com|storage-mr-prod-northeu.cms.microsoft.com|storage.prod.cms.mr.microsoft.com
-microsoft.com storage-mr-prod-westus.cms.microsoft.com                     storage-mr-prod-westus-secondary.cms.microsoft.com|storage-mr-prod-westus.cms.microsoft.com|storage.prod.cms.mr.microsoft.com
-microsoft.com storage-mr-prod-eastus.cms.microsoft.com                     storage-mr-prod-eastus-secondary.cms.microsoft.com|storage-mr-prod-eastus.cms.microsoft.com|storage.prod.cms.mr.microsoft.com
-microsoft.com storage-mr-ppe-westus2.cms.microsoft.com                     storage-mr-ppe-westus2-secondary.cms.microsoft.com|storage-mr-ppe-westus2.cms.microsoft.com|storage.ppe.cms.mr.microsoft.com
-microsoft.com storage-mr-ppe-eastus.cms.microsoft.com                      storage-mr-ppe-eastus-secondary.cms.microsoft.com|storage-mr-ppe-eastus.cms.microsoft.com|storage.ppe.cms.mr.microsoft.com
-microsoft.com azafsvexcelweb.redmond.corp.microsoft.com                    azafsvexcelweb.redmond.corp.microsoft.com
-microsoft.com cosell.ppe.microsoft.com                                     cosell.ppe.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com cloudcollection-ssl.xboxlive.com                             *.cloudcollection.microsoft.com|cloudcollection.microsoft.com
-microsoft.com products.quote-dev.microsoft.com                             products.quote-dev.microsoft.com
-microsoft.com royaltyservice.microsoft.com                                 royaltyservice.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com adnotifications.windowsazure.com                             *.strongauthenticationservice.auth.microsoft.com|strongauthenticationservice.auth.microsoft.com
-microsoft.com emslu1.partners.extranet.microsoft.com                       emslu1.partners.extranet.microsoft.com
-microsoft.com intract.microsoft.com                                        intract.microsoft.com
-microsoft.com vivalearning.microsoft.com                                   vivalearning.microsoft.com
-microsoft.com appmanagement-stage-wus2.microsoft.com                       appmanagement-stage-wus2.microsoft.com
-microsoft.com appmanagement.activedirectory.microsoft.com                  appmanagement.activedirectory.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com credentials.azure.com                                        canary.strongauthenticationservice.auth.microsoft.com|credentials-ppe.auth.microsoft.com|credentials.auth.microsoft.com|mfavalidation-ppe.auth.microsoft.c…
-microsoft.com pc-notifications-dispatch.microsoft.com                      pc-notifications-dispatch.microsoft.com
-microsoft.com powerapps.microsoft.com                                      powerapps-staging.microsoft.com|powerapps.microsoft.com
-microsoft.com xlens.xboxlive.com                                           xlens-api.microsoft.com|xlens-data-proxy.microsoft.com|xlens-next-data-proxy.microsoft.com|xlens-next.microsoft.com|xlens-upload.microsoft.com|xlens.micro…
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com empowerment.microsoft.com                                    empowerment.microsoft.com
-microsoft.com empowerment-int.microsoft.com                                empowerment-int.microsoft.com
-microsoft.com smp-uat.imagine.microsoft.com                                smp-uat.imagine.microsoft.com
-microsoft.com smp-stg.imagine.microsoft.com                                smp-stg.imagine.microsoft.com
-microsoft.com portal-stg.imagine.microsoft.com                             portal-stg.imagine.microsoft.com
-microsoft.com journal.mcapiprojects-int.commerce.microsoft.com             journal.mcapiprojects-int.commerce.microsoft.com
-microsoft.com projects.mcapiprojects-int.commerce.microsoft.com            projects.mcapiprojects-int.commerce.microsoft.com
-microsoft.com imaginecup-stg.microsoft.com                                 imaginecup-stg.microsoft.com
-microsoft.com imaginecup-ppe.microsoft.com                                 imaginecup-ppe.microsoft.com
-microsoft.com portal-uat.azureforeducation.microsoft.com                   portal-uat.azureforeducation.microsoft.com
-microsoft.com portal-stg.azureforeducation.microsoft.com                   portal-stg.azureforeducation.microsoft.com
-microsoft.com console-m365d-rs.microsoft.com                               *.console-m365d-rs.microsoft.com|console-m365d-rs.microsoft.com
-microsoft.com console-m365d-rs.microsoft.com                               *.console-m365d-rs.microsoft.com|console-m365d-rs.microsoft.com
-microsoft.com mediabuildermbtest2-dropmap.trafficmanager.net               mediabuildermbtest2-dropmap.microsoft.com
-microsoft.com mediabuildermbtest2-tools.trafficmanager.net                 mediabuildermbtest2-tools.microsoft.com
-microsoft.com mediabuildermbtest2-sourcelookup.trafficmanager.net          mediabuildermbtest2-sourcelookup.microsoft.com
-microsoft.com mediabuildermbtest2.trafficmanager.net                       mediabuildermbtest2.microsoft.com
-microsoft.com mediabuildermbtest2-media.trafficmanager.net                 mediabuildermbtest2-media.microsoft.com
-microsoft.com assets.mcapiassets-int.commerce.microsoft.com                assets.mcapiassets-int.commerce.microsoft.com
-microsoft.com dcat-idm.microsoft.com                                       dcat-idm.microsoft.com
-microsoft.com powerbi.microsoft.com                                        powerbi-jobs-staging.microsoft.com|powerbi-jobs.microsoft.com|powerbi-staging.microsoft.com|powerbi.microsoft.com
-microsoft.com *.nam.daas.microsoft.com                                     *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.nam.daas.microsoft.com
-microsoft.com ces.corp.microsoft.com                                       ces.corp.microsoft.com
-microsoft.com firstparty.rnr-ppe.ms                                        ratingsedge-ppe.rnr.microsoft.com
-microsoft.com client-cvs.ratingsedge-ppe.rnr.microsoft.com                 client-cvs.ratingsedge-ppe.rnr.microsoft.com
-microsoft.com client-cvs.ratingsedge-ppe.rnr.microsoft.com                 client-cvs.ratingsedge-ppe.rnr.microsoft.com
-microsoft.com wuppe.api.cognitive.microsoft.com                            wuppe.api.cognitive.microsoft.com
-microsoft.com appmanagement.activedirectory.microsoft.com                  appmanagement.activedirectory-ppe.microsoft.com|appmanagement.activedirectory.microsoft.com
-microsoft.com ecoshosting.microsoft.com                                    ecoshosting-ppe.microsoft.com|ecoshosting.microsoft.com|mystaff-ppe.microsoft.com|mystaff.microsoft.com
-microsoft.com partner.ppe.repmap.microsoft.com                             *.ppe.repmap.microsoft.com|*.prod.repmap.microsoft.com|client.ppe.repmap.microsoft.com|client.prod.repmap.microsoft.com|partner.ppe.repmap.microsoft.com|p…
-microsoft.com myaccount.microsoft.com                                      api.myaccount-ppe.microsoft.com|api.myaccount-tip.microsoft.com|api.myaccount.microsoft.com|api.myworkaccount-ppe.microsoft.com|api.myworkaccount.microsof…
-microsoft.com myaccess.canary.microsoft.com                                myaccess.canary.microsoft.com|myaccess.microsoft.com
-microsoft.com iamtelemetrycollector.microsoft.com                          iamtelemetrycollector-ppe.microsoft.com|iamtelemetrycollector.microsoft.com
-microsoft.com login.windows.net                                            iotauth.microsoft.com|login.microsoft.com|mtlsauth.microsoft.com
-microsoft.com account.activedirectory.windowsazure.com                     myapps-ppe.microsoft.com|myapps.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com mygroups.microsoft.com                                       *.myapplications-ppe.microsoft.com|*.myapplications-tip.microsoft.com|*.myapplications.microsoft.com|*.mygroups-ppe.microsoft.com|*.mygroups-tip.microsoft…
-microsoft.com invitations.microsoft.com                                    invitations.microsoft.com
-microsoft.com identity.microsoft.com                                       applications.microsoft.com|apps.dev.microsoft.com|identity.microsoft.com
-microsoft.com mobileappcommunicator.auth.microsoft.com                     mobileappcommunicator.auth-ppe.microsoft.com|mobileappcommunicator.auth.microsoft.com
-microsoft.com appmanagement.activedirectory.microsoft.com                  appmanagement.activedirectory-ppe.microsoft.com|appmanagement.activedirectory.microsoft.com
-microsoft.com *.dbadapter.nw3.azurestack.selfhost.corp.microsoft.com       *.dbadapter.nw1.azurestack.selfhost.corp.microsoft.com|*.dbadapter.nw2.azurestack.selfhost.corp.microsoft.com|*.dbadapter.nw3.azurestack.selfhost.corp.mic…
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com schoudhary.myworkspace.microsoft.com                         *.schoudhary.myworkspace.microsoft.com|schoudhary.myworkspace.microsoft.com
-microsoft.com supportactions-cst2.services.microsoft.com                   supportactions-cst2.services.microsoft.com
-microsoft.com documents.quote-uat.microsoft.com                            documents.quote-uat.microsoft.com
-microsoft.com adnotifications.windowsazure.com                             *.strongauthenticationservice.auth.microsoft.com|strongauthenticationservice.auth.microsoft.com
-microsoft.com centraluseuap.orchestration.speech.microsoft.com             centraluseuap.orchestration.speech.microsoft.com
-microsoft.com quotecenterinsiderbackend.l2o.microsoft.com                  quotecenterinsiderbackend.l2o.microsoft.com
-microsoft.com kevlar.appmanagement-stage.microsoft.com                     kevlar.appmanagement-stage.microsoft.com
-microsoft.com credentials.azure.com                                        canary.strongauthenticationservice.auth.microsoft.com|credentials-ppe.auth.microsoft.com|credentials.auth.microsoft.com|mfavalidation-ppe.auth.microsoft.c…
-microsoft.com credentials.azure.com                                        canary.strongauthenticationservice.auth.microsoft.com|credentials-ppe.auth.microsoft.com|credentials.auth.microsoft.com|mfavalidation-ppe.auth.microsoft.c…
-microsoft.com *.gagsingh.myworkspace.microsoft.com                         *.gagsingh.myworkspace.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com credentials.azure.com                                        canary.strongauthenticationservice.auth.microsoft.com|credentials-ppe.auth.microsoft.com|credentials.auth.microsoft.com|mfavalidation-ppe.auth.microsoft.c…
-microsoft.com sfcluster.sre.asi.microsoft.com                              sfcluster.sre.asi.microsoft.com
-microsoft.com rp.sre.weu.sentinel.microsoft.com                            rp.sre.weu.sentinel.microsoft.com
-microsoft.com rp.sre.weu.sentinel.microsoft.com                            rp.sre.weu.sentinel.microsoft.com
-microsoft.com iridias.microsoft.com                                        iridias.microsoft.com
-microsoft.com iridias.microsoft.com                                        iridias.microsoft.com
-microsoft.com iridias.microsoft.com                                        iridias.microsoft.com
-microsoft.com wishlist.mp.microsoft.com                                    wishlist.mp.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com msaasqueryserviceapi.trafficmanager.net                      msaasqueryserviceapi.support.microsoft.com
-microsoft.com msaasqueryserviceapi.trafficmanager.net                      msaasqueryserviceapi.support.microsoft.com
-microsoft.com msaasqueryserviceapi.trafficmanager.net                      msaasqueryserviceapi.support.microsoft.com
-microsoft.com msaasqueryserviceapi.trafficmanager.net                      msaasqueryserviceapi.support.microsoft.com
-microsoft.com camui.redmond.corp.microsoft.com                             camui-backup.redmond.corp.microsoft.com|camui-staging.redmond.corp.microsoft.com|camui.redmond.corp.microsoft.com|cfrui-backup.redmond.corp.microsoft.com|…
-microsoft.com api.businessappdiscovery.microsoft.com                       *.api.businessappdiscovery.microsoft.com|api.businessappdiscovery.microsoft.com
-microsoft.com *.nam.dev.daas.microsoft.com                                 *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com *.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com|*.nam.dev.daas.microsoft.com
-microsoft.com credentials.azure.com                                        canary.strongauthenticationservice.auth.microsoft.com|credentials-ppe.auth.microsoft.com|credentials.auth.microsoft.com|mfavalidation-ppe.auth.microsoft.c…
-microsoft.com mslsqlu2lis.partners.extranet.microsoft.com                  mslsqlu2lis.partners.extranet.microsoft.com
-microsoft.com ucm.ads.microsoft.com                                        ucm.ads.microsoft.com
-microsoft.com credentials.azure.com                                        canary.strongauthenticationservice.auth.microsoft.com|credentials-ppe.auth.microsoft.com|credentials.auth.microsoft.com|mfavalidation-ppe.auth.microsoft.c…
-microsoft.com ecdmuat.partners.extranet.microsoft.com                      ecdmuat.partners.extranet.microsoft.com
-microsoft.com ucm.ads.microsoft.com                                        ucm.ads.microsoft.com
-microsoft.com appmanagement-weu-aad.microsoft.com                          appmanagement-weu-aad.microsoft.com
-microsoft.com *.develop.ti.microsoft.com                                   *.api.develop.ti.microsoft.com|*.develop.ti.microsoft.com|api.develop.ti.microsoft.com|develop.ti.microsoft.com
-microsoft.com firstparty.rnr-int.ms                                        ratingsedge-int.rnr.microsoft.com
-microsoft.com client-cvs.ratingsedge-ppe.rnr.microsoft.com                 client-cvs.ratingsedge-ppe.rnr.microsoft.com
-microsoft.com client-cvs.ratingsedge-ppe.rnr.microsoft.com                 client-cvs.ratingsedge-ppe.rnr.microsoft.com
-microsoft.com mstntfsfilteringservice.teams.microsoft.com                  mstntfsfilteringservice-amer.teams.microsoft.com|mstntfsfilteringservice-apac.teams.microsoft.com|mstntfsfilteringservice-dogfood.teams.microsoft.com|mstn…
-microsoft.com auth.databox.microsoft.com                                   auth.databox.microsoft.com
-microsoft.com supportsession.auth.databox.microsoft.com                    supportsession.auth.databox.microsoft.com
-microsoft.com mgmt.databox.microsoft.com                                   mgmt.databox.microsoft.com
-microsoft.com credentials.azure.com                                        canary.strongauthenticationservice.auth.microsoft.com|credentials-ppe.auth.microsoft.com|credentials.auth.microsoft.com|mfavalidation-ppe.auth.microsoft.c…
-microsoft.com *.cts.speech.microsoft.com                                   *.australiacentral.cts.speech.microsoft.com|*.australiacentral2.cts.speech.microsoft.com|*.australiaeast.cts.speech.microsoft.com|*.brazilsouth.cts.speech…
-microsoft.com GPS2ICM.microsoft.com                                        GPS2ICM.microsoft.com
-microsoft.com api.preview.powerva.microsoft.com                            api.preview.powerva.microsoft.com
-microsoft.com insider.quotecenter.microsoft.com                            insider.quotecenter.microsoft.com
-microsoft.com demo.quotecenter.microsoft.com                               demo.quotecenter.microsoft.com
-microsoft.com pilot.quotecenter.microsoft.com                              pilot.quotecenter.microsoft.com
-microsoft.com quotecenterbackend.int.l2o.microsoft.com                     quotecenterbackend.int.l2o.microsoft.com
-microsoft.com stable.cosmos.mepla.microsoft.com                            stable.cosmos.mepla.microsoft.com
-microsoft.com stable.c3.mepla.microsoft.com                                stable.c3.mepla.microsoft.com
-microsoft.com latest.cosmos.mepla.microsoft.com                            latest.cosmos.mepla.microsoft.com
-microsoft.com latest.c3.mepla.microsoft.com                                latest.c3.mepla.microsoft.com
-microsoft.com credentials.azure.com                                        canary.strongauthenticationservice.auth.microsoft.com|credentials-ppe.auth.microsoft.com|credentials.auth.microsoft.com|mfavalidation-ppe.auth.microsoft.c…
-microsoft.com sip.hosni.myworkspace.microsoft.com                          hosni.myworkspace.microsoft.com|sip.hosni.myworkspace.microsoft.com
-microsoft.com wmdrm.indiv.playready.microsoft.com                          ndbridge.indiv.playready.microsoft.com|secureclock.playready.microsoft.com|secureclock2.playready.microsoft.com|silverlight.indiv.playready.microsoft.com|…
-microsoft.com *.develop.ti.microsoft.com                                   *.develop.ti.microsoft.com|develop.ti.microsoft.com
-microsoft.com cases-prod.serviceshub.microsoft.com                         cases-prod.serviceshub.microsoft.com
-microsoft.com csanalytics.powerplatform.microsoft.com                      *.csanalytics.powerplatform.microsoft.com|csanalytics.powerplatform.microsoft.com
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com workshops.pi.dps.microsoft.com                               workshops.pi.dps.microsoft.com
-microsoft.com chipinternaluseraccess.redmond.corp.microsoft.com            chipinternaluseraccess.redmond.corp.microsoft.com
-microsoft.com api.preview.powerva.microsoft.com                            api.preview.powerva.microsoft.com
-microsoft.com licensing-int.m365.microsoft.com                             *.licensing-int.m365.microsoft.com|licensing-int.m365.microsoft.com
-microsoft.com devicelistenerprod.microsoft.com                             devicelistenerprod.microsoft.com
-microsoft.com devicelistenerprod.microsoft.com                             devicelistenerprod.microsoft.com
-microsoft.com devicelistenerprod.microsoft.com                             devicelistenerprod.microsoft.com
-microsoft.com devicelistenerprod.microsoft.com                             devicelistenerprod.microsoft.com
-microsoft.com mysignins.microsoft.com                                      api.mysignins.microsoft.com|mysignins.microsoft.com
-microsoft.com *.can.daas.microsoft.com                                     *.can.daas.microsoft.com|*.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.can.daas.microsoft.com|*.daas.microsoft.com
-microsoft.com prod.supportforms.services.microsoft.com                     *.prod.supportforms.services.microsoft.com|*.supportforms.services.microsoft.com|prod.supportforms.services.microsoft.com
-microsoft.com prod-kevlar.supportforms.services.microsoft.com              prod-kevlar.supportforms.services.microsoft.com
-microsoft.com AppNotificationEncryption.manage.microsoft.com               AppNotificationEncryption.manage.microsoft.com
-microsoft.com AppNotificationEncryption.manage-beta.microsoft.com          AppNotificationEncryption.manage-beta.microsoft.com
-microsoft.com powerva.microsoft.com                                        *.powerva.microsoft.com|*.preview.powerva.microsoft.com|powerva.microsoft.com|preview.powerva.microsoft.com
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com kepler.powerplatform.microsoft.com                           *.kepler.powerplatform.microsoft.com|kepler.powerplatform.microsoft.com
-microsoft.com adminanalytics.powerplatform.microsoft.com                   *.adminanalytics.powerplatform.microsoft.com|*.dfanalytics.powerplatform.microsoft.com|adminanalytics.powerplatform.microsoft.com|dfanalytics.powerplatfor…
-microsoft.com licensing.powerplatform.microsoft.com                        *.licensing.powerplatform.microsoft.com|licensing.powerplatform.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.uk.daas.microsoft.com
-microsoft.com sustainability.microsoft.com                                 *.sustainability.microsoft.com|sustainability.microsoft.com
-microsoft.com admin.powerplatform.microsoft.com                            *.admin.powerplatform.microsoft.com|admin.powerplatform.microsoft.com
-microsoft.com *.uk.daas.microsoft.com                                      *.daas.microsoft.com|*.uk.daas.microsoft.com
-microsoft.com onees.lgtm.microsoft.com                                     onees.lgtm.microsoft.com
-microsoft.com pr.lgtm.microsoft.com                                        pr.lgtm.microsoft.com
-microsoft.com win.lgtm.microsoft.com                                       win.lgtm.microsoft.com
-microsoft.com edg.lgtm.microsoft.com                                       edg.lgtm.microsoft.com
-microsoft.com cai.lgtm.microsoft.com                                       cai.lgtm.microsoft.com
-microsoft.com bag.lgtm.microsoft.com                                       bag.lgtm.microsoft.com
-microsoft.com cseo.lgtm.microsoft.com                                      cseo.lgtm.microsoft.com
-microsoft.com cdg.lgtm.microsoft.com                                       cdg.lgtm.microsoft.com
-microsoft.com chf.lgtm.microsoft.com                                       chf.lgtm.microsoft.com
-microsoft.com 1es.lgtm.microsoft.com                                       1es.lgtm.microsoft.com
-microsoft.com air.lgtm.microsoft.com                                       air.lgtm.microsoft.com
-microsoft.com test.lgtm.microsoft.com                                      test.lgtm.microsoft.com
-microsoft.com test.csanalytics.powerplatform.microsoft.com                 *.test.csanalytics.powerplatform.microsoft.com|csanalytics-test.powerplatform.microsoft.com|test.csanalytics.powerplatform.microsoft.com
-microsoft.com dynamics.microsoft.com                                       dynamics-jobs-staging.microsoft.com|dynamics-jobs.microsoft.com|dynamics-staging.microsoft.com|dynamics.microsoft.com
-microsoft.com adinsight.api.ads.microsoft.com                              *.adinsight.api.ads.microsoft.com|*.adinsight.api.bingads.microsoft.com|adinsight.api.ads.microsoft.com|adinsight.api.bingads.microsoft.com
-microsoft.com ingestion.groups-admin-sandbox.data.microsoft.com            ingestion.groups-admin-sandbox.data.microsoft.com
-microsoft.com adinsight.api.ads.microsoft.com                              *.adinsight.api.ads.microsoft.com|*.adinsight.api.bingads.microsoft.com|adinsight.api.ads.microsoft.com|adinsight.api.bingads.microsoft.com
-microsoft.com *.eur.daas.microsoft.com                                     *.daas.microsoft.com|*.eur.daas.microsoft.com
-microsoft.com *.daas.microsoft.com                                         *.daas.microsoft.com|*.eur.daas.microsoft.com
-microsoft.com apgppe.corp.microsoft.com                                    apgppe.corp.microsoft.com
-microsoft.com internal.evergreen.microsoft.com                             internal.evergreen.microsoft.com
-microsoft.com wishlist-int.mp.microsoft.com                                wishlist-int.mp.microsoft.com
-microsoft.com int.ues.teams.microsoft.com                                  int.ues.teams.microsoft.com
-microsoft.com appmanagement-sea-aad.microsoft.com                          appmanagement-sea-aad.microsoft.com
-microsoft.com aabs.skypeforbusiness.net                                    prod.centralus.aabs.microsoft.com|prod.eastasia.aabs.microsoft.com|prod.eastus.aabs.microsoft.com|prod.japanwest.aabs.microsoft.com|prod.northeu.aabs.micr…
-microsoft.com wishlist-dev.mp.microsoft.com                                wishlist-dev.mp.microsoft.com
-microsoft.com axisdr.serviceshub.microsoft.com                             axisdr.serviceshub.microsoft.com
-microsoft.com northeurope01.afs.azure.net                                  kailani-getloc-prod-01.one.microsoft.com|kailani-north-eu-1.one.microsoft.com|kailani7.one.microsoft.com|tm-kailani6.one.microsoft.com|tm-kailani7.one.mic…
-microsoft.com licensemanagement.cls.microsoft.com                          licensemanagement.cls.microsoft.com
-microsoft.com ces.corp.microsoft.com                                       ces.corp.microsoft.com
-microsoft.com canadaeast01.afs.azure.net                                   kailani-cae.one.microsoft.com|kailani-canada-east.one.microsoft.com|kailani-getloc-prod-01.one.microsoft.com|tm-kailani-cac.one.microsoft.com|tm-kailani-c…
-microsoft.com *.sparta.p.dfp.microsoft.com                                 *.sparta.p.dfp.microsoft.com
-microsoft.com westus201.afs.azure.net                                      kailani-flight-sec.one.microsoft.com|kailani-getloc-prod-01.one.microsoft.com|kailani-west-us-2.one.microsoft.com|tm-kailani-flight-pri.one.microsoft.com|…
-microsoft.com 957d4a04-0b3b-4612-a563-20249d80cdbb.microsoft.com           957d4a04-0b3b-4612-a563-20249d80cdbb.microsoft.com
-microsoft.com supportactions-westus2.services.microsoft.com                supportactions-westus2.services.microsoft.com
-microsoft.com mtntpr.teams-prod.microsoft.com                              mtntpr.teams-prod.microsoft.com
-microsoft.com southindia01.afs.azure.net                                   kailani-getloc-prod-01.one.microsoft.com|kailani-sin.one.microsoft.com|tm-kailani-cin.one.microsoft.com|tm-kailani-sin.one.microsoft.com
-microsoft.com eastasia01.afs.azure.net                                     kailani-east-asia-1.one.microsoft.com|kailani-getloc-prod-01.one.microsoft.com|kailani11.one.microsoft.com|tm-kailani10.one.microsoft.com|tm-kailani11.one…
-microsoft.com australiasoutheast01.afs.azure.net                           kailani-aus.one.microsoft.com|kailani-australiasoutheast.one.microsoft.com|kailani-getloc-prod-01.one.microsoft.com|tm-kailani-aue.one.microsoft.com|tm-ka…
-microsoft.com weuudsvcprod.westeurope.cloudapp.azure.com                   appmanagement.microsoft.com
-microsoft.com seaudsvcprod.southeastasia.cloudapp.azure.com                appmanagement.microsoft.com
-microsoft.com eastus201.afs.azure.net                                      kailani-ess.one.microsoft.com|kailani-getloc-prod-01.one.microsoft.com|kailani-us-east2.one.microsoft.com|tm-kailani-cus.one.microsoft.com|tm-kailani-ess.…
-microsoft.com myaccount.microsoft.com                                      api.myaccount-ppe.microsoft.com|api.myaccount-tip.microsoft.com|api.myaccount.microsoft.com|api.myworkaccount-ppe.microsoft.com|api.myworkaccount.microsof…
-microsoft.com partner.ppe.repmap.microsoft.com                             *.ppe.repmap.microsoft.com|*.prod.repmap.microsoft.com|client.ppe.repmap.microsoft.com|client.prod.repmap.microsoft.com|partner.ppe.repmap.microsoft.com|p…
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com mygroups.microsoft.com                                       *.myapplications-ppe.microsoft.com|*.myapplications-tip.microsoft.com|*.myapplications.microsoft.com|*.mygroups-ppe.microsoft.com|*.mygroups-tip.microsoft…
-microsoft.com credentials.azure.com                                        canary.strongauthenticationservice.auth.microsoft.com|credentials-ppe.auth.microsoft.com|credentials.auth.microsoft.com|mfavalidation-ppe.auth.microsoft.c…
-microsoft.com login.windows.net                                            iotauth.microsoft.com|login.microsoft.com|mtlsauth.microsoft.com
-microsoft.com ecoshosting.microsoft.com                                    ecoshosting-ppe.microsoft.com|ecoshosting.microsoft.com|mystaff-ppe.microsoft.com|mystaff.microsoft.com
-microsoft.com iamtelemetrycollector.microsoft.com                          iamtelemetrycollector-ppe.microsoft.com|iamtelemetrycollector.microsoft.com
-microsoft.com identity.microsoft.com                                       applications.microsoft.com|apps.dev.microsoft.com|identity.microsoft.com
-microsoft.com appmanagement.activedirectory.microsoft.com                  appmanagement.activedirectory-ppe.microsoft.com|appmanagement.activedirectory.microsoft.com
-microsoft.com invitations.microsoft.com                                    invitations.microsoft.com
-microsoft.com mobileappcommunicator.auth.microsoft.com                     mobileappcommunicator.auth-ppe.microsoft.com|mobileappcommunicator.auth.microsoft.com
-microsoft.com myaccess.canary.microsoft.com                                myaccess.canary.microsoft.com|myaccess.microsoft.com
-microsoft.com myaccount.microsoft.com                                      api.myaccount-ppe.microsoft.com|api.myaccount-tip.microsoft.com|api.myaccount.microsoft.com|api.myworkaccount-ppe.microsoft.com|api.myworkaccount.microsof…
-microsoft.com partner.ppe.repmap.microsoft.com                             *.ppe.repmap.microsoft.com|*.prod.repmap.microsoft.com|client.ppe.repmap.microsoft.com|client.prod.repmap.microsoft.com|partner.ppe.repmap.microsoft.com|p…
-microsoft.com statsfe2-dev.update.microsoft.com                            statsfe2-dev.update.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com trafficshapingPPE.rdx.office.microsoft.com                   trafficshapingPPE.rdx.office.microsoft.com
-microsoft.com trafficshapingProd.rdx.office.microsoft.com                  trafficshapingProd.rdx.office.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com appsforoffice.microsoft.com                                  appsforoffice.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com iamtelemetrycollector.microsoft.com                          iamtelemetrycollector-ppe.microsoft.com|iamtelemetrycollector.microsoft.com
-microsoft.com ecoshosting.microsoft.com                                    ecoshosting-ppe.microsoft.com|ecoshosting.microsoft.com|mystaff-ppe.microsoft.com|mystaff.microsoft.com
-microsoft.com credentials.azure.com                                        canary.strongauthenticationservice.auth.microsoft.com|credentials-ppe.auth.microsoft.com|credentials.auth.microsoft.com|mfavalidation-ppe.auth.microsoft.c…
-microsoft.com mygroups.microsoft.com                                       *.myapplications-ppe.microsoft.com|*.myapplications-tip.microsoft.com|*.myapplications.microsoft.com|*.mygroups-ppe.microsoft.com|*.mygroups-tip.microsoft…
-microsoft.com appmanagement.activedirectory.microsoft.com                  appmanagement.activedirectory-ppe.microsoft.com|appmanagement.activedirectory.microsoft.com
-microsoft.com login.windows.net                                            iotauth.microsoft.com|login.microsoft.com|mtlsauth.microsoft.com
-microsoft.com identity.microsoft.com                                       applications.microsoft.com|apps.dev.microsoft.com|identity.microsoft.com
-microsoft.com invitations.microsoft.com                                    invitations.microsoft.com
-microsoft.com myaccount.microsoft.com                                      api.myaccount-ppe.microsoft.com|api.myaccount-tip.microsoft.com|api.myaccount.microsoft.com|api.myworkaccount-ppe.microsoft.com|api.myworkaccount.microsof…
-microsoft.com mobileappcommunicator.auth.microsoft.com                     mobileappcommunicator.auth-ppe.microsoft.com|mobileappcommunicator.auth.microsoft.com
-microsoft.com myaccess.canary.microsoft.com                                myaccess.canary.microsoft.com|myaccess.microsoft.com
-microsoft.com partner.ppe.repmap.microsoft.com                             *.ppe.repmap.microsoft.com|*.prod.repmap.microsoft.com|client.ppe.repmap.microsoft.com|client.prod.repmap.microsoft.com|partner.ppe.repmap.microsoft.com|p…
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com customervoice.microsoft.com                                  customervoice.microsoft.com
-microsoft.com SrdjanSurface.europe.corp.microsoft.com                      dev.polymer.feed.microsoft.com|SrdjanSurface.europe.corp.microsoft.com
-microsoft.com lshefner.myworkspace.microsoft.com                           *.lshefner.myworkspace.microsoft.com|lshefner.myworkspace.microsoft.com
-microsoft.com edu-onedrivelti-prod.trafficmanager.net                      onedrivelti.microsoft.com
-microsoft.com edu-onedrivelti-prod.trafficmanager.net                      onedrivelti.microsoft.com
-microsoft.com customervoice.microsoft.com                                  customervoice.microsoft.com
-microsoft.com mstntfsfilteringservice-int.teams.microsoft.com              mstntfsfilteringservice-int.teams.microsoft.com
-microsoft.com akamaisecure3.qualtrics.com                                  customerfeedback.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com mstntfsfilteringservice-dogfood.teams.microsoft.com          mstntfsfilteringservice-dogfood.teams.microsoft.com
-microsoft.com ukwest01.afs.azure.net                                       kailani-getloc-prod-01.one.microsoft.com|kailani-ukw.one.microsoft.com|tm-kailani-uks.one.microsoft.com|tm-kailani-ukw.one.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com sdlabdevault.myworkspace.microsoft.com                       *.sdlabdevault.myworkspace.microsoft.com|sdlabdevault.myworkspace.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com intentional-services-prod-lb.northcentralus.cloudapp.azure.… csf.whiteboard.microsoft.com|ncus.ww.csf.whiteboard.microsoft.com|ncus.ww.wb.whiteboard.microsoft.com|wb.whiteboard.microsoft.com|ww.csf.whiteboard.micros…
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com intentional-services-prod-lb.northcentralus.cloudapp.azure.… csf.whiteboard.microsoft.com|ncus.ww.csf.whiteboard.microsoft.com|ncus.ww.wb.whiteboard.microsoft.com|wb.whiteboard.microsoft.com|ww.csf.whiteboard.micros…
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com intentional-services-prod-lb.northcentralus.cloudapp.azure.… csf.whiteboard.microsoft.com|ncus.ww.csf.whiteboard.microsoft.com|ncus.ww.wb.whiteboard.microsoft.com|wb.whiteboard.microsoft.com|ww.csf.whiteboard.micros…
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com intentional-services-prod-lb.northcentralus.cloudapp.azure.… csf.whiteboard.microsoft.com|ncus.ww.csf.whiteboard.microsoft.com|ncus.ww.wb.whiteboard.microsoft.com|wb.whiteboard.microsoft.com|ww.csf.whiteboard.micros…
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com *.telemetry-internal.teams.microsoft.com                     *.telemetry-internal.teams.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com|vlcentral.microsoft.com
-microsoft.com t10-chef02.t10.selfhost.corp.microsoft.com                   t10-chef02.t10.selfhost.corp.microsoft.com
-microsoft.com t10grafana.t10.selfhost.corp.microsoft.com                   t10grafana.t10.selfhost.corp.microsoft.com
-microsoft.com t10zabbix.t10.selfhost.corp.microsoft.com                    t10zabbix.t10.selfhost.corp.microsoft.com
-microsoft.com t10racktables.t10.selfhost.corp.microsoft.com                t10racktables.t10.selfhost.corp.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com *.vortex.data.microsoft.com                                  *.vortex.data.microsoft.com|vortex.data.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com licensemanagement-int.cls.microsoft.com                      licensemanagement-int.cls.microsoft.com
-microsoft.com cosmos.substratedataplane.m365.phx.gbl.microsoft.com         cosmos.substratedataplane.m365.phx.gbl.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com www.summit-int.microsoft.com                                 www.summit-int.microsoft.com
-microsoft.com summit-int.microsoft.com                                     summit-int.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com customervoice.microsoft.com                                  customervoice.microsoft.com
-microsoft.com client-cvs.ratingsedge-ppe.rnr.microsoft.com                 client-cvs.ratingsedge-ppe.rnr.microsoft.com
-microsoft.com resellerclient-gallatinauth.microsoft.com                    resellerclient-gallatinauth.microsoft.com
-microsoft.com internal.evergreen.microsoft.com                             internal.evergreen.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com maestroapi.microsoft.com                                     maestroapi.microsoft.com
-microsoft.com api.mspim.net                                                myaccess.microsoft.com
-microsoft.com api.mspim.net                                                myaccess.microsoft.com
-microsoft.com iridiasppe.microsoft.com                                     iridiasppe.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com trustapi.office.com                                          deployment.servicetrust.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com app.royalties.microsoft.com                                  app.royalties.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com AZRD3SUP04.redmond.corp.microsoft.com                        AZRD3SUP04.redmond.corp.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com api.mspim.net                                                myaccess.microsoft.com
-microsoft.com api.mspim.net                                                myaccess.microsoft.com
-microsoft.com AZRD2SUP03.redmond.corp.microsoft.com                        AZRD2SUP03.redmond.corp.microsoft.com
-microsoft.com azrd2sup01.redmond.corp.microsoft.com                        azrd2sup01.redmond.corp.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com api.mspim.net                                                myaccess.microsoft.com
-microsoft.com api.mspim.net                                                myaccess.microsoft.com
-microsoft.com credentials.azure.com                                        canary.strongauthenticationservice.auth.microsoft.com|credentials-ppe.auth.microsoft.com|credentials.auth.microsoft.com|mfavalidation-ppe.auth.microsoft.c…
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com partner.ppe.repmap.microsoft.com                             *.ppe.repmap.microsoft.com|*.prod.repmap.microsoft.com|client.ppe.repmap.microsoft.com|client.prod.repmap.microsoft.com|partner.ppe.repmap.microsoft.com|p…
-microsoft.com myaccount.microsoft.com                                      api.myaccount-ppe.microsoft.com|api.myaccount-tip.microsoft.com|api.myaccount.microsoft.com|api.myworkaccount-ppe.microsoft.com|api.myworkaccount.microsof…
-microsoft.com ecoshosting.microsoft.com                                    ecoshosting-ppe.microsoft.com|ecoshosting.microsoft.com|mystaff-ppe.microsoft.com|mystaff.microsoft.com
-microsoft.com myaccess.canary.microsoft.com                                myaccess.canary.microsoft.com|myaccess.microsoft.com
-microsoft.com iamtelemetrycollector.microsoft.com                          iamtelemetrycollector-ppe.microsoft.com|iamtelemetrycollector.microsoft.com
-microsoft.com mygroups.microsoft.com                                       *.myapplications-ppe.microsoft.com|*.myapplications-tip.microsoft.com|*.myapplications.microsoft.com|*.mygroups-ppe.microsoft.com|*.mygroups-tip.microsoft…
-microsoft.com identity.microsoft.com                                       applications.microsoft.com|apps.dev.microsoft.com|identity.microsoft.com
-microsoft.com login.windows.net                                            iotauth.microsoft.com|login.microsoft.com|mtlsauth.microsoft.com
-microsoft.com appmanagement.activedirectory.microsoft.com                  appmanagement.activedirectory-ppe.microsoft.com|appmanagement.activedirectory.microsoft.com
-microsoft.com mobileappcommunicator.auth.microsoft.com                     mobileappcommunicator.auth-ppe.microsoft.com|mobileappcommunicator.auth.microsoft.com
-microsoft.com api.mspim.net                                                myaccess.microsoft.com
-microsoft.com invitations.microsoft.com                                    invitations.microsoft.com
-microsoft.com credentials.azure.com                                        canary.strongauthenticationservice.auth.microsoft.com|credentials-ppe.auth.microsoft.com|credentials.auth.microsoft.com|mfavalidation-ppe.auth.microsoft.c…
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com api.mspim.net                                                myaccess.microsoft.com
-microsoft.com jbrashear.myworkspace.microsoft.com                          *.jbrashear.myworkspace.microsoft.com|jbrashear.myworkspace.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com sjobentleylab.myworkspace.microsoft.com                      *.sjobentleylab.myworkspace.microsoft.com|sjobentleylab.myworkspace.microsoft.com
-microsoft.com holoportation.dev.collab.mixedreality.microsoft.com          *.holoportation.dev.collab.mixedreality.microsoft.com|holoportation.dev.collab.mixedreality.microsoft.com
-microsoft.com holoportation.ppe.collab.mixedreality.microsoft.com          *.holoportation.ppe.collab.mixedreality.microsoft.com|holoportation.ppe.collab.mixedreality.microsoft.com
-microsoft.com cd451f00-4719-460c-91f8-fefb77dc769a.microsoft.com           cd451f00-4719-460c-91f8-fefb77dc769a.microsoft.com
-microsoft.com api.mspim.net                                                myaccess.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com graph.windows.net                                            *.login.microsoft.com|*.logincert.microsoft.com|*.r.login.microsoft.com|login.microsoft.com
-microsoft.com edged.northamerica.corp.microsoft.com                        edged.northamerica.corp.microsoft.com
-microsoft.com azdpsscom03.partners.extranet.microsoft.com                  azdpsscom03.partners.extranet.microsoft.com
-microsoft.com azdpsscomdb.redmond.corp.microsoft.com                       azdpsscomdb.redmond.corp.microsoft.com
-microsoft.com api.mspim.net                                                myaccess.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com cloudvault.dprodmgd301.spocerts.microsoft.com                cloudvault.dprodmgd301.spocerts.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com api.mspim.net                                                myaccess.microsoft.com
-microsoft.com azafsvexcelsql.redmond.corp.microsoft.com                    azafsvexcelsql.redmond.corp.microsoft.com
-microsoft.com multitenancy.bing.microsoft.com                              multitenancy.bing.microsoft.com
-microsoft.com billlab.club                                                 *.billkong.myworkspace.microsoft.com|billkong.myworkspace.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com axisdr.dev.serviceshub.microsoft.com                         axisdr.dev.serviceshub.microsoft.com
-microsoft.com mtntpr.teams-int.microsoft.com                               mtntpr.teams-int.microsoft.com
-microsoft.com azrd3mp07.redmond.corp.microsoft.com                         azrd3mp07.redmond.corp.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com cnglagkinm1092.network.microsoft.com                         cnglagkinm1002.network.microsoft.com|cnglagkinm1092.network.microsoft.com
-microsoft.com cinpunp22m1081.network.microsoft.com                         cinpunp22m1001.network.microsoft.com|cinpunp22m1081.network.microsoft.com
-microsoft.com cinpunp22m1082.network.microsoft.com                         cinpunp22m1002.network.microsoft.com|cinpunp22m1082.network.microsoft.com
-microsoft.com api.mspim.net                                                myaccess.microsoft.com
-microsoft.com appmanagement.activedirectory.microsoft.com                  appmanagement.activedirectory-ppe.microsoft.com|appmanagement.activedirectory.microsoft.com
-microsoft.com mygroups.microsoft.com                                       *.myapplications-ppe.microsoft.com|*.myapplications-tip.microsoft.com|*.myapplications.microsoft.com|*.mygroups-ppe.microsoft.com|*.mygroups-tip.microsoft…
-microsoft.com myaccount.microsoft.com                                      api.myaccount-ppe.microsoft.com|api.myaccount-tip.microsoft.com|api.myaccount.microsoft.com|api.myworkaccount-ppe.microsoft.com|api.myworkaccount.microsof…
-microsoft.com partner.ppe.repmap.microsoft.com                             *.ppe.repmap.microsoft.com|*.prod.repmap.microsoft.com|client.ppe.repmap.microsoft.com|client.prod.repmap.microsoft.com|partner.ppe.repmap.microsoft.com|p…
-microsoft.com mobileappcommunicator.auth.microsoft.com                     mobileappcommunicator.auth-ppe.microsoft.com|mobileappcommunicator.auth.microsoft.com
-microsoft.com myaccess.canary.microsoft.com                                myaccess.canary.microsoft.com|myaccess.microsoft.com
-microsoft.com ecoshosting.microsoft.com                                    ecoshosting-ppe.microsoft.com|ecoshosting.microsoft.com|mystaff-ppe.microsoft.com|mystaff.microsoft.com
-microsoft.com login.windows.net                                            iotauth.microsoft.com|login.microsoft.com|mtlsauth.microsoft.com
-microsoft.com iamtelemetrycollector.microsoft.com                          iamtelemetrycollector-ppe.microsoft.com|iamtelemetrycollector.microsoft.com
-microsoft.com api.mspim.net                                                myaccess.microsoft.com
-microsoft.com identity.microsoft.com                                       applications.microsoft.com|apps.dev.microsoft.com|identity.microsoft.com
-microsoft.com credentials.azure.com                                        canary.strongauthenticationservice.auth.microsoft.com|credentials-ppe.auth.microsoft.com|credentials.auth.microsoft.com|mfavalidation-ppe.auth.microsoft.c…
-microsoft.com invitations.microsoft.com                                    invitations.microsoft.com
-microsoft.com appmanagement.activedirectory.microsoft.com                  appmanagement.activedirectory-ppe.microsoft.com|appmanagement.activedirectory.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com api.mspim.net                                                myaccess.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com cii-app-ppe.eastus.cloudapp.azure.com                        input-ppe.microsoft.com
-microsoft.com demos.microsoft.com                                          demos.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com cii-app-ppe.westus2.cloudapp.azure.com                       input-ppe.microsoft.com
-microsoft.com settings.teams.microsoft.com                                 *.settings.teams.microsoft.com|global-settings.teams.microsoft.com|settings.teams.microsoft.com
-microsoft.com *.sky305xyz.myworkspace.microsoft.com                        *.sky305xyz.myworkspace.microsoft.com
-microsoft.com splunk-uat.corp.microsoft.com                                azcusspkinxu01.corp.microsoft.com|azcusspkinxu01.redmond.corp.microsoft.com|azcusspkinxu02.corp.microsoft.com|azcusspkinxu02.redmond.corp.microsoft.com|az…
-microsoft.com akamaisecure3.qualtrics.com                                  customerfeedback.microsoft.com
-microsoft.com paymentsredirectionservice.cp.microsoft.com                  paymentsredirectionservice.cp.microsoft.com
-microsoft.com portal.azure.com                                             canary-endpoint.microsoft.com|devicemanagement.microsoft.com|endpoint.microsoft.com|lighthouse.microsoft.com
-microsoft.com *.es.microsoft.com                                           *.es.microsoft.com|api.es.microsoft.com|es.microsoft.com
-microsoft.com dev-cm.sf.sanya.accounts.microsoft.cn                        dev-cm.sanya.accounts.microsoft.com
-microsoft.com iks-powerbi-test.ideas.microsoft.com                         iks-powerbi-test.ideas.microsoft.com
-microsoft.com iks-powerbi-ppe.ideas.microsoft.com                          iks-powerbi-ppe.ideas.microsoft.com
-microsoft.com iks-powerbi.ideas.microsoft.com                              iks-powerbi.ideas.microsoft.com
-microsoft.com iks-powerbi-test.ideas.microsoft.com                         iks-powerbi-test.ideas.microsoft.com
-microsoft.com iks-powerbi-ppe.ideas.microsoft.com                          iks-powerbi-ppe.ideas.microsoft.com
-microsoft.com iks-powerbi-ppe.ideas.microsoft.com                          iks-powerbi-ppe.ideas.microsoft.com
-microsoft.com iks-powerbi.ideas.microsoft.com                              iks-powerbi.ideas.microsoft.com
-microsoft.com iks-powerbi-test.ideas.microsoft.com                         iks-powerbi-test.ideas.microsoft.com
-microsoft.com APP-BBDAEMN-001.redmond.corp.microsoft.com                   APP-BBDAEMN-001.redmond.corp.microsoft.com|BB-DAEMON-N1.redmond.corp.microsoft.com
-microsoft.com business.microsoft.com                                       business.microsoft.com
-microsoft.com o365gcc-cosmos.microsoft.com                                 o365gcc-cosmos.microsoft.com|o365gcc.cosmos.microsoft.com
-microsoft.com watsonservice.microsoft.com                                  watsonservice-ppe.corp.microsoft.com|watsonservice-ppe.microsoft.com|watsonservice.corp.microsoft.com|watsonservice.microsoft.com
-microsoft.com global.billing.dev.communication.microsoft.com               global.billing.dev.communication.microsoft.com
-microsoft.com global.billing.dev.communication.microsoft.com               *.billing.dev.communication.microsoft.com|global.billing.dev.communication.microsoft.com
-microsoft.com e.microsoft.com                                              academy.microsoft.com|admin.manage.microsoft.com|aischool.microsoft.com|amsterdam.myenvisiontour.microsoft.com|amsterdam.myignitetour.techcommunity.micros…
-microsoft.com csharp.net                                                   answerdesk.microsoft.com
-microsoft.com testclient.yukon.microsoft.com                               testclient.yukon.microsoft.com
-microsoft.com dpcdev.microsoft.com                                         dpcdev.microsoft.com
-microsoft.com *.customvoice.fairfaxdevops.api.speech.microsoft.com         *.customvoice.fairfaxdevops.api.speech.microsoft.com|customvoice.fairfaxdevops.api.speech.microsoft.com
-microsoft.com azurewatsontest.microsoft.com                                azurewatsontest.microsoft.com
-microsoft.com *.stage.urlp.ams.gcc.teams.microsoft.com                     *.stage.urlp.ams.gcc.teams.microsoft.com|stage.urlp.ams.gcc.teams.microsoft.com
-microsoft.com kevlar-test.m365servicehealthppe.microsoft.com               kevlar-test.m365servicehealthppe.microsoft.com
-microsoft.com sbc.vitalii.myworkspace.microsoft.com                        sbc.vitalii.myworkspace.microsoft.com
-microsoft.com sip.vitalii.myworkspace.microsoft.com                        sip.vitalii.myworkspace.microsoft.com
-microsoft.com *.vitalii.myworkspace.microsoft.com                          *.vitalii.myworkspace.microsoft.com
-microsoft.com *.tsamy.myworkspace.microsoft.com                            *.tsamy.myworkspace.microsoft.com
-microsoft.com *.tsamy.myworkspace.microsoft.com                            *.tsamy.myworkspace.microsoft.com
-microsoft.com sip.tsamy.myworkspace.microsoft.com                          sip.tsamy.myworkspace.microsoft.com
+issuer_ca_id issuer_name                                                         common_name                                                      name_value
+------------ -----------                                                         -----------                                                      ----------                                                                          
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             account.activedirectory.windowsazure.com                         *.myapps.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             account.activedirectory.windowsazure.com                         *.myapps.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             account.activedirectory.windowsazure.com                         *.myapps.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 dashboard.px.microsoft.com                                       dashboard.px.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 pceilo.gtm.cae.microsoft.com                                     pceilo.gtm.cae.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 dev.conversation.speech-test.microsoft.com                       dev.conversation.speech-test.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 francecentral.prod.support.inapphelp.services.microsoft.com      francecentral.prod.support.inapphelp.services.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 recipients.mcapirecipients-int.commerce.microsoft.com            *.recipients.mcapirecipients-int.commerce.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 azuremarketplace.microsoft.com                                   azuremarketplace.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 securetime2.playready.microsoft.com                              securetime2.playready.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 securetime.playready.microsoft.com                               securetime.playready.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 parent-ci.microsoft.com                                          parent-ci.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 studio.jarvis.microsoft.com                                      jarvis.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 sfdataservice.microsoft.com                                      pti-int.store.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 now.norway.tip0.rpadminssl.flow.microsoft.com                    admin.api.flow.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 gw.ecdn.microsoft.com                                            gw.ecdn.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 saradmin.microsoft.com                                           saradmin.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.preview.powerva.microsoft.com                                api.preview.powerva.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 secondary.onedeploy.microsoft.com                                secondary.onedeploy.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 inv-int.mp.microsoft.com                                         inv-int.mp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 eu.api.ppe.support.microsoft.com                                 api.ppe-eu.support.sxg.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.ppe-eu.support.sxg.microsoft.com                             api.ppe-eu.support.sxg.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 eu.api.ppe.support.microsoft.com                                 api.ppe-eu.support.sxg.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 azuredasui.corp.microsoft.com                                    azuredasui.corp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 hrdi.microsoft.com                                               hrdi.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 hrddi.microsoft.com                                              hrddi.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           jungseo.myworkspace.microsoft.com                                *.jungseo.myworkspace.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 prod.events.msft.communication.azure.com                         *.events.prod.communication.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               DBP-IRIS-N02.redmond.corp.microsoft.com                          DBP-IRIS-C1.redmond.corp.microsoft.com…
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               tenantfeedback.microsoft.com                                     tenantfeedback.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.mgmt.fp.wd.microsoft.com                                       *.mgmt.fp.wd.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.preview.powerva.microsoft.com                                api.preview.powerva.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               ocv.geneva.keyvault.prod.microsoft.com                           ocv.geneva.keyvault.prod.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               ocv-elasticsearch-node-ssl-prd.microsoft.com                     ocv-elasticsearch-node-ssl-prd.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 cdn.techcommunity.microsoft.com                                  cdn.techcommunity.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 partnermanagedsubsrp.cp.microsoft.com                            partnermanagedsubsrp.cp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           middletier.teams.microsoft.com                                   *.middletier.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           middletier.teams.microsoft.com                                   *.middletier.teams.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.powerva.microsoft.com                                        api.powerva.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 recipients.mcapirecipients-proto.commerce.microsoft.com          *.recipients.mcapirecipients-proto.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 mailhook.dev.teams.microsoft.com                                 mailhook.dev.teams.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 collaboratesvc.microsoft.com                                     collaboratesvc.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 moderndrstip.cp.microsoft.com                                    moderndrstip.cp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 wfapi.tools.cp.microsoft.com                                     wfapi.tools.cp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             conversationservice.infra.gcc.teams.microsoft.com                conversationservice.infra.gcc.teams.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 settings.data.microsoft.com                                      *.settings.data.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 settings.data.microsoft.com                                      *.settings.data.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 settings.data.microsoft.com                                      *.settings.data.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 settings.data.microsoft.com                                      *.settings.data.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 settings.data.microsoft.com                                      *.settings.data.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 settings.data.microsoft.com                                      *.settings.data.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 onecc.data.microsoft.com                                         onecc.data.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 settings.data.microsoft.com                                      *.settings.data.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 settings.data.microsoft.com                                      *.settings.data.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 cpq.int.l2o.microsoft.com                                        cpq.int.l2o.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 powerva.microsoft.com                                            *.powerva.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 er.onecc.data.microsoft.com                                      er.onecc.data.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 onecc.data.microsoft.com                                         *.onecc.data.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             cosmos.misteam.substrate.phx.gbl.microsoft.com                   cosmos.misteam.substrate.phx.gbl.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 remoteassistance.support.services.microsoft.com                  remoteassistancedev.support.services.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.terminology.microsoft.com                                    api.terminology.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 apidev.terminology.microsoft.com                                 apidev.terminology.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           officecdnmac.microsoft.com                                       officecdnmac.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 uhs-wns-prod.microsoft.com                                       uhs-wns-prod.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 datagridsearch-dev.microsoft.com                                 *.datagridsearch-dev.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 cosellpublishingui.microsoft.com                                 cosellpublishingui.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 asd-jarvis-prod.serviceshub.microsoft.com                        asd-jarvis-prod.serviceshub.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 remoteassistancedev.support.services.microsoft.com               remoteassistancedev.support.services.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           yourdomain.myworkspace.microsoft.com                             *.yourdomain.myworkspace.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             internal.evergreen.microsoft.com                                 internal.evergreen.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 narada-int.microsoft.com                                         narada-int.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 capi-int.microsoft.com                                           capi-int.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 capi.microsoft.com                                               capi.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 capi.microsoft.com                                               capi.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 capi.microsoft.com                                               capi.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 capi.microsoft.com                                               capi.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 appmanagement.activedirectory.microsoft.com                      appmanagement.activedirectory.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           eqssmdmdemo.microsoft.com                                        eqssmdmdemo.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 cdn.techcommunity.microsoft.com                                  cdn.techcommunity.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 wpa.one.microsoft.com                                            wpa.one.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 productactivation.one.microsoft.com                              productactivation.one.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 mpa.one.microsoft.com                                            mpa.one.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 int.awdata.watson.microsoft.com                                  int.awdata.watson.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           amer-webhook.teams.microsoft.com                                 amer-webhook.teams.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 azdmpiis00001.europe.corp.microsoft.com                          azdmpiis00001.europe.corp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.tts-frontend.speech.microsoft.com                              *.tts-frontend.speech.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           webhook-dogfood.teams.microsoft.com                              webhook-dogfood.teams.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 hits.microsoft.com                                               hits.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.ppe.mgmt.dl.wd.microsoft.com                                   *.ppe.mgmt.dl.wd.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           oneprofileprodapi.trafficmanager.net                             mscertprod.oneprofile.authentication.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           oneprofileprodapi.trafficmanager.net                             mscertprod.oneprofile.authentication.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 powerusers.microsoft.com                                         powerusers.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.eastus.purchasestorage-int.microsoft.com                       *.eastus.purchasestorage-int.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 vlasint.partners.extranet.microsoft.com                          vlasint.partners.extranet.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.eastus.purchasestorage-int.microsoft.com                       *.eastus.purchasestorage-int.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 vlasext.partners.extranet.microsoft.com                          vlasext.partners.extranet.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             myaccess.canary.microsoft.com                                    myaccess.canary.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 invite-df.fl.teams.microsoft.com                                 *.invite-df.fl.teams.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             myaccess.canary.microsoft.com                                    myaccess.canary.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 dataservice.portal.esrp.microsoft.com                            dataservice.portal.esrp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.ppeint.cts.speech.microsoft.com                                *.australiacentral2.ppeint.cts.speech.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 gsmtest1.microsoft.com                                           gsmtest1.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 proxy.iis.customermaster.fd.cloud.microsoft.com                  jcmsfd-proxy.account.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 proxy.servicefabric.customermaster.fd.cloud.microsoft.com        proxy.servicefabric.customermaster.fd.cloud.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           tminienv31svc.afstest.azure.net                                  kailani-getloc-test-01.one.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           tminienv34svc.afstest.azure.net                                  kailani-getloc-test-01.one.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           tminienv46svc.afstest.azure.net                                  kailani-getloc-test-01.one.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             login.windows.net                                                iotauth.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             appmanagement.activedirectory.microsoft.com                      appmanagement.activedirectory.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             invitations.microsoft.com                                        invitations.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             telemetrycollector.microsoft.com                                 iamtelemetrycollector.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             myaccount.microsoft.com                                          api.myaccount.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             myaccess.canary.microsoft.com                                    myaccess.canary.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             ecoshosting.microsoft.com                                        ecoshosting.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             iamtelemetrycollector.microsoft.com                              iamtelemetrycollector.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             partner.ppe.repmap.microsoft.com                                 client.ppe.repmap.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             api.mspim.net                                                    myaccess.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             identity.microsoft.com                                           applications.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             mygroups.microsoft.com                                           *.myapplications.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             pas.windows.net                                                  authorization.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             appmanagement.activedirectory.microsoft.com                      appmanagement.activedirectory.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             login.windows.net                                                iotauth.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dev.neo4j.wd.csp.microsoft.com                                 *.dev.neo4j.wd.csp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 eagreements.microsoft.com                                        eagreements.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 templatesvlcm.partners.extranet.microsoft.com                    templatesvlcm.partners.extranet.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 cosellvalidation.psx.mp.microsoft.com                            cosellvalidation.psx.mp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 surveyplatformdev.microsoft.com                                  surveyplatformdev.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.powerva.microsoft.com                                        api.powerva.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 int.iis.customermaster.fd.cloud.microsoft.com                    int.iis.customermaster.fd.cloud.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 paslpuat.partners.extranet.microsoft.com                         paslpuat.partners.extranet.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.customvoice.develop.api.speech.microsoft.com                   *.customvoice.develop.api.speech.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           ipetrache2.myworkspace.microsoft.com                             *.ipetrache2.myworkspace.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 surveyplatform.microsoft.com                                     surveyplatform.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 datastoreuat.juno.microsoft.com                                  datastoreuat.juno.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             api.mspim.net                                                    myaccess.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             login.windows.net                                                iotauth.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           bd360coreapi.geneva.keyvault.wcf.microsoft.com                   bd360coreapi.geneva.keyvault.wcf.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 commercialreturns.microsoft.com                                  commercialreturns.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.revenuerecognition.microsoft.com                             api.revenuerecognition.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 kepler.powerplatform.microsoft.com                               *.kepler.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 azfcsnediopsq17.redmond.corp.microsoft.com                       azfcsnediopsq17.redmond.corp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 kbsadmin.one.microsoft.com                                       kbsadmin.one.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 licensing.powerplatform.microsoft.com                            *.licensing.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 kepler.powerplatform.microsoft.com                               *.kepler.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.businessappdiscovery.microsoft.com                           *.api.businessappdiscovery.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 admin.powerapps.com                                              admin.businessplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.catalogservice-int.dcat.dsp.mp.microsoft.com                   *.backend.catalogservice-int.dcat.dsp.mp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 scimvalidator.microsoft.com                                      *.scimvalidator.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.businessaccount.microsoft.com                                api.businessaccount.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 mslearningcontentuat.microsoft.com                               mslearningcontentuat.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 sand.cisencrypt.dsc.microsoft.com                                sand.cisencrypt.dsc.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 finance365.microsoft.com                                         finance365.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 int.convai.speech.microsoft.com                                  int.convai.speech.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.bap.microsoft.com                                            *.api.bap.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 powerva.microsoft.com                                            *.powerva.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 powerva.microsoft.com                                            *.powerva.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 payloaduat.juno.microsoft.com                                    payloaduat.juno.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           ocmpcfagent-prod.redmond.microsoft.com                           ocmpcfagent-prod.redmond.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 adminconsole.usage.cp.microsoft.com                              adminconsole.usage.cp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 azurepilot.cp.microsoft.com                                      azurepilot.cp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 portaluat.juno.microsoft.com                                     portaluat.juno.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 jseuat.juno.microsoft.com                                        jseuat.juno.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 lmhuat.juno.microsoft.com                                        lmhuat.juno.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 locbuilduat.juno.microsoft.com                                   locbuilduat.juno.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 handoffuat.juno.microsoft.com                                    handoffuat.juno.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 scheduleruat.juno.microsoft.com                                  scheduleruat.juno.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 usagesyncagent.cp.microsoft.com                                  usagesyncagent.cp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 usage.cp.microsoft.com                                           usage.cp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 handbackuat.juno.microsoft.com                                   handbackuat.juno.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           mvp.microsoft.com                                                *.mvp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 onecert-test.microsoft.com                                       onecert-test.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 sfr1uat.juno.microsoft.com                                       sfr1uat.juno.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 sfr1uat.juno.microsoft.com                                       sfr1uat.juno.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 MantisUAT.microsoft.com                                          MantisUAT.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 dealregservice-int.pi.microsoft.com                              dealregservice-int.pi.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 glerppe.microsoft.com                                            glerppe.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           skype-sms-auth.ppe.communityleader.microsoft.com                 skype-sms-auth.ppe.communityleader.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           ppe.communityleader.microsoft.com                                *.ppe.communityleader.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           adminppe.communityleader.microsoft.com                           adminppe.communityleader.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 portal.supplychain.microsoft.com                                 portal.supplychain.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           ingress-agr.vienna.microsoft.com                                 ingress-agr.vienna.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 dunning.cp.microsoft.com                                         dunning.bn4.cp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 dunningjournal.cp.microsoft.com                                  dunningjournal.bn4.cp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 uhs-wns-prod.microsoft.com                                       uhs-wns-prod.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 canary-azureavamgmt-api.microsoft.com                            canary-azureavamgmt-api.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 canary-azureava-bot.microsoft.com                                canary-azureava-bot.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 canary-azureava-api.microsoft.com                                canary-azureava-api.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 portal.supplychain.microsoft.com                                 portal.supplychain.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 azureavamgmt-api.microsoft.com                                   azureavamgmt-api.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 sustainability.microsoft.com                                     *.sustainability.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 azureava-bot.microsoft.com                                       azureava-bot.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.westus2.purchasestorage-int.microsoft.com                      *.westus2.purchasestorage-int.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 csanalytics.powerplatform.microsoft.com                          *.csanalytics.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 hdsdemo-dev.microsoft.com                                        hdsdemo-dev.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 cosellpublishingui-ppe.microsoft.com                             cosellpublishingui-ppe.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 canary-azureavamgmt-api.microsoft.com                            canary-azureavamgmt-api.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 canary-azureava-bot.microsoft.com                                canary-azureava-bot.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 canary-azureava-api.microsoft.com                                canary-azureava-api.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 azureavamgmt-api.microsoft.com                                   azureavamgmt-api.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 azureava-bot.microsoft.com                                       azureava-bot.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 admin.powerplatform.microsoft.com                                *.admin.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 devicedrillservice.microsoft.com                                 devicedrillservice.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 devicedrill.microsoft.com                                        devicedrill.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 canary-azureavamgmt-api.microsoft.com                            canary-azureavamgmt-api.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 settings-validation-sandbox.data.microsoft.com                   settings-validation-sandbox.data.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 canary-azureava-bot.microsoft.com                                canary-azureava-bot.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 canary-azureava-api.microsoft.com                                canary-azureava-api.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 azureavamgmt-api.microsoft.com                                   azureavamgmt-api.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 azureava-bot.microsoft.com                                       azureava-bot.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 mam-us.ppe.func.cp.wd.microsoft.com                              mam-us.ppe.func.cp.wd.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 mam-us.ppe.func.cp.wd.microsoft.com                              mam-us.ppe.func.cp.wd.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 csanalytics.powerplatform.microsoft.com                          *.csanalytics.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 invite-canary.fl.teams.microsoft.com                             *.invite-canary.fl.teams.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 canary-azureavamgmt-api.microsoft.com                            canary-azureavamgmt-api.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 canary-azureava-bot.microsoft.com                                canary-azureava-bot.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 canary-azureava-api.microsoft.com                                canary-azureava-api.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 azureavamgmt-api.microsoft.com                                   azureavamgmt-api.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 azureava-bot.microsoft.com                                       azureava-bot.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 mpauat.one.microsoft.com                                         mpauat.one.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 mspacsr.microsoft.com                                            mspacsr.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           devicecare-aks-ppe.supplychain.microsoft.com                     *.devicecare-aks-ppe.supplychain.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           Genevaauth.wcf.microsoft.com                                     Genevaauth.wcf.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 actionfeaturestore-int.microsoft.com                             actionfeaturestore-int.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 command-internal-int-eastus.cms.microsoft.com                    command-internal-int-eastus.cms.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 command-internal-int-westus.cms.microsoft.com                    command-internal-int-westus.cms.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 invite-int.fl.teams.microsoft.com                                *.invite-int.fl.teams.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 invite-int.fl.teams.microsoft.com                                *.invite-int.fl.teams.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 healthprobe.fulfillment.cp.microsoft.com                         healthprobe.fulfillment.cp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 fulfillment.cp.microsoft.com                                     fulfillment.bn4.cp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 vlscppe.microsoft.com                                            vlscppe.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 spectre.microsoft.com                                            *.spectre.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 spectre.microsoft.com                                            *.spectre.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 spectre.microsoft.com                                            *.spectre.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 emcws.partners.extranet.microsoft.com                            emcws.partners.extranet.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 bas.partners.extranet.microsoft.com                              basdrgc.partners.extranet.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 clpws.prd.ssl.partners.extranet.microsoft.com                    clpagmtws-co1ext.partners.extranet.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 vlscsvc.microsoft.com                                            vlscsvc.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 licensingonlineservicesactivation.microsoft.com                  licensingonlineservicesactivation.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 make.powerpages.microsoft.com                                    *.make.powerpages.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 fef.bmsua01.manage-beta.microsoft.com                            Enrollment.manage-beta.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 fef.bmsub01.manage-beta.microsoft.com                            Enrollment.manage-beta.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           hrprofileppe1.microsoft.com                                      hrprofileppe1.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 hdsdemo.microsoft.com                                            hdsdemo.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 dev.api.slohub.microsoft.com                                     dev.api.slohub.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 dev.slohub.microsoft.com                                         dev.slohub.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           auth.databox.microsoft.com                                       auth.databox.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           mgmt.databox.microsoft.com                                       mgmt.databox.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           supportsession.auth.databox.microsoft.com                        supportsession.auth.databox.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 I01C2DOACCH01.partners.extranet.microsoft.com                    I01C2DOACCH01.partners.extranet.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 I01C2DSQLOA01.partners.extranet.microsoft.com                    I01C2DSQLOA01.partners.extranet.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 pti.store.microsoft.com                                          pti-int.store.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 pat.cp.microsoft.com                                             pat.cp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 I01C2DSVCOA01.partners.extranet.microsoft.com                    I01C2DSVCOA01.partners.extranet.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             pas.windows.net                                                  authorization.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             mobileappcommunicator.auth.microsoft.com                         mobileappcommunicator.auth.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.securews.microsoft.com                                       api.securews.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 3PSecure-Prod.redmond.corp.microsoft.com                         3PSecure-Prod.redmond.corp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 3PSecure-PPE.redmond.corp.microsoft.com                          3PSecure-PPE.redmond.corp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 I25OC2DAPPS01.partners.extranet.microsoft.com                    I25OC2DAPPS01.partners.extranet.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 dtplabs-staging.microsoft.com                                    dtplabs-staging.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 hdsdemo.microsoft.com                                            hdsdemo.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 avslegacy.jarvis.onebox.microsoft.com                            avslegacy.jarvis.onebox.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 query-preview-amp-ppe-eastus.cms.microsoft.com                   query-preview-amp-ppe-eastus.cms.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 query-amp-ppe-eastus.cms.microsoft.com                           query-amp-ppe-eastus.cms.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 acu1-uat-sfm01.sceplatform.microsoft.com                         acu1-ppe-sfm01.sceplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 make.powerpages.microsoft.com                                    *.make.powerpages.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 powerva.microsoft.com                                            *.powerva.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.bap.microsoft.com                                            *.api.bap.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 monitoring360.microsoft.com                                      monitoring360.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           bots.teams.microsoft.com                                         bots.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           bots.teams.microsoft.com                                         bots.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           bots.teams.microsoft.com                                         bots.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           bots.teams.microsoft.com                                         bots.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           bots.teams.microsoft.com                                         bots.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           bots.teams.microsoft.com                                         bots.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           bots.teams.microsoft.com                                         bots.teams.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             sfbmsggateway.gcc.teams.microsoft.com                            sfbmsggateway.gcc.teams.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.skylight.aks.skylight.services.microsoft.com                   *.skylight.aks.skylight.services.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 vsa.services.microsoft.com                                       vsa-eastus-trs-prod.services.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 vsa.services.microsoft.com                                       vsa-eastasia-trs-prod.services.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 vsa.services.microsoft.com                                       vsa-prod.services.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 cdn-vsa-trs-prod.services.microsoft.com                          cdn-vsa-trs-prod.services.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.powerva.microsoft.com                                        api.powerva.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.preview.powerva.microsoft.com                                api.preview.powerva.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dmedge.sdg.teams.microsoft.com                                   dmedge.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dmedge.sdg.teams.microsoft.com                                   dmedge.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           dmedge.sdg.teams.microsoft.com                                   dmedge.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dmedge.sdg.teams.microsoft.com                                   dmedge.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dmedge.sdg.teams.microsoft.com                                   dmedge.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dmedge.sdg.teams.microsoft.com                                   auea.dmedge.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dmedge.sdg.teams.microsoft.com                                   dmedge.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dmedge.sdg.teams.microsoft.com                                   auea.dmedge.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dmedge.sdg.teams.microsoft.com                                   dmedge.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dm.sdg.teams.microsoft.com                                       dm.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           dm.sdg.teams.microsoft.com                                       dm.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           dm.sdg.teams.microsoft.com                                       dm.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           dm.sdg.teams.microsoft.com                                       dm.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           dm.sdg.teams.microsoft.com                                       auea.dm.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dm.sdg.teams.microsoft.com                                       auea.dm.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dm.sdg.teams.microsoft.com                                       dm.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dm.sdg.teams.microsoft.com                                       dm.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 portalint.juno.microsoft.com                                     portalint.juno.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 payloadint.juno.microsoft.com                                    payloadint.juno.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 locbuildint.juno.microsoft.com                                   locbuildint.juno.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 schedulerint.juno.microsoft.com                                  schedulerint.juno.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 lmhint.juno.microsoft.com                                        lmhint.juno.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 jseint.juno.microsoft.com                                        jseint.juno.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 handoffint.juno.microsoft.com                                    handoffint.juno.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 handbackint.juno.microsoft.com                                   handbackint.juno.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.ocdus.microsoft.com                                            *.ocdus.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcmainipp.sdg.teams.microsoft.com                               sbcmainipp.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcmainipp.sdg.teams.microsoft.com                               sbcmainipp.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcmainipp.sdg.teams.microsoft.com                               euno.sbcmainipp.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcmainipp.sdg.teams.microsoft.com                               euno.sbcmainipp.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcmainipp.sdg.teams.microsoft.com                               auea.sbcmainipp.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcmainipp.sdg.teams.microsoft.com                               auea.sbcmainipp.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcmainipp.sdg.teams.microsoft.com                               sbcmainipp.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcmainipp.sdg.teams.microsoft.com                               sbcmainipp.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcmainmgmt.sdg.teams.microsoft.com                              sbcmainmgmt.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcmainmgmt.sdg.teams.microsoft.com                              sbcmainmgmt.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcmainmgmt.sdg.teams.microsoft.com                              euno.sbcmainmgmt.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcmainmgmt.sdg.teams.microsoft.com                              euno.sbcmainmgmt.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcmainmgmt.sdg.teams.microsoft.com                              auea.sbcmainmgmt.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcmainmgmt.sdg.teams.microsoft.com                              auea.sbcmainmgmt.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcmainmgmt.sdg.teams.microsoft.com                              sbcmainmgmt.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcmainmgmt.sdg.teams.microsoft.com                              sbcmainmgmt.sdg.teams.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             egrenderingdev.evergreen.microsoft.com                           egrenderingdev.evergreen.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcobipp.sdg.teams.microsoft.com                                 sbcobipp.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcobipp.sdg.teams.microsoft.com                                 sbcobipp.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcobipp.sdg.teams.microsoft.com                                 euno.sbcobipp.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcobipp.sdg.teams.microsoft.com                                 euno.sbcobipp.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcobmgmt.sdg.teams.microsoft.com                                sbcobmgmt.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcobipp.sdg.teams.microsoft.com                                 auea.sbcobipp.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcobipp.sdg.teams.microsoft.com                                 auea.sbcobipp.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcobipp.sdg.teams.microsoft.com                                 sbcobipp.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcobipp.sdg.teams.microsoft.com                                 sbcobipp.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcobmgmt.sdg.teams.microsoft.com                                euno.sbcobmgmt.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcobmgmt.sdg.teams.microsoft.com                                euno.sbcobmgmt.sdg.teams.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 test.msbbotservice.microsoft.com                                 test.msbbotservice.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcobmgmt.sdg.teams.microsoft.com                                auea.sbcobmgmt.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcobmgmt.sdg.teams.microsoft.com                                auea.sbcobmgmt.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcobmgmt.sdg.teams.microsoft.com                                sbcobmgmt.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcobmgmt.sdg.teams.microsoft.com                                sbcobmgmt.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcobmgmt.sdg.teams.microsoft.com                                sbcobmgmt.sdg.teams.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 datastorepoc.juno.microsoft.com                                  datastorepoc.juno.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 ddommstest01.redmond.corp.microsoft.com                          ddommstest01.redmond.corp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 clientstore.partners.extranet.microsoft.com                      clientstore.partners.extranet.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 msbbotservice.microsoft.com                                      *.msbbotservice.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 icminfra.corp.microsoft.com                                      icminfra.corp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 cus.dlsppe.microsoft.com                                         cus.dlsppe.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.bap.microsoft.com                                            *.api.bap.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.elixir.microsoft.com                                           *.elixir.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 frontdoor-consumer.bigcatalog.commerce.microsoft.com             *.bigcatalog.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 service.RecOrder-INT.commerce.microsoft.com                      service.RecOrder-INT.commerce.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 ppe-azureavamgmt-api.microsoft.com                               ppe-azureavamgmt-api.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 ppe-azureava-bot.microsoft.com                                   ppe-azureava-bot.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 glb.frontend-dev.trafficshaping.dsp.mp.microsoft.com             glb.frontend-dev.trafficshaping.dsp.mp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 appmanagement.activedirectory.microsoft.com                      appmanagement.activedirectory.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 opauat.one.microsoft.com                                         opauat.one.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.nam.vaas.daas.microsoft.com                                    *.nam.vaas.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.vaas.daas.microsoft.com                                        *.nam.vaas.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.nam.vaas.daas.microsoft.com                                    *.nam.vaas.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.vaas.daas.microsoft.com                                        *.nam.vaas.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 vlresendtooluat.corp.microsoft.com                               vlresendtooluat.corp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 glb.frontend-int.trafficshaping.dsp.mp.microsoft.com             glb.frontend-int.trafficshaping.dsp.mp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 glb.ingestion-dev.trafficshaping.dsp.mp.microsoft.com            glb.ingestion-dev.trafficshaping.dsp.mp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 adminanalytics.powerplatform.microsoft.com                       *.adminanalytics.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.vaas.daas.microsoft.com                                        *.nam.vaas.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.vaas.daas.microsoft.com                                    *.nam.vaas.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.vaas.daas.microsoft.com                                        *.nam.vaas.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.nam.vaas.daas.microsoft.com                                    *.nam.vaas.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 gateway.westcentralus.maps.azure.com                             atlas.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.vaas.daas.microsoft.com                                        *.nam.vaas.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.vaas.daas.microsoft.com                                    *.nam.vaas.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.vaas.daas.microsoft.com                                        *.nam.vaas.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.vaas.daas.microsoft.com                                    *.nam.vaas.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 admin.powerapps.com                                              admin.businessplatform.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           client-cvs.ratingsedge-ppe.rnr.microsoft.com                     client-cvs.ratingsedge-ppe.rnr.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 fb7b34f9-52fc-438f-8639-c8a17607db76.microsoft.com               fb7b34f9-52fc-438f-8639-c8a17607db76.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 4788cb5a-7c4a-465f-ae82-3c9a5eec9785.microsoft.com               4788cb5a-7c4a-465f-ae82-3c9a5eec9785.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           portal.azure.com                                                 canary-endpoint.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 partneraccounts-ppe.eastus2.cloudapp.azure.com                   accountmgmtservice-int.dce.mp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 mlaquoteservice.microsoft.com                                    mlaquoteservice.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 mla.microsoft.com                                                mla.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 order.rest.store.microsoft.com                                   order-admin.store.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 yubiacus02.msftgreen.microsoft.com                               yubiacus02.msftgreen.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 yubiacus01.msftgreen.microsoft.com                               yubiacus01.msftgreen.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 gsmtest1.microsoft.com                                           gsmtest1.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 smsb-int.fl.teams.microsoft.com                                  *.smsb-int.fl.teams.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 main.prod.marketplaceapi.azure.com                               marketplaceapi.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 healthprobe.omssubscriptionbridge.cp.microsoft.com               healthprobe.omssubscriptionbridge.cp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 omssubscriptionbridge.cp.microsoft.com                           *.azureomssubscriptionbridge.cp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 main.prod.marketplaceapi.azure.com                               marketplaceapi.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             tas.gcc.teams.microsoft.com                                      tas.gcc.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           auth.databox.microsoft.com                                       auth.databox.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           supportsession.auth.databox.microsoft.com                        supportsession.auth.databox.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           mgmt.databox.microsoft.com                                       mgmt.databox.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 uat.stat.microsoft.com                                           uat.stat.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 cre.raas.microsoft.com                                           cre.raas.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 test.stat.microsoft.com                                          test.stat.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.status-int.dcat.dsp.mp.microsoft.com                           *.backend.status-int.dcat.dsp.mp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 frontdoor-consumer.bigcatalog.commerce.microsoft.com             *.bigcatalog.commerce.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 frontdoor-consumer.bigcatalog.commerce.microsoft.com             *.bigcatalog.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 frontdoor-consumer.bigcatalog.commerce.microsoft.com             *.bigcatalog.commerce.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.preview.powerva.microsoft.com                                api.preview.powerva.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 kevlar.eus2.ris.api.iris.microsoft.com                           kevlar.eus2.ris.api.iris.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcteams.sdg.teams.microsoft.com                                 sbcteams.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcteams.sdg.teams.microsoft.com                                 sbcteams.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcteams.sdg.teams.microsoft.com                                 euno.sbcteams.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcteams.sdg.teams.microsoft.com                                 euno.sbcteams.sdg.teams.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 query-preview-rt-int-eastus.cms.microsoft.com                    query-preview-rt-int-eastus.cms.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcteams.sdg.teams.microsoft.com                                 sbcteams.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcteams.sdg.teams.microsoft.com                                 sbcteams.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcteams.sdg.teams.microsoft.com                                 auea.sbcteams.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcteams.sdg.teams.microsoft.com                                 auea.sbcteams.sdg.teams.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 salesplatformux-prod.l2o.microsoft.com                           prod.geneva.keyvault.salesplatformux-prod.l2o.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             identity.microsoft.com                                           applications.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             invitations.microsoft.com                                        invitations.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             appmanagement.activedirectory.microsoft.com                      appmanagement.activedirectory.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             iamtelemetrycollector.microsoft.com                              iamtelemetrycollector.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             ecoshosting.microsoft.com                                        ecoshosting.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             myaccess.canary.microsoft.com                                    myaccess.canary.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             partner.ppe.repmap.microsoft.com                                 client.ppe.repmap.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             mygroups.microsoft.com                                           *.myapplications.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             myaccount.microsoft.com                                          api.myaccount.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             telemetrycollector.microsoft.com                                 iamtelemetrycollector.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             identity.microsoft.com                                           applications.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             appmanagement.activedirectory.microsoft.com                      appmanagement.activedirectory.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             invitations.microsoft.com                                        invitations.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 edgedata.prod.ngp.microsoft.com                                  edgedata.prod.ngp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 web.powerva.microsoft.com                                        *.web.powerva.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 admin.powerplatform.microsoft.com                                *.admin.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 licensing.powerplatform.microsoft.com                            *.licensing.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 licensing.powerplatform.microsoft.com                            *.licensing.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 cmserviceencrypt.gateway.configmgr.manage-dogfood.microsoft.com  cmserviceencrypt.gateway.configmgr.manage-dogfood.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 cmgatewaysigning.gateway.configmgr.manage-dogfood.microsoft.com  cmgatewaysigning.gateway.configmgr.manage-dogfood.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 ps.azurewaf.microsoft.com                                        ps.azurewaf.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           client-cvs.ratingsedge-ppe.rnr.microsoft.com                     client-cvs.ratingsedge-ppe.rnr.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           client-cvs.ratingsedge-ppe.rnr.microsoft.com                     client-cvs.ratingsedge-ppe.rnr.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 smartscreen.microsoft.com                                        api.smartscreen.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 smartscreen.microsoft.com                                        api.smartscreen.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 gateway.configmgr.manage-dogfood.microsoft.com                   gateway.configmgr.manage-dogfood.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.preview.powerva.microsoft.com                                api.preview.powerva.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 media.int.communication.microsoft.com                            *.media.int.communication.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             tags.gcc.teams.microsoft.com                                     tags.gcc.teams.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 assets.mcapiassets-aircapi.commerce.microsoft.com                assets.mcapiassets-aircapi.commerce.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 b8599bf5-08f0-4510-8d02-13dbdbebf734.microsoft.com               b8599bf5-08f0-4510-8d02-13dbdbebf734.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 billingssp.int.communication.microsoft.com                       *.billingssp.int.communication.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 8a6c0a45-f148-4950-ad1a-87cb7abb2326.microsoft.com               8a6c0a45-f148-4950-ad1a-87cb7abb2326.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.ocdus.microsoft.com                                            *.ocdus.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 smartscreen-ppe.microsoft.com                                    *.smartscreen-ppe.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 17e3e2bf-2dd9-4ed3-8b46-bed1c6112784.microsoft.com               17e3e2bf-2dd9-4ed3-8b46-bed1c6112784.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 0688854f-d5d9-4885-8447-8599aa383f4e.microsoft.com               0688854f-d5d9-4885-8447-8599aa383f4e.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 isolated-dev.docs.microsoft.com                                  isolated-dev.docs.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 stt.azureactivedirectory.speech.microsoft.com                    stt.azureactivedirectory.speech.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             supportactions-dev.services.microsoft.com                        supportactions-dev.services.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.support.services.microsoft.com                                 *.support.services.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 stt.azureactivedirectory.speech.microsoft.com                    stt.azureactivedirectory.speech.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.prod.acs-resourceprovider.trafficmanager.net                   *.rp.prod.communication.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.mgmt.gb.wd.microsoft.com                                       *.fe.gb.wd.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 acu1-dev-sfm01.sceplatform.microsoft.com                         acu1-dev-sfm01.sceplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 appservice.northwest.azs-longhaul-01.selfhost.corp.microsoft.com api.appservice.northwest.azs-longhaul-01.selfhost.corp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 imaginecup-stg.microsoft.com                                     imaginecup-stg.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 purchase.glscommerce.microsoft.com                               purchase.glscommerce.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 pricingscopejournal.cp.microsoft.com                             pricingscopejournal.cp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 pricecomposer.cp.microsoft.com                                   pricecomposer.cp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 pricingscopes.cp.microsoft.com                                   pricingscopes.cp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 refundengine.cp.microsoft.com                                    refundengine.cp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 narada.microsoft.com                                             narada.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.support.services.microsoft.com                                 *.support.services.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.support.services.microsoft.com                                 *.support.services.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 digitalattachclaims-int.purchase.mp.microsoft.com                *.digitalattachclaims-int.purchase.mp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 query-preview-mr-prod-westeu.cms.microsoft.com                   query-preview-mr-prod-eu.cms.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 query-mr-prod-westeu.cms.microsoft.com                           query-mr-prod-eu.cms.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 dev.orchestration.speech.microsoft.com                           dev.orchestration.speech.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 digitalattachclaims-int.purchase.mp.microsoft.com                *.digitalattachclaims-int.purchase.mp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 digitalattachclaims.purchase.mp.microsoft.com                    *.digitalattachclaims.purchase.mp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.support.services.microsoft.com                                 *.support.services.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.support.services.microsoft.com                                 *.support.services.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 acu1-dev-sfm01.sceplatform.microsoft.com                         acu1-dev-sfm01.sceplatform.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             internal.evergreen.microsoft.com                                 internal.evergreen.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.tts-frontend.speech.microsoft.com                              *.tts-frontend.speech.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 smsgw.prod.communication.microsoft.com                           *.smsgw.prod.communication.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 smsgw.ppe.communication.microsoft.com                            *.smsgw.ppe.communication.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 smsgw.int.communication.microsoft.com                            *.smsgw.int.communication.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 smsgw.int.communication.microsoft.com                            *.smsgw.int.communication.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.asyncgw.teams.microsoft.com                                    *.asyncgw.teams.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.catalogservice-dev.dcat.dsp.mp.microsoft.com                   *.backend.catalogservice-dev.dcat.dsp.mp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 winfb-es.microsoft.com                                           winfb-es.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 winfb-es.microsoft.com                                           winfb-es.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 nlightnecy-lcp-s6-lc-at-st-l6.dipiot.microsoft.com               nlightnecy-lcp-s6-lc-at-st-l6.dipiot.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 tapuisit.microsoft.com                                           tapuisit.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 translator.microsoft.com                                         translator.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 translator.microsoft.com                                         translator.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 translator.microsoft.com                                         translator.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 azdmpsql00001.europe.corp.microsoft.com                          azdmpsql00001.europe.corp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 umserviceuat.microsoft.com                                       umserviceuat.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 pkgsql01a.segroup.winse.corp.microsoft.com                       pkgsql01a.segroup.winse.corp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.mgmt.fp.wd.microsoft.com                                       *.mgmt.fp.wd.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 tapuidit.microsoft.com                                           tapuidit.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.testhost.speech.microsoft.com                                  *.testhost.speech.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dpp.speech.microsoft.com                                       *.dpp.speech.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.pronservice.speech.microsoft.com                               *.pronservice.speech.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.dgs.speech.microsoft.com                                       *.dgs.speech.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           web.targetingservice.services.microsoft.com                      web.targetingservice.services.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           middletier.teams.microsoft.com                                   *.middletier.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           middletier.teams.microsoft.com                                   *.middletier.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 earningspreview-dev.corp.microsoft.com                           earningspreview-dev.corp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 supportactions.services.microsoft.com                            supportactions-cst.services.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 supportactions.services.microsoft.com                            supportactions-cst.services.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 geneva.keyvault.nonprod.mquery.ust.microsoft.com                 geneva.keyvault.nonprod.mquery.ust.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 supportactions.services.microsoft.com                            supportactions-cst.services.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 supportactions.services.microsoft.com                            supportactions-cst.services.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 supportactions.services.microsoft.com                            supportactions-cst.services.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 supportactions.services.microsoft.com                            supportactions.services.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 supportactions.services.microsoft.com                            supportactions-cst.services.microsoft.com…
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               contentauth.objectstoreaccessint.microsoft.com                   contentauth.objectstoreaccessint.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.ppe.mgmt.fp.wd.microsoft.com                                   *.ppe.mgmt.fp.wd.microsoft.com
+      185756 C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1           internal.docs.microsoft.com                                      internal.docs.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 dart.microsoft.com                                               dart.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 smartscreen-ppe.microsoft.com                                    *.smartscreen-ppe.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 web.test.powerva.microsoft.com                                   *.web.test.powerva.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.ppe.mgmt.fp.wd.microsoft.com                                   *.ppe.mgmt.fp.wd.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 cnvat.microsoft.com                                              cnvat.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 tip.admin.powerplatform.microsoft.com                            tip.admin.powerplatform.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 msdl.microsoft.com                                               msdl.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 supportactions-northeurope.services.microsoft.com                supportactions-northeurope.services.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 supportactions-eastus2.services.microsoft.com                    supportactions-eastus2.services.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 supportactions-eastus.services.microsoft.com                     supportactions-eastus.services.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 supportactions-centralus.services.microsoft.com                  supportactions-centralus.services.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 datastoreint.juno.microsoft.com                                  datastoreint.juno.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 healthprobe.cps.cp.microsoft.com                                 healthprobe.cps.cp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 supportactions-westcentralus.services.microsoft.com              supportactions-westcentralus.services.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 prod-rse-sf.centralus.cloudapp.azure.com                         retailstore.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               ngp.insiderhubppe.microsoft.com                                  ngp.insiderhubppe.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 admin.powerplatform.microsoft.com                                *.admin.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.mgmt.cp.wd.microsoft.com                                       *.mgmt.cp.wd.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 winatp-gw.microsoft.com                                          winatp-gw.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 appmanagement.activedirectory.microsoft.com                      appmanagement.activedirectory.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 acu1-dev-sfm01.sceplatform.microsoft.com                         acu1-dev-sfm01.sceplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.ppe.space.microsoft.com                                        *.ppe.space.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 acu1-dev-sfm01.sceplatform.microsoft.com                         acu1-brw-pst-d1-sfm01.sceplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 acu1-dev-sfm01.sceplatform.microsoft.com                         acu1-brw-pst-d1-sfm01.sceplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 nonprod2.merge.microsoft.com                                     nonprod2.merge.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 gsmtest1.microsoft.com                                           gsmtest1.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.onedeploy.microsoft.com                                        *.onedeploy.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.mgmt.fp.wd.microsoft.com                                       *.mgmt.fp.wd.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.bap.microsoft.com                                            *.api.bap.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 pcfv2.privacy.microsoft.com                                      pcfv2.privacy.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           ak.ms-studiosmedia.com                                           *.event.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.test.daas.microsoft.com                                        *.nam.test.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           gsrppe.microsoft.com                                             gsrppe.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 acu1-dev-sfm01.sceplatform.microsoft.com                         acu1-brw-pst-d1-sfm01.sceplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 cmserviceencrypt.gateway.configmgr.manage-int.microsoft.com      cmserviceencrypt.gateway.configmgr.manage-int.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 bas.corp.microsoft.com                                           bas.corp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 acu1-dev-sfm01.sceplatform.microsoft.com                         acu1-brw-pst-d1-sfm01.sceplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 acu1-dev-sfm01.sceplatform.microsoft.com                         acu1-brw-pst-d1-sfm01.sceplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 acu1-dev-sfm01.sceplatform.microsoft.com                         acu1-brw-pst-d1-sfm01.sceplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 acu1-dev-sfm01.sceplatform.microsoft.com                         acu1-brw-pst-d1-sfm01.sceplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 acu1-dev-sfm01.sceplatform.microsoft.com                         acu1-brw-pst-d1-sfm01.sceplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 mailhook.teams.microsoft.com                                     mailhook.teams.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.preview.powerva.microsoft.com                                api.preview.powerva.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.ggs.speech.microsoft.com                                       *.ggs-frontend.speech.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.sr.speech.microsoft.com                                        *.sr-frontend.speech.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dgs.speech.microsoft.com                                       *.dgs.speech.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.dpp.speech.microsoft.com                                       *.dpp.speech.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 rp.dev3.weu.sentinel.microsoft.com                               rp.dev3.weu.sentinel.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 sfcluster.dev.asi.microsoft.com                                  sfcluster.dev.asi.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 sfcluster.dev.asi.microsoft.com                                  sfcluster.dev.asi.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 rp.dev2.weu.sentinel.microsoft.com                               rp.dev2.weu.sentinel.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 pkitaazurenotification.redmond.corp.microsoft.com                pkitaazurenotification.redmond.corp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 Portal.manage-selfhost.microsoft.com                             fei.SHMSUA01.manage-selfhost.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 gateway.configmgr.manage-int.microsoft.com                       gateway.configmgr.manage-int.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 saepio.microsoft.com                                             prod.geneva.keyvault.saepio.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 warehouse.manage.microsoft.com                                   warehouse.manage.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 warehouse.manage-beta.microsoft.com                              warehouse.manage-beta.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.mgmt.fp.wd.microsoft.com                                       *.mgmt.fp.wd.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 dealregservice-ppe.geneva.keyvault.pi.microsoft.com              dealregservice-ppe.geneva.keyvault.pi.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 cvs.docs.microsoft.com                                           cvs.docs.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               recommendations.microsoft.com                                    recommendations.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 globallink-nonprod.microsoft.com                                 globallink-nonprod.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 media.dev.communication.microsoft.com                            *.media.dev.communication.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.tst.forex.microsoft.com                                      api.dev.forex.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 server.ehrconnector.teams-ppe.microsoft.com                      amer-ehrconnectorsvc-ppe.teams.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 server.ehrconnector.teams-ppe.microsoft.com                      amer-ehrconnectorsvc-ppe.teams.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.nam.daas.microsoft.com                                         *.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.daas.microsoft.com                                             *.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 billingssp.dev.communication.microsoft.com                       *.billingssp.dev.communication.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 docs.microsoft.com                                               *.docs.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 dealregservice-ppe.pi.microsoft.com                              dealregservice-ppe.pi.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.test.daas.microsoft.com                                        *.nam.test.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 daf.api-ppe.support.microsoft.com                                daf.api-ppe.support.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.api-ppe.support-aries.microsoft.com                            alda.api-ppe.support.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 daf.api-ppe.support.microsoft.com                                daf.api-ppe.support.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.api-ppe.support-aries.microsoft.com                            alda.api-ppe.support.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 alda.api-ppe.support.microsoft.com                               alda.api-ppe.support.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 alda.api-ppe.support.microsoft.com                               alda.api-ppe.support.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 daf.api-ppe.support.microsoft.com                                daf.api-ppe.support.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.api-ppe.support-aries.microsoft.com                            alda.api-ppe.support.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 sara.api-ppe.support.microsoft.com                               sara.api-ppe.support.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 alda.api-ppe.support.microsoft.com                               alda.api-ppe.support.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 server.ehrconnector.teams-ppe.microsoft.com                      amer-ehrconnectorsvc-ppe.teams.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.api-ppe.support-aries.microsoft.com                            alda.api-ppe.support.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 daf.api-ppe.support.microsoft.com                                daf.api-ppe.support.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 alda.api-ppe.support.microsoft.com                               alda.api-ppe.support.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 einvoice.microsoft.com                                           einvoice.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 gpwebinquiry.microsoft.com                                       gpwebinquiry.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 myaccess.microsoft.com                                           myaccess.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 gpwebinquirydev.microsoft.com                                    gpwebinquirydev.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 termstudiohelpdev.microsoft.com                                  termstudiohelpdev.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 termstudiodev.microsoft.com                                      termstudiodev.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 styleguidedev.microsoft.com                                      styleguidedev.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 policheckdev.microsoft.com                                       policheckdev.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 grumsdev.microsoft.com                                           grumsdev.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 apidev.terminology.microsoft.com                                 apidev.terminology.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.termstudiodev.microsoft.com                                  api.termstudiodev.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 termstudiohelp.microsoft.com                                     termstudiohelp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 styleguide.microsoft.com                                         styleguide.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 polichecktermtest.microsoft.com                                  polichecktermtest.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 policheck.microsoft.com                                          policheck.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 grums.microsoft.com                                              grums.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.termstudio.microsoft.com                                     api.termstudio.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.terminology.microsoft.com                                    api.terminology.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 portal.changeguard.fcm.azure.microsoft.com                       portal.changeguard.fcm.azure.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             storage.ams.gcc.teams.microsoft.com                              *.storage.ams.gcc.teams.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             storage.ams.gcc.teams.microsoft.com                              *.storage.ams.gcc.teams.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 changeguard.fcm.azure.microsoft.com                              assessment.changeguard.fcm.azure.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           DBP-SPTLGHT-001.redmond.corp.microsoft.com                       DBP-SPTLGHT-001.redmond.corp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 digitalreservations.microsoft.com                                digitalreservations.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 termstudio.microsoft.com                                         termstudio.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 frontend-ppe.scanx.esrp.microsoft.com                            frontend-ppe.scanx.esrp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 www.ezio.cpusre.microsoft.com                                    ezio.cpusre.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               shdppeapp.microsoft.com                                          shdppeapp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 testconnectivity.microsoft.com                                   testconnectivity.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 liquid.microsoft.com                                             liquid.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           oa-sqlhost-02.redmond.corp.microsoft.com                         oa-sqlhost-02.redmond.corp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 cerner.ehrconnector.teams.microsoft.com                          cerner.ehrconnector.teams.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 noam.prod.telephony.azure.com                                    *.sms.prod.communication.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 cmcatalogsvc.manage-dogfood.microsoft.com                        cmcatalogsvc.manage-dogfood.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           pi-sqlutil-01.redmond.corp.microsoft.com                         pi-sqlutil-01.redmond.corp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 sapsearch-ci.microsoft.com                                       sapsearch-ci.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.ind.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 cmcatalogsvc.manage-dogfood.microsoft.com                        cmcatalogsvc.manage-dogfood.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 bristow-portal.msftvpn.ras.microsoft.com                         bristow-portal.msftvpn.ras.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 redmond-portal.msftvpn.ras.microsoft.com                         msftvpn.ras.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 redmond.msftvpn-alt.ras.microsoft.com                            msftvpn-alt.ras.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 hyderabad-portal.msftvpn.ras.microsoft.com                       hyderabad-portal.msftvpn.ras.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 redmond.msftvpn.ras.microsoft.com                                msftvpn.ras.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 hyderabad.msftvpn-alt.ras.microsoft.com                          hyderabad.msftvpn-alt.ras.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 hyderabad.msftvpn.ras.microsoft.com                              hyderabad.msftvpn.ras.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 cerner.ehrconnector.teams-ppe.microsoft.com                      cerner.ehrconnector-ppe.teams.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 bristow.msftvpn-alt.ras.microsoft.com                            bristow.msftvpn-alt.ras.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 bangalore-css-portal.msftvpn.ras.microsoft.com                   bangalore-css-portal.msftvpn.ras.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 bristow.msftvpn.ras.microsoft.com                                bristow.msftvpn.ras.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 bangalore-css.msftvpn-alt.ras.microsoft.com                      bangalore-css.msftvpn-alt.ras.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 bangalore-css.msftvpn.ras.microsoft.com                          bangalore-css.msftvpn.ras.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 hyderabad-css-portal.msftvpn.ras.microsoft.com                   hyderabad-css-portal.msftvpn.ras.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 dfs.api.iris.microsoft.com                                       *.dfs.api.iris.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 hyderabad-css.msftvpn-alt.ras.microsoft.com                      hyderabad-css.msftvpn-alt.ras.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           ev2cert.geneva.keyvault.lockbox.microsoft.com                    ev2cert.geneva.keyvault.lockbox.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 hyderabad-css.msftvpn.ras.microsoft.com                          hyderabad-css.msftvpn.ras.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 kevlar.eus2.dfs.api.iris.microsoft.com                           kevlar.eus2.dfs.api.iris.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 kevlar.easia.dfs.api.iris.microsoft.com                          kevlar.easia.dfs.api.iris.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 kevlar.wus2.dfs.api.iris.microsoft.com                           kevlar.wus2.dfs.api.iris.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 kevlar.neu.dfs.api.iris.microsoft.com                            kevlar.neu.dfs.api.iris.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 oaas-int-uiauth.ezio.commerce.microsoft.com                      *.oaas-int-uiauth.ezio.commerce.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 sapsearch-ci.microsoft.com                                       sapsearch-ci.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 query-preview-rt-prod-eastap.cms.microsoft.com                   querypre.prod.cms.rt.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 query-rt-prod-eastap.cms.microsoft.com                           cdn-query.prod.cms.rt.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 cerner.ehrconnector.teams-canary.microsoft.com                   cerner.ehrconnector-canary.teams.microsoft.com…
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               gfe.jobagentclient.dprodmgd106.spocerts.microsoft.com            gfe.jobagentclient.dprodmgd106.spocerts.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 invoicepresentment.cp.microsoft.com                              invoicepresentment.co1.cp.microsoft.com…
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               gfe.jobagentclient.edog.spocerts.microsoft.com                   gfe.jobagentclient.edog.spocerts.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               gfe.jobagentclient.dprod.spocerts.microsoft.com                  gfe.jobagentclient.dprod.spocerts.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 azuredasrest.corp.microsoft.com                                  azuredasrest.corp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 finco.redmond.corp.microsoft.com                                 finco.redmond.corp.microsoft.com
+      185756 C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1           cwsexuat1.partners.extranet.microsoft.com                        cwsexuat1.partners.extranet.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 easystartppe.microsoft.com                                       easystartppe.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 xtoken.sfds.microsoft.com                                        xtoken.sfds.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 cdintaketestapi.microsoft.com                                    cdintaketestapi.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 wincomms.redmond.corp.microsoft.com                              wincommsapi.redmond.corp.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           targetingservice.services.microsoft.com                          targetingservice.services.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           aad.targetingservice.services.microsoft.com                      aad.targetingservice.services.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 powerva.microsoft.com                                            *.powerva.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 mbsinternal-U1.microsoft.com                                     mbsinternal-U1.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.test.daas.microsoft.com                                    *.nam.test.daas.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           ppe.targetingservice.services.microsoft.com                      ppe.targetingservice.services.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.bap.microsoft.com                                            *.api.bap.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 mbsupdates-u1.microsoft.com                                      mbsupdates-u1.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.mgmt.fp.wd.microsoft.com                                       *.mgmt.fp.wd.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 preview.eagreements.microsoft.com                                preview.eagreements.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 protection.office.com                                            compliance.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 protection.office.com                                            compliance.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 onecert-test.microsoft.com                                       onecert-test.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 streaming.rtt.teams.microsoft.com                                streaming.rtt.teams.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.mwservice.webxtsvc-int.microsoft.com                           *.mwservice.webxtsvc-int.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 edgeedrop.microsoft.com                                          edgeedrop.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 greymatter365ssrs.redmond.corp.microsoft.com                     greymatter365ssrs.redmond.corp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.webxtsvc-ppe.microsoft.com                                     *.webxtsvc-ppe.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 webxtsvc-ppe.microsoft.com                                       webxtsvc-ppe.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.webxtsvc-int.microsoft.com                                     *.webxtsvc-int.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 webxtsvc-int.microsoft.com                                       webxtsvc-int.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 appmanagement.activedirectory.microsoft.com                      appmanagement.activedirectory.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 wsd-buildandpackagingconnector.segroup.winse.corp.microsoft.com  wsd-buildandpackagingconnector.segroup.winse.corp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           mtntpr.teams-prod.microsoft.com                                  mtntpr.teams-prod.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 paivr.partners.extranet.microsoft.com                            paivr.partners.extranet.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           mtntpr.teams-prod.microsoft.com                                  mtntpr.teams-prod.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           mtntpr.teams-prod.microsoft.com                                  mtntpr.teams-prod.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           oneprofileuatapi.trafficmanager.net                              mscertbeta.oneprofile.authentication.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 make.preprod.powerpages.microsoft.com                            *.make.preprod.powerpages.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 tip2.admin.powerplatform.microsoft.com                           *.tip2.admin.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 preprod.adminanalytics.powerplatform.microsoft.com               adminanalytics-preprod.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 kepler-tip.powerplatform.microsoft.com                           *.kepler-tip.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 preprod.sustainability.microsoft.com                             *.preprod.sustainability.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 preprod.csanalytics.powerplatform.microsoft.com                  csanalytics-preprod.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 licensing-tip.powerplatform.microsoft.com                        *.licensing-tip.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 preprod.powerva.microsoft.com                                    *.preprod.powerva.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 tip1.api.businessappdiscovery.microsoft.com                      *.tip1.api.businessappdiscovery.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 tip1.api.bap.microsoft.com                                       *.tip1.api.bap.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 web.preprod.powerva.microsoft.com                                *.web.preprod.powerva.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 test.sustainability.microsoft.com                                *.test.sustainability.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 test.csanalytics.powerplatform.microsoft.com                     csanalytics-test.powerplatform.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 make.test.powerpages.microsoft.com                               *.make.test.powerpages.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 tip.admin.powerplatform.microsoft.com                            tip.admin.powerplatform.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 test.powerva.microsoft.com                                       *.test.powerva.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 tip2.api.businessappdiscovery.microsoft.com                      *.tip2.api.businessappdiscovery.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 test.adminanalytics.powerplatform.microsoft.com                  adminanalytics-test.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 web.test.powerva.microsoft.com                                   *.web.test.powerva.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 kepler-test.powerplatform.microsoft.com                          *.kepler-test.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 licensing-tie.powerplatform.microsoft.com                        *.licensing-tie.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 tip2.api.bap.microsoft.com                                       *.tip2.api.bap.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.ppe.mgmt.dl.wd.microsoft.com                                   *.ppe.mgmt.dl.wd.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.mavideo.microsoft.com                                          *.mavideo.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             msdrad.msg.infra.gcc.teams.microsoft.com                         *.msdrad.msg.infra.gcc.teams.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             msdrad.msg.infra.gcc.teams.microsoft.com                         *.msdrad.msg.infra.gcc.teams.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 staging-dcatbackend.mp.microsoft.com                             *.staging-dcatbackend.mp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 mbsinternal.redmond.corp.microsoft.com                           mbsinternal.gtm.corp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 mbs.microsoft.com                                                mbs2.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 businesscenter.mbs.microsoft.com                                 businesscenter.mbs.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.mgmt.fp.wd.microsoft.com                                       *.mgmt.fp.wd.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 streaming.rtt.teams.microsoft.com                                streaming.rtt.teams.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 refdwmds.redmond.corp.microsoft.com                              refdwmds.redmond.corp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.mgmt.fp.wd.microsoft.com                                       *.mgmt.fp.wd.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 digitalattachclaims.purchase.mp.microsoft.com                    *.digitalattachclaims.purchase.mp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.mgmt.fp.wd.microsoft.com                                       *.mgmt.fp.wd.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.beta.smartpage.microsoft.com                                   *.beta.smartpage.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 polaris.microsoft.com                                            polaris.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 glb.approvals-prod.dcat.dsp.mp.microsoft.com                     *.approvals-prod.dcat.dsp.mp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 glb.approvals-tip.dcat.dsp.mp.microsoft.com                      *.approvals-tip.dcat.dsp.mp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 acu1-uat-sfm01.sceplatform.microsoft.com                         acu1-uat-sfm01.sceplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 pcfv2.privacy.microsoft.com                                      pcfv2.privacy.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 octopusrescueicm.corp.microsoft.com                              octopusrescueicm.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 serviceinsightsdev.microsoft.com                                 capacityinsightsdev.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 acu1-uat-sfm01.sceplatform.microsoft.com                         acu1-uat-sfm01.sceplatform.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 acu1-dev-sfm01.sceplatform.microsoft.com                         acu1-dev-sfm01.sceplatform.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.events.data.microsoft.com                                      *.events.data.microsoft.com…
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               marvel.rave.ols.microsoft.com                                    marvel.rave.ols.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.events.data.microsoft.com                                      *.events.data.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 imaginecup.microsoft.com                                         imaginecup.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 imaginecup.microsoft.com                                         imaginecup.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           noneu-admin-dev.teams.microsoft.com                              noneu-admin-dev.teams.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               lists.microsoft.com                                              lists.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 glb.approvals-int.dcat.dsp.mp.microsoft.com                      *.approvals-int.dcat.dsp.mp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.mgmt.cp.wd.microsoft.com                                       *.mgmt.cp.wd.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 glb.approvals-dev.dcat.dsp.mp.microsoft.com                      *.approvals-dev.dcat.dsp.mp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.partnercenter-aircapi.microsoft.com                          api.partnercenter-aircapi.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           oa-sqlhost-01.redmond.corp.microsoft.com                         oa-sqlhost-01.redmond.corp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 onepub-esrp-dev.westcentralus.cloudapp.azure.com                 onepub-esrp-dev.pme.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.ci.ads.microsoft.com                                         api.ci.ads.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.preview.powerva.microsoft.com                                api.preview.powerva.microsoft.com
+      185756 C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1           dev.loop.microsoft.com                                           dev.loop.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.beta.smartpage.microsoft.com                                   *.beta.smartpage.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 cmcatalogsvc.manage-int.microsoft.com                            cmcatalogsvc.manage-int.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 optimizer.asimov.microsoft.com                                   optimizer.asimov.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 test.sustainability.microsoft.com                                *.test.sustainability.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 datastoreint.juno.microsoft.com                                  datastoreint.juno.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 datastoreint.juno.microsoft.com                                  datastoreint.juno.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 cmcatalogsvc.manage-int.microsoft.com                            cmcatalogsvc.manage-int.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 arlington.bsxcommerce.mp.microsoft.com                           arlington.bsxcommerce.mp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 int.iis.sf.customermaster.cloud.microsoft.com                    int.iis.sf.customermaster.cloud.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.si.smartpage.microsoft.com                                     *.betasi.smartpage.microsoft.com…
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               dev.loop.microsoft.com                                           dev.loop.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 arlington.bsxcommerce.mp.microsoft.com                           arlington.bsxcommerce.mp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 vertexservice.cp.microsoft.com                                   *.vertexservice70.cp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 fasttrackipaapi.microsoft.com                                    fasttrackipaapi.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 fasttrackipaapi.microsoft.com                                    fasttrackipaapi.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 wfapi.tools.cp.microsoft.com                                     wfapi.tools.cp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 smsgw.dev.communication.microsoft.com                            *.smsgw.dev.communication.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 msxplatformservices.microsoft.com                                msxplatformservices.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 throttling-ssl.groups-throttling-test.data.microsoft.com         throttling-ssl.groups-throttling-test.data.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 ingestion.groups-admin-sandbox.data.microsoft.com                *.ingestion.groups-admin-sandbox.data.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 groups-admin-sandbox.data.microsoft.com                          *.groups-admin-sandbox.data.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 groups-sandbox.data.microsoft.com                                *.groups-sandbox.data.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.mgmt.gb.wd.microsoft.com                                       *.fe.gb.wd.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 mysecurity.microsoft.com                                         *.gb.wd.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.taxservice.cp.microsoft.com                                    *.taxservice.cp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 frontend-ppe.scanx.esrp.microsoft.com                            frontend-ppe.scanx.esrp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 basapiserver.redmond.corp.microsoft.com                          basapiserver.redmond.corp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.powerva.microsoft.com                                        api.powerva.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               sdsint.mt.clientauth.edu.microsoft.com                           sdsint.mt.clientauth.edu.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               int.aad.clientauth.edu.microsoft.com                             int.aad.clientauth.edu.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               int.shellsvc.clientauth.edu.microsoft.com                        int.shellsvc.clientauth.edu.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           smc-linkgen-prod.services.support.microsoft.com                  smc-linkgen-prod.services.support.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 liquid.microsoft.com                                             liquid.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 frontdoor-ppe.educationhub.microsoft.com                         frontdoor-ppe.educationhub.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 server.ehrconnector.teams-canary.microsoft.com                   ehrconnectorsvc-canary.teams.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 throttling-ssl.groups-throttling-test.data.microsoft.com         throttling-ssl.groups-throttling-test.data.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 tip2.flow.microsoft.com                                          tip2.flow.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 ingestion.groups-admin-sandbox.data.microsoft.com                *.ingestion.groups-admin-sandbox.data.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 groups-admin-sandbox.data.microsoft.com                          *.groups-admin-sandbox.data.microsoft.com…
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               int.azure.clientauth.edu.microsoft.com                           int.azure.clientauth.edu.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 groups-sandbox.data.microsoft.com                                *.groups-sandbox.data.microsoft.com…
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               int.mds.edu.microsoft.com                                        int.mds.edu.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 paymentconfigtool.cp.microsoft.com                               paymentconfigtool.cp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 docs.coreidentity.microsoft.com                                  docs.coreidentity.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 docs.coreidentity.microsoft.com                                  docs.coreidentity.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 ca.mfs.microsoft.com                                             caeas.mfs.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 entitlement.coreidentity.microsoft.com                           entitlement.coreidentity.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 entitlement.coreidentity.microsoft.com                           entitlement.coreidentity.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 coreidentity.microsoft.com                                       beta.coreidentity.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 sfr2int.juno.microsoft.com                                       sfr2int.juno.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 sfr2int.juno.microsoft.com                                       sfr2int.juno.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 coreidentity.microsoft.com                                       beta.coreidentity.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 sfr1int.juno.microsoft.com                                       sfr1int.juno.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 sfr1int.juno.microsoft.com                                       sfr1int.juno.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           edgedata.prod.public.microsoft.com                               edgedata.prod.public.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 make.powerpages.microsoft.com                                    *.make.powerpages.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 wddas.iris.campaigns.dataes.microsoft.com                        wddas.iris.campaigns.dataes.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 eds-flighting.support.microsoft.com                              eds-flighting.support.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 eds.support.microsoft.com                                        eds.support.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 command-internal-ci-westus.cms.microsoft.com                     command-internal-ci-westus.cms.microsoft.com…
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               sdsppe.mt.clientauth.edu.microsoft.com                           sdsppe.mt.clientauth.edu.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               ppe.aad.clientauth.edu.microsoft.com                             ppe.aad.clientauth.edu.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               sdsprod.mt.clientauth.edu.microsoft.com                          sdsprod.mt.clientauth.edu.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               prod.shellsvc.clientauth.edu.microsoft.com                       prod.shellsvc.clientauth.edu.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               ppe.shellsvc.clientauth.edu.microsoft.com                        ppe.shellsvc.clientauth.edu.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               prod.aad.clientauth.edu.microsoft.com                            prod.aad.clientauth.edu.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               prod.mds.edu.microsoft.com                                       prod.mds.edu.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               ppe.mds.edu.microsoft.com                                        ppe.mds.edu.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               prod.azure.clientauth.edu.microsoft.com                          prod.azure.clientauth.edu.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               ppe.azure.clientauth.edu.microsoft.com                           ppe.azure.clientauth.edu.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 person.coreidentity.microsoft.com                                person.coreidentity.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           southcentralus01.afsint.azure.net                                kailani-getloc-test-01.one.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           northcentralus01.afsint.azure.net                                kailani-getloc-test-01.one.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 person.coreidentity.microsoft.com                                person.coreidentity.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 notification.coreidentity.microsoft.com                          notification.coreidentity.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 notification.coreidentity.microsoft.com                          notification.coreidentity.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 csanalytics.powerplatform.microsoft.com                          *.csanalytics.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 admin.powerapps.com                                              admin.businessplatform.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           dabdelmaks.myworkspace.microsoft.com                             *.dabdelmaks.myworkspace.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dabdelmaks.myworkspace.microsoft.com                             *.dabdelmaks.myworkspace.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             settings.gcc.teams.microsoft.com                                 *.gcc.teams.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 mymicrosofticmconnectorcertificate.microsoft.com                 mymicrosofticmconnectorcertificate.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 sts.ust.wdgae.microsoft.com                                      BL1sts.ust.wdgae.microsoft.com…
+      177844 C=US, O=DigiCert Inc, CN=GeoTrust TLS DV RSA Mixed SHA256 2020 CA-1 rivantodea.myworkspace.microsoft.com                             rivantodea.myworkspace.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.bap.microsoft.com                                            *.api.bap.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 mbs2-U1.microsoft.com                                            mbs2-U1.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.mgmt.fp.wd.microsoft.com                                       *.mgmt.fp.wd.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 sherloc-df.fl.teams.microsoft.com                                *.sherloc-df.fl.teams.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 sherloc-df.fl.teams.microsoft.com                                *.sherloc-df.fl.teams.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.powerva.microsoft.com                                        api.powerva.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 businesscenter-U1.mbs.microsoft.com                              businesscenter-U1.mbs.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.mwservice.webxtsvc.microsoft.com                               *.mwservice.webxtsvc.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.cantrackuat.careers.microsoft.com                              *.cantrackuat.careers.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               appmanagement-stage.microsoft.com                                appmanagement-stage.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               appmanagement-stage.microsoft.com                                appmanagement-stage.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               nam2coherencestaging.eastus2.cloudapp.azure.com                  appmanagement-stage.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 previewuat.eagreements.microsoft.com                             previewuat.eagreements.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 wdrsppe.microsoft.com                                            *.ppe.rs.wd.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 ecconcessions-d1.microsoft.com                                   ecconcessions-d1.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 poet.ppe.microsoft.com                                           poet.ppe.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.bap.microsoft.com                                            *.api.bap.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 nonprod.merge.microsoft.com                                      nonprod.merge.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 stt.azureactivedirectory.speech.microsoft.com                    stt.azureactivedirectory.speech.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 journal.mcapiprojects-aircapi.commerce.microsoft.com             journal.mcapiprojects-aircapi.commerce.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 projects.mcapiprojects-aircapi.commerce.microsoft.com            projects.mcapiprojects-aircapi.commerce.microsoft.com
+      185756 C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1           amc.msdx.microsoft.com                                           amc.msdx.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 LogManagerService.wus2.manage-selfhost.microsoft.com             LogManagerService.wus2.manage-selfhost.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 frontdoor.bigcatalog.commerce.microsoft.com                      *.bigcatalog.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 optimizer-sandbox.asimov.microsoft.com                           optimizer-sandbox.asimov.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 assets.mcapiassets-aircapi.commerce.microsoft.com                assets.mcapiassets-aircapi.commerce.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 document.encrypt.invoice.microsoft.com                           document.encrypt.invoice.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             mecontrol.msabi.office.cosmos.microsoft.com                      mecontrol.msabi.office.cosmos.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             moet.microsoft.com                                               moet.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           granite-cluster-usea-prod.teams.microsoft.com                    granite-cluster-usea-prod.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           granite-cluster-uswe-prod.teams.microsoft.com                    granite-cluster-uswe-prod.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           granite-cluster-usnc-prod.teams.microsoft.com                    granite-cluster-usnc-prod.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           granite-cluster-ukso-prod.teams.microsoft.com                    granite-cluster-ukso-prod.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           granite-cluster-euwe-prod.teams.microsoft.com                    granite-cluster-euwe-prod.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           granite-cluster-euno-prod.teams.microsoft.com                    granite-cluster-euno-prod.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           granite-cluster-asse-prod.teams.microsoft.com                    granite-cluster-asse-prod.teams.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 assistvaultprod.assist.microsoft.com                             assistvaultprod.assist.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 assistsfprod.westus2.cloudapp.azure.com                          assist.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.mwservice.webxtsvc.microsoft.com                               *.mwservice.webxtsvc.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 azure-ratecard-dev.mp.microsoft.com                              azure-ratecard-dev.mp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           portal.azure.com                                                 canary-endpoint.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 productingestion.pricing.cp.microsoft.com                        productingestion.cp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 smsb-canary.fl.teams.microsoft.com                               *.smsb-canary.fl.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 kevlar.easia-public.dfs.api.iris.microsoft.com                   kevlar.easia-public.dfs.api.iris.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 smsb-canary.fl.teams.microsoft.com                               *.smsb-canary.fl.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 kevlar.eus2-public.dfs.api.iris.microsoft.com                    kevlar.eus2-public.dfs.api.iris.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 kevlar.neu.dfs.api.iris.microsoft.com                            kevlar.neu.dfs.api.iris.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 kevlar.wus2-public.dfs.api.iris.microsoft.com                    kevlar.wus2-public.dfs.api.iris.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 monitoring.geneva.keyvault.dfs.api.iris.microsoft.com            monitoring.geneva.keyvault.dfs.api.iris.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 s2s.dfs.api.iris.microsoft.com                                   s2s.dfs.api.iris.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           csharp.net                                                       answerdesk.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.batch.fairfaxdevops.speech.microsoft.com                       *.batch.fairfaxdevops.speech.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 dfs.api.iris.microsoft.com                                       *.dfs.api.iris.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 onepub-esrp-dev.westcentralus.cloudapp.azure.com                 onepub-esrp-dev.pme.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 collaboratedevsvc.microsoft.com                                  collaboratedevsvc.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 download.connectppe.microsoft.com                                download.connectppe.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 www.ezio.commerce.microsoft.com                                  ezio.commerce.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.windowsautopilot.microsoft.com                                 dfci.dds.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 api.test.powerva.microsoft.com                                   *.api.test.powerva.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 ppe.fp.wd.microsoft.com                                          *.ppe.fp.wd.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             iks.ideas.microsoft.com                                          iks.ideas.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           granite-cluster-uswe2-canary.teams.microsoft.com                 granite-cluster-uswe2-canary.teams.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 liquid-dev.microsoft.com                                         liquid-dev.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 kepler-tip.powerplatform.microsoft.com                           *.kepler-tip.powerplatform.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 smartscreen.microsoft.com                                        api.smartscreen.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 smartscreen.microsoft.com                                        api.smartscreen.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 smartscreen.microsoft.com                                        api.smartscreen.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 smartscreen.microsoft.com                                        api.smartscreen.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 smartscreen.microsoft.com                                        api.smartscreen.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 smartscreen.microsoft.com                                        api.smartscreen.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 kevlar.neu.dfs.api.iris.microsoft.com                            kevlar.neu.dfs.api.iris.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 dummyapnscert.credentials.auth.microsoft.com                     dummyapnscert.credentials.auth.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 ppe.fp.wd.microsoft.com                                          *.ppe.fp.wd.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 msrc-crm-ppe.corp.microsoft.com                                  msrc-auth-ppe.corp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.activitycenter.teams.microsoft.com                             *.activitycenter.teams.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 msrc-crm-ppe.corp.microsoft.com                                  msrc-cases-ppe.corp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 idwebelements.microsoft.com                                      idwebelements.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           ideas.powerpages.microsoft.com                                   ideas.powerpages.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           ideas.powerpages.microsoft.com                                   ideas.powerpages.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           Ideastest.powerpages.microsoft.com                               Ideastest.powerpages.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 liquid-dev.microsoft.com                                         liquid-dev.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 victor.ustcms.microsoft.com                                      victor.ustcms.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 binarysigning.pq-df.microsoft.com                                binarysigning.pq-df.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 partner.microsoft.com                                            partner.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 developer.microsoft.com                                          developer.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 liquid-ppe.microsoft.com                                         liquid-ppe.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 api.taskanalysis.microsoft.com                                   api.taskanalysis.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 liquid-dev.microsoft.com                                         liquid-dev.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 groups.data.microsoft.com                                        *.groups.data.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 irving-portal.msftvpn.ras.microsoft.com                          irving-portal.msftvpn.ras.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 irving.msftvpn-alt.ras.microsoft.com                             irving.msftvpn-alt.ras.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 irving.msftvpn.ras.microsoft.com                                 irving.msftvpn.ras.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 cheyenne-portal.msftvpn.ras.microsoft.com                        cheyenne-portal.msftvpn.ras.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 cheyenne.msftvpn-alt.ras.microsoft.com                           cheyenne.msftvpn-alt.ras.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 cheyenne.msftvpn.ras.microsoft.com                               cheyenne.msftvpn.ras.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 bay-portal.msftvpn.ras.microsoft.com                             bay-portal.msftvpn.ras.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 bay.msftvpn-alt.ras.microsoft.com                                bay.msftvpn-alt.ras.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 bay.msftvpn.ras.microsoft.com                                    bay.msftvpn.ras.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 live.applicationinsights.azure.com                               rt.applicationinsights.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 sapsearch-ci.microsoft.com                                       sapsearch-ci.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 msrc-crm-ppe.corp.microsoft.com                                  msrc-auth-ppe.corp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 capi.microsoft.com                                               capi.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 capi.microsoft.com                                               capi.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             internal.evergreen.microsoft.com                                 internal.evergreen.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 wd-prod-sseop-syncsvc.se.wd.microsoft.com                        wd-prod-sseop-syncsvc.se.wd.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 wd.prod.encrypt.se.wd.microsoft.com                              wd.prod.encrypt.se.wd.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 cre.raas.microsoft.com                                           cre.raas.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 groups-admin-ppe.data.microsoft.com                              groups-admin-ppe.data.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.sparta.p.dfp.microsoft.com                                     *.sparta.p.dfp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 shim.prod.cms.amp.microsoft.com                                  shim.prod.cms.amp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 accountmgmtservice.dce.mp.microsoft.com                          accountmgmtservice.dce.mp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.activitycenter-canary.teams.microsoft.com                      *.activitycenter-canary.teams.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.activitycenter-int.teams.microsoft.com                         *.activitycenter-int.teams.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 api.expenseaudit.microsoft.com                                   api.expenseaudit.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 expenseaudit.microsoft.com                                       expenseaudit.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 expenseaudit.microsoft.com                                       expenseaudit.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           hrprofile.microsoft.com                                          hrprofile.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           hrprofileeng.microsoft.com                                       hrprofileeng.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 web.powerva.microsoft.com                                        *.web.powerva.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 admin.powerapps.com                                              admin.businessplatform.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 csanalytics.powerplatform.microsoft.com                          *.csanalytics.powerplatform.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 web.powerva.microsoft.com                                        *.web.powerva.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 prod.geneva.keyvault.sitemuseprod.corp.microsoft.com             prod.geneva.keyvault.sitemuseprod.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 mspreviewppe-alt.corp.microsoft.com                              mspreviewppe-alt.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 sitemusedev.redmond.corp.microsoft.com                           authoringdev.redmond.corp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 adminanalytics.powerplatform.microsoft.com                       *.adminanalytics.powerplatform.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 admin.powerplatform.microsoft.com                                *.admin.powerplatform.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 security.cmsprod.corp.microsoft.com                              security.cmsprod.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 msauthoringppe.corp.microsoft.com                                msauthoringppe.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 msauthoringserviceppe.corp.microsoft.com                         msauthoringserviceppe.corp.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           store-images.microsoft.com                                       store-images.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 cmspreviewmain.redmond.corp.microsoft.com                        cmspreviewmain.redmond.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 groupsvc-int.corp.microsoft.com                                  groupsvc-int.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 mspreviewppe.corp.microsoft.com                                  mspreviewppe.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 smcmssvc.corp.microsoft.com                                      authoringsvc2.corp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 groupsvc.corp.microsoft.com                                      groupsvc.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 cmsprodprw.corp.microsoft.com                                    cmspreview2.corp.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           client-cvs.ratingsedge-ppe.rnr.microsoft.com                     client-cvs.ratingsedge-ppe.rnr.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.cantrackprod.careers.microsoft.com                             *.cantrackprod.careers.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.daas.microsoft.com                                             *.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.nam.daas.microsoft.com                                         *.daas.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           web.test.powerva.microsoft.com                                   *.web.test.powerva.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 i25ou2bsqlcor1.partners.extranet.microsoft.com                   i25ou2bsqlcor1.partners.extranet.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 ccckvm1.redmond.corp.microsoft.com                               ccckvm1.redmond.corp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 api.businessappdiscovery.microsoft.com                           *.api.businessappdiscovery.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 wpaadminuat.one.microsoft.com                                    wpaadminuat.one.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           test.sustainability.microsoft.com                                *.test.sustainability.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           licensing-test.powerplatform.microsoft.com                       *.licensing-test.powerplatform.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           kepler-test.powerplatform.microsoft.com                          *.kepler-test.powerplatform.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           csanalytics-test.powerplatform.microsoft.com                     *.csanalytics-test.powerplatform.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           dfanalytics-test.powerplatform.microsoft.com                     *.dfanalytics-test.powerplatform.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           migrationsvc.teams.microsoft.com                                 migrationsvc-apac.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           adminanalytics-test.powerplatform.microsoft.com                  *.adminanalytics-test.powerplatform.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 demandplanning.microsoft.com                                     demandplanning.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 kepler.powerplatform.microsoft.com                               *.kepler.powerplatform.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 licensing.powerplatform.microsoft.com                            *.licensing.powerplatform.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 web.powerva.microsoft.com                                        *.web.powerva.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           valensilab.myworkspace.microsoft.com                             *.valensilab.myworkspace.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 spectre-dev.microsoft.com                                        *.spectre-dev.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 api.businessappdiscovery.microsoft.com                           *.api.businessappdiscovery.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 lb.wiki.qa.social.microsoft.com                                  lb.wiki.qa.social.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 api.businessappdiscovery.microsoft.com                           *.api.businessappdiscovery.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 test.powerva.microsoft.com                                       *.test.powerva.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 web.powerva.microsoft.com                                        *.web.powerva.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 licensing.powerplatform.microsoft.com                            *.licensing.powerplatform.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 compassv2.trafficmanager.net                                     compassv2bcp.corp.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.healthbot.microsoft.com                                        *.healthbot.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 bisbx00.redmond.corp.microsoft.com                               bisbx00.redmond.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 cpvexperience.pc.microsoft.com                                   cpvexperience.pc.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             partneraccountexperience.microsoft.com                           partneraccountexperience.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 mbsinternal.microsoft.com                                        mbsinternal.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             partneraccountexperience.microsoft.com                           partneraccountexperience.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 opensource.microsoft.com                                         docs.opensource.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 cantrackdev.microsoft.com                                        cantrackdev.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 ecclusters.microsoft.com                                         ecclusters.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 webxtsvc.microsoft.com                                           webxtsvc.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 pomsapbrokerservice.cis.microsoft.com                            *.pomsapbrokerservice.cis.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.data.develop.api.speech.microsoft.com                          *.data.develop.api.speech.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           test.tb-rp.microsoft.com                                         test.tb-rp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 mbsinternal-d4.redmond.corp.microsoft.com                        mbsinternal-d4.redmond.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 mbs-d2.download.microsoft.com                                    mbs-d2.download.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 i07md1csqlsrs01.redmond.corp.microsoft.com                       i07md1csqlsrs01.redmond.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 ecconcessionsservice-d1.microsoft.com                            ecconcessionsservice-d1.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 ecconcessions-d1.microsoft.com                                   ecconcessions-d1.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 mbs-d4.partners.extranet.microsoft.com                           mbs-d4.partners.extranet.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 i07md4dsqlnet01.partners.extranet.microsoft.com                  i07md4dsqlnet01.partners.extranet.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 i07md1dsqlnet01.partners.extranet.microsoft.com                  i07md1dsqlnet01.partners.extranet.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 mbspdsqldntlsnr.partners.extranet.microsoft.com                  mbspdsqldntlsnr.partners.extranet.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 mbsauthor.partners.extranet.microsoft.com                        mbsauthor.partners.extranet.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 mbsauthor-d3.partners.extranet.microsoft.com                     mbsauthor-d3.partners.extranet.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 mbs.microsoft.com                                                mbs2.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 mbs.download.microsoft.com                                       mbs.download.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 i06mpdcsqldss01.redmond.corp.microsoft.com                       i06mpdcsqldss01.redmond.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 i01mpdcsqldss01.redmond.corp.microsoft.com                       i01mpdcsqldss01.redmond.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 ecconcessionsservice.microsoft.com                               ecconcessionsservice.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 ecconcessions.microsoft.com                                      ecconcessions.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 mbsinternal.redmond.corp.microsoft.com                           mbsinternal.gtm.corp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 businesscenter.mbs.microsoft.com                                 businesscenter.mbs.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           prod.tb-rp.microsoft.com                                         prod.tb-rp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.webxtsvc.microsoft.com                                         *.webxtsvc.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           activedirectory-coreidentity.corp.microsoft.com                  activedirectory-coreidentity.corp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           ppe.tb-rp.microsoft.com                                          ppe.tb-rp.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           ccnwux111m0802.network.microsoft.com                             ccnwux111m0802.network.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           ccnwux111m0801.network.microsoft.com                             ccnwux111m0801.network.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.data.develop.api.speech.microsoft.com                          *.data.develop.api.speech.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 syslog.gtm.corp.microsoft.com                                    aznesyslngp03.corp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 gwthsvc-prod.teams.microsoft.com                                 gwthsvc-prod.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           gwthsvc-prod.genevawarm.microsoft.com                            gwthsvc-prod.genevawarm.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           gwthsvc-prod.genevawarm.microsoft.com                            gwthsvc-prod.genevawarm.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           growthdatapipeline.westus2.prod.microsoft.com                    growthdatapipeline.westus2.prod.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 pcfv2.privacy.microsoft.com                                      pcfv2.privacy.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           growthdatapipeline.westus2.prod.microsoft.com                    growthdatapipeline.westus2.prod.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           gwthsvc-msft.genevawarm.microsoft.com                            gwthsvc-msft.genevawarm.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 test.ris.iris.microsoft.com                                      test.ris.iris.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 gwthsvc-msft.teams.microsoft.com                                 gwthsvc-msft.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           gwthsvc-dogfood.genevawarm.microsoft.com                         gwthsvc-dogfood.genevawarm.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             moet.microsoft.com                                               moet.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           westus2.growth-int.teams.microsoft.com                           westus2.growth-int.teams.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 test.ris.iris.microsoft.com                                      test.ris.iris.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 oaas-int.ezio.commerce.microsoft.com                             *.oaas-int.ezio.commerce.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           gwthsvc-dogfood.genevawarm.microsoft.com                         gwthsvc-dogfood.genevawarm.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           westus2.growth-int.teams.microsoft.com                           westus2.growth-int.teams.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               graph.microsoft.com                                              graph.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               ocv-slots-ppe.microsoft.com                                      ocv-slots-ppe.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               ocv-int.microsoft.com                                            ocv-int.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               tenantfeedback-test.microsoft.com                                tenantfeedback-test.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               ocv-ppe.microsoft.com                                            ocv-ppe.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.dyn365commerceinsights.microsoft.com                           *.dyn365commerceinsights.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             iks-powerbi.ideas.microsoft.com                                  iks-powerbi.ideas.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 dummyapnscert.credentials.auth.microsoft.com                     dummyapnscert.credentials.auth.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 dummyapnscert.credentials.auth.microsoft.com                     dummyapnscert.credentials.auth.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 dummyapnscert.credentials.auth.microsoft.com                     dummyapnscert.credentials.auth.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 dummyapnscert.credentials.auth.microsoft.com                     dummyapnscert.credentials.auth.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           westus2.granite-int.teams.microsoft.com                          westus2.granite-int.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           westus2.granite-int.teams.microsoft.com                          westus2.granite-int.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 wwcarchive-test.microsoft.com                                    wwcarchive-test.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 wwcarchive.microsoft.com                                         wwcarchive.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 dummyapnscert.credentials.auth.microsoft.com                     dummyapnscert.credentials.auth.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 dummyapnscert.credentials.auth.microsoft.com                     dummyapnscert.credentials.auth.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 agreement.l2o.microsoft.com                                      agreement.l2o.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 agreement.l2o.microsoft.com                                      agreement.l2o.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 agreement.l2o.microsoft.com                                      agreement.l2o.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 agreement.l2o.microsoft.com                                      agreement.l2o.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 a4odevaf.a4opacketcore.microsoft.com                             a4odevaf.a4opacketcore.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 a4oprodaf.a4opacketcore.microsoft.com                            a4oprodaf.a4opacketcore.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 gwthsvc-dogfood.teams.microsoft.com                              gwthsvc-dogfood.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 a4odevaf.a4opacketcore.microsoft.com                             a4odevaf.a4opacketcore.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 a4oprodaf.a4opacketcore.microsoft.com                            a4oprodaf.a4opacketcore.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 sfr1int.juno.microsoft.com                                       sfr1int.juno.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 devicelistenerppe.microsoft.com                                  devicelistenerppe.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 edi.ppe.supplychain.microsoft.com                                edi.ppe.supplychain.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 devicelistenerppe.microsoft.com                                  devicelistenerppe.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           38aa33bc-a7e7-4007-bfb2-e8b17f04aadc.microsoft.com               38aa33bc-a7e7-4007-bfb2-e8b17f04aadc.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         teamsnotifications-int.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 digitalattach-int.mp.microsoft.com                               *.digitalattach-int.mp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 genevamonitors.taptt.esqbiditestservices.microsoft.com           genevamonitors.taptt.esqbiditestservices.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 xlens.xboxlive.com                                               xlens-api.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 xreflect.xboxlive.com                                            xreflect.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 recommendations.microsoft.com                                    recommendations.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 msrc-ppe.microsoft.com                                           msrc-ppe.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 dummyapnscert.credentials.auth.microsoft.com                     dummyapnscert.credentials.auth.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 dummyapnscert.credentials.auth.microsoft.com                     dummyapnscert.credentials.auth.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 dummyapnscert.credentials.auth.microsoft.com                     dummyapnscert.credentials.auth.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 tip1.api.flow.microsoft.com                                      *.emea.tip1.api.flow.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 paymentmetadataservice.cp.microsoft.com                          paymentmetadataservice.cp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 paymentmethodsdiscovery.cp.microsoft.com                         paymentmethodsdiscovery.cp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 dcs-prod.cp.microsoft.com                                        dcs-prod.cp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           DBT-SQLUTIL-001.redmond.corp.microsoft.com                       DBT-SQLUTIL-001.redmond.corp.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           getconnected.microsoft.com                                       getconnected.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 capi-int.microsoft.com                                           capi-int.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 Portal.manage-dogfood.microsoft.com                              fei.DMSUA01.manage-dogfood.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           blogs.technet.microsoft.com                                      blogs.technet.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           docs.microsoft.com                                               *.docs.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 clouddns-ats-test-westus2.ats.clouddns-test.microsoft.com        clouddns-ats-test-westus2.ats.clouddns-test.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 api.bap.microsoft.com                                            *.api.bap.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           gsrnonprod.microsoft.com                                         gsrnonprod.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 groups-ppe.data.microsoft.com                                    *.groups-ppe.data.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 frontdoor.bigcatalog.commerce.microsoft.com                      *.bigcatalog.commerce.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 compassv2.trafficmanager.net                                     compassv2bcp.corp.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           deploymentschedulerint.microsoft.com                             deploymentschedulerint.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 liquid.microsoft.com                                             liquid.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 I07BNPDWEBVLC03.partners.extranet.microsoft.com                  I07BNPDWEBVLC03.partners.extranet.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 powerva.microsoft.com                                            *.powerva.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 powerva.microsoft.com                                            *.powerva.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 msppe.corp.microsoft.com                                         msppe.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 smcmssvc-int.corp.microsoft.com                                  authoringsvc2ppe.corp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 smcms-int.corp.microsoft.com                                     authoringsite2ppe.corp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 security.cmsint.corp.microsoft.com                               security.cmsint.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 ecconcessionsservice.microsoft.com                               ecconcessionsservice.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 ecconcessions.microsoft.com                                      ecconcessions.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 simplifiedpobprt.microsoft.com                                   simplifiedpobprt.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 pkgsqlppe01b.segroup.winse.corp.microsoft.com                    pkgsqlppe01b.segroup.winse.corp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 pkgsqlppe01a.segroup.winse.corp.microsoft.com                    pkgsqlppe01a.segroup.winse.corp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 reqmls.microsoft.com                                             reqmls.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 ecconcessionsservice-d2.microsoft.com                            ecconcessionsservice-d2.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 ecconcessions-d2.microsoft.com                                   ecconcessions-d2.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           ildcoffice-01.middleeast.corp.microsoft.com                      ildcoffice-01.middleeast.corp.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           haimb-srv2.middleeast.corp.microsoft.com                         haimb-srv2.middleeast.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.healthbot-test.microsoft.com                                   *.healthbot-test.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 awsui-uat.microsoft.com                                          awsui-uat.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 kd.dogfood.keys.ml.teams.microsoft.com                           kd.dogfood.keys.ml.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 dscprodservices.microsoft.com                                    dscprodservices.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 reqmls.microsoft.com                                             reqmls.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 queryservice.cdl.cp.microsoft.com                                external.mquery.ust.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 queryservice.cdl.cp.microsoft.com                                external.mquery.ust.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 kd.dogfood.keys.ml.teams.microsoft.com                           kd.dogfood.keys.ml.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 docs.watson.microsoft.com                                        docs.watson.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 int.decryptionservice.cdl.cp.microsoft.com                       int.decryptionservice.cdl.cp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 portalpoc.juno.microsoft.com                                     portalpoc.juno.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 payloadpoc.juno.microsoft.com                                    payloadpoc.juno.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 locbuildpoc.juno.microsoft.com                                   locbuildpoc.juno.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 schedulerpoc.juno.microsoft.com                                  schedulerpoc.juno.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 jsepoc.juno.microsoft.com                                        jsepoc.juno.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 lmhpoc.juno.microsoft.com                                        lmhpoc.juno.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 handoffpoc.juno.microsoft.com                                    handoffpoc.juno.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 handbackpoc.juno.microsoft.com                                   handbackpoc.juno.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 aes.s.microsoft.com                                              aes.s.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 redir.s.microsoft.com                                            asia.redir.s.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 ris.api.iris.microsoft.com                                       *.ris.api.iris.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.healthbot-dev.microsoft.com                                    *.healthbot-dev.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 partneraccounts-prod.eastus2.cloudapp.azure.com                  accountmgmtservice.dce.mp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.ussec.ti.microsoft.com                                         *.api.ussec.ti.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 SpeechStudio.publisher.geneva.keyvault.ussec.ti.microsoft.com    SpeechStudio.publisher.geneva.keyvault.ussec.ti.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               bookings-gcc.office.net                                          bookings-gcc.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           msazurelab01.myworkspace.microsoft.com                           *.msazurelab01.myworkspace.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 certauth.partnercompetency-PayOps.microsoft.com                  certauth.partnercompetency-PayOps.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 mdl-api-prod.corp.microsoft.com                                  mdl-api-prod.corp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           dmedge.sdg.teams.microsoft.com                                   auea.dmedge.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dm.sdg.teams.microsoft.com                                       auea.dm.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcmainipp.sdg.teams.microsoft.com                               auea-b.sbcmainipp.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcobipp.sdg.teams.microsoft.com                                 auea.sbcobipp.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcmainmgmt.sdg.teams.microsoft.com                              auea-b.sbcmainmgmt.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcteams.sdg.teams.microsoft.com                                 auea.sbcteams.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcobmgmt.sdg.teams.microsoft.com                                auea.sbcobmgmt.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dmedge.sdg.teams.microsoft.com                                   dmedge.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           dm.sdg.teams.microsoft.com                                       dm.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcmainmgmt.sdg.teams.microsoft.com                              euno.sbcmainmgmt.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcmainipp.sdg.teams.microsoft.com                               euno.sbcmainipp.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcobipp.sdg.teams.microsoft.com                                 euno.sbcobipp.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcobmgmt.sdg.teams.microsoft.com                                euno.sbcobmgmt.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcteams.sdg.teams.microsoft.com                                 euno.sbcteams.sdg.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 mdl-api-prod.corp.microsoft.com                                  mdl-api-prod.corp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcmainipp.sdg.teams.microsoft.com                               sbcmainipp.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dmedge.sdg.teams.microsoft.com                                   dmedge.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dm.sdg.teams.microsoft.com                                       dm.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcobipp.sdg.teams.microsoft.com                                 sbcobipp.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcteams.sdg.teams.microsoft.com                                 sbcteams.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcmainmgmt.sdg.teams.microsoft.com                              sbcmainmgmt.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcobmgmt.sdg.teams.microsoft.com                                sbcobmgmt.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dmedge.sdg.teams.microsoft.com                                   dmedge.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dm.sdg.teams.microsoft.com                                       dm.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           client.sdg.teams.microsoft.com                                   client.sdg.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcmainipp.sdg.teams.microsoft.com                               sbcmainipp.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcmainmgmt.sdg.teams.microsoft.com                              sbcmainmgmt.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcobipp.sdg.teams.microsoft.com                                 sbcobipp.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           sbcobmgmt.sdg.teams.microsoft.com                                sbcobmgmt.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           sbcteams.sdg.teams.microsoft.com                                 sbcteams.sdg.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 consumerapi.narada.microsoft.com                                 *.consumerapi.narada.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 testdiscovery.bigcatalog-int.commerce.microsoft.com              testdiscovery.bigcatalog-int.commerce.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 streamservice.cdl.cp.microsoft.com                               streamservice.cdl.cp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 decryptionservice.cdl.cp.microsoft.com                           decryptionservice.cdl.cp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 api.preview.powerva.microsoft.com                                api.preview.powerva.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 appmanagement.activedirectory.microsoft.com                      appmanagement.activedirectory.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           tminienv76svc.afstest.azure.net                                  kailani-getloc-test-01.one.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 streamservice.cdl.cp.microsoft.com                               streamservice.cdl.cp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 eventlistener.cdl.cp.microsoft.com                               eventlistener.cdl.cp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 bigcatalog.microsoft.com                                         *.bigcatalog.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           teamsgraph.teams.microsoft.com                                   teamsgraph.teams.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 calm.preprod.wta.auth.microsoft.com                              calm.preprod.wta.auth.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 coreidentity.microsoft.com                                       coreidentity.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 6cc27260-4891-48b5-9a41-88e9a750d1b3.microsoft.com               6cc27260-4891-48b5-9a41-88e9a750d1b3.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dev.rpa.microsoft.com                                            dev.rpa.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           teamsgraph.teams.microsoft.com                                   teamsgraph.teams.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 beta.coreidentity.microsoft.com                                  beta.coreidentity.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 beta.coreidentity.microsoft.com                                  beta.coreidentity.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 hrgateway.microsoft.com                                          hrgateway.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 hrgateway.microsoft.com                                          hrgateway.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.daas.microsoft.com                                             *.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.eur.daas.microsoft.com                                         *.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 QueryBrokerService.AMSUB0502.manage.microsoft.com                QueryBrokerService.AMSUB0502.manage.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 QueryBrokerService.AMSUB0501.manage.microsoft.com                QueryBrokerService.AMSUB0501.manage.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 QueryBrokerService.AMSUB0302.manage.microsoft.com                QueryBrokerService.AMSUB0302.manage.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 QueryBrokerService.AMSUA0202.manage.microsoft.com                QueryBrokerService.AMSUA0202.manage.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 QueryBrokerService.AMSUB0301.manage.microsoft.com                QueryBrokerService.AMSUB0301.manage.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 QueryBrokerService.AMSUA0201.manage.microsoft.com                QueryBrokerService.AMSUA0201.manage.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 QueryBrokerService.AMSUA0102.manage.microsoft.com                QueryBrokerService.AMSUA0102.manage.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 QueryBrokerService.AMSUA0101.manage.microsoft.com                QueryBrokerService.AMSUA0101.manage.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 api.bap.microsoft.com                                            *.api.bap.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             holoportation-relay.dev.collab.mixedreality.microsoft.com        *.holoportation-relay2.dev.collab.mixedreality.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             *.holoportation-relay.ppe.collab.mixedreality.microsoft.com      *.holoportation-relay2.ppe.collab.mixedreality.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             iks-powerbi-ppe.ideas.microsoft.com                              iks-powerbi-ppe.ideas.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             iks-powerbi-test.ideas.microsoft.com                             iks-powerbi-test.ideas.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 azrd3mp03.redmond.corp.microsoft.com                             azrd3mp03.redmond.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 azrd3mp02.redmond.corp.microsoft.com                             azrd3mp02.redmond.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 azrd3mp01.redmond.corp.microsoft.com                             azrd3mp01.redmond.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 QueryBrokerService.AMSUC0501.manage.microsoft.com                QueryBrokerService.AMSUC0501.manage.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 QueryBrokerService.AMSUB0202.manage.microsoft.com                QueryBrokerService.AMSUB0202.manage.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.daas.microsoft.com                                             *.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 QueryBrokerService.AMSUB0201.manage.microsoft.com                QueryBrokerService.AMSUB0201.manage.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.nam.daas.microsoft.com                                         *.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 QueryBrokerService.AMSUA0702.manage.microsoft.com                QueryBrokerService.AMSUA0702.manage.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 QueryBrokerService.AMSUA0701.manage.microsoft.com                QueryBrokerService.AMSUA0701.manage.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 QueryBrokerService.AMSUA0401.manage.microsoft.com                QueryBrokerService.AMSUA0401.manage.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           aadsync.teams.microsoft.com                                      aadsync.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           aadsync.teams.microsoft.com                                      aadsync.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           aadsync.teams.microsoft.com                                      aadsync.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           aadsync.teams.microsoft.com                                      aadsync.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           aadsync.teams.microsoft.com                                      aadsync.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           aadsync.teams.microsoft.com                                      aadsync.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           aadsync.teams.microsoft.com                                      aadsync.teams.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 azrd2mp07.redmond.corp.microsoft.com                             azrd2mp07.redmond.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 azrd2mp05.redmond.corp.microsoft.com                             azrd2mp05.redmond.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 azrd2mp03.redmond.corp.microsoft.com                             azrd2mp03.redmond.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 azrd2mp02.redmond.corp.microsoft.com                             azrd2mp02.redmond.corp.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           aadsync.teams.microsoft.com                                      aadsync.teams.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 azrd2mp01.redmond.corp.microsoft.com                             azrd2mp01.redmond.corp.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           targetinggroupsapiapp.corp.microsoft.com                         targetinggroupsapiapp.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.daas.microsoft.com                                             *.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.uae.daas.microsoft.com                                         *.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 sironaei.production.api.services.premier.microsoft.com           sironaei.production.api.services.premier.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 azau1mp03.fareast.corp.microsoft.com                             azau1mp03.fareast.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 azau1mp02.fareast.corp.microsoft.com                             azau1mp02.fareast.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 azau1mp01.fareast.corp.microsoft.com                             azau1mp01.fareast.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.asi.daas.microsoft.com                                         *.asi.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.daas.microsoft.com                                             *.asi.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 onecert-test.microsoft.com                                       onecert-test.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 opensource.microsoft.com                                         opensource.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.uk.daas.microsoft.com                                          *.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.daas.microsoft.com                                             *.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.spserv.microsoft.com                                           prod.provgateway.playready.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           api.sdh.sdg.teams.microsoft.com                                  apac.sdh.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           api.sdh.sdg.teams.microsoft.com                                  apac.sdh.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           api.sdh.sdg.teams.microsoft.com                                  apac.sdh.sdg.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 mediasync.microsoft.com                                          *.mediasync.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 spserv.microsoft-int.com                                         int.provgateway.playready.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.daas.microsoft.com                                             *.bra.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.bra.daas.microsoft.com                                         *.bra.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 api.securews.microsoft.com                                       api.securews.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.fptdev.microsoft.com                                           *.fptdev.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 api.securews.microsoft.com                                       api.securews.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.daas.microsoft.com                                             *.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.fra.daas.microsoft.com                                         *.daas.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               jobagent.dprodmgd106.spocerts.microsoft.com                      jobagent.dprodmgd106.spocerts.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 smartscreen.microsoft.com                                        *.smartscreen.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 canadacentral.telephony.convai.speech.microsoft.com              a.canadacentral.telephony.convai.speech.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 eastasia.telephony.convai.speech.microsoft.com                   a.eastasia.telephony.convai.speech.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 australiaeast.telephony.convai.speech.microsoft.com              a.australiaeast.telephony.convai.speech.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 southeastasia.telephony.convai.speech.microsoft.com              a.southeastasia.telephony.convai.speech.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 westeurope.telephony.convai.speech.microsoft.com                 a.westeurope.telephony.convai.speech.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 northeurope.telephony.convai.speech.microsoft.com                a.northeurope.telephony.convai.speech.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 controls-ppe.corp.microsoft.com                                  controls.cp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 southcentralus.telephony.convai.speech.microsoft.com             a.southcentralus.telephony.convai.speech.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 eastus2.telephony.convai.speech.microsoft.com                    a.eastus2.telephony.convai.speech.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 westus.telephony.convai.speech.microsoft.com                     a.westus.telephony.convai.speech.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 eastus.telephony.convai.speech.microsoft.com                     a.eastus.telephony.convai.speech.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 westus2.telephony.convai.speech.microsoft.com                    a.westus2.telephony.convai.speech.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 westus2.telephony.convai.speech.microsoft.com                    a.westus2.telephony.convai.speech.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 4dd936e6-47f9-4480-9a72-5386392acc44.microsoft.com               4dd936e6-47f9-4480-9a72-5386392acc44.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 powerva.microsoft.com                                            *.powerva.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 itpro-tams-poola-ip-uswe-dogfood.teams.microsoft.com             itpro-tams-poola-ip-uswe-dogfood.teams.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 aimdp-dev.microsoft.com                                          aimdp-dev.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 csanalytics.powerplatform.microsoft.com                          *.csanalytics.powerplatform.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 api.businessappdiscovery.microsoft.com                           *.api.businessappdiscovery.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 decryptionservice.cdl.cp.microsoft.com                           decryptionservice.cdl.cp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 sustainability.microsoft.com                                     *.sustainability.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 kepler.powerplatform.microsoft.com                               *.kepler.powerplatform.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 campaigntracking-int.mp.dps.microsoft.com                        campaigntracking-int.mp.dps.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 crossplatform-int.api.mp.dps.microsoft.com                       crossplatform-int.api.mp.dps.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 crossplatform-int.mgmt.mp.dps.microsoft.com                      crossplatform-int.mgmt.mp.dps.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 expmgmt-int.mp.dse.microsoft.com                                 expmgmt-int.mp.dse.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 groupmanagementservice-int.mp.dps.microsoft.com                  groupmanagementservice-int.mp.dps.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 monetization-api-int.mp.dse.microsoft.com                        monetization-api-int.mp.dse.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 monetizationkeyvault-int.mp.dse.microsoft.com                    monetizationkeyvault-int.mp.dse.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 cred.microsoft.com                                               cred.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             ecoshosting.microsoft.com                                        ecoshosting.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 yubiauw202.msftgreen.microsoft.com                               yubiauw202.msftgreen.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 yubiauw201.msftgreen.microsoft.com                               yubiauw201.msftgreen.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.masivideo.microsoft.com                                        *.masivideo.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 supportactions-eastus-dev.services.microsoft.com                 supportactions-eastus-dev.services.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 supportactions-westus2-dev.services.microsoft.com                supportactions-westus2-dev.services.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 notificationgatewaycontent-int.mp.dps.microsoft.com              notificationgatewaycontent-int.mp.dps.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 storeoffers-int.mp.dps.microsoft.com                             Storeoffers-int-eastus.mp.dps.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 storeoffersmgmt-int.mp.dps.microsoft.com                         Storeoffersmgmt-int-eastus.mp.dps.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 storeoffersui-int.mp.dps.microsoft.com                           Storeoffersui-int-eastus.mp.dps.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.controls.account.microsoft.com                                 *.controls.account.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 tip1.flow.microsoft.com                                          *.emea.tip1.flow.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 partnerservicesppe.microsoft.com                                 partnerservicesppe.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 yubiauw202.core.wdgue.microsoft.com                              yubiauw202.core.wdgue.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 token.cp.microsoft.com                                           inventory.token.cp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 token.cp.microsoft.com                                           minting.token.cp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 token.cp.microsoft.com                                           delivery.token.cp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 token.cp.microsoft.com                                           request.token.cp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 token.cp.microsoft.com                                           info.token.cp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 clientauth.sfmgt.prod.dcatbcdr.microsoft.com                     clientauth.sfmgt.prod.dcatbcdr.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 cd.public.disco.ml.teams.microsoft.com                           *.cd.ipdns.public.disco.ml.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 cd.public.disco.ml.teams.microsoft.com                           *.cd.ipdns.public.disco.ml.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 bisbx00.redmond.corp.microsoft.com                               bisbx00.redmond.corp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           middletier.teams.microsoft.com                                   *.middletier.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 paslp.partners.extranet.microsoft.com                            paslp.partners.extranet.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 msxplatformservices-test.microsoft.com                           msxplatformservices-test.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           api.sdh.sdg.teams.microsoft.com                                  apac.sdh.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           api.sdh.sdg.teams.microsoft.com                                  apac.sdh.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           api.sdh.sdg.teams.microsoft.com                                  apac.sdh.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           middletier.teams.microsoft.com                                   *.middletier.teams.microsoft.com…
+      185756 C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1           fasttrack.microsoft.com                                          fasttrack.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           api.sdh.sdg.teams.microsoft.com                                  api.sdh.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           api.sdh.sdg.teams.microsoft.com                                  api.sdh.sdg.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           api.sdh.sdg.teams.microsoft.com                                  api.sdh.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           api.sdh.sdg.teams.microsoft.com                                  api.sdh.sdg.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           api.sdh.sdg.teams.microsoft.com                                  api.sdh.sdg.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 dev.merge.microsoft.com                                          dev.merge.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 westcentralus.telephony.convai.speech.microsoft.com              a.westcentralus.telephony.convai.speech.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 centralindia.telephony.convai.speech.microsoft.com               a.centralindia.telephony.convai.speech.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 francecentral.telephony.convai.speech.microsoft.com              a.francecentral.telephony.convai.speech.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 uksouth.telephony.convai.speech.microsoft.com                    a.uksouth.telephony.convai.speech.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 ivruat.one.microsoft.com                                         ivruat.one.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 holoportation.prod.collab.mixedreality.microsoft.com             *.holoportation.prod.collab.mixedreality.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           auth.databox.microsoft.com                                       auth.databox.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           supportsession.auth.databox.microsoft.com                        supportsession.auth.databox.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           mgmt.databox.microsoft.com                                       mgmt.databox.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 powerplatform-int.microsoft.com                                  powerplatform-int.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 securedevices.microsoft.com                                      securedevices.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 reportabuse.int.microsoftedge.microsoft.com                      reportabuse.int.microsoftedge.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 powervirtualagents-int.microsoft.com                             powervirtualagents-int.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 powerautomate-int.microsoft.com                                  powerautomate-int.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 source.supplychain.microsoft.com                                 source.supplychain.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.daas.microsoft.com                                             *.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.uk.daas.microsoft.com                                          *.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 powerplatform.microsoft.com                                      powerplatform.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 powervirtualagents.microsoft.com                                 powervirtualagents.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 int-desktopanalytics.manage.microsoft.com                        int-desktopanalytics.manage.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 int-desktopanalytics-svc.manage.microsoft.com                    int-desktopanalytics-svc.manage.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 adminanalytics.powerplatform.microsoft.com                       *.adminanalytics.powerplatform.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 admin.powerplatform.microsoft.com                                *.admin.powerplatform.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 api.coreidentity.microsoft.com                                   api.coreidentity.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 powerautomate.microsoft.com                                      powerautomate.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 QueryBrokerService.AMSUD0101.manage.microsoft.com                QueryBrokerService.AMSUD0101.manage.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 CorrelationService.aus.manage.microsoft.com                      CorrelationService.aus.manage.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 ingestion.groups-admin.data.microsoft.com                        ingestion.groups-admin.data.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 ingestion.groups-admin-ppe.data.microsoft.com                    ingestion.groups-admin-ppe.data.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 make.powerpages.microsoft.com                                    *.make.powerpages.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 edi.supplychain.microsoft.com                                    edi.supplychain.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 api.supplychain.microsoft.com                                    api.supplychain.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.nebulatestpublic.rmb.corp.microsoft.com                        *.nebulatestpublic.rmb.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 powerva.microsoft.com                                            *.powerva.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 appservice.northwest.azs-longhaul-01.selfhost.corp.microsoft.com appservice.northwest.azs-longhaul-01.selfhost.corp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 appservice.northwest.azs-longhaul-01.selfhost.corp.microsoft.com appservice.northwest.azs-longhaul-01.selfhost.corp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 appservice.northwest.azs-longhaul-01.selfhost.corp.microsoft.com api.appservice.northwest.azs-longhaul-01.selfhost.corp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 communityhubtest.microsoft.com                                   communityhubtest.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           mgmt.databox.microsoft.com                                       mgmt.databox.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           auth.databox.microsoft.com                                       auth.databox.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           supportsession.auth.databox.microsoft.com                        supportsession.auth.databox.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 vlresendtool.microsoft.com                                       vlresendtool.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 i2.services.social.microsoft.com                                 i2.services.social.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 i4.services.social.microsoft.com                                 i4.services.social.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 i3.services.social.microsoft.com                                 i3.services.social.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 i2.services.social.microsoft.com                                 i2.services.social.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 api.coreidentity.microsoft.com                                   api.coreidentity.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             internal.evergreen.microsoft.com                                 internal.evergreen.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 alias.coreidentity.microsoft.com                                 alias.coreidentity.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.granite.teams.microsoft.com                                    *.granite.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 alias.coreidentity.microsoft.com                                 alias.coreidentity.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 mailbox.coreidentity.microsoft.com                               mailbox.coreidentity.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 titanbyod-test-api.corp.microsoft.com                            titanbyod-test-api.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 wincommsppe.redmond.corp.microsoft.com                           wincommsapippe.redmond.corp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 powerva.microsoft.com                                            *.powerva.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 powerva.microsoft.com                                            *.powerva.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 api.bap.microsoft.com                                            *.api.bap.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.bra.daas.microsoft.com                                         *.bra.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.daas.microsoft.com                                             *.bra.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.mgmt.ss.wd.microsoft.com                                       *.mgmt.ss.wd.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.ind.daas.microsoft.com                                         *.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.daas.microsoft.com                                             *.daas.microsoft.com…
+      185756 C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1           preview-insider.microsoft.com                                    preview-insider.microsoft.com
+      185756 C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1           msstoreapiperf.microsoft.com                                     msstoreapiperf.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 azuremarketplace.microsoft.com                                   azuremarketplace.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 api.powerva.microsoft.com                                        api.powerva.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           tokenservice-dev.unified.microsoft.com                           tokenservice-dev.unified.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           servicescatalog-dev.unified.microsoft.com                        servicescatalog-dev.unified.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           group-dev.unified.microsoft.com                                  group-dev.unified.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           fas-dev.unified.microsoft.com                                    fas-dev.unified.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 api.businessappdiscovery.microsoft.com                           *.api.businessappdiscovery.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 csanalytics.powerplatform.microsoft.com                          *.csanalytics.powerplatform.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 vlresendtoolppe.microsoft.com                                    vlresendtoolppe.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 bencertificateprd.redmond.corp.microsoft.com                     bencertificateprd.redmond.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 ecdmuat1.redmond.corp.microsoft.com                              ecdmuat1.redmond.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 websectestsite.microsoft.com                                     websectestsite.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 preprod.powerva.microsoft.com                                    *.preprod.powerva.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 heracles-back-web-prd.microsoft.com                              heracles-back-web-prd.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 heracles-back-web-prd.microsoft.com                              heracles-back-web-prd.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 api.powerva.microsoft.com                                        api.powerva.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 myworkspace.microsoft.com                                        myworkspace.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 titanbyod-test.corp.microsoft.com                                titanbyod-test.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 dynamics-int.microsoft.com                                       dynamics-int.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 powerbi-int.microsoft.com                                        powerbi-int.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 sfcluster.eus.prod.asi.microsoft.com                             sfcluster.eus.prod.asi.microsoft.com
+      185756 C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1           msstoreapiqa.microsoft.com                                       msstoreapiqa.microsoft.com
+      185756 C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1           msstoreapippe.microsoft.com                                      msstoreapippe.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           teamsnotifications-int.teams.microsoft.com                       teamsnotifications-int.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           teamsnotifications-int.teams.microsoft.com                       teamsnotifications-int.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 sfcluster.weu.prod.asi.microsoft.com                             sfcluster.weu.prod.asi.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 powerquery-int.microsoft.com                                     powerquery-int.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 cre.raas.microsoft.com                                           cre.raas.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           in.applicationinsights.azure.com                                 dc.applicationinsights.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 CorrelationService.sea.manage.microsoft.com                      CorrelationService.sea.manage.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             api.ams.gcc.teams.microsoft.com                                  *.api.ams.gcc.teams.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             api.ams.gcc.teams.microsoft.com                                  *.api.ams.gcc.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.teamsnotifications.teams.microsoft.com                         *.teamsnotifications.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 api.flow.microsoft.com                                           api.flow.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 flow.microsoft.com                                               *.asia.flow.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 QueryBrokerService.AMSUA0801.manage.microsoft.com                QueryBrokerService.AMSUA0801.manage.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 QueryBrokerService.AMSUB0601.manage.microsoft.com                QueryBrokerService.AMSUB0601.manage.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 CorrelationService.weu.manage.microsoft.com                      CorrelationService.weu.manage.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 QueryBrokerService.AMSUC0301.manage.microsoft.com                QueryBrokerService.AMSUC0301.manage.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 QueryBrokerService.AMSUC0101.manage.microsoft.com                QueryBrokerService.AMSUC0101.manage.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 admin.powerapps.com                                              admin.businessplatform.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 QueryBrokerService.AMSUB0102.manage.microsoft.com                QueryBrokerService.AMSUB0102.manage.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.teamsnotifications.teams.microsoft.com                         *.teamsnotifications.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter.teams.microsoft.com                                  cachewriter-ae.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           chatsvcagg.teams.microsoft.com                                   chatsvcagg-df.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           chatsvcagg-test.teams.microsoft.com                              chatsvcagg-test.teams.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 QueryBrokerService.AMSUB0101.manage.microsoft.com                QueryBrokerService.AMSUB0101.manage.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 QueryBrokerService.AMSUA0502.manage.microsoft.com                QueryBrokerService.AMSUA0502.manage.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 QueryBrokerService.AMSUA0501.manage.microsoft.com                QueryBrokerService.AMSUA0501.manage.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 QueryBrokerService.AMSUA0601.manage.microsoft.com                QueryBrokerService.AMSUA0601.manage.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 guestwireless.corp.microsoft.com                                 diedubgrarcp01.corp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 licensing.powerplatform.microsoft.com                            *.licensing.powerplatform.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.telecommandsvc.microsoft.com                                   *.telecommandsvc.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 msftguest-virtual.partners.extranet.microsoft.com                msftguest-virtual.partners.extranet.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 admin.perf.order.commerce.microsoft.com                          admin.perf.order.commerce.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 journal.perf.order.commerce.microsoft.com                        journal.perf.order.commerce.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 journalindex.perf.order.commerce.microsoft.com                   journalindex.perf.order.commerce.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 service.perf.order.commerce.microsoft.com                        service.perf.order.commerce.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 mailbox.coreidentity.microsoft.com                               mailbox.coreidentity.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 caspian-vpn.ras.microsoft.com                                    caspian-vpn.ras.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 dev.bcs.speech.microsoft.com                                     dev.bcs.speech.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 QueryBrokerService.AMSUA0602.manage.microsoft.com                QueryBrokerService.AMSUA0602.manage.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 admin.powerplatform.microsoft.com                                *.admin.powerplatform.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 CorrelationService.wus2.manage.microsoft.com                     CorrelationService.wus2.manage.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 adminanalytics.powerplatform.microsoft.com                       *.adminanalytics.powerplatform.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 smartoverage-int.microsoft.com                                   *.smartoverage-int.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.mec.infra.teams.microsoft.com                                  *.mec.infra.teams.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.mec.infra.teams.microsoft.com                                  *.mec.infra.teams.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.mec.infra.teams.microsoft.com                                  *.mec.infra.teams.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 web.powerva.microsoft.com                                        *.web.powerva.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 csanalytics.powerplatform.microsoft.com                          *.csanalytics.powerplatform.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.mec.infra.teams.microsoft.com                                  *.mec.infra.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           officecdn.microsoft.com                                          i.officecdn.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           officecdn.microsoft.com                                          fs-edog.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cvs.ppe.binglocal.microsoft.com                                  cvs.ppe.binglocal.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cvs.binglocal.microsoft.com                                      cvs.binglocal.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 composerweb-int.dps.mp.microsoft.com                             composerweb-int.dps.mp.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           testrenewalcert1.fxdataes.microsoft.com                          testrenewalcert1.fxdataes.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           testrenewalcert1.fxdataes.microsoft.com                          testrenewalcert1.fxdataes.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           testrenewalcert1.fxdataes.microsoft.com                          testrenewalcert1.fxdataes.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           testrenewalcert1.fxdataes.microsoft.com                          testrenewalcert1.fxdataes.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.int.oasis.microsoft.com                                        *.int.oasis.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           telecommand.telemetry.microsoft.com                              telecommand.telemetry.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 api.powerva.microsoft.com                                        api.powerva.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 attributestoreui.microsoft.com                                   attributestoreui.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 msaasqueryserviceapi.trafficmanager.net                          msaasqueryserviceapi.support.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 admin.powerapps.com                                              admin.businessplatform.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 api.businessappdiscovery.microsoft.com                           *.api.businessappdiscovery.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 licensing.powerplatform.microsoft.com                            *.licensing.powerplatform.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 admin.powerapps.com                                              admin.businessplatform.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 licensing.powerplatform.microsoft.com                            *.licensing.powerplatform.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 documentservice-aad-dev-eus.invoice.microsoft.com                documentservice-aad-dev-eus.invoice.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 irisrps.microsoft.com                                            irisrps.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 customers.microsoft.com                                          customers.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 api.msrc-ppe.microsoft.com                                       api.msrc-ppe.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 rr.office.microsoft.com                                          rr.office.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 AP01.mtm.microsoft.com                                           AP01.mtm.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 EU02.mtm.microsoft.com                                           EU02.mtm.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 graph.microsoft.com                                              graph.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 brerm.microsoft.com                                              brerm.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 NA02.mtm.microsoft.com                                           NA02.mtm.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 dataes.microsoft.com                                             dataes.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 fpt.microsoft.com                                                fpt2.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 tenantpolicy.infra.teams.microsoft.com                           tenantpolicy.infra.teams.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.hub.microsoft.com                                              *.hub.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 businesscaseserviceencr-prod.redmond.corp.microsoft.com          businesscaseserviceencr-prod.redmond.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 speappseast-vault.corp.microsoft.com                             speappseast-vault.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 speappseast-awx.corp.microsoft.com                               speappseast-awx.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 speappseast-keycloak.corp.microsoft.com                          speappseast-keycloak.corp.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.mif.pstnhub.microsoft.com                                      *.mif.pstnhub.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cttpor61mm0802.network.microsoft.com                             cttpor61mm0802.network.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cttpor61mm0801.network.microsoft.com                             cttpor61mm0801.network.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 dcg-beta.microsoft.com                                           dcg-beta.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 pkgsvcdev01.segroup.winse.corp.microsoft.com                     pkgsvcdev01.segroup.winse.corp.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           fareast.corp.microsoft.com                                       fareast.corp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           fareast.corp.microsoft.com                                       fareast.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 api.partnerreferrals.microsoft.com                               api.partnerreferrals.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 wsd-buildandpackagingconnector.segroup.winse.corp.microsoft.com  wsd-buildandpackagingconnector.segroup.winse.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 prod.servicefabric.customermaster.fd.cloud.microsoft.com         prod.servicefabric.customermaster.fd.cloud.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 prod.iis.customermaster.fd.cloud.microsoft.com                   jcmsfd.account.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.holoportation-relay.prod.collab.mixedreality.microsoft.com     *.holoportation-relay2.prod.collab.mixedreality.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 azfcsnediopsq21.redmond.corp.microsoft.com                       azfcsnediopsq21.redmond.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 azfcsnediopsq2.redmond.corp.microsoft.com                        azfcsnediopsq2.redmond.corp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           esxp.microsoft.com                                               aceskills.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           esxp.microsoft.com                                               aceskills.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           dabdelmaks.myworkspace.microsoft.com                             *.dabdelmaks.myworkspace.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 azfcsnediopsq19.redmond.corp.microsoft.com                       azfcsnediopsq19.redmond.corp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           client-cvs.ratingsedge-ppe.rnr.microsoft.com                     client-cvs.ratingsedge-ppe.rnr.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.notify.windows.com                                             *.cdpcs.access.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.notify.windows.com                                             *.cdpcs.access.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 extensionsecurity.microsoftedge.microsoft.com                    extensionsecurity.microsoftedge.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 vlasu1.microsoft.com                                             vlasu1.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 vlasu1int.microsoft.com                                          vlasu1int.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           pranshu-sspm.corp.microsoft.com                                  pranshu-sspm.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 powerva.microsoft.com                                            *.powerva.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 reports-ppe.teams.microsoft.com                                  reports-ppe.teams.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 azfcsnedmsusql.europe.corp.microsoft.com                         azfcsnedmsusql.europe.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 ecdmuat1.partners.extranet.microsoft.com                         ecdmuat1.partners.extranet.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 healthprobe.notification.cp.microsoft.com                        healthprobe.notification.cp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 notification.cp.microsoft.com                                    *.notification.cp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 mdl-api-prod.corp.microsoft.com                                  mdl-api-prod.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 mdl.corp.microsoft.com                                           mdl.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 config.teams.microsoft.com                                       *.config.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 config.microsoft.com                                             *.config.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.hub.microsoft.com                                              beta.hub.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.daas.microsoft.com                                             *.au.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.au.daas.microsoft.com                                          *.au.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 ori-dev.serviceshub.microsoft.com                                *.ori-dev.serviceshub.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 userattributes-int.mp.dps.microsoft.com                          userattributes-int.mp.dps.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 query-rt-int-eastus.cms.microsoft.com                            query-rt-int-eastus.cms.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               csp.microsoft.com                                                csp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.daas.microsoft.com                                             *.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.ind.daas.microsoft.com                                         *.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.controls.account.microsoft.com                                 *.controls.account.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 mdl-api-int.corp.microsoft.com                                   mdl-api-int.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.contentmoderator.cognitive.microsoft.com                       *.contentmoderator.cognitive.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.contentmoderator.cognitive.microsoft.com                       *.contentmoderator.cognitive.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 legacy.repos.opensource.microsoft.com                            legacy.repos.opensource-dev.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 opensource.microsoft.com                                         docs.opensource.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.innersource.microsoft.com                                      *.innersource.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           api.sdh.sdg.teams.microsoft.com                                  api.sdh.sdg.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 mdl-api-int.corp.microsoft.com                                   mdl-api-int.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 mdltest.microsoft.com                                            mdltest.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.mec.infra.teams.microsoft.com                                  *.mec.infra.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dbxsupportcert.auth.databox.microsoft.com                        dbxsupportcert.auth.databox.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           mgmt.databox.microsoft.com                                       mgmt.databox.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           auth.databox.microsoft.com                                       auth.databox.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 api.businessappdiscovery.microsoft.com                           *.api.businessappdiscovery.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 cdn.definitionupdates.microsoft.com                              cdn.definitionupdates.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 msaas-dev.support.microsoft.com                                  msaas-dev.support.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 msaas.support.microsoft.com                                      msaas.support.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 sapsearch-ci.microsoft.com                                       sapsearch-ci.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 sap.dev.sapsearch.microsoft.com                                  sap.dev.sapsearch.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 smoketest.dev.sapsearch.microsoft.com                            smoketest.dev.sapsearch.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 msaasqueryserviceintapi.trafficmanager.net                       msaasqueryserviceintapi.support.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               gfe.jobagentclient.dprodmgd250.spocerts.microsoft.com            gfe.jobagentclient.dprodmgd250.spocerts.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 clientcert.dev.sapsearch.microsoft.com                           clientcert.dev.sapsearch.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 api.bap.microsoft.com                                            *.api.bap.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           contactcentrequality.microsoft.com                               contactcentrequality.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 int.bcs.speech.microsoft.com                                     int.bcs.speech.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 dynamics.microsoft.com                                           dynamics.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 powerbi.microsoft.com                                            powerbi.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           noneu-admin.teams.microsoft.com                                  noneu-admin.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           eu-admin.teams.microsoft.com                                     eu-admin.teams.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 powerapps.microsoft.com                                          powerapps.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.azsacr.nw4.azurestack.selfhost.corp.microsoft.com              *.azsacr.nw4.azurestack.selfhost.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 taxdocument.microsoft.com                                        taxdocument.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 admin.peer5.skype.net                                            admin.ecdn.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 sdk.peer5.skype.net                                              sdk.ecdn.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 calm.corp.microsoft.com                                          calm.corp.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           autonomoussystems.microsoft.com                                  autonomoussystems.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 prod-eca.api.dfp.microsoft.com                                   prod-eca.api.dfp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 prod-eca.data.dfp.microsoft.com                                  prod-eca.data.dfp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 testconnectivity.microsoft.com                                   testconnectivity.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 dublin.msftvpn.ras.microsoft.com                                 dublin.msftvpn.ras.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 pgw.cp.microsoft.com                                             pgw.cp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 testconnectivity.microsoft.com                                   testconnectivity.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 commercepaycallback.cp.microsoft.com                             commercepaycallback.cp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 testconnectivity.microsoft.com                                   testconnectivity.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 rr.office.microsoft.com                                          rr.office.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 rr.office.microsoft.com                                          rr.office.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 dublin-portal.msftvpn.ras.microsoft.com                          dublin-portal.msftvpn.ras.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 dublin.msftvpn-alt.ras.microsoft.com                             dublin.msftvpn-alt.ras.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 advocacypublic.clouddamppe.microsoft.com                         advocacypublic.clouddamppe.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 london.msftvpn-alt.ras.microsoft.com                             london.msftvpn-alt.ras.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 herzelia-portal.msftvpn.ras.microsoft.com                        herzelia-portal.msftvpn.ras.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 herzelia.msftvpn.ras.microsoft.com                               herzelia.msftvpn.ras.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 prod-cca.api.dfp.microsoft.com                                   prod-cca.api.dfp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 herzelia.msftvpn-alt.ras.microsoft.com                           herzelia.msftvpn-alt.ras.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 munich-portal.msftvpn.ras.microsoft.com                          msftvpn.ras.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           noam.eersapi.teams-test.microsoft.com                            noam.eersapi.teams-test.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           noam.eersapi.teams-test.microsoft.com                            noam.eersapi.teams-test.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 munich.msftvpn.ras.microsoft.com                                 msftvpn.ras.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 munich.msftvpn-alt.ras.microsoft.com                             msftvpn-alt.ras.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 officecdn.microsoft.com                                          i.officecdn.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 api.dfp3.dynamics.com                                            api.dfp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 eca.data.dfp.microsoft.com                                       eca.data.dfp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 prod-cca.data.dfp.microsoft.com                                  prod-cca.data.dfp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 prod-cca.api.dfp.microsoft.com                                   prod-cca.api.dfp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 london.msftvpn.ras.microsoft.com                                 london.msftvpn.ras.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 london-ft.msftvpn-alt.ras.microsoft.com                          london-ft.msftvpn-alt.ras.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 london-ft.msftvpn.ras.microsoft.com                              london-ft.msftvpn.ras.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 smartoverage.microsoft.com                                       *.smartoverage.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           mastclient-con-int.des.microsoft.com                             mastclient-con-int.des.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 london-portal.msftvpn.ras.microsoft.com                          london-portal.msftvpn.ras.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 london.msftvpn-alt.ras.microsoft.com                             london.msftvpn-alt.ras.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 london.msftvpn.ras.microsoft.com                                 london.msftvpn.ras.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cuap01.afs.azure.net                                             kailani-cuap.one.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 sfcluster.beamprod.microsoft.com                                 sfcluster.beamprod.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           afsppcuap-dp.afs.azure.net                                       kailani-cuap.one.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           afsppeuap-dp.afs.azure.net                                       kailani-euap.one.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           promomail.microsoft.com                                          m.promomail.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           infoemails.microsoft.com                                         infoemails.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           notificationmails.microsoft.com                                  m.notificationmails.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 prod-eastasia.srch.esi.microsoft.com                             prod-centralus.srch.esi.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 edipoc.ppe.supplychain.microsoft.com                             edipoc.ppe.supplychain.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 cloudgis.corp.microsoft.com                                      cloudgisbeta.corp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 licensing.md.mp.microsoft.com                                    licensing.md.mp.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           afssharemetasigning-test.one.microsoft.com                       afssharemetasigning-test.one.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 mailhook.teams.microsoft.com                                     mailhook.teams.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 settings-ppe.data.microsoft.com                                  *.settings-ppe.data.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 mailhook.teams.microsoft.com                                     mailhook.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           mailhook.teams.microsoft.com                                     mailhook.teams.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 rp.sre.neu.sentinel.microsoft.com                                rp.sre.neu.sentinel.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 sfcluster.sre.asi.microsoft.com                                  sfcluster.sre.asi.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.fp.nw2.azurestack.selfhost.corp.microsoft.com                  *.fp.nw1.azurestack.selfhost.corp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 publicfileexchange.cp.microsoft.com                              publicfileexchange.cp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 nebcheckout.corp.microsoft.com                                   nebcheckout.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 security.cmsppe.corp.microsoft.com                               security.cmsppe.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 lqpaasrunner.redmond.corp.microsoft.com                          lqpaasrunner.redmond.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 smcms.corp.microsoft.com                                         authoringsite2.corp.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           csharp.net                                                       answerdesk.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 liquidrunner.redmond.corp.microsoft.com                          liquidrunner.redmond.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 liquid-ppe.microsoft.com                                         liquid-ppe.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 ta.deploymentservice.int.exp.microsoft.com                       ta.deploymentservice.int.exp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.hub.microsoft.com                                              beta.hub.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.hub.microsoft.com                                              beta.eu.hub.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.hub.microsoft.com                                              beta.eu.hub.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 iis.prod.customermaster.cloud.microsoft.com                      accounts.bkgprocessing.cp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 fpt.microsoft.com                                                fpt2.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 firstparty.collections.commerce.microsoft.com                    *.firstparty.collections.commerce.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 fpt.microsoft.com                                                fpt2.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 xbox-collections.mp.microsoft.com                                *.xbox-collections.mp.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           collections.md.mp.microsoft.com                                  collections.md.mp.microsoft.com…
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               spocontentazureclient.dprodmgd301.spocerts.microsoft.com         spocontentazureclient.dprodmgd301.spocerts.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               jobagent.dprodmgd301.spocerts.microsoft.com                      jobagent.dprodmgd301.spocerts.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.cts.speech.microsoft.com                                       *.australiacentral2.cts.speech.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 liquid-dev.microsoft.com                                         liquid-dev.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 msgapi.teams.microsoft.com                                       *.msgapi.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 cloudorchestrator.bigcatalog-ac.commerce.microsoft.com           *.bigcatalog-ac.commerce.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.tts-frontend.speech.microsoft.com                              *.tts-frontend.speech.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 permission-int.teams.microsoft.com                               *.permission-int.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 permission-int.teams.microsoft.com                               *.permission-int.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 permission-int.teams.microsoft.com                               *.permission-int.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 permission-int.teams.microsoft.com                               *.permission-int.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 permission-int.teams.microsoft.com                               *.permission-int.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 einvoicetest.microsoft.com                                       einvoicetest.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 msgapi.teams.microsoft.com                                       *.msgapi.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 clientauth.sfmgt.dev.dcatbcdr.microsoft.com                      clientauth.sfmgt.dev.dcatbcdr.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 azfcscusyncpsql.redmond.corp.microsoft.com                       azfcscusyncpsql.redmond.corp.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           supportsession.auth.databox.microsoft.com                        supportsession.auth.databox.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           auth.databox.microsoft.com                                       auth.databox.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           mgmt.databox.microsoft.com                                       mgmt.databox.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 s3connect.microsoft.com                                          s3connect.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 azfcsjpseaprosq.fareast.corp.microsoft.com                       azfcsjpseaprosq.fareast.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 partnerquoteumuat.microsoft.com                                  partnerquoteumuat.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 licensingb2b.partners.extranet.microsoft.com                     licensingb2b.partners.extranet.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 azu1sqlgrtl.partners.extranet.microsoft.com                      azu1sqlgrtl.partners.extranet.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           a-jpea.prod.templates.tac.teams.microsoft.com                    a-jpea.prod.templates.tac.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 productcatalog.licensing.microsoft.com                           productcatalog.licensing.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 quoteservice.licensing.microsoft.com                             quoteservice.licensing.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 approvals.licensing.microsoft.com                                approvals.licensing.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 domaindata.licensing.microsoft.com                               domaindata.licensing.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 author.soundscape.microsoft.com                                  author.soundscape.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 orders.licensing.microsoft.com                                   orders.licensing.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 lcswebapi.licensing.microsoft.com                                lcswebapi.licensing.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 payments.licensing.microsoft.com                                 payments.licensing.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 notificationsservice.licensing.microsoft.com                     notificationsservice.licensing.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 benefit.licensing.microsoft.com                                  benefit.licensing.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 entitlement.licensing.microsoft.com                              entitlement.licensing.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 azcfitgrssq10.redmond.corp.microsoft.com                         azcfitgrssq10.redmond.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 sustainability.microsoft.com                                     *.sustainability.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 azcfitgrssq10.redmond.corp.microsoft.com                         azcfitgrssq10.redmond.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 partner.licensing.microsoft.com                                  partner.licensing.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 poet.orderservice.ppe.microsoft.com                              poet.orderservice.ppe.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 c.dogfood.ctrl.ml.teams.microsoft.com                            c.dogfood.ctrl.ml.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 campaign.kensho.microsoft.com                                    campaign.kensho.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.mec.infra.teams.microsoft.com                                  *.mec.infra.teams.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 rhui-1.microsoft.com                                             azure-rhui.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 c.dogfood.ctrl.ml.teams.microsoft.com                            c.dogfood.ctrl.ml.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 refdwmdsdev.redmond.corp.microsoft.com                           refdwmdsdev.redmond.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 refdwmdsdev.redmond.corp.microsoft.com                           refdwmdsdev.redmond.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 mdl-api-dev.corp.microsoft.com                                   mdl-api-dev.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 www.mslearning.microsoft.com                                     www.mslearning.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           refdwmds.redmond.corp.microsoft.com                              refdwmds.redmond.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 mdl-api-dev.corp.microsoft.com                                   mdl-api-dev.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 heracles-front-web-prd.microsoft.com                             heracles-front-web-prd.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.swz.daas.microsoft.com                                         *.daas.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.daas.microsoft.com                                             *.daas.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           ocingestion-int.mp.microsoft.com                                 *.ocingestion-int.mp.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           ustrl-int.mp.microsoft.com                                       *.ustrl-int.mp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 prod-cus.api.dfp.microsoft.com                                   prod-cus.api.dfp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 prod-eus2.api.dfp.microsoft.com                                  prod-eus2.api.dfp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 prod-neu.api.dfp.microsoft.com                                   prod-neu.api.dfp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 prod-neu.data.dfp.microsoft.com                                  prod-neu.data.dfp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 prod-cus.data.dfp.microsoft.com                                  prod-cus.data.dfp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 campaign.kensho.microsoft.com                                    campaign.kensho.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 adinquiry.bingads.microsoft.com                                  adinquiry.bingads.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           teamspush-test.teams.microsoft.com                               teamspush-test.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           teamsnotifications-test.teams.microsoft.com                      teamsnotifications-test.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cachewriter-test.teams.microsoft.com                             cachewriter-test.teams.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 onecert-test.microsoft.com                                       onecert-test.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               lists.microsoft.com                                              lists.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 auth.dcg.microsoft.com                                           auth.dcg.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           integratedsecurityservice.microsoft.com                          integratedsecurityservice.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           finaccess-pccc.microsoft.com                                     finaccess-pccc.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           finaccess-mercury.microsoft.com                                  finaccess-mercury.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           finaccess-mds.microsoft.com                                      finaccess-mds.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           finaccess-app.microsoft.com                                      finaccess-app.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           chatsvcagg-test.teams.microsoft.com                              chatsvcagg-test.teams.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 nonprod.ta.mtp.md.microsoft.com                                  nonprod.ta.mtp.md.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 msgapi.int.teams.microsoft.com                                   *.msgapi.int.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           msgapi.int.teams.microsoft.com                                   *.msgapi.int.teams.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.exp.microsoft.com                                              *.exp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 surfacesigning.corp.microsoft.com                                surfacesigning.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.holoportation-relay.prod.collab.mixedreality.microsoft.com     *.holoportation-relay2.prod.collab.mixedreality.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 purchase.md.mp.microsoft.com                                     purchase.md.mp.microsoft.com…
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               secretencryption.dprodmgd301.sharepoint.microsoft.com            secretencryption.dprodmgd301.sharepoint.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 beta.eu.ion.microsoft.com                                        beta.eu.ion.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 beta.ion.microsoft.com                                           beta.ion.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 schedule.microsoft.com                                           schedule.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 lb.profileweb.social.microsoft.com                               lb.profileweb.social.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 lb.profileweb.qa.social.microsoft.com                            lb.profileweb.qa.social.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.did.microsoft.com                                              beta.did.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.did.microsoft.com                                              beta.did.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 westus2.sr.speech.microsoft.com                                  westus2.sr.speech.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 beta.ion.microsoft.com                                           beta.ion.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 westus2.cris.speech.microsoft.com                                westus2.cris.speech.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 westus2.ggs.speech.microsoft.com                                 westus2.ggs.speech.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 westus2.dpp.speech.microsoft.com                                 westus2.dpp.speech.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 westus2.dgs.speech.microsoft.com                                 westus2.dgs.speech.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.controls.account.microsoft.com                                 *.controls.account.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.did.microsoft.com                                              beta.eu.did.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 westus2.sr.speech.microsoft.com                                  westus2.sr.speech.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 westus2.cris.speech.microsoft.com                                westus2.cris.speech.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.did.microsoft.com                                              beta.eu.did.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 westus2.ggs.speech.microsoft.com                                 westus2.ggs.speech.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 beta.eu.ion.microsoft.com                                        beta.eu.ion.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 westus2.dpp.speech.microsoft.com                                 westus2.dpp.speech.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 westus2.dgs.speech.microsoft.com                                 westus2.dgs.speech.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 beta.ion.microsoft.com                                           beta.ion.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.did.microsoft.com                                              beta.did.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 occommon-int.microsoft.com                                       *.occommon-int.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 wuppe.api.cognitive.microsoft.com                                wuppe.api.cognitive.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 fees-int.mp.microsoft.com                                        fees-int.mp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 admin.powerapps.com                                              admin.businessplatform.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 uifonpremiseserviceprod.microsoft.com                            uifonpremiseserviceprod.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 licensing.powerplatform.microsoft.com                            *.licensing.powerplatform.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 cmgatewaysigning.gateway.configmgr.manage.microsoft.com          cmgatewaysigning.gateway.configmgr.manage.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 midevproxy.sceplatform.microsoft.com                             midevproxy.sceplatform.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 gateway.configmgr.manage.microsoft.com                           as.gateway.configmgr.manage.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 cmgatewaysigning.gateway.configmgr.manage.microsoft.com          cmgatewaysigning.gateway.configmgr.manage.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 fpt.microsoft.com                                                fpt2.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 gateway.configmgr.manage.microsoft.com                           as.gateway.configmgr.manage.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 sigraphinfra.os.prod.v1.office.microsoft.com                     sigraphinfra.os.prod.v1.office.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 sigraphinfra.os.ppe.v1.office.microsoft.com                      sigraphinfra.os.ppe.v1.office.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 fpt.microsoft.com                                                fpt2.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 eventhub.redmond.azurestack.corp.microsoft.com                   *.eventhub.redmond.azurestack.corp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.exp.microsoft.com                                              *.exp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 inventory.mp.microsoft.com                                       *.inventory.md.mp.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           serviceprincipal-rtlsvc.retailservices-ppe.teams.microsoft.com   serviceprincipal-rtlsvc.retailservices-ppe.teams.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 ta.deploymentservice.exp.microsoft.com                           ta.deploymentservice.exp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 api.partnercenter.microsoft.com                                  api.partnercenter.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 billingjournalservice.cp.microsoft.com                           Billingjournalservice.ch1p.cp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 lineitemsetjournalservice.cp.microsoft.com                       lineitemsetjournalservice.ch1p.cp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 billingservice.cp.microsoft.com                                  billingservice.ch1p.cp.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 api.partnercenter-staging.microsoft.com                          api.partnercenter-staging.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 apsservices.corp.microsoft.com                                   apsservices.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 aps-portal.corp.microsoft.com                                    aps-portal.corp.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 cdnppe.definitionupdates.microsoft.com                           cdnppe.definitionupdates.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 cmgatewaysigning.gateway.configmgr.manage.microsoft.com          cmgatewaysigning.gateway.configmgr.manage.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 i25u1dvlslis.partners.extranet.microsoft.com                     i25u1dvlslis.partners.extranet.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 *.nam.daas.microsoft.com                                         *.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 *.daas.microsoft.com                                             *.daas.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 gateway.configmgr.manage.microsoft.com                           as.gateway.configmgr.manage.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 recipients.mcapirecipients.commerce.microsoft.com                *.recipients.mcapirecipients.commerce.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           refdwmds.redmond.corp.microsoft.com                              refdwmds.redmond.corp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 cmgatewaysigning.gateway.configmgr.manage.microsoft.com          cmgatewaysigning.gateway.configmgr.manage.microsoft.com
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 fpt.microsoft.com                                                fpt2.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 gateway.configmgr.manage.microsoft.com                           as.gateway.configmgr.manage.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 azfipjemusql02.redmond.corp.microsoft.com                        azfipjemusql02.redmond.corp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 cmgatewaysigning.gateway.configmgr.manage.microsoft.com          cmgatewaysigning.gateway.configmgr.manage.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 aad-attestation-test1.dps.mp.microsoft.com                       aad-attestation-test1.dps.mp.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 gateway.configmgr.manage.microsoft.com                           as.gateway.configmgr.manage.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 cmgatewaysigning.gateway.configmgr.manage.microsoft.com          cmgatewaysigning.gateway.configmgr.manage.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.mec.infra.teams.microsoft.com                                  *.mec.infra.teams.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 csanalytics.powerplatform.microsoft.com                          *.csanalytics.powerplatform.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 api.businessappdiscovery.microsoft.com                           *.api.businessappdiscovery.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 admin.powerapps.com                                              admin.businessplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 sustainability.microsoft.com                                     *.sustainability.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 gateway.configmgr.manage.microsoft.com                           as.gateway.configmgr.manage.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 csanalytics.powerplatform.microsoft.com                          *.csanalytics.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.businessappdiscovery.microsoft.com                           *.api.businessappdiscovery.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 adminanalytics.powerplatform.microsoft.com                       *.adminanalytics.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 kepler.powerplatform.microsoft.com                               *.kepler.powerplatform.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           azw-anse.test.watson.azure.com                                   anse.azurewatsontest.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.mgmt.gb.wd.microsoft.com                                       *.fe.gb.wd.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 mysecurity.microsoft.com                                         *.gb.wd.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.nw4.azurestack.selfhost.corp.microsoft.com                     *.adminhosting.nw4.azurestack.selfhost.corp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 msrc-keyserver.corp.microsoft.com                                msrc-keyserver.corp.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           ingress-agr.vienna.microsoft.com                                 ingress-agr.vienna.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 query-preview-mr-prod-westeu.cms.microsoft.com                   query-preview-mr-prod-eu.cms.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 query-mr-prod-westeu.cms.microsoft.com                           query-mr-prod-eu.cms.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 query-preview-mr-prod-westeu.cms.microsoft.com                   query-preview-mr-prod-eu.cms.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 query-mr-prod-westeu.cms.microsoft.com                           query-mr-prod-eu.cms.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           ocfm-int.mp.microsoft.com                                        *.ocfm-int.mp.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           ocfm-client-int.mp.microsoft.com                                 *.ocfm-client-int.mp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 web.test.powerva.microsoft.com                                   *.web.test.powerva.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 licensing-tie.powerplatform.microsoft.com                        *.licensing-tie.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 query-preview-mr-prod-westeu.cms.microsoft.com                   query-preview-mr-prod-eu.cms.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 query-mr-prod-westeu.cms.microsoft.com                           query-mr-prod-eu.cms.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           proxy-int.rl.microsoft.com                                       *.proxy-int.rl.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           rod-int.rl.microsoft.com                                         *.rod-int.rl.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           azureava.microsoft.com                                           azureava.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           warranty-client-int.mp.microsoft.com                             *.warranty-client-int.mp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 database.ci.ads.microsoft.com                                    database.ci.ads.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 query-rt-prod-eastap.cms.microsoft.com                           cdn-query.prod.cms.rt.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 query-preview-rt-prod-eastap.cms.microsoft.com                   querypre.prod.cms.rt.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 pubsub.msg.infra.gcc.teams.microsoft.com                         pubsub.msg.infra.gcc.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           azureava.microsoft.com                                           azureava.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 cmcatalogsvc.manage.microsoft.com                                cmcatalogsvc.manage.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 query-preview-rt-prod-eastap.cms.microsoft.com                   querypre.prod.cms.rt.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 query-rt-prod-eastap.cms.microsoft.com                           cdn-query.prod.cms.rt.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 cmcatalogsvc.manage.microsoft.com                                cmcatalogsvc.manage.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 wwlengprogslns.microsoft.com                                     wwlengprogslns.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 edge-auth.microsoft.com                                          edge-auth.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             internal.evergreen.microsoft.com                                 internal.evergreen.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 azcfitgrssq13.redmond.corp.microsoft.com                         azcfitgrssq13.redmond.corp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 xflow.microsoft.com                                              asimov-xflow.corp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 incentivesworkshops-int.pi.microsoft.com                         incentivesworkshops-int.pi.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 accounts.fd.jedi.microsoft.com                                   accounts.fd.jedi.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.partnerproficiency.microsoft.com                             api.partnerproficiency.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.partnerproficiency.microsoft.com                             api.partnerproficiency.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 preprod.adminanalytics.powerplatform.microsoft.com               adminanalytics-preprod.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 preprod.powerva.microsoft.com                                    *.preprod.powerva.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           azureava.microsoft.com                                           azureava.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 controls.cp.microsoft.com                                        controls.cp.microsoft.com…
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 controls-ppe.corp.microsoft.com                                  controls-ppe.corp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 controls-int.corp.microsoft.com                                  controls-int.corp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 query-rt-int-eastus.cms.microsoft.com                            query-preview-rt-int-eastus.cms.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           azureava.microsoft.com                                           azureava.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 invoicingjournal.cp.microsoft.com                                invoicingjournal.cp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 documentdetailjournal.cp.microsoft.com                           documentdetailjournal.cp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 sddclab-tools.corp.microsoft.com                                 sddclab-tools.corp.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               bookings.outlookapps.com                                         bookings.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 mymicrosofticmconnectorcertificate.microsoft.com                 mymicrosofticmconnectorcertificate.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.fptdev.microsoft.com                                           *.fptdev.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 preview.personnel.microsoft.com                                  preview.personnel.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.plm.microsoft.com                                              *.plm.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 mad.adinsight.bingads.microsoft.com                              mad.adinsight.bingads.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 make.powerpages.microsoft.com                                    *.make.powerpages.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 vlodocs.corp.microsoft.com                                       vlodocs.corp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 vlodocmain.corp.microsoft.com                                    vlodocmain.corp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 kepler.powerplatform.microsoft.com                               *.kepler.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 tll-netem-kvm.corp.microsoft.com                                 tll-netem-kvm.corp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 mysignins.microsoft.com                                          api.mysignins.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 admin.powerapps.com                                              admin.businessplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 sustainability.microsoft.com                                     *.sustainability.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 azfitvuatsql1.redmond.corp.microsoft.com                         azfitvuatsql1.redmond.corp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 mysignins.microsoft.com                                          api.mysignins.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           integratedsecurityserviceuat.microsoft.com                       integratedsecurityserviceuat.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           integratedsecurityservicedev.microsoft.com                       integratedsecurityservicedev.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           auth.databox.microsoft.com                                       auth.databox.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           mgmt.databox.microsoft.com                                       mgmt.databox.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           supportsession.auth.databox.microsoft.com                        supportsession.auth.databox.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 newhire.microsoft.com                                            newhire.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 azfcsseaiptusql.fareast.corp.microsoft.com                       azfcsseaiptusql.fareast.corp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 mpnprogramux.microsoft.com                                       mpnprogramux.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           ts-groupsadmin.targetingservice.services.microsoft.com           ts-groupsadmin.targetingservice.services.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.ppe.mgmt.fp.wd.microsoft.com                                   *.ppe.mgmt.fp.wd.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.develop.speech.microsoft.com                                   *.develop.speech.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.jpn.daas.microsoft.com                                         *.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.daas.microsoft.com                                             *.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.tas.exp.microsoft.com                                          *.tas.exp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 iamkubernetesprod.trafficmanager.net                             aadvisor.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 iamkubernetesprod.trafficmanager.net                             aadvisor.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 iamkubernetesprod.trafficmanager.net                             aadvisor.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 iamkubernetesprod.trafficmanager.net                             aadvisor.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 iamkubernetesprod.trafficmanager.net                             aadvisor.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 iamkubernetesprod.trafficmanager.net                             aadvisor.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 iamkubernetesprod.trafficmanager.net                             aadvisor.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 iamkubernetesprod.trafficmanager.net                             aadvisor.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 iamkubernetesprod.trafficmanager.net                             aadvisor.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 iamkubernetesprod.trafficmanager.net                             aadvisor.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 iamkubernetesprod.trafficmanager.net                             aadvisor.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 adnotifications.windowsazure.com                                 *.strongauthenticationservice.auth.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 iamkubernetesprod.trafficmanager.net                             aadvisor.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dfw.servicesnet.microsoft.com                                    dfw.servicesnet.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.prod.esm.microsoft.com                                         *.prod.esm.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           finaccess-pccc-uat.microsoft.com                                 finaccess-pccc-uat.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           finaccess-mercury-uat.microsoft.com                              finaccess-mercury-eng.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           finaccess-mds-uat.microsoft.com                                  finaccess-mds-uat.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           finaccessuat.microsoft.com                                       finaccessuat.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           finaccess-mds-engg.microsoft.com                                 finaccess-mds-engg.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           finaccess-engg-app.microsoft.com                                 finaccess-engg-app.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           onerf-keyvault-application.microsoft.com                         onerf-keyvault-application.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 xbox-collections.mp.microsoft.com                                *.xbox-collections.mp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 firstparty.collections.commerce.microsoft.com                    *.firstparty.collections.commerce.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 ppe.data.watson.microsoft.com                                    ppe.data.watson.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 NA01.mtm.microsoft.com                                           NA01.mtm.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 singapore-portal.msftvpn.ras.microsoft.com                       msftvpn.ras.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 singapore.msftvpn-alt.ras.microsoft.com                          msftvpn-alt.ras.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 EU01.mtm.microsoft.com                                           EU01.mtm.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 singapore.msftvpn.ras.microsoft.com                              msftvpn.ras.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 shanghai-portal.msftvpn.ras.microsoft.com                        msftvpn.ras.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 shanghai.msftvpn-alt.ras.microsoft.com                           msftvpn-alt.ras.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 shanghai.msftvpn.ras.microsoft.com                               msftvpn.ras.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 beijing-portal.msftvpn.ras.microsoft.com                         beijing-portal.msftvpn.ras.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cp101-int.do.dsp.mp.microsoft.com                                cp101-int.do.dsp.mp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 beijing.msftvpn-alt.ras.microsoft.com                            beijing.msftvpn-alt.ras.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 beijing.msftvpn.ras.microsoft.com                                beijing.msftvpn.ras.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 tokyo-ft.msftvpn.ras.microsoft.com                               msftvpn.ras.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 tokyo-portal.msftvpn.ras.microsoft.com                           msftvpn.ras.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 tokyo.msftvpn-alt.ras.microsoft.com                              msftvpn-alt.ras.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 tokyo.msftvpn.ras.microsoft.com                                  msftvpn.ras.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 healthcare.teams.microsoft.com                                   healthcare.teams.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           CnFEDS-AADAuthentication.mp.microsoft.com                        CnFEDS-AADAuthentication.mp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 powerva.microsoft.com                                            *.powerva.microsoft.com…
+      163652 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 05 healthcare.teams.microsoft.com                                   healthcare.teams.microsoft.com
+      163657 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 06 ids.microsoft.com                                                *.ids.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 int-desktopanalytics.manage.microsoft.com                        int-desktopanalytics.manage.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 ids.api.iris.microsoft.com                                       *.ids.api.iris.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 int.convai.speech.microsoft.com                                  int.convai.speech.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 int-desktopanalytics-svc.manage.microsoft.com                    int-desktopanalytics-svc.manage.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 centralindia.telephony.convai.speech.microsoft.com               a.centralindia.telephony.convai.speech.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.controls.account.microsoft.com                                 *.controls.account.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 encryption.appmanagement.activedirectory-ppe.microsoft.com       encryption.appmanagement.activedirectory-ppe.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 encryption.appmanagement.activedirectory.microsoft.com           encryption.appmanagement.activedirectory.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 groups-sandbox.data.microsoft.com                                *.groups-sandbox.data.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 supportsession.auth.databox.microsoft.com                        supportsession.auth.databox.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 auth.databox.microsoft.com                                       auth.databox.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.ppe.mgmt.dl.wd.microsoft.com                                   *.ppe.mgmt.dl.wd.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 digitalreservations-ppe.microsoft.com                            digitalreservations-ppe.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cxpdashboards.azurewebsites.net                                  polaris.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 digitalattach.mp.microsoft.com                                   *.digitalattach.mp.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             api.mspim.net                                                    myaccess.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             mygroups.microsoft.com                                           *.myapplications.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             appmanagement.activedirectory.microsoft.com                      appmanagement.activedirectory.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             myaccount.microsoft.com                                          api.myaccount.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             partner.ppe.repmap.microsoft.com                                 client.ppe.repmap.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             pas.windows.net                                                  authorization.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             invitations.microsoft.com                                        invitations.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             identity.microsoft.com                                           applications.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             myaccess.canary.microsoft.com                                    myaccess.canary.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             buildstarter-svc.corp.microsoft.com                              buildstarter-svc.corp.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             api.mspim.net                                                    myaccess.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             myaccount.microsoft.com                                          api.myaccount.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             pas.windows.net                                                  authorization.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             invitations.microsoft.com                                        invitations.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             partner.ppe.repmap.microsoft.com                                 client.ppe.repmap.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             identity.microsoft.com                                           applications.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             appmanagement.activedirectory.microsoft.com                      appmanagement.activedirectory.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             login.windows.net                                                iotauth.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             myaccess.canary.microsoft.com                                    myaccess.canary.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             mygroups.microsoft.com                                           *.myapplications.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             telemetrycollector.microsoft.com                                 iamtelemetrycollector.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.preprod.powerva.microsoft.com                                *.api.preprod.powerva.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.tip2.api.powerautomate.microsoft.com                           *.tip2.api.powerautomate.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 tip2.api.powerautomate.microsoft.com                             tip2.api.powerautomate.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 global.billing.prod.communication.microsoft.com                  *.billing.prod.communication.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.agallego.myworkspace.microsoft.com                             *.agallego.myworkspace.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 mysignins.microsoft.com                                          api.mysignins.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 fpt.microsoft.com                                                fpt2.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 us.atlas.microsoft.com                                           us.atlas.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 fpt.microsoft.com                                                fpt.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 fpt.microsoft.com                                                fpt2.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 fpt.microsoft.com                                                fpt2.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 fpt.microsoft.com                                                fpt.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 fpt.microsoft.com                                                fpt.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 DAUXINTCertint-desktopanalytics.manage.microsoft.com             DAUXINTCertint-desktopanalytics.manage.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.tts-frontend.speech.microsoft.com                              *.tts-frontend.speech.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 mastapi-int.microsoft.com                                        mastapi-dev.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cxpdashboards.azurewebsites.net                                  polaris.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cxpdashboards.azurewebsites.net                                  polaris.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 mast-int.microsoft.com                                           mast-dev.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.edgeoffer.microsoft.com                                      api.edgeoffer.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 iis.accounts.jedi.microsoft.com                                  accounts.jedi.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           azw-anse.test.watson.azure.com                                   anse.azurewatsontest.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           azw-anse.test.watson.azure.com                                   anse.azurewatsontest.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 adfshelpppe.microsoft.com                                        adfshelpppe.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           svcrefbms.corp.microsoft.com                                     svcrefbms.corp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 adfshelpppe.microsoft.com                                        adfshelpppe.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 urs.microsoft.com                                                telemetry.urs.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 adnotifications.windowsazure.com                                 *.strongauthenticationservice.auth.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 apiv2.prod.narada.microsoft.com                                  *.apiv2.prod.narada.microsoft.com…
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               portal.office.com                                                admin.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 wfmconnector.teams.microsoft.com                                 *.wfmconnector.teams.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 wfmconnector-ppe.teams.microsoft.com                             *.wfmconnector-ppe.teams.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 uat-centralus.srch.esi.microsoft.com                             bvt-centralus.srch.esi.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 kusto.aria.microsoft.com                                         eu.kusto.aria.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 kusto.aria.microsoft.com                                         eu.kusto.aria.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 kusto.aria.microsoft.com                                         eu.kusto.aria.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 kusto.aria.microsoft.com                                         eu.kusto.aria.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 kusto.aria.microsoft.com                                         eu.kusto.aria.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           client-cvs.ratingsedge-ppe.rnr.microsoft.com                     client-cvs.ratingsedge-ppe.rnr.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.healthbot.microsoft.com                                        *.healthbot.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 kusto.aria.microsoft.com                                         eu.kusto.aria.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 kusto.aria.microsoft.com                                         eu.kusto.aria.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 kusto.aria.microsoft.com                                         eu.kusto.aria.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 kusto.aria.microsoft.com                                         eu.kusto.aria.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.healthbot-test.microsoft.com                                   *.healthbot-test.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 dcsrdazersf1.corp.microsoft.com                                  dcsrdazersf1.corp.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           noruactionstest.microsoft.com                                    noruactionstest.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 benefitsnow.partners.extranet.microsoft.com                      benefitsnow.partners.extranet.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 cre.raas.microsoft.com                                           cre.raas.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.nam.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 kusto.aria.microsoft.com                                         eu.kusto.aria.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 kusto.aria.microsoft.com                                         eu.kusto.aria.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           middletier.teams.microsoft.com                                   *.middletier.teams.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.bap.microsoft.com                                            *.api.bap.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.healthbot-test.microsoft.com                                   *.healthbot-test.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 kusto.aria.microsoft.com                                         eu.kusto.aria.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 kusto.aria.microsoft.com                                         eu.kusto.aria.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 kepler.powerplatform.microsoft.com                               *.kepler.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 kepler.powerplatform.microsoft.com                               *.kepler.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 csanalytics.powerplatform.microsoft.com                          *.csanalytics.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 sustainability.microsoft.com                                     *.sustainability.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 admin.powerplatform.microsoft.com                                *.admin.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.businessappdiscovery.microsoft.com                           *.api.businessappdiscovery.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 sustainability.microsoft.com                                     *.sustainability.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 licensing.powerplatform.microsoft.com                            *.licensing.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 csanalytics.powerplatform.microsoft.com                          *.csanalytics.powerplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 osaumwebapi.gtm.corp.microsoft.com                               osaumwebapi.gtm.corp.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             middletier.gcc.teams.microsoft.com                               middletier.gcc.teams.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 wip.mam.manage-int.microsoft.com                                 eu.wip.mam.manage-int.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             middletier.gcc.teams.microsoft.com                               middletier.gcc.teams.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 sustainability.microsoft.com                                     *.sustainability.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 csanalytics.powerplatform.microsoft.com                          *.csanalytics.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 web.powerva.microsoft.com                                        *.web.powerva.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 sustainability.microsoft.com                                     *.sustainability.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 admin.powerapps.com                                              admin.businessplatform.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 adminanalytics.powerplatform.microsoft.com                       *.adminanalytics.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 csanalytics.powerplatform.microsoft.com                          *.csanalytics.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.businessappdiscovery.microsoft.com                           *.api.businessappdiscovery.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 ta.deploymentservice.exp.microsoft.com                           ta.deploymentservice.exp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 ta.deploymentservice.exp.microsoft.com                           ta.deploymentservice.exp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 ta.deploymentservice.int.exp.microsoft.com                       ta.deploymentservice.int.exp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 ta.deploymentservice.int.exp.microsoft.com                       ta.deploymentservice.int.exp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.tas.exp.microsoft.com                                          *.tas.exp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.tas.exp.microsoft.com                                          *.tas.exp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 appmanagement.activedirectory-ppe.microsoft.com                  appmanagement.activedirectory-ppe.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 csanalytics.powerplatform.microsoft.com                          *.csanalytics.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 admin.powerplatform.microsoft.com                                *.admin.powerplatform.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 kepler.powerplatform.microsoft.com                               *.kepler.powerplatform.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           euaworkflowprod.microsoft.com                                    euaworkfloweventprocessorprod.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           euatenantprod.microsoft.com                                      euatenantprod.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           euapolicyprod.microsoft.com                                      euapolicyapprovaleventprocessorprod.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           euapolicyprod.microsoft.com                                      euapolicyeventprocessorprod.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           euamigrationprod.microsoft.com                                   euamigrationprod.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           euadelegationprod.microsoft.com                                  euadelegationportal.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           euaauthorizationprod.microsoft.com                               euaauthorizationprod.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           euaaccessprovisioningprod.microsoft.com                          euaaccessbulkrequestprocessorprod.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 service.paymentstransaction.commerce.microsoft.com               service.paymentstransaction.commerce.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           inspire.microsoft.com                                            inspire.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.inspire.microsoft.com                                          *.inspire.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           scheduler.teams.microsoft.com                                    *.scheduler.teams.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.exp.microsoft.com                                              *.exp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.exp.microsoft.com                                              *.exp.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           test.supplier.microsoft.com                                      test.supplier.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 test.supplier-api.microsoft.com                                  test.supplier-api.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dev.oasis.microsoft.com                                        *.dev.oasis.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 vivace.int.exp.microsoft.com                                     vivace.int.exp.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             rpfe.classic.cp.microsoft.com                                    rpfe.classic.cp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.tas.exp.microsoft.com                                          *.tas.exp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 marketingsites-prod.microsoft.com                                marketingsites-int.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 service.onerf.microsoft.com                                      service.onerf.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.exp.microsoft.com                                              *.exp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.zaf.daas.microsoft.com                                         *.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.daas.microsoft.com                                             *.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 pfgold.dev.ustcms.microsoft.com                                  pfgold.dev.ustcms.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.zaf.daas.microsoft.com                                         *.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.daas.microsoft.com                                             *.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.daas.microsoft.com                                             *.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.eur.daas.microsoft.com                                         *.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.int.oasis.microsoft.com                                        *.int.oasis.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 onepub-esrp-dev.westcentralus.cloudapp.azure.com                 onepub-esrp-dev.pme.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 usagesyncagent.cp.microsoft.com                                  usagesyncagent.cp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 adminconsole.usage.cp.microsoft.com                              adminconsole.usage.cp.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 api.usage.cp.microsoft.com                                       api.usage.cp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 api.usage.cp.microsoft.com                                       api.usage.cp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 onepub-esrp-ppe.westcentralus.cloudapp.azure.com                 onepub-esrp-ppe.pme.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 ctpoperations.cp.microsoft.com                                   ctpoperations.co1.cp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.prod.oasis.microsoft.com                                       prod.geneva.keyvault.prod.oasis.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.ppe.oasis.microsoft.com                                        ppe.geneva.keyvault.ppe.oasis.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           mailhook.int.teams.microsoft.com                                 mailhook.int.teams.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           proton.northamerica.corp.microsoft.com                           proton.northamerica.corp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.dev.daas.microsoft.com                                         *.dev.daas.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.eur.dev.daas.microsoft.com                                     *.dev.daas.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 dsas360.microsoft.com                                            dsas360.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           deploymentschedulerselfhost.microsoft.com                        deploymentschedulerselfhost.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 primarycert.api-dev.support.microsoft.com                        primarycert.api-dev.support.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.data.develop.api.speech.microsoft.com                          *.data.develop.api.speech.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           mediabuilderacc-sourcelookup.trafficmanager.net                  mediabuilderacc-sourcelookup.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           mediabuilderacc-dropmap.trafficmanager.net                       mediabuilderacc-dropmap.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           mediabuilderacc-tools.trafficmanager.net                         mediabuilderacc-tools.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           mediabuilderacc.trafficmanager.net                               mediabuilderacc.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           mediabuilderacc-media.trafficmanager.net                         mediabuilderacc-media.microsoft.com
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.exp.microsoft.com                                              *.exp.microsoft.com…
+      163651 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 02 *.exp.microsoft.com                                              *.exp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.exp.microsoft.com                                              *.exp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.exp.microsoft.com                                              *.exp.microsoft.com…
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 *.exp.microsoft.com                                              *.exp.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           egrc.microsoft.com                                               egrc.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 azfcscucdmpsql7.redmond.corp.microsoft.com                       azfcscucdmpsql7.redmond.corp.microsoft.com
+      163653 C=US, O=Microsoft Corporation, CN=Microsoft Azure TLS Issuing CA 01 contentservice.dce.mp.microsoft.com                              contentservice.dce.mp.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           onepdmauth.rsm.microsoft.com                                     onepdmauth.rsm.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           tminienv9svc.afstest.azure.net                                   kailani-getloc-test-01.one.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           caedub001m1081.network.microsoft.com                             caedub001m1001.network.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           cuap01.afs.azure.net                                             kailani-cuap.one.microsoft.com…
+      185756 C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1           iridias.microsoft.com                                            iridias.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           pps.paymod.cp.microsoft.com                                      pps.paymod.cp.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           uatidentitymanagement.microsoft.com                              uatidentitymanagement.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           uatidentitymanagement.microsoft.com                              uatidentitymanagement.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           middletier.teams.microsoft.com                                   *.middletier.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           a-uswe-canary.prod.templates.tac.teams.microsoft.com             a-uswe-canary-cosmic.prod.templates.tac.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           euaworkflow.microsoft.com                                        euaworkfloweventprocessordev.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           euatenant.microsoft.com                                          euatenant.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           euapolicy.microsoft.com                                          euapolicy.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           euapolicy.microsoft.com                                          euapolicyeventprocessordev.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           euamigrationdev.microsoft.com                                    euamigrationdev.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           euaauthorization.microsoft.com                                   euaauthorization.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           euadelegationdev.microsoft.com                                   euadelegationdev.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           euaaccessprovisioning.microsoft.com                              euaaccessportaldev.microsoft.com…
+      185756 C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1           iridias.microsoft.com                                            iridias.microsoft.com
+      185756 C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1           cloudpc.microsoft.com                                            cloudpc.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           funfeedbackservices.corp.microsoft.com                           funfeedbackservices.corp.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             iks-test.ideas.microsoft.com                                     iks-test.ideas.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             iks-ppe.ideas.microsoft.com                                      iks-ppe.ideas.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           azsiaasctr.redmond.corp.microsoft.com                            azsiaasctr.redmond.corp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           azsflight-nw3.redmond.corp.microsoft.com                         azsflight-nw3.redmond.corp.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.nw2.azurestack.selfhost.corp.microsoft.com                     *.adminhosting.nw2.azurestack.selfhost.corp.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.nw1.azurestack.selfhost.corp.microsoft.com                     *.adminhosting.nw1.azurestack.selfhost.corp.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.nw3.azurestack.selfhost.corp.microsoft.com                     *.adminhosting.nw3.azurestack.selfhost.corp.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           extensionhostvm.redmond.corp.microsoft.com                       extensionhostvm.redmond.corp.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             internal.evergreen.microsoft.com                                 internal.evergreen.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           middletier.teams.microsoft.com                                   *.middletier.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           middletier.teams.microsoft.com                                   *.middletier.teams.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cosell.microsoft.com                                             cosell.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           msxpartnercenterbridge.preview.microsoft.com                     msxpartnercenterbridge.preview.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           msxpartnercenterbridge.microsoft.com                             msxpartnercenterbridge.microsoft.com
+      185756 C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1           deschutes-ppe.microsoft.com                                      deschutes-ppe.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             abc-fabric-er-production.corp.microsoft.com                      abc-fabric-er-production.corp.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             abc-fabric-staging.corp.microsoft.com                            abc-fabric-staging.corp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           azafsvexcelweb.redmond.corp.microsoft.com                        azafsvexcelweb.redmond.corp.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           canary.api.lockbox.microsoft.com                                 canary.api.lockbox.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           test.api.lockbox.microsoft.com                                   test.api.lockbox.microsoft.com
+      185756 C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1           afd-RDGateway-R1.wvd.microsoft.com                               afd-RDGateway-R1.wvd.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           getconnecteduat.microsoft.com                                    getconnecteduat.microsoft.com
+      185756 C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1           afd-RDGateway-R0.wvd.microsoft.com                               afd-RDGateway-R0.wvd.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           mgmt.databox.microsoft.com                                       mgmt.databox.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           supportsession.auth.databox.microsoft.com                        supportsession.auth.databox.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.flightproxy.teams.microsoft.com                                *.flightproxy.teams.microsoft.com
+      185756 C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1           review.startups.microsoft.com                                    review.startups.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           targetinggroupsapiapp.corp.microsoft.com                         targetinggroupsapiapp.corp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cisoconnections.microsoft.com                                    cisoconnections.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           scheduler.teams.microsoft.com                                    *.scheduler.teams.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           auth.databox.microsoft.com                                       auth.databox.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           auth.databox.microsoft.com                                       auth.databox.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           auth.databox.microsoft.com                                       auth.databox.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           mymlads.microsoft.com                                            mymlads.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             supportactions-dev.services.microsoft.com                        supportactions-dev.services.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             emails.infra.gcc.teams.microsoft.com                             emails.infra.gcc.teams.microsoft.com
+      185756 C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1           assist.microsoft.com                                             assist.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               jobagent.edog.spocerts.microsoft.com                             jobagent.edog.spocerts.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               jobagent.dprod.spocerts.microsoft.com                            jobagent.dprod.spocerts.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           msrc.corp.microsoft.com                                          msrc.corp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           ltprodweb.redmond.corp.microsoft.com                             ltprodweb.redmond.corp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           dlmbomprod.redmond.corp.microsoft.com                            dlmbomprod.redmond.corp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           dlmbom.redmond.corp.microsoft.com                                dlmbom.redmond.corp.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           *.PatrickHerman.myworkspace.microsoft.com                        *.PatrickHerman.myworkspace.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           WDXAsiaExperienceJapan2.microsoft.com                            WDXAsiaExperienceJapan2.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           windows.cert.geneva.keyvault.mi.microsoft.com                    windows.cert.geneva.keyvault.mi.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           targetinggroupsapiapp.corp.microsoft.com                         targetinggroupsapiapp.corp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           azafsvexcelsql.redmond.corp.microsoft.com                        azafsvexcelsql.redmond.corp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           ccnsuzb25m0803.network.microsoft.com                             ccnsuzb25m0803.network.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           ccnsuzb25m0802.network.microsoft.com                             ccnsuzb25m0802.network.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           ccnsuzb25m0801.network.microsoft.com                             ccnsuzb25m0801.network.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           ccnguataim0802.network.microsoft.com                             ccnguataim0802.network.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           ccnguataim0801.network.microsoft.com                             ccnguataim0801.network.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.communityleader.microsoft.com                                  *.communityleader.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           skype-sms-auth.communityleader.microsoft.com                     skype-sms-auth.communityleader.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           communityleader.microsoft.com                                    communityleader.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.api-ppe.support-aries.microsoft.com                            alda.api-ppe.support.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           preview.print.microsoft.com                                      preview.print.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             cluster.project.microsoft.com                                    cluster.project.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             cluster.project.microsoft.com                                    cluster.project.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           wvd-rdp.test.watson.azure.com                                    azurewatsontest.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           wvd-sas.test.watson.azure.com                                    azurewatsontest.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             onecert.core.microsoft.com                                       onecert.core.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             cluster.project.microsoft.com                                    cluster.project.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           noam.eersapi.teams-test.microsoft.com                            noam.eersapi.teams-test.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           noam.eersapi.teams-test.microsoft.com                            noam.eersapi.teams-test.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           noam.eersapi.teams-test.microsoft.com                            noam.eersapi.teams-test.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           noam.eersapi.teams-test.microsoft.com                            noam.eersapi.teams-test.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           calcuiuat.microsoft.com                                          calcuiuat.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             pipelinestudio.ideas.microsoft.com                               pipelinestudio.ideas.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             holoportationrelay.dev.collab.mixedreality.microsoft.com         *.holoportationrelay.dev.collab.mixedreality.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           noam.eersapi.teams-test.microsoft.com                            noam.eersapi.teams-test.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           noam.eersapi.teams-test.microsoft.com                            noam.eersapi.teams-test.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           noam.eersapi.teams-test.microsoft.com                            noam.eersapi.teams-test.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           noam.eersapi.teams-test.microsoft.com                            noam.eersapi.teams-test.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           dev-smoke.serviceshub.microsoft.com                              dev-smoke.serviceshub.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           portal.azure.com                                                 canary-endpoint.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           test.asimov.microsoft.com                                        test.asimov.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             internal.evergreen.microsoft.com                                 internal.evergreen.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           servicesuat.microsoft.com                                        aceskillsuat.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           servicesuat.microsoft.com                                        aceskillsuat.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           esxp-sit.microsoft.com                                           esxp-sit.microsoft.com
+       12313 C=US, O=DigiCert Inc, CN=DigiCert Cloud Services CA-1               test.microsoft.com                                               test.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           *.hghaith.myworkspace.microsoft.com                              *.hghaith.myworkspace.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           gsr.microsoft.com                                                gsr.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           gsr.microsoft.com                                                gsr.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           ris.api.iris.microsoft.com                                       *.ris.api.iris.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             mygroups.microsoft.com                                           *.myapplications.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             login.windows.net                                                iotauth.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             appmanagement.activedirectory.microsoft.com                      appmanagement.activedirectory.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             identity.microsoft.com                                           applications.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             myaccount.microsoft.com                                          api.myaccount.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             partner.ppe.repmap.microsoft.com                                 client.ppe.repmap.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             myaccess.canary.microsoft.com                                    myaccess.canary.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             invitations.microsoft.com                                        invitations.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             mygroups.microsoft.com                                           *.myapplications.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             login.windows.net                                                iotauth.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             partner.ppe.repmap.microsoft.com                                 client.ppe.repmap.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             myaccess.canary.microsoft.com                                    myaccess.canary.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             identity.microsoft.com                                           applications.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             appmanagement.activedirectory.microsoft.com                      appmanagement.activedirectory.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             invitations.microsoft.com                                        invitations.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             mobileappcommunicator.auth.microsoft.com                         mobileappcommunicator.auth.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             iamtelemetrycollector.microsoft.com                              iamtelemetrycollector.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             myaccount.microsoft.com                                          api.myaccount.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           tmisvcs.df.teams.microsoft.com                                   tmisvcs.df.teams.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             identity.microsoft.com                                           applications.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             mygroups.microsoft.com                                           *.myapplications.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             mobileappcommunicator.auth.microsoft.com                         mobileappcommunicator.auth.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             login.windows.net                                                iotauth.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             partner.ppe.repmap.microsoft.com                                 client.ppe.repmap.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             myaccess.canary.microsoft.com                                    myaccess.canary.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             myaccount.microsoft.com                                          api.myaccount.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             iamtelemetrycollector.microsoft.com                              iamtelemetrycollector.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             invitations.microsoft.com                                        invitations.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             appmanagement.activedirectory.microsoft.com                      appmanagement.activedirectory.microsoft.com…
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           3256c1ad-bf40-49c3-ade2-7e0a7222e8a8.microsoft.com               3256c1ad-bf40-49c3-ade2-7e0a7222e8a8.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             partneraccountexperience.microsoft.com                           partneraccountexperience.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           wallaby.microsoft.com                                            wallaby.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           pc2000.middleeast.corp.microsoft.com                             pc2000.middleeast.corp.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           3256c1ad-bf40-49c3-ade2-7e0a7222e8a8.microsoft.com               3256c1ad-bf40-49c3-ade2-7e0a7222e8a8.microsoft.com
+      177842 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 02           robo.partners.extranet.microsoft.com                             *.robo.partners.extranet.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           azw-anse.test.watson.azure.com                                   anse.azurewatsontest.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           azw-anse.test.watson.azure.com                                   anse.azurewatsontest.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           gamedev.microsoft.com                                            academic.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           csharp.net                                                       answerdesk.microsoft.com
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           cacomino.myworkspace.microsoft.com                               *.cacomino.myworkspace.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             pls-debug.ideas.microsoft.com                                    pls-debug.ideas.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+      177846 C=US, O=Microsoft Corporation, CN=Microsoft RSA TLS CA 01           reefcoral.myworkspace.microsoft.com                              *.reefcoral.myworkspace.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             graph.windows.net                                                *.logincert.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             onecert.core.microsoft.com                                       onecert.core.microsoft.com…
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             emails-ppe.azure.microsoft.com                                   emails-ppe.azure.microsoft.com
+        1191 C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA             relay.ks.cp.microsoft.com                                        relay.ks.cp.microsoft.com
+      177844 C=US, O=DigiCert Inc, CN=GeoTrust TLS DV RSA Mixed SHA256 2020 CA-1 sbc1.dvvashis.myworkspace.microsoft.com                          sbc1.dvvashis.myworkspace.microsoft.com
+      177844 C=US, O=DigiCert Inc, CN=GeoTrust TLS DV RSA Mixed SHA256 2020 CA-1 sbc1.sidlab.myworkspace.microsoft.com                            sbc1.sidlab.myworkspace.microsoft.com
 ```
