@@ -130,6 +130,7 @@ Used to convert a string into an array
 https://stackoverflow.com/questions/15927291/how-to-split-a-string-by-comma-ignoring-comma-in-double-quotes
         
 Version History
+```
 v2.0-20230306   Moved post-processing to its own function called Format-CRTResponse
 v1.6-20230111   Changed most Write-Host to Write-Verbose to be more like standard cmdlets
 		Changed Write-Host for the host not found to be a Write-Error
@@ -137,6 +138,7 @@ v1.5-20221227   Changed Deduplicate and ExcludeExpired to switch instead of bool
 		Changed Write-Output in End { } into a return
 		Moved return from End { } to the Proceess { } loop so it should be able to return partial values if something goes wrong
 		Added Write-Warning to non-terminating error messages
+```
     
 ## RELATED LINKS
 https://github.com/wordeater/Invoke-CRTRequest
