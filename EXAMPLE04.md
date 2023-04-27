@@ -1,1043 +1,827 @@
 ```
-PS> Invoke-CRTRequest "purple.com" -Deduplicate -ExcludeExpired -Verbose -Debug
-DEBUG: [2023-01-23 10:46:11]	Domain to search: purple.com
-DEBUG: [2023-01-23 10:46:11]	Deduplicate results? Yes
-DEBUG: [2023-01-23 10:46:11]	Exclude expired? Yes
-DEBUG: [2023-01-23 10:46:11]	Delay between retries: 5 seconds
-DEBUG: [2023-01-23 10:46:11]	Total number of retries: -1
-DEBUG: [2023-01-23 10:46:11]	Url to Invoke: https://crt.sh/?q=purple.com&output=json&deduplicate=Y&exclude=expired
-VERBOSE: [2023-01-23 10:46:11]	Invoke-RestMethod -Method "Get" -Uri "https://crt.sh/?q=purple.com&output=json&deduplicate=Y&exclude=expired"
+PS> Invoke-CRTRequest "purple.com" -Deduplicate -ExcludeExpired -Verbose
+
+VERBOSE: [2023-04-27 13:33:56]	Invoke-RestMethod -Method "Get" -Uri "https://crt.sh/?q=purple.com&output=json&deduplicate=Y&exclude=expired"
 VERBOSE: GET with 0-byte payload
 VERBOSE: received -byte response of content type application/json
 VERBOSE: Content encoding: utf-8
-VERBOSE: [2023-01-23 10:46:22]	Match found for "purple.com"
+VERBOSE: [2023-04-27 13:34:31]	Match found for "purple.com"
+VERBOSE: [2023-04-27 13:34:31]	Returned 78 results.
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : support.purple.com
+name_value      : support.purple.com
+id              : 9241592234
+entry_timestamp : 4/27/2023 12:40:46AM
+not_before      : 4/26/2023 11:40:46PM
+not_after       : 7/25/2023 11:40:45PM
+serial_number   : 03722dbf492f1b1943068dd5155c94714488
 
-search_domain              : purple.com
-common_name                : discount-engine-stage.purple.com
-name_value                 : discount-engine-stage.purple.com|purple.com
-id                         : 8448370274
-entry_timestamp            : 1/19/2023 9:03:54PM
-not_before                 : 1/19/2023 8:03:54PM
-not_after                  : 4/19/2023 8:03:53PM
-serial_number              : 0334178f28087b1169b01ac59f090b2345c3
-issuer_ca_id               : 183283
-issuer_name                : C=US, O=Let's Encrypt, CN=E1
-issuer.CommonName          : E1
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : buy.purple.com
+name_value      : buy.purple.com
+id              : 9214432865
+entry_timestamp : 4/23/2023 9:11:39AM
+not_before      : 4/23/2023 8:11:39AM
+not_after       : 7/22/2023 8:11:38AM
+serial_number   : 03b99a31d85dcdcc6b7fa7c2fefe6694d963
 
-search_domain              : purple.com
-common_name                : discount-engine-stage.purple.com
-name_value                 : discount-engine-stage.purple.com|purple.com
-id                         : 8448369914
-entry_timestamp            : 1/19/2023 9:03:47PM
-not_before                 : 1/19/2023 8:03:47PM
-not_after                  : 4/19/2023 8:03:46PM
-serial_number              : 03d08d36d8aa5cb4f62187f2cfe574888705
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183283
+issuer_name     : C=US, O=Let's Encrypt, CN=E1
+common_name     : purple.com
+name_value      : mpos-stage.purple.com
+                  purple.com
+id              : 9187397129
+entry_timestamp : 4/19/2023 4:47:54AM
+not_before      : 4/19/2023 3:47:54AM
+not_after       : 7/18/2023 3:47:53AM
+serial_number   : 03f1dbeec1eb84ffd624bbfa4cceb26f40ca
 
-search_domain              : purple.com
-common_name                : shop.purple.com
-name_value                 : shop.purple.com
-id                         : 8418653402
-entry_timestamp            : 1/16/2023 4:52:38AM
-not_before                 : 1/16/2023 3:52:38AM
-not_after                  : 4/16/2023 3:52:37AM
-serial_number              : 048d0296c38c3f466b217063377c51a95dc0
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : purple.com
+name_value      : mpos-stage.purple.com
+                  purple.com
+id              : 9186305781
+entry_timestamp : 4/19/2023 4:47:52AM
+not_before      : 4/19/2023 3:47:52AM
+not_after       : 7/18/2023 3:47:51AM
+serial_number   : 0329429815dd899fcd2b561795c1e1927752
 
-search_domain              : purple.com
-common_name                : mpos-v2.purple.com
-name_value                 : mpos-v2.purple.com|purple.com
-id                         : 8393429629
-entry_timestamp            : 1/11/2023 6:36:49PM
-not_before                 : 1/11/2023 5:36:49PM
-not_after                  : 4/11/2023 5:36:48PM
-serial_number              : 0428139b02fb74be22058b496b4a8b173c02
-issuer_ca_id               : 183283
-issuer_name                : C=US, O=Let's Encrypt, CN=E1
-issuer.CommonName          : E1
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : sleepweek.purple.com
+name_value      : sleepweek.purple.com
+id              : 9146634939
+entry_timestamp : 4/14/2023 11:16:51AM
+not_before      : 4/14/2023 10:16:51AM
+not_after       : 7/13/2023 10:16:50AM
+serial_number   : 047b79f6de00c9c58382fac31747357a328e
 
-search_domain              : purple.com
-common_name                : mpos-v2.purple.com
-name_value                 : mpos-v2.purple.com|purple.com
-id                         : 8393429658
-entry_timestamp            : 1/11/2023 6:36:48PM
-not_before                 : 1/11/2023 5:36:47PM
-not_after                  : 4/11/2023 5:36:46PM
-serial_number              : 039b474dfc73bc78320c1708d91a7d25dbf3
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 157938
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
+common_name     : e.email.purple.com
+name_value      : e.email.purple.com
+id              : 9122979059
+entry_timestamp : 4/12/2023 1:39:10AM
+not_before      : 4/12/2023 12:00:00AM
+not_after       : 4/11/2024 11:59:59PM
+serial_number   : 02bd82d57c8131fc54c9c7680318ff30
 
-search_domain              : purple.com
-common_name                : mpos.purple.com
-name_value                 : mpos.purple.com|purple.com
-id                         : 8393420610
-entry_timestamp            : 1/11/2023 6:35:00PM
-not_before                 : 1/11/2023 5:35:00PM
-not_after                  : 4/11/2023 5:34:59PM
-serial_number              : 04d360b4236b7d30f4e0ba4b98cee494c787
-issuer_ca_id               : 183283
-issuer_name                : C=US, O=Let's Encrypt, CN=E1
-issuer.CommonName          : E1
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 157939
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
+common_name     : e.email.purple.com
+name_value      : e.email.purple.com
+id              : 9122983148
+entry_timestamp : 4/12/2023 1:39:08AM
+not_before      : 4/12/2023 12:00:00AM
+not_after       : 4/11/2024 11:59:59PM
+serial_number   : 09edeeba35367417a3cae5791c5f3a2f
 
-search_domain              : purple.com
-common_name                : mpos.purple.com
-name_value                 : mpos.purple.com|purple.com
-id                         : 8417433423
-entry_timestamp            : 1/11/2023 6:34:56PM
-not_before                 : 1/11/2023 5:34:56PM
-not_after                  : 4/11/2023 5:34:55PM
-serial_number              : 04b8bef4050e5b5fb7e332001a1de677245d
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 157938
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
+common_name     : d.email.purple.com
+name_value      : d.email.purple.com
+id              : 9122932659
+entry_timestamp : 4/12/2023 1:33:13AM
+not_before      : 4/12/2023 12:00:00AM
+not_after       : 4/11/2024 11:59:59PM
+serial_number   : 0aed0ca4205cb2b1c08838e65978ec92
 
-search_domain              : purple.com
-common_name                : mpos.purple.com
-name_value                 : mpos.purple.com|purple.com
-id                         : 8387916599
-entry_timestamp            : 1/10/2023 6:03:40PM
-not_before                 : 1/10/2023 5:03:40PM
-not_after                  : 4/10/2023 5:03:39PM
-serial_number              : 042be641513cf2fa268b06ffbf453f512a3b
-issuer_ca_id               : 183283
-issuer_name                : C=US, O=Let's Encrypt, CN=E1
-issuer.CommonName          : E1
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 157939
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
+common_name     : d.email.purple.com
+name_value      : d.email.purple.com
+id              : 9122928860
+entry_timestamp : 4/12/2023 1:33:12AM
+not_before      : 4/12/2023 12:00:00AM
+not_after       : 4/11/2024 11:59:59PM
+serial_number   : 09d2367dbb4c1dcf0eb35a244b274922
 
-search_domain              : purple.com
-common_name                : mpos.purple.com
-name_value                 : mpos.purple.com|purple.com
-id                         : 8381879424
-entry_timestamp            : 1/10/2023 6:03:30PM
-not_before                 : 1/10/2023 5:03:30PM
-not_after                  : 4/10/2023 5:03:29PM
-serial_number              : 0480b247cac6a45ac5d747c77981d05bb98b
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183283
+issuer_name     : C=US, O=Let's Encrypt, CN=E1
+common_name     : discount-engine-stage.purple.com
+name_value      : discount-engine-stage.purple.com
+                  purple.com
+id              : 9071402229
+entry_timestamp : 4/5/2023 10:10:56PM
+not_before      : 4/5/2023 9:10:56PM
+not_after       : 7/4/2023 9:10:55PM
+serial_number   : 0372ef5db48f01eb1bac9ec1b2347871f0fa
 
-search_domain              : purple.com
-common_name                : mpos-prod.purple.com
-name_value                 : mpos-prod.purple.com|purple.com
-id                         : 8378209130
-entry_timestamp            : 1/9/2023 3:05:58AM
-not_before                 : 1/9/2023 2:05:58AM
-not_after                  : 4/9/2023 2:05:57AM
-serial_number              : 039db0869db9f399ec99a4a4909025b88cd7
-issuer_ca_id               : 183283
-issuer_name                : C=US, O=Let's Encrypt, CN=E1
-issuer.CommonName          : E1
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : discount-engine-stage.purple.com
+name_value      : discount-engine-stage.purple.com
+                  purple.com
+id              : 9071401716
+entry_timestamp : 4/5/2023 10:10:54PM
+not_before      : 4/5/2023 9:10:54PM
+not_after       : 7/4/2023 9:10:53PM
+serial_number   : 04a45e532dd0e45aae613c5efe41154adeea
 
-search_domain              : purple.com
-common_name                : mpos-prod.purple.com
-name_value                 : mpos-prod.purple.com|purple.com
-id                         : 8378208835
-entry_timestamp            : 1/9/2023 3:05:54AM
-not_before                 : 1/9/2023 2:05:53AM
-not_after                  : 4/9/2023 2:05:52AM
-serial_number              : 0435908c9581e0b294bcffb683e90449fd3a
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183283
+issuer_name     : C=US, O=Let's Encrypt, CN=E1
+common_name     : mpos-stage.purple.com
+name_value      : mpos-stage.purple.com
+                  purple.com
+id              : 9071950738
+entry_timestamp : 4/5/2023 10:10:44PM
+not_before      : 4/5/2023 9:10:44PM
+not_after       : 7/4/2023 9:10:43PM
+serial_number   : 033a7c6b2b92caad61c9d7948f0fa6d5b6f7
 
-search_domain              : purple.com
-common_name                : mpos-prod.purple.com
-name_value                 : mpos-prod.purple.com|purple.com
-id                         : 8398995075
-entry_timestamp            : 1/9/2023 1:54:01AM
-not_before                 : 1/9/2023 12:54:01AM
-not_after                  : 4/9/2023 12:54:00AM
-serial_number              : 03c058bc927c4edf17624f3b422c6abf4421
-issuer_ca_id               : 183283
-issuer_name                : C=US, O=Let's Encrypt, CN=E1
-issuer.CommonName          : E1
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : mpos-stage.purple.com
+name_value      : mpos-stage.purple.com
+                  purple.com
+id              : 9071398443
+entry_timestamp : 4/5/2023 10:10:37PM
+not_before      : 4/5/2023 9:10:37PM
+not_after       : 7/4/2023 9:10:36PM
+serial_number   : 042534c49cdd5d5c2758ad58c3d5c26e8912
 
-search_domain              : purple.com
-common_name                : mpos-prod.purple.com
-name_value                 : mpos-prod.purple.com|purple.com
-id                         : 8377863513
-entry_timestamp            : 1/9/2023 1:53:50AM
-not_before                 : 1/9/2023 12:53:50AM
-not_after                  : 4/9/2023 12:53:49AM
-serial_number              : 04be86cbee08855e0858bf1b013131bc7616
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183283
+issuer_name     : C=US, O=Let's Encrypt, CN=E1
+common_name     : mpos.purple.com
+name_value      : mpos.purple.com
+                  purple.com
+id              : 9071946756
+entry_timestamp : 4/5/2023 10:10:21PM
+not_before      : 4/5/2023 9:10:21PM
+not_after       : 7/4/2023 9:10:20PM
+serial_number   : 048de11f697b7bf1b9293230cb6e91d5f28b
 
-search_domain              : purple.com
-common_name                : partner.purple.com
-name_value                 : partner.purple.com
-id                         : 8368334736
-entry_timestamp            : 1/7/2023 5:50:21AM
-not_before                 : 1/7/2023 4:50:21AM
-not_after                  : 4/7/2023 4:50:20AM
-serial_number              : 04a90f814d7f35fc4bf2269c604d72bae8f7
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : mpos.purple.com
+name_value      : mpos.purple.com
+                  purple.com
+id              : 9071393200
+entry_timestamp : 4/5/2023 10:10:10PM
+not_before      : 4/5/2023 9:10:10PM
+not_after       : 7/4/2023 9:10:09PM
+serial_number   : 03dfb77a76a734f35b7990c19fcb3dc70184
 
-search_domain              : purple.com
-common_name                : donate.purple.com
-name_value                 : donate.purple.com
-id                         : 8360825768
-entry_timestamp            : 1/6/2023 10:46:40PM
-not_before                 : 1/6/2023 9:46:39PM
-not_after                  : 4/6/2023 9:46:38PM
-serial_number              : 04f3b5cbdd686f0809d03254cb017ea46bc0
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183283
+issuer_name     : C=US, O=Let's Encrypt, CN=E1
+common_name     : purple.com
+name_value      : purple.com
+id              : 9071390703
+entry_timestamp : 4/5/2023 10:09:54PM
+not_before      : 4/5/2023 9:09:54PM
+not_after       : 7/4/2023 9:09:53PM
+serial_number   : 041a17ce7fd9614099ad53555e1b9ccfedc1
 
-search_domain              : purple.com
-common_name                : mpos.purple.com
-name_value                 : mpos.purple.com|purple.com
-id                         : 8366063531
-entry_timestamp            : 1/4/2023 11:23:04PM
-not_before                 : 1/4/2023 10:23:04PM
-not_after                  : 4/4/2023 10:23:03PM
-serial_number              : 035a459ad38d6fc41180c0e5e5277c1e9d84
-issuer_ca_id               : 183283
-issuer_name                : C=US, O=Let's Encrypt, CN=E1
-issuer.CommonName          : E1
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : purple.com
+name_value      : purple.com
+id              : 9071389804
+entry_timestamp : 4/5/2023 10:09:47PM
+not_before      : 4/5/2023 9:09:47PM
+not_after       : 7/4/2023 9:09:46PM
+serial_number   : 031c85d585df4fc1dc8682ad7181564d6f0f
 
-search_domain              : purple.com
-common_name                : mpos.purple.com
-name_value                 : mpos.purple.com|purple.com
-id                         : 8355988032
-entry_timestamp            : 1/4/2023 11:22:59PM
-not_before                 : 1/4/2023 10:22:58PM
-not_after                  : 4/4/2023 10:22:57PM
-serial_number              : 04f4013c9bb34582ac56182fada8ca78a5ae
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 247115
+issuer_name     : C=US, O=Amazon, CN=Amazon RSA 2048 M02
+common_name     : library.purple.com
+name_value      : library.purple.com
+id              : 9063005246
+entry_timestamp : 4/5/2023 1:37:38AM
+not_before      : 4/5/2023 12:00:00AM
+not_after       : 5/3/2024 11:59:59PM
+serial_number   : 0693ebf73fc071c725fda2609ced408e
 
-search_domain              : purple.com
-common_name                : mpos-qa.purple.com
-name_value                 : mpos-qa.purple.com|purple.com
-id                         : 8355532956
-entry_timestamp            : 1/4/2023 9:39:29PM
-not_before                 : 1/4/2023 8:39:29PM
-not_after                  : 4/4/2023 8:39:28PM
-serial_number              : 03179fb813fbf88f27078e3dd4ee5c09ba90
-issuer_ca_id               : 183283
-issuer_name                : C=US, O=Let's Encrypt, CN=E1
-issuer.CommonName          : E1
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 157938
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
+common_name     : se.email.purple.com
+name_value      : se.email.purple.com
+id              : 9035370597
+entry_timestamp : 4/2/2023 12:57:37AM
+not_before      : 4/2/2023 12:00:00AM
+not_after       : 4/1/2024 11:59:59PM
+serial_number   : 0ecaa48f8f3f22889b8ed5138f76f1d5
 
-search_domain              : purple.com
-common_name                : mpos-qa.purple.com
-name_value                 : mpos-qa.purple.com|purple.com
-id                         : 8355532837
-entry_timestamp            : 1/4/2023 9:39:27PM
-not_before                 : 1/4/2023 8:39:27PM
-not_after                  : 4/4/2023 8:39:26PM
-serial_number              : 032a6cdacaf8fefd255904776123f920e2f3
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 157939
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
+common_name     : se.email.purple.com
+name_value      : se.email.purple.com
+id              : 9035433177
+entry_timestamp : 4/2/2023 12:48:07AM
+not_before      : 4/2/2023 12:00:00AM
+not_after       : 4/1/2024 11:59:59PM
+serial_number   : 08b3a76a937df683b3f12e179ac0b3a8
 
-search_domain              : purple.com
-common_name                : mpos-v2-qa.purple.com
-name_value                 : mpos-v2-qa.purple.com|purple.com
-id                         : 8350847520
-entry_timestamp            : 1/3/2023 11:54:57PM
-not_before                 : 1/3/2023 10:54:57PM
-not_after                  : 4/3/2023 10:54:56PM
-serial_number              : 038057815dcca7cd3dfbea2703d70d0a47a2
-issuer_ca_id               : 183283
-issuer_name                : C=US, O=Let's Encrypt, CN=E1
-issuer.CommonName          : E1
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 157938
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
+common_name     : purple.com
+name_value      : *.purple.com
+                  purple.com
+id              : 9026321074
+entry_timestamp : 4/1/2023 12:40:22AM
+not_before      : 4/1/2023 12:00:00AM
+not_after       : 3/31/2024 11:59:59PM
+serial_number   : 0916e71d497889a26bcaa8d568c5e4a4
 
-search_domain              : purple.com
-common_name                : mpos-v2-qa.purple.com
-name_value                 : mpos-v2-qa.purple.com|purple.com
-id                         : 8350847489
-entry_timestamp            : 1/3/2023 11:54:54PM
-not_before                 : 1/3/2023 10:54:54PM
-not_after                  : 4/3/2023 10:54:53PM
-serial_number              : 043625307d13b376089c0fb2a9a8dc1c6f68
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 157939
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
+common_name     : purple.com
+name_value      : *.purple.com
+                  purple.com
+id              : 9026296514
+entry_timestamp : 4/1/2023 12:40:19AM
+not_before      : 4/1/2023 12:00:00AM
+not_after       : 3/31/2024 11:59:59PM
+serial_number   : 0950a5501bcf95a1f314a356ba9b0531
 
-search_domain              : purple.com
-common_name                : support.purple.com
-name_value                 : support.purple.com
-id                         : 8302033084
-entry_timestamp            : 12/28/2022 12:42:35AM
-not_before                 : 12/27/2022 11:42:35PM
-not_after                  : 3/27/2023 11:42:34PM
-serial_number              : 0305e99bac73f7ba2413734035a5a25f15df
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : purple.com
+name_value      : purple.com
+id              : 8994918212
+entry_timestamp : 3/27/2023 6:51:41PM
+not_before      : 3/27/2023 5:51:41PM
+not_after       : 6/25/2023 5:51:40PM
+serial_number   : 042b54b9c9a874b708ee7c9db5244b396363
 
-search_domain              : purple.com
-common_name                : mpos-stage.purple.com
-name_value                 : mpos-stage.purple.com|purple.com
-id                         : 8257101896
-entry_timestamp            : 12/22/2022 2:04:47AM
-not_before                 : 12/22/2022 1:04:47AM
-not_after                  : 3/22/2023 1:04:46AM
-serial_number              : 035a2916ed16107e5403b9bc1c9a399aefdc
-issuer_ca_id               : 183283
-issuer_name                : C=US, O=Let's Encrypt, CN=E1
-issuer.CommonName          : E1
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : purple.com
+name_value      : purple.com
+id              : 9003582909
+entry_timestamp : 3/27/2023 6:51:37PM
+not_before      : 3/27/2023 5:51:37PM
+not_after       : 6/25/2023 5:51:36PM
+serial_number   : 032a26e41b2891171881812c2c397d707860
 
-search_domain              : purple.com
-common_name                : mpos-stage.purple.com
-name_value                 : mpos-stage.purple.com|purple.com
-id                         : 8257720868
-entry_timestamp            : 12/22/2022 2:04:43AM
-not_before                 : 12/22/2022 1:04:43AM
-not_after                  : 3/22/2023 1:04:42AM
-serial_number              : 03ae508ce8f5a5d29af38d94192b56771a7d
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : mpos.purple.com
+name_value      : mpos.purple.com
+                  purple.com
+id              : 8988057575
+entry_timestamp : 3/25/2023 10:32:43PM
+not_before      : 3/25/2023 9:32:43PM
+not_after       : 6/23/2023 9:32:42PM
+serial_number   : 04e55ec2bf8b6dcc75aae6e190d8d75b5a8a
 
-search_domain              : purple.com
-common_name                : cspo.purple.com
-name_value                 : cspo.purple.com
-id                         : 8185936425
-entry_timestamp            : 12/12/2022 10:42:18PM
-not_before                 : 12/12/2022 12:00:00AM
-not_after                  : 6/11/2023 11:59:59PM
-serial_number              : 0c1b5d32b82fc62b95777f93d1c68adf
-issuer_ca_id               : 246719
-issuer_name                : C=US, O=Amazon, CN=Amazon RSA 2048 M01
-issuer.CommonName          : Amazon RSA 2048 M01
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Amazon
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : mpos.purple.com
+name_value      : mpos.purple.com
+                  purple.com
+id              : 8985314653
+entry_timestamp : 3/25/2023 10:30:32PM
+not_before      : 3/25/2023 9:30:32PM
+not_after       : 6/23/2023 9:30:31PM
+serial_number   : 03f1829ce988468e866e77137201d5329bc4
 
-search_domain              : purple.com
-common_name                : buy.purple.com
-name_value                 : buy.purple.com
-id                         : 8164653283
-entry_timestamp            : 12/10/2022 2:16:40AM
-not_before                 : 12/10/2022 1:16:39AM
-not_after                  : 3/10/2023 1:16:38AM
-serial_number              : 04dec6c4cfca24625b96947fa57d0e7d1c61
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : mpos-stage.purple.com
+name_value      : mpos-stage.purple.com
+                  purple.com
+id              : 8975152262
+entry_timestamp : 3/24/2023 5:46:40PM
+not_before      : 3/24/2023 4:46:40PM
+not_after       : 6/22/2023 4:46:39PM
+serial_number   : 040b63ee0ab429323e43c7cd22e41830de2a
 
-search_domain              : purple.com
-common_name                : sleepweek.purple.com
-name_value                 : sleepweek.purple.com
-id                         : 8075634681
-entry_timestamp            : 11/28/2022 12:56:42AM
-not_before                 : 11/27/2022 11:56:42PM
-not_after                  : 2/25/2023 11:56:41PM
-serial_number              : 03ee1f8c22c877f2fe26f2f66e2066eff065
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : mpos-stage.purple.com
+name_value      : mpos-stage.purple.com
+                  purple.com
+id              : 8975152395
+entry_timestamp : 3/24/2023 5:46:36PM
+not_before      : 3/24/2023 4:46:36PM
+not_after       : 6/22/2023 4:46:35PM
+serial_number   : 04dfa321e3f169a0a00ffd9c47c59f8c1611
 
-search_domain              : purple.com
-common_name                : shop.purple.com
-name_value                 : shop.purple.com
-id                         : 7993906675
-entry_timestamp            : 11/17/2022 5:48:28AM
-not_before                 : 11/17/2022 4:48:28AM
-not_after                  : 2/15/2023 4:48:27AM
-serial_number              : 03f2a72d51aced4bd29dac29c45b59778254
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : discount-engine-stage.purple.com
+name_value      : discount-engine-stage.purple.com
+                  purple.com
+id              : 8934546230
+entry_timestamp : 3/19/2023 8:40:40PM
+not_before      : 3/19/2023 7:40:40PM
+not_after       : 6/17/2023 7:40:39PM
+serial_number   : 047d045840f2534adbc251ac9136d3c3ee8f
 
-search_domain              : purple.com
-common_name                : mpos-prod.purple.com
-name_value                 : mpos-prod.purple.com|purple.com
-id                         : 7947354609
-entry_timestamp            : 11/10/2022 10:12:47PM
-not_before                 : 11/10/2022 9:12:47PM
-not_after                  : 2/8/2023 9:12:46PM
-serial_number              : 04ad562054a385d3ef5f9407d481058ec0c5
-issuer_ca_id               : 183283
-issuer_name                : C=US, O=Let's Encrypt, CN=E1
-issuer.CommonName          : E1
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : discount-engine-stage.purple.com
+name_value      : discount-engine-stage.purple.com
+                  purple.com
+id              : 8934546020
+entry_timestamp : 3/19/2023 8:40:34PM
+not_before      : 3/19/2023 7:40:33PM
+not_after       : 6/17/2023 7:40:32PM
+serial_number   : 04e309a8fac4ef35a2407d8a62049d8f798d
 
-search_domain              : purple.com
-common_name                : mpos-prod.purple.com
-name_value                 : mpos-prod.purple.com|purple.com
-id                         : 7947336373
-entry_timestamp            : 11/10/2022 10:12:43PM
-not_before                 : 11/10/2022 9:12:43PM
-not_after                  : 2/8/2023 9:12:42PM
-serial_number              : 04506d18fabc750b619c980449abd7073c32
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : donate.purple.com
+name_value      : donate.purple.com
+id              : 8909395059
+entry_timestamp : 3/17/2023 6:36:40AM
+not_before      : 3/17/2023 5:36:39AM
+not_after       : 6/15/2023 5:36:38AM
+serial_number   : 037708b66b7fce83fa466c258becb9a4043f
 
-search_domain              : purple.com
-common_name                : mpos-prod.purple.com
-name_value                 : mpos-prod.purple.com|purple.com
-id                         : 7947278744
-entry_timestamp            : 11/10/2022 10:00:16PM
-not_before                 : 11/10/2022 9:00:15PM
-not_after                  : 2/8/2023 9:00:14PM
-serial_number              : 04f7703c47ce97fb0bd7453ff690d338e087
-issuer_ca_id               : 183283
-issuer_name                : C=US, O=Let's Encrypt, CN=E1
-issuer.CommonName          : E1
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : partner.purple.com
+name_value      : partner.purple.com
+id              : 8908626026
+entry_timestamp : 3/17/2023 4:50:49AM
+not_before      : 3/17/2023 3:50:49AM
+not_after       : 6/15/2023 3:50:48AM
+serial_number   : 04af0cdd51dee0b62c6365ce4ed75a329a34
 
-search_domain              : purple.com
-common_name                : mpos-prod.purple.com
-name_value                 : mpos-prod.purple.com|purple.com
-id                         : 7947268515
-entry_timestamp            : 11/10/2022 10:00:07PM
-not_before                 : 11/10/2022 9:00:07PM
-not_after                  : 2/8/2023 9:00:06PM
-serial_number              : 04f1a0865531e8641ae6b9b503c6c3aaeea4
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : shop.purple.com
+name_value      : shop.purple.com
+id              : 8908259576
+entry_timestamp : 3/17/2023 3:58:23AM
+not_before      : 3/17/2023 2:58:23AM
+not_after       : 6/15/2023 2:58:22AM
+serial_number   : 031303948f9bd9d942d0b6e082520eec7f8c
 
-search_domain              : purple.com
-common_name                : donate.purple.com
-name_value                 : donate.purple.com
-id                         : 7872429294
-entry_timestamp            : 10/31/2022 1:21:42PM
-not_before                 : 10/31/2022 12:21:42PM
-not_after                  : 1/29/2023 12:21:41PM
-serial_number              : 03c77f019e20bc23aa0a5905e0805ef8b005
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183283
+issuer_name     : C=US, O=Let's Encrypt, CN=E1
+common_name     : mpos-v2.purple.com
+name_value      : mpos-v2.purple.com
+                  purple.com
+id              : 8867511224
+entry_timestamp : 3/11/2023 6:16:06PM
+not_before      : 3/11/2023 5:16:06PM
+not_after       : 6/9/2023 5:16:05PM
+serial_number   : 03b69d245a113e6811acca7d0e5dc68a1871
 
-search_domain              : purple.com
-common_name                : partner.purple.com
-name_value                 : partner.purple.com
-id                         : 7863992752
-entry_timestamp            : 10/30/2022 6:49:07AM
-not_before                 : 10/30/2022 5:49:07AM
-not_after                  : 1/28/2023 5:49:06AM
-serial_number              : 044ace2a0c585e3b3c1e6d30f8ce05b9a8e8
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : mpos-v2.purple.com
+name_value      : mpos-v2.purple.com
+                  purple.com
+id              : 8867511255
+entry_timestamp : 3/11/2023 6:16:05PM
+not_before      : 3/11/2023 5:16:05PM
+not_after       : 6/9/2023 5:16:04PM
+serial_number   : 0459a751868d1a01a02f73917d20ee1a506e
 
-search_domain              : purple.com
-common_name                : support.purple.com
-name_value                 : support.purple.com
-id                         : 7855985958
-entry_timestamp            : 10/29/2022 12:43:06AM
-not_before                 : 10/28/2022 11:43:06PM
-not_after                  : 1/26/2023 11:43:05PM
-serial_number              : 04b0be5daff61ed3876d3c6343b8bf5f6af0
-issuer_ca_id               : 183267
-issuer_name                : C=US, O=Let's Encrypt, CN=R3
-issuer.CommonName          : R3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Let's Encrypt
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183283
+issuer_name     : C=US, O=Let's Encrypt, CN=E1
+common_name     : mpos.purple.com
+name_value      : mpos.purple.com
+                  purple.com
+id              : 8867377062
+entry_timestamp : 3/11/2023 5:54:27PM
+not_before      : 3/11/2023 4:54:27PM
+not_after       : 6/9/2023 4:54:26PM
+serial_number   : 04c0cc56adeddd9220191d6720ecdd311f2f
 
-search_domain              : purple.com
-common_name                : share.purple.com
-name_value                 : share.purple.com
-id                         : 7271021664
-entry_timestamp            : 8/5/2022 2:37:18AM
-not_before                 : 8/5/2022 12:00:00AM
-not_after                  : 9/3/2023 11:59:59PM
-serial_number              : 04f5cff34ac33504705e7f8d2c205b55
-issuer_ca_id               : 9324
-issuer_name                : C=US, O=Amazon, OU=Server CA 1B, CN=Amazon
-issuer.CommonName          : Amazon
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Amazon
-issuer.OrganizationalUnit  : Server CA 1B
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : mpos.purple.com
+name_value      : mpos.purple.com
+                  purple.com
+id              : 8867376832
+entry_timestamp : 3/11/2023 5:54:17PM
+not_before      : 3/11/2023 4:54:17PM
+not_after       : 6/9/2023 4:54:16PM
+serial_number   : 04b3d24483398a0dbc0c833903718bdb22d2
 
-search_domain              : purple.com
-common_name                : investors.purple.com
-name_value                 : investors.purple.com
-id                         : 6981983568
-entry_timestamp            : 6/22/2022 12:38:34AM
-not_before                 : 6/22/2022 12:00:00AM
-not_after                  : 6/22/2023 11:59:59PM
-serial_number              : 04eb9a258ba765d8f5ef126ff5c5b1cb
-issuer_ca_id               : 157938
-issuer_name                : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
-issuer.CommonName          : Cloudflare Inc ECC CA-3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Cloudflare, Inc.
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183283
+issuer_name     : C=US, O=Let's Encrypt, CN=E1
+common_name     : mpos.purple.com
+name_value      : mpos.purple.com
+                  purple.com
+id              : 8858222732
+entry_timestamp : 3/10/2023 5:29:00PM
+not_before      : 3/10/2023 4:29:00PM
+not_after       : 6/8/2023 4:28:59PM
+serial_number   : 035fae75899ab20967775c6b4a45d744ed11
 
-search_domain              : purple.com
-common_name                : investors.purple.com
-name_value                 : investors.purple.com
-id                         : 6981983583
-entry_timestamp            : 6/22/2022 12:38:33AM
-not_before                 : 6/22/2022 12:00:00AM
-not_after                  : 6/22/2023 11:59:59PM
-serial_number              : 024b70a26fed33f3fd6bf46af787e9f8
-issuer_ca_id               : 157939
-issuer_name                : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
-issuer.CommonName          : Cloudflare Inc RSA CA-2
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Cloudflare, Inc.
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : mpos.purple.com
+name_value      : mpos.purple.com
+                  purple.com
+id              : 8857733325
+entry_timestamp : 3/10/2023 5:28:52PM
+not_before      : 3/10/2023 4:28:52PM
+not_after       : 6/8/2023 4:28:51PM
+serial_number   : 0300c756593b794edf5e1a8ca20c8e8006f2
 
-search_domain              : purple.com
-common_name                : sni.cloudflaressl.com
-name_value                 : *.purple.com|purple.com
-id                         : 6922867745
-entry_timestamp            : 6/13/2022 2:08:05AM
-not_before                 : 6/13/2022 12:00:00AM
-not_after                  : 6/13/2023 11:59:59PM
-serial_number              : 0f5fdb958763f917dd8bcd42e6db9a1d
-issuer_ca_id               : 157938
-issuer_name                : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
-issuer.CommonName          : Cloudflare Inc ECC CA-3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Cloudflare, Inc.
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183283
+issuer_name     : C=US, O=Let's Encrypt, CN=E1
+common_name     : mpos-prod.purple.com
+name_value      : mpos-prod.purple.com
+                  purple.com
+id              : 8842377132
+entry_timestamp : 3/9/2023 2:32:19AM
+not_before      : 3/9/2023 1:32:18AM
+not_after       : 6/7/2023 1:32:17AM
+serial_number   : 04fb2009d1074617a5bd03cace24a0a015df
 
-search_domain              : purple.com
-common_name                : sni.cloudflaressl.com
-name_value                 : *.purple.com|purple.com
-id                         : 6922867845
-entry_timestamp            : 6/13/2022 2:08:04AM
-not_before                 : 6/13/2022 12:00:00AM
-not_after                  : 6/13/2023 11:59:59PM
-serial_number              : 0ec80983eeeedf3bf18bd7cd2a796adf
-issuer_ca_id               : 157939
-issuer_name                : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
-issuer.CommonName          : Cloudflare Inc RSA CA-2
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Cloudflare, Inc.
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : mpos-prod.purple.com
+name_value      : mpos-prod.purple.com
+                  purple.com
+id              : 8842377247
+entry_timestamp : 3/9/2023 2:32:17AM
+not_before      : 3/9/2023 1:32:17AM
+not_after       : 6/7/2023 1:32:16AM
+serial_number   : 0344f27eaf33a65042a18fdda6c5ced69dbd
 
-search_domain              : purple.com
-common_name                : canemail.purple.com
-name_value                 : canemail.purple.com
-id                         : 6908762459
-entry_timestamp            : 6/10/2022 10:37:50PM
-not_before                 : 6/10/2022 12:00:00AM
-not_after                  : 7/11/2023 11:59:59PM
-serial_number              : 089e92df7979849f3468d0ff47d2b45c
-issuer_ca_id               : 185756
-issuer_name                : C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1
-issuer.CommonName          : DigiCert TLS RSA SHA256 2020 CA1
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : DigiCert Inc
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183283
+issuer_name     : C=US, O=Let's Encrypt, CN=E1
+common_name     : mpos-prod.purple.com
+name_value      : mpos-prod.purple.com
+                  purple.com
+id              : 8842332037
+entry_timestamp : 3/9/2023 1:24:58AM
+not_before      : 3/9/2023 12:24:58AM
+not_after       : 6/7/2023 12:24:57AM
+serial_number   : 0458a8700e043a1b189a1cd9557171a0afca
 
-search_domain              : purple.com
-common_name                : canemail.purple.com
-name_value                 : canemail.purple.com
-id                         : 6795682797
-entry_timestamp            : 5/24/2022 10:27:06PM
-not_before                 : 5/24/2022 12:00:00AM
-not_after                  : 6/24/2023 11:59:59PM
-serial_number              : 05efe53b7a426ea3b96cfd8af9efea99
-issuer_ca_id               : 185756
-issuer_name                : C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1
-issuer.CommonName          : DigiCert TLS RSA SHA256 2020 CA1
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : DigiCert Inc
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : mpos-prod.purple.com
+name_value      : mpos-prod.purple.com
+                  purple.com
+id              : 8841930966
+entry_timestamp : 3/9/2023 1:24:57AM
+not_before      : 3/9/2023 12:24:56AM
+not_after       : 6/7/2023 12:24:55AM
+serial_number   : 049c65655b3683e3f4588bc9e66e18b3da80
 
-search_domain              : purple.com
-common_name                : e.email.purple.com
-name_value                 : e.email.purple.com
-id                         : 6712415426
-entry_timestamp            : 5/12/2022 4:36:58AM
-not_before                 : 5/12/2022 12:00:00AM
-not_after                  : 5/12/2023 11:59:59PM
-serial_number              : 04c08387dd8a03531cb7ac1f4ff187b7
-issuer_ca_id               : 157938
-issuer_name                : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
-issuer.CommonName          : Cloudflare Inc ECC CA-3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Cloudflare, Inc.
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 157938
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
+common_name     : s.purple.com
+name_value      : s.purple.com
+id              : 8841547181
+entry_timestamp : 3/9/2023 12:28:52AM
+not_before      : 3/9/2023 12:00:00AM
+not_after       : 3/8/2024 11:59:59PM
+serial_number   : 0c1326c40ec5db934c4d2006e354e18b
 
-search_domain              : purple.com
-common_name                : e.email.purple.com
-name_value                 : e.email.purple.com
-id                         : 6712415375
-entry_timestamp            : 5/12/2022 4:36:58AM
-not_before                 : 5/12/2022 12:00:00AM
-not_after                  : 5/12/2023 11:59:59PM
-serial_number              : 0d34cd917b503671df56de2fe08fa32a
-issuer_ca_id               : 157939
-issuer_name                : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
-issuer.CommonName          : Cloudflare Inc RSA CA-2
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Cloudflare, Inc.
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 157939
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
+common_name     : s.purple.com
+name_value      : s.purple.com
+id              : 8841544821
+entry_timestamp : 3/9/2023 12:28:52AM
+not_before      : 3/9/2023 12:00:00AM
+not_after       : 3/8/2024 11:59:59PM
+serial_number   : 0dcc1abc079fa93d90481cff77dfce07
 
-search_domain              : purple.com
-common_name                : d.email.purple.com
-name_value                 : d.email.purple.com
-id                         : 6712358447
-entry_timestamp            : 5/12/2022 4:27:07AM
-not_before                 : 5/12/2022 12:00:00AM
-not_after                  : 5/12/2023 11:59:59PM
-serial_number              : 026e9961a292e1b7b34f397df73fbd98
-issuer_ca_id               : 157938
-issuer_name                : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
-issuer.CommonName          : Cloudflare Inc ECC CA-3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Cloudflare, Inc.
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183283
+issuer_name     : C=US, O=Let's Encrypt, CN=E1
+common_name     : mpos.purple.com
+name_value      : mpos.purple.com
+                  purple.com
+id              : 8803754683
+entry_timestamp : 3/4/2023 10:52:56PM
+not_before      : 3/4/2023 9:52:56PM
+not_after       : 6/2/2023 9:52:55PM
+serial_number   : 03c3fdf139d6a38f2427d4629b5a41da390a
 
-search_domain              : purple.com
-common_name                : d.email.purple.com
-name_value                 : d.email.purple.com
-id                         : 6712358495
-entry_timestamp            : 5/12/2022 4:27:06AM
-not_before                 : 5/12/2022 12:00:00AM
-not_after                  : 5/12/2023 11:59:59PM
-serial_number              : 073bfc3a440edf0aec25d3a8d00917cb
-issuer_ca_id               : 157939
-issuer_name                : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
-issuer.CommonName          : Cloudflare Inc RSA CA-2
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Cloudflare, Inc.
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : mpos.purple.com
+name_value      : mpos.purple.com
+                  purple.com
+id              : 8803754608
+entry_timestamp : 3/4/2023 10:52:54PM
+not_before      : 3/4/2023 9:52:54PM
+not_after       : 6/2/2023 9:52:53PM
+serial_number   : 03d8c30f199d03b77b85bc64823193cbc057
 
-search_domain              : purple.com
-common_name                : cspo.purple.com
-name_value                 : cspo.purple.com
-id                         : 6711258146
-entry_timestamp            : 5/12/2022 12:25:22AM
-not_before                 : 5/12/2022 12:00:00AM
-not_after                  : 6/11/2023 11:59:59PM
-serial_number              : 041108cdb97ec6d864da903aeaf8f085
-issuer_ca_id               : 9324
-issuer_name                : C=US, O=Amazon, OU=Server CA 1B, CN=Amazon
-issuer.CommonName          : Amazon
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Amazon
-issuer.OrganizationalUnit  : Server CA 1B
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183283
+issuer_name     : C=US, O=Let's Encrypt, CN=E1
+common_name     : mpos-qa.purple.com
+name_value      : mpos-qa.purple.com
+                  purple.com
+id              : 8803220082
+entry_timestamp : 3/4/2023 9:06:53PM
+not_before      : 3/4/2023 8:06:52PM
+not_after       : 6/2/2023 8:06:51PM
+serial_number   : 03eb4403bdab02dcc02485fb4738c174b75c
 
-search_domain              : purple.com
-common_name                : library.purple.com
-name_value                 : library.purple.com
-id                         : 6666510870
-entry_timestamp            : 5/5/2022 3:16:06AM
-not_before                 : 5/5/2022 12:00:00AM
-not_after                  : 6/3/2023 11:59:59PM
-serial_number              : 09d4201012d4a0516d55a1faf4313253
-issuer_ca_id               : 9324
-issuer_name                : C=US, O=Amazon, OU=Server CA 1B, CN=Amazon
-issuer.CommonName          : Amazon
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Amazon
-issuer.OrganizationalUnit  : Server CA 1B
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : mpos-qa.purple.com
+name_value      : mpos-qa.purple.com
+                  purple.com
+id              : 8803219924
+entry_timestamp : 3/4/2023 9:06:44PM
+not_before      : 3/4/2023 8:06:44PM
+not_after       : 6/2/2023 8:06:43PM
+serial_number   : 0358cf2c6c1a47eef0b9f4ea58a3ced24f5d
 
-search_domain              : purple.com
-common_name                : se.email.purple.com
-name_value                 : se.email.purple.com
-id                         : 6645909616
-entry_timestamp            : 5/2/2022 1:43:10AM
-not_before                 : 5/2/2022 12:00:00AM
-not_after                  : 5/2/2023 11:59:59PM
-serial_number              : 05828c69aba9a9779e849cc8ac311e62
-issuer_ca_id               : 157938
-issuer_name                : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
-issuer.CommonName          : Cloudflare Inc ECC CA-3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Cloudflare, Inc.
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183283
+issuer_name     : C=US, O=Let's Encrypt, CN=E1
+common_name     : mpos-v2-qa.purple.com
+name_value      : mpos-v2-qa.purple.com
+                  purple.com
+id              : 8796275703
+entry_timestamp : 3/3/2023 11:29:05PM
+not_before      : 3/3/2023 10:29:05PM
+not_after       : 6/1/2023 10:29:04PM
+serial_number   : 04352c9991fc5610a801a930942f786d9fff
 
-search_domain              : purple.com
-common_name                : se.email.purple.com
-name_value                 : se.email.purple.com
-id                         : 6645909501
-entry_timestamp            : 5/2/2022 1:43:09AM
-not_before                 : 5/2/2022 12:00:00AM
-not_after                  : 5/2/2023 11:59:59PM
-serial_number              : 0f84a73aa174e74dc42efd59ad8f11c5
-issuer_ca_id               : 157939
-issuer_name                : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
-issuer.CommonName          : Cloudflare Inc RSA CA-2
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Cloudflare, Inc.
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : mpos-v2-qa.purple.com
+name_value      : mpos-v2-qa.purple.com
+                  purple.com
+id              : 8796275539
+entry_timestamp : 3/3/2023 11:29:01PM
+not_before      : 3/3/2023 10:29:01PM
+not_after       : 6/1/2023 10:29:00PM
+serial_number   : 03ad135378e1be4196fd14f0f8ca7336c5cf
 
-search_domain              : purple.com
-common_name                : purple.com
-name_value                 : *.purple.com|purple.com
-id                         : 6639381407
-entry_timestamp            : 5/1/2022 12:56:00AM
-not_before                 : 5/1/2022 12:00:00AM
-not_after                  : 5/1/2023 11:59:59PM
-serial_number              : 041bf5ac8debe1298126fb6c6915878f
-issuer_ca_id               : 157938
-issuer_name                : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
-issuer.CommonName          : Cloudflare Inc ECC CA-3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Cloudflare, Inc.
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : support.purple.com
+name_value      : support.purple.com
+id              : 8743957922
+entry_timestamp : 2/26/2023 12:41:24AM
+not_before      : 2/25/2023 11:41:24PM
+not_after       : 5/26/2023 11:41:23PM
+serial_number   : 03b4b121b0d06a101273d7bf2baca6a0d5ec
 
-search_domain              : purple.com
-common_name                : purple.com
-name_value                 : *.purple.com|purple.com
-id                         : 6639381508
-entry_timestamp            : 5/1/2022 12:55:59AM
-not_before                 : 5/1/2022 12:00:00AM
-not_after                  : 5/1/2023 11:59:59PM
-serial_number              : 0d0a905fa3510b90c856e59a1c7e3532
-issuer_ca_id               : 157939
-issuer_name                : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
-issuer.CommonName          : Cloudflare Inc RSA CA-2
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Cloudflare, Inc.
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 247115
+issuer_name     : C=US, O=Amazon, CN=Amazon RSA 2048 M02
+common_name     : library.purple.com
+name_value      : library.purple.com
+id              : 8715842518
+entry_timestamp : 2/22/2023 8:39:58PM
+not_before      : 2/22/2023 12:00:00AM
+not_after       : 6/3/2023 11:59:59PM
+serial_number   : 0d0a76d411fbd138efc97394b20d029d
 
-search_domain              : purple.com
-common_name                : s.purple.com
-name_value                 : s.purple.com
-id                         : 6499169245
-entry_timestamp            : 4/8/2022 1:08:47AM
-not_before                 : 4/8/2022 12:00:00AM
-not_after                  : 4/8/2023 11:59:59PM
-serial_number              : 02a602a932ca7d6144f87f7c003d3970
-issuer_ca_id               : 157938
-issuer_name                : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
-issuer.CommonName          : Cloudflare Inc ECC CA-3
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Cloudflare, Inc.
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 247115
+issuer_name     : C=US, O=Amazon, CN=Amazon RSA 2048 M02
+common_name     : share.purple.com
+name_value      : share.purple.com
+id              : 8714505674
+entry_timestamp : 2/22/2023 4:49:18PM
+not_before      : 2/22/2023 12:00:00AM
+not_after       : 9/3/2023 11:59:59PM
+serial_number   : 015098484027cdc3907bef30cd214ebb
 
-search_domain              : purple.com
-common_name                : s.purple.com
-name_value                 : s.purple.com
-id                         : 6499169272
-entry_timestamp            : 4/8/2022 1:08:46AM
-not_before                 : 4/8/2022 12:00:00AM
-not_after                  : 4/8/2023 11:59:59PM
-serial_number              : 0ad97449421671aeb8913f0cccf5e310
-issuer_ca_id               : 157939
-issuer_name                : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
-issuer.CommonName          : Cloudflare Inc RSA CA-2
-issuer.CountryName         : US
-issuer.StateorProvinceName : 
-issuer.Locality            : 
-issuer.Organization        : Cloudflare, Inc.
-issuer.OrganizationalUnit  : 
-issuer.serialNumber        : 
-issuer.emailAddress        : 
+issuer_ca_id    : 183283
+issuer_name     : C=US, O=Let's Encrypt, CN=E1
+common_name     : mpos-stage.purple.com
+name_value      : mpos-stage.purple.com
+                  purple.com
+id              : 8687864813
+entry_timestamp : 2/19/2023 4:10:06AM
+not_before      : 2/19/2023 3:10:05AM
+not_after       : 5/20/2023 3:10:04AM
+serial_number   : 0483b59df2ed6e5d4415b791d1a6a6b8e5a0
 
-VERBOSE: [2023-01-23 10:46:22]	Returned 54 results.
-DEBUG: [2023-01-23 10:46:22]	Execution took 00:00:10.8799444
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : mpos-stage.purple.com
+name_value      : mpos-stage.purple.com
+                  purple.com
+id              : 8687848085
+entry_timestamp : 2/19/2023 4:06:58AM
+not_before      : 2/19/2023 3:06:58AM
+not_after       : 5/20/2023 3:06:57AM
+serial_number   : 0318a3dd2ae39635c7ad5822102aeae40dba
+
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : buy.purple.com
+name_value      : buy.purple.com
+id              : 8651084507
+entry_timestamp : 2/14/2023 8:16:40AM
+not_before      : 2/14/2023 7:16:39AM
+not_after       : 5/15/2023 7:16:38AM
+serial_number   : 04ad373948c8c370c885302fbe6ac306b68d
+
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : sleepweek.purple.com
+name_value      : sleepweek.purple.com
+id              : 8572601299
+entry_timestamp : 2/4/2023 9:41:40AM
+not_before      : 2/4/2023 8:41:40AM
+not_after       : 5/5/2023 8:41:39AM
+serial_number   : 036c4c51bbe4d62ddf3b359c3537065fbcb3
+
+issuer_ca_id    : 183283
+issuer_name     : C=US, O=Let's Encrypt, CN=E1
+common_name     : purple.com
+name_value      : purple.com
+id              : 8513047627
+entry_timestamp : 1/27/2023 7:29:18PM
+not_before      : 1/27/2023 6:29:18PM
+not_after       : 4/27/2023 6:29:17PM
+serial_number   : 03db6e4896c1125339b84e9799418371152a
+
+issuer_ca_id    : 183267
+issuer_name     : C=US, O=Let's Encrypt, CN=R3
+common_name     : purple.com
+name_value      : purple.com
+id              : 8521262692
+entry_timestamp : 1/27/2023 7:29:12PM
+not_before      : 1/27/2023 6:29:12PM
+not_after       : 4/27/2023 6:29:11PM
+serial_number   : 03d2d8ba5e2e9f6c6fa3e38dace21d2f80ad
+
+issuer_ca_id    : 246719
+issuer_name     : C=US, O=Amazon, CN=Amazon RSA 2048 M01
+common_name     : cspo.purple.com
+name_value      : cspo.purple.com
+id              : 8185936425
+entry_timestamp : 12/12/2022 10:42:18PM
+not_before      : 12/12/2022 12:00:00AM
+not_after       : 6/11/2023 11:59:59PM
+serial_number   : 0c1b5d32b82fc62b95777f93d1c68adf
+
+issuer_ca_id    : 9324
+issuer_name     : C=US, O=Amazon, OU=Server CA 1B, CN=Amazon
+common_name     : share.purple.com
+name_value      : share.purple.com
+id              : 7271021664
+entry_timestamp : 8/5/2022 2:37:18AM
+not_before      : 8/5/2022 12:00:00AM
+not_after       : 9/3/2023 11:59:59PM
+serial_number   : 04f5cff34ac33504705e7f8d2c205b55
+
+issuer_ca_id    : 157938
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
+common_name     : investors.purple.com
+name_value      : investors.purple.com
+id              : 6981983568
+entry_timestamp : 6/22/2022 12:38:34AM
+not_before      : 6/22/2022 12:00:00AM
+not_after       : 6/22/2023 11:59:59PM
+serial_number   : 04eb9a258ba765d8f5ef126ff5c5b1cb
+
+issuer_ca_id    : 157939
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
+common_name     : investors.purple.com
+name_value      : investors.purple.com
+id              : 6981983583
+entry_timestamp : 6/22/2022 12:38:33AM
+not_before      : 6/22/2022 12:00:00AM
+not_after       : 6/22/2023 11:59:59PM
+serial_number   : 024b70a26fed33f3fd6bf46af787e9f8
+
+issuer_ca_id    : 157938
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
+common_name     : sni.cloudflaressl.com
+name_value      : *.purple.com
+                  purple.com
+id              : 6922867745
+entry_timestamp : 6/13/2022 2:08:05AM
+not_before      : 6/13/2022 12:00:00AM
+not_after       : 6/13/2023 11:59:59PM
+serial_number   : 0f5fdb958763f917dd8bcd42e6db9a1d
+
+issuer_ca_id    : 157939
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
+common_name     : sni.cloudflaressl.com
+name_value      : *.purple.com
+                  purple.com
+id              : 6922867845
+entry_timestamp : 6/13/2022 2:08:04AM
+not_before      : 6/13/2022 12:00:00AM
+not_after       : 6/13/2023 11:59:59PM
+serial_number   : 0ec80983eeeedf3bf18bd7cd2a796adf
+
+issuer_ca_id    : 185756
+issuer_name     : C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1
+common_name     : canemail.purple.com
+name_value      : canemail.purple.com
+id              : 6908762459
+entry_timestamp : 6/10/2022 10:37:50PM
+not_before      : 6/10/2022 12:00:00AM
+not_after       : 7/11/2023 11:59:59PM
+serial_number   : 089e92df7979849f3468d0ff47d2b45c
+
+issuer_ca_id    : 185756
+issuer_name     : C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1
+common_name     : canemail.purple.com
+name_value      : canemail.purple.com
+id              : 6795682797
+entry_timestamp : 5/24/2022 10:27:06PM
+not_before      : 5/24/2022 12:00:00AM
+not_after       : 6/24/2023 11:59:59PM
+serial_number   : 05efe53b7a426ea3b96cfd8af9efea99
+
+issuer_ca_id    : 157938
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
+common_name     : e.email.purple.com
+name_value      : e.email.purple.com
+id              : 6712415426
+entry_timestamp : 5/12/2022 4:36:58AM
+not_before      : 5/12/2022 12:00:00AM
+not_after       : 5/12/2023 11:59:59PM
+serial_number   : 04c08387dd8a03531cb7ac1f4ff187b7
+
+issuer_ca_id    : 157939
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
+common_name     : e.email.purple.com
+name_value      : e.email.purple.com
+id              : 6712415375
+entry_timestamp : 5/12/2022 4:36:58AM
+not_before      : 5/12/2022 12:00:00AM
+not_after       : 5/12/2023 11:59:59PM
+serial_number   : 0d34cd917b503671df56de2fe08fa32a
+
+issuer_ca_id    : 157938
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
+common_name     : d.email.purple.com
+name_value      : d.email.purple.com
+id              : 6712358447
+entry_timestamp : 5/12/2022 4:27:07AM
+not_before      : 5/12/2022 12:00:00AM
+not_after       : 5/12/2023 11:59:59PM
+serial_number   : 026e9961a292e1b7b34f397df73fbd98
+
+issuer_ca_id    : 157939
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
+common_name     : d.email.purple.com
+name_value      : d.email.purple.com
+id              : 6712358495
+entry_timestamp : 5/12/2022 4:27:06AM
+not_before      : 5/12/2022 12:00:00AM
+not_after       : 5/12/2023 11:59:59PM
+serial_number   : 073bfc3a440edf0aec25d3a8d00917cb
+
+issuer_ca_id    : 9324
+issuer_name     : C=US, O=Amazon, OU=Server CA 1B, CN=Amazon
+common_name     : cspo.purple.com
+name_value      : cspo.purple.com
+id              : 6711258146
+entry_timestamp : 5/12/2022 12:25:22AM
+not_before      : 5/12/2022 12:00:00AM
+not_after       : 6/11/2023 11:59:59PM
+serial_number   : 041108cdb97ec6d864da903aeaf8f085
+
+issuer_ca_id    : 9324
+issuer_name     : C=US, O=Amazon, OU=Server CA 1B, CN=Amazon
+common_name     : library.purple.com
+name_value      : library.purple.com
+id              : 6666510870
+entry_timestamp : 5/5/2022 3:16:06AM
+not_before      : 5/5/2022 12:00:00AM
+not_after       : 6/3/2023 11:59:59PM
+serial_number   : 09d4201012d4a0516d55a1faf4313253
+
+issuer_ca_id    : 157938
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
+common_name     : se.email.purple.com
+name_value      : se.email.purple.com
+id              : 6645909616
+entry_timestamp : 5/2/2022 1:43:10AM
+not_before      : 5/2/2022 12:00:00AM
+not_after       : 5/2/2023 11:59:59PM
+serial_number   : 05828c69aba9a9779e849cc8ac311e62
+
+issuer_ca_id    : 157939
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
+common_name     : se.email.purple.com
+name_value      : se.email.purple.com
+id              : 6645909501
+entry_timestamp : 5/2/2022 1:43:09AM
+not_before      : 5/2/2022 12:00:00AM
+not_after       : 5/2/2023 11:59:59PM
+serial_number   : 0f84a73aa174e74dc42efd59ad8f11c5
+
+issuer_ca_id    : 157938
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc ECC CA-3
+common_name     : purple.com
+name_value      : *.purple.com
+                  purple.com
+id              : 6639381407
+entry_timestamp : 5/1/2022 12:56:00AM
+not_before      : 5/1/2022 12:00:00AM
+not_after       : 5/1/2023 11:59:59PM
+serial_number   : 041bf5ac8debe1298126fb6c6915878f
+
+issuer_ca_id    : 157939
+issuer_name     : C=US, O="Cloudflare, Inc.", CN=Cloudflare Inc RSA CA-2
+common_name     : purple.com
+name_value      : *.purple.com
+                  purple.com
+id              : 6639381508
+entry_timestamp : 5/1/2022 12:55:59AM
+not_before      : 5/1/2022 12:00:00AM
+not_after       : 5/1/2023 11:59:59PM
+serial_number   : 0d0a905fa3510b90c856e59a1c7e3532
 ```
