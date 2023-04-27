@@ -13,9 +13,9 @@ function Invoke-CRTRequest {
 		
 		By default, the function performs no deduplication and includes all entries, even those that are expired.
 		It also has a default sleep of 5 seconds when a web error occurs and it must retry a query.
-		These option can be changed using parameters.
+		These options can be changed using parameters.
 		
-		Output is an array of strings which is converted into an array of hashes with some post-processing.
+		Output is an array of strings with various data embedded.
 		[			
 			{
 				"issuer_ca_id": 16418,
@@ -40,15 +40,8 @@ function Invoke-CRTRequest {
 				"serial_number": "62d0a79bc5b32f9953489598013637d6"
 			}
 		]
-		Post-processing does the following
-		- Converts issuer_name to an array of hashes
-		- Converts issuer_name.OU from an array to '|' separated data
-		- Converts name_value to '|' separated data instead of '\n' separated data
-		- Converts entry_timestamp to a DateTime
-		- Converts not_before to a DateTime
-		- Converts not_after to a DateTime
-		Which can be sent to Export-Csv with a ForEach command.
-		Note that using -Verbose currently breaks the Export-Csv option.
+	
+	You can use companion function Format-CRTResponse to perform some post-processing which converts all the multi-line strings into single-line strings and parses the embedded fields from the issuer_name field out into individual fields.
 	
 	.PARAMETER Domain
 		A single domain without an protocol, for example localhost.localdomain
@@ -72,13 +65,13 @@ function Invoke-CRTRequest {
 		Invoke-CRTRequest "microsoft.com" -Deduplicate -ExcludeExpired | Format-Table
 	
 	.EXAMPLE
-		Invoke-CRTRequest -Domain "google.com" -Delay 15 -Retry 5 -Verbose
+		Invoke-CRTRequest -Domain "google.com" -Delay 15 -Retry 5
 	
 	.EXAMPLE
 		Invoke-CRTRequest -Domain "linkedin.com" | ForEach-Object { $_ | Export-Csv .\Temp.csv -Force -Append -NoType }
 	
 	.EXAMPLE
-		Invoke-CRTRequest "purple.com" -Deduplicate -ExcludeExpired -Verbose -Debug
+		Invoke-CRTRequest "purple.com" -Deduplicate -ExcludeExpired -Verbose
 	
 	.NOTES
 		Written by Word Eater (WordEaterNG@gmail.com)
@@ -92,7 +85,7 @@ function Invoke-CRTRequest {
 			https://stackoverflow.com/questions/15927291/how-to-split-a-string-by-comma-ignoring-comma-in-double-quotes
 			
 		Version History
-		v1.7-20230123	Changed some Write-Verbose to Write-Debug to be more like standard cmdlets
+		v2.0-20230306	Moved post-processing to its own function called Format-CRTResponse
 		v1.6-20230111	Changed most Write-Host to Write-Verbose to be more like standard cmdlets
 				Changed Write-Host for the host not found to be a Write-Error
 		v1.5-20221227	Changed Deduplicate and ExcludeExpired to switch instead of boolean to be more like standard cmdlets
@@ -109,7 +102,7 @@ function Invoke-CRTRequest {
 	.LINK
 		https://certificate.transparency.dev/howctworks/
 	#>
-	[CmdletBinding()]
+	[CmdletBinding(SupportsShouldProcess = $true)]
 	[OutputType([System.Array])]
 	Param(
 		[Parameter(Mandatory=$true)][String]$Domain="localhost.localdomain",
@@ -161,7 +154,7 @@ function Invoke-CRTRequest {
 					$Failed = $false
 					try {
 						$(Get-Timestamp) + "`t" + "Invoke-RestMethod -Method ""Get"" -Uri ""$ReqUrl""" | Write-Verbose
-						$req = Invoke-RestMethod -Method Get -Uri $ReqUrl
+						$Response = Invoke-RestMethod -Method Get -Uri $ReqUrl
 					} catch {
 						if ($_.ErrorDetails.Message) {
 							$(Get-Timestamp) + "`t" + $_.ErrorDetails.Message | Write-Warning
@@ -181,7 +174,7 @@ function Invoke-CRTRequest {
 			'0' {
 				try {
 					$(Get-Timestamp) + "`t" + "Invoke-RestMethod -Method ""Get"" -Uri ""$ReqUrl""" | Write-Verbose
-					$req = Invoke-RestMethod -Method Get -Uri $ReqUrl
+					$Response = Invoke-RestMethod -Method Get -Uri $ReqUrl
 				} catch {
 					if ($_.ErrorDetails.Message) {
 						$(Get-Timestamp) + "`t" + $_.ErrorDetails.Message | Write-Warning
@@ -199,7 +192,7 @@ function Invoke-CRTRequest {
 					$Failed = $false
 					try {
 						$(Get-Timestamp) + "`t" + "Invoke-RestMethod -Method ""Get"" -Uri ""$ReqUrl""" | Write-Verbose
-						$req = Invoke-RestMethod -Method Get -Uri $ReqUrl
+						$Response = Invoke-RestMethod -Method Get -Uri $ReqUrl
 					} catch {
 						if ($_.ErrorDetails.Message) {
 							$(Get-Timestamp) + "`t" + $_.ErrorDetails.Message | Write-Warning
@@ -217,35 +210,11 @@ function Invoke-CRTRequest {
 				Break
 			}
 		}
-		if ( [bool]$req.response ) {
+		if ( [bool]$Response.response ) {
 			$(Get-Timestamp) + "`t" + "Match found for ""$Domain""" | Write-Verbose
-			$req | ForEach {
-				$entry = $_
-				$issuer = $([regex]::Split($entry.issuer_name, ',(?=(?:[^"]|"[^"]*")*$)' ) | ForEach { $_.Trim() } ) | ConvertFrom-StringData
-				$OutputRow = [PSCustomObject][ordered]@{
-					search_domain = $Domain
-					common_name = $entry.common_name
-					name_value = ((($entry.name_value -Split '\n') | Sort-Object -Unique) -Join '|' )
-					id = $entry.id
-					entry_timestamp = Get-Date -Date $entry.entry_timestamp
-					not_before = Get-Date -Date $entry.not_before
-					not_after = Get-Date -Date $entry.not_after
-					serial_number = $entry.serial_number
-					issuer_ca_id = $entry.issuer_ca_id
-					issuer_name = $entry.issuer_name
-					"issuer.CommonName" = $issuer.CN -Replace '"',''
-					"issuer.CountryName" = $issuer.C -Replace '"',''
-					"issuer.StateorProvinceName" = $issuer.ST -Replace '"',''
-					"issuer.Locality" = $issuer.L -Replace '"',''
-					"issuer.Organization" = $issuer.O -Replace '"',''
-					"issuer.OrganizationalUnit" = ($issuer.OU -Join '|') -Replace '"',''
-					"issuer.serialNumber" = $issuer.serialNumber
-					"issuer.emailAddress" = $issuer.emailAddress
-				}
-				return $OutputRow
-			}
-			$Count = $req.Count
+			$Count = $Response.Count
 			$(Get-Timestamp) + "`t" + "Returned $Count results." | Write-Verbose
+			return $Response
 		} else {
 			$(Get-Timestamp) + "`t" + "No match found for ""$Domain""" | Write-Error
 		}
